@@ -1,0 +1,146 @@
+
+""let $VIMRUNTIMEDIR="."
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" " PATHOGEN
+execute pathogen#infect()
+filetype plugin indent on
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" " DECLUTTER
+set nocompatible
+set modelines=0
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" " LOOK AND FEEL
+behave xterm
+syntax on
+
+colorscheme molokai
+
+if has("gui_running")
+  let g:molokai_original = 1
+  let g:rehash256 = 1
+  if has("gui_win32")
+    set lines=100 columns=150
+    set guifont=Consolas:h11:cANSI
+  elseif has("gui_gtk2")
+    set lines=999 columns=999
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set lines=999 columns=999
+    set guifont=Menlo\ Regular:h14
+  else
+    if exists("+lines")
+      set lines=100
+    endif
+    if exists("+columns")
+      set columns=100
+    endif
+  endif
+endif
+
+
+set noswapfile
+set noundofile
+set nobackup
+
+set autoindent
+set encoding=utf-8
+set scrolloff=5
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set number
+set relativenumber
+"set autochdir
+"set visualbell
+
+" " Window
+set nowrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+" " Tabs
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" " Folds
+set foldmethod=indent
+set foldnestmax=10
+set foldlevel=99
+set foldlevelstart=10
+set foldenable
+"set nofoldenable
+
+" " case-sensitive search intelligently
+set ignorecase
+set smartcase
+
+" " work together to highlight search results
+set incsearch
+set showmatch
+set hlsearch
+
+" increment as decimal 007->008
+set nrformats=
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+" " KEYS
+
+noremap <Space> <Nop>
+sunmap <Space>
+let g:mapleader=" "
+inoremap jk <esc>
+
+" replace selected text with default register without yanking it
+vnoremap <leader>p "_dP
+
+
+
+" " Windows
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+map <F12> :e $MYVIMRC<CR>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+" " NERDTree & nerdtree-git-plugin
+
+"http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
+"let NERDTreeHijackNetrw=1
+
+"prettier
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+nnoremap <Leader>m :NERDTreeToggle<CR>
+nnoremap <Leader>n :NERDTreeFind<CR>
+
+map <Leader>q :wqa<CR>
+nnoremap <Leader><Leader> <C-^>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" " tmux
+let g:tmux_navigator_save_on_switch = 2

@@ -1,0 +1,9 @@
+bundle/airline        https://github.com/bling/vim-airline
+bundle/nerdtree       https://github.com/scrooloose/nerdtree
+bundle/repeat         https://github.com/tpope/vim-repeat
+bundle/surround       https://github.com/tpope/vim-surround
+bundle/tern           https://github.com/marijnh/tern_for_vim
+bundle/misc           https://github.com/xolox/vim-misc.git
+bundle/ale            https://github.com/w0rp/ale
+bundle/YouCompleteMe  https://github.com/valloric/youcompleteme
+bundle/tmux-navigator https://github.com/christoomey/vim-tmux-navigator.git
