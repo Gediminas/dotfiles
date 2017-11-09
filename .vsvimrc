@@ -1,1 +1,5 @@
 inoremap jk <esc>
+
+" " Single-handed HalfPageUp/Down
+map <A-j> <C-d>
+map <A-k> <C-u>

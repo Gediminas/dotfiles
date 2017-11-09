@@ -113,6 +113,10 @@ inoremap jk <esc>
 vnoremap <leader>p "_dP
 
 
+" " Single-handed HalfPageUp/Down
+map <A-j> <C-d>
+map <A-k> <C-u>
+
 
 " " Windows
 nnoremap <C-J> <C-W><C-J>
