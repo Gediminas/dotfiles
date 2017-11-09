@@ -2,7 +2,7 @@
 
 <^>!a::SendInput !a
 <^>!b::SendInput !b
-<^>!c::SendInput !c
+;<^>!c::SendInput !c
 <^>!d::SendInput !d
 <^>!f::SendInput !f
 <^>!g::SendInput !g
@@ -19,14 +19,22 @@
 <^>!r::SendInput !r
 <^>!t::SendInput !t
 <^>!u::SendInput !u
-<^>!v::SendInput !v
+;<^>!v::SendInput !v
 <^>!w::SendInput !w
-<^>!x::SendInput !x
+;<^>!x::SendInput !x
 <^>!y::SendInput !y
 <^>!z::SendInput !z
+<^>![::SendInput ![
+<^>!]::SendInput !]
+<^>!;::SendInput !;
+<^>!'::SendInput !'
+<^>!\::SendInput !\
+<^>!,::SendInput !,
+<^>!.::SendInput !.
+<^>!/::SendInput !/
 
 
-;https://autohotkey.com/board/topic/104173-capslock-to-control-and-escape/
+; https://autohotkey.com/board/topic/104173-capslock-to-control-and-escape/
 
 SetCapsLockState Off
 
@@ -40,7 +48,22 @@ CapsLock::
 CapsLock up::
 	If key
 		Send {Ctrl Up}
-	else
-		if (A_TimeSincePriorHotkey < 1000)
+	Else
+		If (A_TimeSincePriorHotkey < 1000)
 			Send, {Esc 2}
 	Return
+
+
+; HACK: Win/ResophNotes does not allow to use Alt+Space (==nvAlt)
+
+!Space::#!F11
+	return
+
+; MAC key bindings
+
+#x::SendInput ^x
+#c::SendInput ^c
+#v::SendInput ^v
+;#w::^F4
+;#q::!F4
+
