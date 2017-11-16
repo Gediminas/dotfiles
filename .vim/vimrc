@@ -1,4 +1,3 @@
-
 ""let $VIMRUNTIMEDIR="."
 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -119,10 +118,16 @@ map <A-k> <C-u>
 
 
 " " Windows
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+
+" " git difftool/vimdiff navigate to next/prev difference
+if &diff
+  nnoremap <C-n> ]c
+  nnoremap <C-p> [c
+endif
 
 map <F12> :e $MYVIMRC<CR>
 
@@ -130,22 +135,23 @@ map <F12> :e $MYVIMRC<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 " " NERDTree & nerdtree-git-plugin
 
 "http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
 "let NERDTreeHijackNetrw=1
-
 "prettier
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 nnoremap <Leader>m :NERDTreeToggle<CR>
 nnoremap <Leader>n :NERDTreeFind<CR>
 
-map <Leader>q :wqa<CR>
+""map <Leader>q :wqa<CR>
 nnoremap <Leader><Leader> <C-^>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " " tmux
 let g:tmux_navigator_save_on_switch = 2
+
