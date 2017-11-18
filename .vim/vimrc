@@ -14,7 +14,7 @@ set modelines=0
 " " LOOK AND FEEL
 behave xterm
 syntax on
-set t_Co=256
+"set t_Co=256
 set mouse=a
 
 colorscheme molokai
