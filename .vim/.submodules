@@ -7,3 +7,4 @@ bundle/misc           https://github.com/xolox/vim-misc.git
 bundle/ale            https://github.com/w0rp/ale
 bundle/YouCompleteMe  https://github.com/valloric/youcompleteme
 bundle/tmux-navigator https://github.com/christoomey/vim-tmux-navigator.git
+bundle/obsession      https://github.com/tpope/vim-obsession.git
