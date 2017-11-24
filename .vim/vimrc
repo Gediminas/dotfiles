@@ -132,6 +132,9 @@ endif
 
 map <F12> :e $MYVIMRC<CR>
 
+nnoremap <Leader>p "*p
+nnoremap <Leader>P "*P
+nnoremap <Leader>y "*y
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
