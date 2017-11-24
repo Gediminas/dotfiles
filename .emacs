@@ -7,6 +7,14 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; hacks
+
+(defun reload-init-file ()
+  (interactive)
+  (load-file "~/.emacs"))
+
+(global-set-key (kbd "C-c C-r") 'reload-init-file)    ; Reload .emacs file
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; use-package
@@ -223,7 +231,7 @@ nil 0.5)))
 
 ;; http://mobileorg.github.io/documentation/
 ;; Set to the location of your Org files on your local system
-(setq org-directory "~/org")
+(setq org-directory "~/Dropbox/org")
 ;; Set to the name of the file where new notes will be stored
 (setq org-mobile-inbox-for-pull "~/org/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
@@ -238,7 +246,7 @@ nil 0.5)))
  '(display-battery-mode t)
  '(package-selected-packages
    (quote
-    (evil-leader use-package neotree helm-projectile magit flycheck projectile helm evil-visual-mark-mode)))
+    (find-file-in-project evil-leader use-package neotree helm-projectile magit flycheck projectile helm evil-visual-mark-mode)))
  '(save-place t)
  '(show-paren-mode t))
 (custom-set-faces
@@ -247,4 +255,41 @@ nil 0.5)))
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+; https://blog.aaronbieber.com/2016/01/30/dig-into-org-mode.html
+
+(setq org-agenda-files '("~/Dropbox/org/"))
+
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "CANCELED")))
+
+
+(defun gds-pop-to-org-agenda (split)
+  "Visit the org agenda, in the current window or a SPLIT."
+  (interactive "P")
+  (org-agenda-list)
+  (when (not split)
+    (delete-other-windows)))
+(define-key global-map (kbd "C-c t a") 'gds-pop-to-org-agenda)
+
+(setq org-capture-templates
+            '(("a" "My TODO task format." entry
+                        (file "todo.org")
+                                 "* TODO %?
+                                 SCHEDULED: %t")))
+
+(defun gds-org-task-capture ()
+  "Capture a task with my default template."
+  (interactive)
+  (org-capture nil "a"))
+(define-key global-map (kbd "C-c c") 'gds-org-task-capture)
+
+
+
+(setq org-agenda-text-search-extra-files '(agenda-archives))
+(setq org-blank-before-new-entry (quote ((heading) (plain-list-item))))
+(setq org-enforce-todo-dependencies t)
+(setq org-log-done (quote time))
+(setq org-log-redeadline (quote time))
+(setq org-log-reschedule (quote time))
 
