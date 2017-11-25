@@ -8,16 +8,16 @@
   * Windows 10
 
 ## Soft:
+  * tmux 2.5   (Linux/Mac)
   * vim 8.0
-    * versions
+    * versions:
       * vim    (Linux/Mac/Windows terminal)
       * gvim   (Linux/Windows)
       * MacVim (MacOS)
-    * plugins
+    * plugins:
         * NerdTree
-  * tmux 2.5   (Linux/Mac)
   * emacs 25   (Windows/Linux/Mac)
-    * plugins
+    * plugins:
         * evil
         * neotree
 
