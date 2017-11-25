@@ -14,7 +14,7 @@
       * gvim   (Linux/Windows)
       * MacVim (MacOS)
     * plugins
-	* NerdTree
+        * NerdTree
   * tmux 2.5   (Linux/Mac)
   * emacs 25   (Windows/Linux/Mac)
     * plugins
