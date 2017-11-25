@@ -15,6 +15,7 @@
       * gvim   (Linux/Windows)
       * MacVim (MacOS)
   * tmux 2.5   (Linux/Mac)
+  * emacs 25 (Windows/Linux/Mac)
 
 ## Keys
   * Karabiner Elements (Mac)
