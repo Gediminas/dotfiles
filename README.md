@@ -9,13 +9,17 @@
 
 ## Soft:
   * vim 8.0
-    * terminal
-      * vim    (Linux/Mac/Windows)
-    * gui
+    * versions
+      * vim    (Linux/Mac/Windows terminal)
       * gvim   (Linux/Windows)
       * MacVim (MacOS)
+    * plugins
+	* NerdTree
   * tmux 2.5   (Linux/Mac)
-  * emacs 25 (Windows/Linux/Mac)
+  * emacs 25   (Windows/Linux/Mac)
+    * plugins
+	* evil
+	* neotree
 
 ## Keys
   * Karabiner Elements (Mac)
