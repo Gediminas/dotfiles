@@ -18,8 +18,8 @@
   * tmux 2.5   (Linux/Mac)
   * emacs 25   (Windows/Linux/Mac)
     * plugins
-	* evil
-	* neotree
+        * evil
+        * neotree
 
 ## Keys
   * Karabiner Elements (Mac)
