@@ -23,10 +23,14 @@
 
 ## Install
   * tmux:
-    > git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    > tmux
-    > prefix+I
+	```
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	tmux
+	prefix+I
+	```
   * vim:
-    > bash .vim/get_submodules.sh
-    > bash .vim/install.sh
+	```
+	bash .vim/get_submodules.sh
+	bash .vim/install.sh
+	```
   
