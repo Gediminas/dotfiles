@@ -4,7 +4,7 @@
   * Linux
     * Debian 8 Jessie (headless server)
     * Ubuntu 16.04 Xenial Xerus LTS (desktop)
-  * MacOS 10 Sierra
+  * MacOS 10 High Sierra
   * Windows 10
 
 ## Soft:
@@ -25,7 +25,7 @@
   * Karabiner Elements (Mac)
   * AutoHotKey (Windows)
 
-## Install
+## Init
   * tmux:
 	```
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
