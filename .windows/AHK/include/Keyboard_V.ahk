@@ -1,24 +1,94 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; For home-row (sdfv njkl) for debugging c++
 
-v & q::Send, {Blind}^{F13}
-v & w::Send, {Blind}^{F14}
-v & e::Send, {Blind}^{F15}
-v & r::Send, {Blind}^{F16}
-v & t::Send, {Blind}^{F17}
+space & v::
+v & space::
+return
 
-v & a::Send, {Blind}^{F18}
-v & s::Send, {Blind}^{F19}
-v & d::Send, {Blind}^{F20}
-v & f::Send, {Blind}^{F21}
+v & q::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F13}
+	else
+		Send, {Blind}^{F13}
+	Return
 
-v & z::Send, {Blind}^{F22}
-v & x::Send, {Blind}^{F23}
-v & c::Send, {Blind}^{F24}
+v & w::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F14}
+	else
+		Send, {Blind}^{F14}
+	Return
 
-;v & `::Send, ^`
-;v::Send, {Blind} v
-;+v::Send, {Blind} +v
+v & e::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F15}
+	else
+		Send, {Blind}^{F15}
+	Return
 
+v & r::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F16}
+	else
+		Send, {Blind}^{F16}
+	Return
+
+v & t::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F17}
+	else
+		Send, {Blind}^{F17}
+	Return
+
+v & a::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F18}
+	else
+		Send, {Blind}^{F18}
+	Return
+
+v & s::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F19}
+	else
+		Send, {Blind}^{F19}
+	Return
+
+v & d::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F20}
+	else
+		Send, {Blind}^{F20}
+	Return
+
+v & f::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F21}
+	else
+		Send, {Blind}^{F21}
+	Return
+
+v & z::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F22}
+	else
+		Send, {Blind}^{F22}
+	Return
+
+v & x::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F23}
+	else
+		Send, {Blind}^{F23}
+	Return
+
+v & c::
+	If (GetKeyState("SPACE", "P"))
+		Send, {Blind}!^{F24}
+	else
+		Send, {Blind}^{F24}
+	Return
+
+v & g::Send, {Enter}
 
 $*v::send {Blind}{v} 

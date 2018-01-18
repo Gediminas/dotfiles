@@ -11,8 +11,8 @@
 
 #Include include\Keyboard.ahk
 #Include include\Keyboard_Dual.ahk
-#Include include\Keyboard_V.ahk
 #Include include\Keyboard_Space.ahk
+#Include include\Keyboard_V.ahk
 #Include include\Keyboard_Win.ahk
 
 #Include include\mouser6.ahk

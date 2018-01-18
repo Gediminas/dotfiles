@@ -18,15 +18,15 @@ CapsLock up::
 	Return
 
 
-Enter::
-	key2=
-	Input, key2, B C L1 T1, {Enter}
-	if (ErrorLevel = "Max")
-		Tooltip "0"
-	Tooltip "1"
-	Send, {Enter 1}
-	Return
-Enter up::
-	Tooltip "2"
-	Send, {Enter 2}
-	Return
+;Enter::
+;	key2=
+;	Input, key2, B C L1 T1, {Enter}
+;	if (ErrorLevel = "Max")
+;		Tooltip "0"
+;	Tooltip "1"
+;	Send, {Enter 1}
+;	Return
+;Enter up::
+;	Tooltip "2"
+;	Send, {Enter 2}
+;	Return

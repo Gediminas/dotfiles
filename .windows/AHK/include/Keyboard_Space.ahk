@@ -39,6 +39,7 @@ Space & s::Send, {Blind}^s
 
 
 
+
 ;;Space & e::Send, {Ctrl Down}n{Ctrl Up}
 ;;Space & r::Send, {F5}
 
@@ -58,7 +59,7 @@ Space & j::Send, {Blind}{Down}
 Space & k::Send, {Blind}{Up}
 Space & l::Send, {Blind}{Right}
 
-Space & b::Send, {Blind}^{Space}
+Space & b::Send, {Blind}{Space}
 ;Space & n::Send, {Blind}^{Enter}
 
 Space & Backspace::Send, {Blind}^{Delete}
