@@ -13,13 +13,13 @@ RWin & Tab::ShiftAltTab
 #a::^a
 
 ;; Undo / Redo
-#y::^y
-#z::^z
+#y::SendInput ^y
+#z::SendInput ^z
 
 ;; Cut/Copy/Paste
-#x::^x
-#c::^c
-#v::^v
+#x::SendInput ^x
+#c::SendInput ^c
+#v::SendInput ^v
 
 ;; Disable Narrator
 #u::return

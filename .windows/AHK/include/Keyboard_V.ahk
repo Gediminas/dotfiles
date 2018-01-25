@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; For home-row (sdfv njkl) for debugging c++
 
-space & v::
+;space & v::
 v & space::
 return
 

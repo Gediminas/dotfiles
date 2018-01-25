@@ -1,7 +1,7 @@
 ; AHK script implementing hjkl navigation like TouchCursor 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; FUNCTIONS
+;;; F1-F12 (for MacBookPro with TouchBar)
 
 Space & 1::Send, {F1}
 Space & 2::Send, {F2}
@@ -18,7 +18,32 @@ Space & =::Send, {F12}
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; RIGHT
+;;; Apple Magic Keyboard (Windows 10)
+
+Space & F7:: SendInput {Media_Prev}
+Space & F8:: SendInput {Media_Play_Pause}
+Space & F9:: SendInput {Media_Next}
+Space & F10::SendInput {Volume_Mute}
+Space & F11::SendInput {Volume_Down}
+Space & F12::SendInput {Volume_Up}
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; LEFT
+
+Space & Tab::SendInput, !{Tab}
+Space & q::  SendInput, {Pause}
+Space & w::  SendInput, ^{Tab}
+;Space & e::Send, {Ctrl Down}n{Ctrl Up}
+;Space & r::Send, {F5}
+
+Space & a::SendInput ^+s
+Space & s::SendInput {Blind}^s
+
+Space & z::SendInput ^z
+Space & x::SendInput ^x
+Space & c::SendInput ^c
+Space & v::SendInput ^v
 
 Space & CapsLock::
 Space & Esc::
@@ -30,55 +55,48 @@ Space & Esc::
     Send ^w
   }
 Return
-								
-Space & Tab::Send, !{Tab}
-Space & q::Send, ^{Tab}
-Space & w::Send, ^{Tab}
 
-Space & s::Send, {Blind}^s
-
-
-
-
-;;Space & e::Send, {Ctrl Down}n{Ctrl Up}
-;;Space & r::Send, {F5}
+;Space & q::
+;	WinGetClass, ActiveClass, A
+;	WinSet, Bottom,, A
+;	WinActivate, ahk_class %ActiveClass%
+;	return
+;
+;Space & q::
+;	WinGetClass, ActiveClass, A
+;	WinActivateBottom, ahk_class %ActiveClass%
+;	return
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; LEFT
+;;; RIGHT
 
-Space & y::Send, {Home}
-Space & u::Send, {PgDn}
-Space & i::Send, {PgUp}
-Space & o::Send, {End}
-Space & p::Send, {Backspace}
-Space & [::Send, {Ctrl Down}{Left}{Ctrl Up}{Delete}
+Space &  y::Send, {Home}
+Space &  u::Send, {PgDn}
+Space &  i::Send, {PgUp}
+Space &  o::Send, {End}
+Space &  p::Send, ^+{Left}{Delete}
 
-Space & h::Send, {Blind}{Left}
-Space & j::Send, {Blind}{Down}
-Space & k::Send, {Blind}{Up}
-Space & l::Send, {Blind}{Right}
+Space &  h::Send, {Blind}{Left}
+Space &  j::Send, {Blind}{Down}
+Space &  k::Send, {Blind}{Up}
+Space &  l::Send, {Blind}{Right}
+Space & `;::Send, {Blind}{Backspace}
 
-Space & b::Send, {Blind}{Space}
-;Space & n::Send, {Blind}^{Enter}
-
-Space & Backspace::Send, {Blind}^{Delete}
-
+Space &  b::Send, {Blind}{Space}
+Space &  n::Send, {Blind}{Enter}
+Space &  m::Send, {Blind}{Delete}
+Space & Backspace::Send, {Blind}{Delete}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; DESKTOP
 
-Space & Left::Send, {Ctrl Down}{LWin Down}{Left} {Ctrl Up}{LWin Up}
-Space & Right::Send, {Ctrl Down}{LWin Down}{Right}{Ctrl Up}{LWin Up}
+Space & Left:: SendInput ^#{Left}
+Space & Right::SendInput ^#{Right}
 
-;Space & e::Send, {Ctrl Down}{LWin Down}{Left} {Ctrl Up}{LWin Up}
-;Space & r::Send, {Ctrl Down}{LWin Down}{Right}{Ctrl Up}{LWin Up}
+Space & ,::SendInput ^#{Left}
+Space & .::SendInput ^#{Right}
 
-Space & ,::Send, {Ctrl Down}{LWin Down}{Left} {Ctrl Up}{LWin Up}
-Space & .::Send, {Ctrl Down}{LWin Down}{Right}{Ctrl Up}{LWin Up}
-
-;Space & RShift::Send, {LWin Down}{Tab}{LWin Up}
-;Space & Enter::Send, {LWin Down}{Tab}{LWin Up}
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -87,25 +105,25 @@ Space & .::Send, {Ctrl Down}{LWin Down}{Right}{Ctrl Up}{LWin Up}
 Space & Up::  Send, {Volume_Mute}
 Space & Down::Send, {Media_Play_Pause}
 
-;Space & Esc::Send, {Media_Prev}
-;Space & `::Send, {Media_Prev}
-;Space & BS::Send, {Media_Next}
-;Space & y::Send, {Volume_Mute}
-;Space & [::Send, {Volume_Down}
-;Space & ]::Send, {Volume_Up}
-;Space & \::Send, {Media_Play_Pause}
+;Space & F7:: SendInput {Media_Prev}
+;Space & F8:: SendInput {Media_Play_Pause}
+;Space & F9:: SendInput {Media_Next}
+;Space & F10::SendInput {Volume_Mute}
+;Space & F11::SendInput {Volume_Down}
+;Space & F12::SendInput {Volume_Up}
+
+;Space & BS::return
+;Space & [::return
+;Space & ]::return
+;Space & ''::return
+;Space & \::return
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-; Too distracting
-;Space & LShift::Send, {Alt Down}{Space}{Alt Up}
-; <+Space::Send, {Alt Down}{Space}{Alt Up}
-
-;Space::Send, {Space}
-;Return
+;Space & RShift::Send, {LWin Down}{Tab}{LWin Up}
+;Space & Enter::Send, {LWin Down}{Tab}{LWin Up}
+;Space & /::return
 
 $*Space::send {Blind}{Space} 
 
