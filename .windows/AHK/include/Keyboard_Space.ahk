@@ -32,8 +32,18 @@ Space & F12::SendInput {Volume_Up}
 ;;; LEFT
 
 Space & Tab::SendInput, !{Tab}
-Space & q::  SendInput, {Pause}
-Space & w::  SendInput, ^{Tab}
+Space & q::  SendInput, {Blind}{Pause}
+
+Space & w::
+  If WinActive("ahk_exe emacs.exe") {
+	SendInput, {Space}{Tab}
+  } Else If WinActive("ahk_exe putty_tray_64.exe") {
+	SendInput, {Space}{Tab}
+  } Else {
+    SendInput, ^{Tab}
+  }
+Return
+
 ;Space & e::Send, {Ctrl Down}n{Ctrl Up}
 ;Space & r::Send, {F5}
 
@@ -71,22 +81,22 @@ Return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; RIGHT
 
-Space &  y::Send, {Home}
-Space &  u::Send, {PgDn}
-Space &  i::Send, {PgUp}
-Space &  o::Send, {End}
-Space &  p::Send, ^+{Left}{Delete}
+Space &  y::SendInput, {Blind}{Home}
+Space &  u::SendInput, {Blind}{PgDn}
+Space &  i::SendInput, {Blind}{PgUp}
+Space &  o::SendInput, {Blind}{End}
+Space &  p::SendInput, ^+{Left}{Delete}
 
-Space &  h::Send, {Blind}{Left}
-Space &  j::Send, {Blind}{Down}
-Space &  k::Send, {Blind}{Up}
-Space &  l::Send, {Blind}{Right}
-Space & `;::Send, {Blind}{Backspace}
+Space &  h::SendInput, {Blind}{Left}
+Space &  j::SendInput, {Blind}{Down}
+Space &  k::SendInput, {Blind}{Up}
+Space &  l::SendInput, {Blind}{Right}
+Space & `;::SendInput, {Blind}{Backspace}
 
-Space &  b::Send, {Blind}{Space}
-Space &  n::Send, {Blind}{Enter}
-Space &  m::Send, {Blind}{Delete}
-Space & Backspace::Send, {Blind}{Delete}
+Space &  b::SendInput, {Blind}{Space}
+Space &  n::SendInput, {Blind}{Enter}
+Space &  m::SendInput, {Blind}{Delete}
+Space & BS::SendInput, {Blind}{Delete}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; DESKTOP

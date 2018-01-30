@@ -9,6 +9,8 @@
 ; https://github.com/ahkscript/awesome-AutoHotkey
 ; https://autohotkey.com/docs/KeyList.htm
 
+SetKeyDelay, 0
+
 #Include include\Keyboard.ahk
 #Include include\Keyboard_Dual.ahk
 #Include include\Keyboard_Space.ahk
@@ -16,10 +18,10 @@
 #Include include\Keyboard_Win.ahk
 
 #Include include\mouser6.ahk
+#Include include\CapsLockTapEscapeHoldControl.ahk
 
 ;#Include include\AdvancedWindowSnap.ahk
 ;#Include include\AlwaysOnTop.ahk
-;#Include include\CapsLockTapEscapeHoldControl.ahk
 ;#Include include\Media.ahk
 ;#Include include\Screenshots.ahk
 ;#Include include\Spotlight.ahk

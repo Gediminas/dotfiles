@@ -1,21 +1,21 @@
 ; AHK script 
 
 ; https://autohotkey.com/board/topic/104173-capslock-to-control-and-escape/
-SetCapsLockState Off
-CapsLock::
-	key=
-	Input, key, B C L0.3 T1, {Esc}
-	if (ErrorLevel = "Max")
-		Send {Ctrl Down}%key%
-	KeyWait, CapsLock
-	Return
-CapsLock up::
-	If key
-		Send {Ctrl Up}
-	Else
-		If (A_TimeSincePriorHotkey < 300)
-			Send, {Esc 2}
-	Return
+;SetCapsLockState Off
+;CapsLock::
+;	key=
+;	Input, key, B C L0.3 T1, {Esc}
+;	if (ErrorLevel = "Max")
+;		Send {Ctrl Down}%key%
+;	KeyWait, CapsLock
+;	Return
+;CapsLock up::
+;	If key
+;		Send {Ctrl Up}
+;	Else
+;		If (A_TimeSincePriorHotkey < 300)
+;			Send, {Esc 2}
+;	Return
 
 
 ;Enter::
