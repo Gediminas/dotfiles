@@ -249,7 +249,7 @@ values."
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    ;; Control line numbers activation.
    ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
    ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
@@ -263,7 +263,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -334,6 +334,17 @@ you should place your code here."
   (setq deft-use-filename-as-title t)
   (setq deft-recursive t)
   (global-set-key [f8] 'deft)
+
+  (with-eval-after-load 'evil
+    (defalias #'forward-evil-word #'forward-evil-symbol))
+
+  (setq xterm-mouse-mode 1)
+
+  (setq evil-emacs-state-cursor '("chartreuse3" (bar . 2)))
+
+  (remove-hook 'prog-mode-hook #'smartparens-mode)
+  (spacemacs/toggle-smartparens-globally-off)
+
 
   )
 
