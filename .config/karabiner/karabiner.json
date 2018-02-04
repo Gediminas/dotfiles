@@ -172,7 +172,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
@@ -201,7 +201,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "h",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -224,7 +224,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -247,7 +247,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -332,7 +332,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "y",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -502,7 +502,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "h",
+                                    "key_code": "o",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -525,7 +525,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "n",
+                                    "key_code": "i",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4015,7 +4015,7 @@
                         "vendor_id": 1452
                     },
                     "ignore": true,
-                    "manipulate_caps_lock_led": true,
+                    "manipulate_caps_lock_led": false,
                     "simple_modifications": []
                 },
                 {
