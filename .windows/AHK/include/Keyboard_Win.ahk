@@ -10,7 +10,7 @@ RWin & Tab::ShiftAltTab
 
 
 ;; Select All
-#a::^a
+#a::SendInput ^a
 
 ;; Undo / Redo
 #y::SendInput ^y

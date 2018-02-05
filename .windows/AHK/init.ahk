@@ -9,12 +9,13 @@
 ; https://github.com/ahkscript/awesome-AutoHotkey
 ; https://autohotkey.com/docs/KeyList.htm
 
-SetKeyDelay, 0
+SetKeyDelay, -1
 
 #Include include\Keyboard.ahk
 #Include include\Keyboard_Dual.ahk
 #Include include\Keyboard_Space.ahk
 #Include include\Keyboard_V.ahk
+#Include include\Keyboard_N.ahk
 #Include include\Keyboard_Win.ahk
 
 #Include include\mouser6.ahk

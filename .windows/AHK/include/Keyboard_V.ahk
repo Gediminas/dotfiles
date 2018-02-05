@@ -1,10 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; For home-row (sdfv njkl) for debugging c++
 
-;space & v::
-v & space::
-return
-
 v & q::
 	If (GetKeyState("SPACE", "P"))
 		Send, {Blind}!^{F13}
@@ -82,7 +78,7 @@ v & x::
 		Send, {Blind}^{F23}
 	Return
 
-v & c::
+ v & c::
 	If (GetKeyState("SPACE", "P"))
 		Send, {Blind}!^{F24}
 	else
@@ -90,5 +86,10 @@ v & c::
 	Return
 
 v & g::Send, {Enter}
+
+
+;space & v::
+v & space:: return
+v & b::SendInput, {Blind}{v}
 
 $*v::send {Blind}{v} 

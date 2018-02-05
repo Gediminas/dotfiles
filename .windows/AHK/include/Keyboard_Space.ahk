@@ -44,16 +44,32 @@ Space & w::
   }
 Return
 
-;Space & e::Send, {Ctrl Down}n{Ctrl Up}
-;Space & r::Send, {F5}
+;Space & e::SendInput, {Ctrl Down}n{Ctrl Up}
+Space & r::SendInput, ^{F5}
 
 Space & a::SendInput ^+s
-Space & s::SendInput {Blind}^s
+
+Space & s::
+  If WinActive("ahk_exe emacs.exe") {
+  	SendInput, {Esc}
+    Sleep 200
+    SendInput, {Space}
+    Sleep 200
+    SendInput, {f}{s}
+  } Else If WinActive("ahk_exe putty_tray_64.exe") {
+    SendInput, {Esc}
+    Sleep 200
+    SendInput, {Space}
+    Sleep 200
+    SendInput, {f}{s}
+  } Else {
+    SendInput {Blind}^s
+  }
+Return
 
 Space & z::SendInput ^z
 Space & x::SendInput ^x
 Space & c::SendInput ^c
-Space & v::SendInput ^v
 
 Space & CapsLock::
 Space & Esc::
@@ -93,8 +109,6 @@ Space &  k::SendInput, {Blind}{Up}
 Space &  l::SendInput, {Blind}{Right}
 Space & `;::SendInput, {Blind}{Backspace}
 
-Space &  b::SendInput, {Blind}{Space}
-Space &  n::SendInput, {Blind}{Enter}
 Space &  m::SendInput, {Blind}{Delete}
 Space & BS::SendInput, {Blind}{Delete}
 
@@ -104,10 +118,12 @@ Space & BS::SendInput, {Blind}{Delete}
 Space & Left:: SendInput ^#{Left}
 Space & Right::SendInput ^#{Right}
 
-Space & ,::SendInput ^#{Left}
-Space & .::SendInput ^#{Right}
+;Space & ,::SendInput ^#{Left}
+;Space & .::SendInput ^#{Right}
 
 
+Space & ,::Send, {LWin down}{LCtrl down}{Left}{LWin up}{LCtrl up}
+Space & .::Send, {LWin down}{LCtrl down}{Right}{LWin up}{LCtrl up}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; MEDIA
@@ -135,5 +151,9 @@ Space & Down::Send, {Media_Play_Pause}
 ;Space & Enter::Send, {LWin Down}{Tab}{LWin Up}
 ;Space & /::return
 
-$*Space::send {Blind}{Space} 
 
+;Space & n::SendInput, {Blind}{Enter}
+Space & b::SendInput, {Blind}{Space}
+Space & v::SendInput ^v
+
+$*Space::send {Blind}{Space} 
