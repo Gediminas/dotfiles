@@ -314,12 +314,14 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
- 
-  (evil-leader/set-key "q q" `spacemacs/frame-killer) 
+
+  (evil-leader/set-key "q q" `spacemacs/frame-killer)
 
   ;; Set escape keybinding to "jk"
   (setq-default evil-escape-key-sequence "jk")
   (setq-default evil-escape-delay 0.2)
+
+  (cua-mode t)
 
   ;; https://github.com/syl20bnr/spacemacs/issues/9603
   ;(org-defkey org-mode-map [(meta return)] 'org-meta-return)
