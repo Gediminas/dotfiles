@@ -296,6 +296,10 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
+
+   ;;https://emacs.stackexchange.com/questions/26949/can-i-turn-off-or-switch-the-syntax-checker-for-js2-mode
+   js2-mode-show-parse-errors nil
+   js2-mode-show-strict-warnings nil
    ))
 
 (defun dotspacemacs/user-init ()
