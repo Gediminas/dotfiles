@@ -122,6 +122,13 @@
                         "description": "gds SpaceFn",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.microsoft.rdc.mac$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    },
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
@@ -629,7 +636,8 @@
                                     {
                                         "key_code": "r",
                                         "modifiers": [
-                                            "left_command"
+                                            "left_command",
+                                            "left_shift"
                                         ]
                                     }
                                 ],
