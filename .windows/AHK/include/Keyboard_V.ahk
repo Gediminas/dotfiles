@@ -1,95 +1,117 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; For home-row (sdfv njkl) for debugging c++
 
+SetKeyDelay, -1
+
+v & 1::SendInput, {Blind}{F1}
+v & 2::SendInput, {Blind}{F2}
+v & 3::SendInput, {Blind}{F3}
+v & 4::SendInput, {Blind}{F4}
+v & 5::SendInput, {Blind}{F5}
+v & 6::SendInput, {Blind}{F6}
+v & 7::SendInput, {Blind}{F7}
+v & 8::SendInput, {Blind}{F8}
+v & 9::SendInput, {Blind}{F9}
+v & 0::SendInput, {Blind}{F10}
+v & -::SendInput, {Blind}{F11}
+v & =::SendInput, {Blind}{F12}
+
 v & q::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F13}
+		SendInput, {Blind}!^{F13}
 	else
-		Send, {Blind}^{F13}
+		SendInput, {Blind}^{F13}
 	Return
 
 v & w::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F14}
+		SendInput, {Blind}!^{F14}
 	else
-		Send, {Blind}^{F14}
+		SendInput, {Blind}^{F14}
 	Return
 
 v & e::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F15}
+		SendInput, {Blind}!^{F15}
 	else
-		Send, {Blind}^{F15}
+		SendInput, {Blind}^{F15}
 	Return
 
 v & r::
-	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F16}
-	else
-		Send, {Blind}^{F16}
+	If (GetKeyState("SPACE", "P")) {
+		Tooltip vr_
+		SendInput, {Blind}!^{F16}
+	} else {
+		Tooltip vr
+		SendInput, {Blind}^{F16}
+	}
 	Return
 
 v & t::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F17}
+		SendInput, {Blind}!^{F17}
 	else
-		Send, {Blind}^{F17}
+		SendInput, {Blind}^{F17}
 	Return
 
 v & a::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F18}
+		SendInput, {Blind}!^{F18}
 	else
-		Send, {Blind}^{F18}
+		SendInput, {Blind}^{F18}
 	Return
 
 v & s::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F19}
+		SendInput, {Blind}!^{F19}
 	else
-		Send, {Blind}^{F19}
+		SendInput, {Blind}^{F19}
 	Return
 
 v & d::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F20}
+		SendInput, {Blind}!^{F20}
 	else
-		Send, {Blind}^{F20}
+		SendInput, {Blind}^{F20}
 	Return
 
 v & f::
-	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F21}
-	else
-		Send, {Blind}^{F21}
+	If (GetKeyState("SPACE", "P")) {
+		Tooltip vf_
+		SendInput, {Blind}!^{F21}
+	}
+	else {
+		Tooltip vf
+		SendInput, {Blind}^{F21}
+	}
 	Return
 
 v & z::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F22}
+		SendInput, {Blind}!^{F22}
 	else
-		Send, {Blind}^{F22}
+		SendInput, {Blind}^{F22}
 	Return
 
 v & x::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F23}
+		SendInput, {Blind}!^{F23}
 	else
-		Send, {Blind}^{F23}
+		SendInput, {Blind}^{F23}
 	Return
 
  v & c::
 	If (GetKeyState("SPACE", "P"))
-		Send, {Blind}!^{F24}
+		SendInput, {Blind}!^{F24}
 	else
-		Send, {Blind}^{F24}
+		SendInput, {Blind}^{F24}
 	Return
 
-v & g::Send, {Enter}
+v & g::SendInput, {Enter}
 
 
-;space & v::
-v & space:: return
 v & b::SendInput, {Blind}{v}
+v & n:: return
+v & space:: return
 
-$*v::send {Blind}{v} 
+$*v::SendInput {Blind}{v}

@@ -1,5 +1,7 @@
 ; Create shortcut to this file under: C:\Users\<YOURUSERNAME>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
+SetKeyDelay, -1
+
 ; # Win (Windows logo key)
 ; ! Alt
 ; ^ Control
@@ -9,13 +11,15 @@
 ; https://github.com/ahkscript/awesome-AutoHotkey
 ; https://autohotkey.com/docs/KeyList.htm
 
-SetKeyDelay, -1
 
 #Include include\Keyboard.ahk
 #Include include\Keyboard_Dual.ahk
 #Include include\Keyboard_Space.ahk
+#Include include\Keyboard_Space-Magic.ahk
+#Include include\Keyboard_Space-LT.ahk
+; #Include include\Keyboard_Space-FN.ahk
 #Include include\Keyboard_V.ahk
-#Include include\Keyboard_N.ahk
+; #Include include\Keyboard_N.ahk
 #Include include\Keyboard_Win.ahk
 
 #Include include\mouser6.ahk
@@ -28,18 +32,3 @@ SetKeyDelay, -1
 ;#Include include\Spotlight.ahk
 ;#Include include\TabModifier.ahk
 
-; ------------------------------------------------------------------------------
-; Custom "Mission Control"
-;#<::
-;  Send,^#{left}
-;Return
-;
-;#>::
-;  Send,^#{right}
-;Return
-;
-;#/::
-;  Send,#{tab}
-;Return
-;
-; ------------------------------------------------------------------------------
