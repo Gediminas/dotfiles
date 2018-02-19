@@ -43,10 +43,10 @@ Space & s::
 Return
 
 Space & d::
-  SendInput {Shift Down}
+  SendInput {Ctrl Down}
   Return
 Space & d up::
-  SendInput {Shift Up}
+  SendInput {Ctrl Up}
   Return
 Space & f::
   SendInput {Shift Down}
@@ -67,13 +67,13 @@ Space &  y::SendInput, {Blind}{Home}
 Space &  u::SendInput, {Blind}{PgDn}
 Space &  i::SendInput, {Blind}{PgUp}
 Space &  o::SendInput, {Blind}{End}
-Space &  p::SendInput, ^+{Left}{Delete}
 
 Space &  h::SendInput, {Blind}{Left}
 Space &  j::SendInput, {Blind}{Down}
 Space &  k::SendInput, {Blind}{Up}
 Space &  l::SendInput, {Blind}{Right}
 Space & `;::SendInput, {Blind}{Backspace}
+Space &  '::SendInput, ^{Backspace}
 
 Space &  m::SendInput, {Blind}{Delete}
 Space & BS::SendInput, {Blind}{Delete}
@@ -100,3 +100,4 @@ Space & n::SendInput, {Blind}{Enter}
 Space & v::SendInput, ^v
 
 $*Space::SendInput {Blind}{Space} 
+

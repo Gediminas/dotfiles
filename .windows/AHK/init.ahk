@@ -1,6 +1,14 @@
 ; Create shortcut to this file under: C:\Users\<YOURUSERNAME>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 SetKeyDelay, -1
+SetControlDelay, -1
+SetWinDelay, -1
+SetMouseDelay, -1
+SetBatchLines, -1
+Process, Priority,, High
+ListLines Off
+#KeyHistory 0
+#NoEnv
 
 ; # Win (Windows logo key)
 ; ! Alt
