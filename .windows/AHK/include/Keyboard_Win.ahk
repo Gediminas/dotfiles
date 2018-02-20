@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+﻿;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; MAC key bindings on Windows
 ;;; (Apple Magic Keyboard OR RDC)
 
@@ -45,6 +45,7 @@
 ;; Windows navigation
 LWin & j::ShiftAltTab
 LWin & k::AltTab
+LWin & Tab::AltTab
 
 ;; Disable Win key behavior of popping up the Start Menu, but still allow Win+‹key› combination.
 ;LWin Up::Return 
