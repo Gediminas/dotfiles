@@ -13,22 +13,23 @@ i::i
 j::j
 k::k
 l::l
-m::m
-; n::n
-o::o
-p::p
+$*m::SendInput {Blind}{m}
+$*n::SendInput {Blind}{n}
+$*o::SendInput {Blind}{o}
+$*p::SendInput {Blind}{p}
 q::q
 r::r
 s::s
 t::t
 u::u
 ; v::v
+$*v::SendInput {Blind}{v}
 w::w
 x::x
 y::y
 z::z
-,::,
-.::.
+$*,::SendInput {Blind}{,}
+$*.::SendInput {Blind}{.}
 
 ; Apple Keyboard Magic on Win10
 `::§

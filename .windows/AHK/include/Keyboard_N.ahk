@@ -26,4 +26,4 @@ n & b::SendInput, {Blind}n
 n & v:: return
 n & space:: return
 
-$*n::SendInput {Blind}{n} 
+; $*n::SendInput {Blind}{n} 

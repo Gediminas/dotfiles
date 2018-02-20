@@ -114,4 +114,4 @@ v & b::SendInput, {Blind}{v}
 v & n:: return
 v & space:: return
 
-$*v::SendInput {Blind}{v}
+; $*v::SendInput {Blind}{v}
