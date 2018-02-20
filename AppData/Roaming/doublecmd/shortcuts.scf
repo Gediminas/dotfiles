@@ -196,10 +196,6 @@
         <Command>cm_Options</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F17</Shortcut>
-        <Command>cm_Search</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F16</Shortcut>
         <Shortcut>Ctrl+F16</Shortcut>
         <Command>cm_RenameOnly</Command>
@@ -477,6 +473,10 @@
       <Hotkey>
         <Shortcut>Ctrl+J</Shortcut>
         <Command>cm_ViewHistoryNext</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F</Shortcut>
+        <Command>cm_Search</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
