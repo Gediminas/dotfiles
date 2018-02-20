@@ -39,10 +39,8 @@ v & e::
 
 v & r::
 	If (GetKeyState("SPACE", "P")) {
-		Tooltip vr_
 		SendInput, {Blind}!^{F16}
 	} else {
-		Tooltip vr
 		SendInput, {Blind}^{F16}
 	}
 	Return
@@ -77,11 +75,9 @@ v & d::
 
 v & f::
 	If (GetKeyState("SPACE", "P")) {
-		Tooltip vf_
 		SendInput, {Blind}!^{F21}
 	}
 	else {
-		Tooltip vf
 		SendInput, {Blind}^{F21}
 	}
 	Return
