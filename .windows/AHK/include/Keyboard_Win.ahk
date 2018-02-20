@@ -21,7 +21,7 @@
 +!#s::+!^s
 
 ;; Find
-#f::^f
+#f::SendInput {LWin up}{Ctrl down}f{Ctrl up}{LWin down}
 +#f::+^f
 !#f::!^f
 +!#f::+!^f
