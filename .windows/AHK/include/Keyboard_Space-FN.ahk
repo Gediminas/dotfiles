@@ -14,3 +14,4 @@ Space & -::Send, {Blind}{F11}
 Space & =::Send, {Blind}{F12}
 
 ; $*Space::SendInput {Blind}{Space} 
+ 

@@ -21,6 +21,7 @@ ListLines Off
 
 
 #Include include\Keyboard.ahk
+#Include include\Keyboard_Workarounds.ahk
 #Include include\Keyboard_Dual.ahk
 #Include include\Keyboard_Space.ahk
 #Include include\Keyboard_Space-Magic.ahk
