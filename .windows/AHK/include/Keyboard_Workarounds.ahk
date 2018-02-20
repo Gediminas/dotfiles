@@ -1,4 +1,4 @@
-; Workarounds...
+﻿; Workarounds...
 
 ; prevent space up delay "gitp ush" (git push)
 a::a
@@ -29,3 +29,10 @@ y::y
 z::z
 ,::,
 .::.
+
+; Apple Keyboard Magic on Win10
+`::§
+§::`
+~::±
+±::~
+

@@ -48,10 +48,10 @@ Space & d::
 Space & d up::
   SendInput {Ctrl Up}
   Return
-Space & f::
+Space & e::
   SendInput {Shift Down}
   Return
-Space & f up::
+Space & e up::
   SendInput {Shift Up}
   Return
 
@@ -63,10 +63,11 @@ Space & c::SendInput ^c
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; RIGHT
 
-Space &  y::SendInput, {Blind}{Home}
+Space &  y::SendInput, {Blind}{Tab}
 Space &  u::SendInput, {Blind}{PgDn}
 Space &  i::SendInput, {Blind}{PgUp}
-Space &  o::SendInput, {Blind}{End}
+Space &  o::SendInput, {Blind}{Home}
+Space &  p::SendInput, {Blind}{End}
 
 Space &  h::SendInput, {Blind}{Left}
 Space &  j::SendInput, {Blind}{Down}
