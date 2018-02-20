@@ -279,13 +279,23 @@
                             {
                                 "conditions": [
                                     {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyperterm$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^io\\.alacritty$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
                                         "name": "touchcursor_extended_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "y",
+                                    "key_code": "'",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -294,7 +304,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "home"
+                                        "key_code": "w",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -363,23 +376,13 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "end"
+                                        "key_code": "home"
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
                                 "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^co\\.zeit\\.hyperterm$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^io\\.alacritty$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    },
                                     {
                                         "name": "touchcursor_extended_mode",
                                         "type": "variable_if",
@@ -396,10 +399,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "w",
-                                        "modifiers": [
-                                            "left_control"
-                                        ]
+                                        "key_code": "end"
                                     }
                                 ],
                                 "type": "basic"
