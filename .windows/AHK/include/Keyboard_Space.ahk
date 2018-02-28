@@ -22,21 +22,21 @@ Space & w::
 
 Space & r::SendInput, ^{F5}
 
-Space & a::SendInput ^+s
+Space & a::
+  If WinActive("ahk_exe emacs.exe") {
+    SendInput, {Esc}:wa{Enter}
+  } Else If WinActive("ahk_exe putty_tray_64.exe") {
+    SendInput, {Esc}:wa{Enter}
+  } Else {
+    SendInput {Blind}^+s
+  }
+Return
 
 Space & s::
   If WinActive("ahk_exe emacs.exe") {
-  	SendInput, {Esc}
-    Sleep 200
-    SendInput, {Space}
-    Sleep 200
-    SendInput, {f}{s}
+  	SendInput, {Esc}:w{Enter}
   } Else If WinActive("ahk_exe putty_tray_64.exe") {
-    SendInput, {Esc}
-    Sleep 100
-    SendInput, {Space}
-    ;Sleep 100
-    SendInput, {f}{s}
+    SendInput, {Esc}:w{Enter}
   } Else {
     SendInput {Blind}^s
   }
