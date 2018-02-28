@@ -301,6 +301,11 @@ values."
    js2-mode-show-parse-errors nil
    js2-mode-show-strict-warnings nil
    js2-strict-missing-semi-warning nil
+
+   ;???
+   ;dotspacemacs-mode-line-theme 'spacemacs
+   ;dotspacemacs-mode-line-theme 'vim-powerline
+
    ))
 
 (defun dotspacemacs/user-init ()
@@ -351,11 +356,21 @@ you should place your code here."
 
   (setq xterm-mouse-mode 1)
 
-  (setq evil-emacs-state-cursor '("chartreuse3" (bar . 2)))
+  ;???
+  ;(setq evil-emacs-state-cursor '("chartreuse3" (bar . 2)))
 
+  ;???
+  ;;neotree setting
+  ;;(global-set-key [f8] 'neotree-toggle)
+  ;(setq neo-smart-open t)
+  ;(setq neo-theme 'ascii)
+  ;(setq neo-create-file-auto-open t)
+  ;(setq projectile-switch-project-action 'neotree-projectile-action)
+
+  ;???
   (remove-hook 'prog-mode-hook #'smartparens-mode)
   (spacemacs/toggle-smartparens-globally-off)
-
+  (spacemacs/toggle-truncate-lines-on)
 
   )
 
