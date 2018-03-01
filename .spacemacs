@@ -325,13 +325,52 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-  (evil-leader/set-key "q q" `spacemacs/frame-killer)
+
+  ;; FUNCTIONS ===================================
+
+  (defun get-current-file-name ()
+    (if (buffer-file-name)
+        (abbreviate-file-name (buffer-file-name))
+      "%b"))
+
+  (cua-mode t)
+  (cua-selection-mode t)
+
+  (setq xterm-mouse-mode 1)
+
+  (setq deft-directory "~/Dropbox/org")
+  (setq deft-text-mode 'org-mode)
+  (setq deft-use-filename-as-title t)
+  (setq deft-recursive t)
+  (global-set-key [f8] 'deft)
+
+
+  ;; VARIABLES ===================================
+
+
+  ;; HOOKS =======================================
+
+  (with-eval-after-load 'evil
+    (defalias #'forward-evil-word #'forward-evil-symbol))
+
+
+  ;; KEYBINDINGS =================================
 
   ;; Set escape keybinding to "jk"
   (setq-default evil-escape-key-sequence "jk")
   (setq-default evil-escape-delay 0.2)
 
-  (cua-mode t)
+  ;; quit
+  (evil-leader/set-key "q q" `spacemacs/frame-killer)
+
+
+  ;; FUTURE ======================================
+
+  ;???
+  (remove-hook 'prog-mode-hook #'smartparens-mode)
+  (spacemacs/toggle-smartparens-globally-off)
+  (spacemacs/toggle-truncate-lines-on)
+
   ;(evil-vimish-fold-mode t)
 
   ;; https://github.com/syl20bnr/spacemacs/issues/9603
@@ -345,16 +384,6 @@ you should place your code here."
   ;(setq deft-extension "txt")
   ;(setq deft-text-mode 'markdown-mode)
 
-  (setq deft-directory "~/Dropbox/org")
-  (setq deft-text-mode 'org-mode)
-  (setq deft-use-filename-as-title t)
-  (setq deft-recursive t)
-  (global-set-key [f8] 'deft)
-
-  (with-eval-after-load 'evil
-    (defalias #'forward-evil-word #'forward-evil-symbol))
-
-  (setq xterm-mouse-mode 1)
 
   ;???
   ;(setq evil-emacs-state-cursor '("chartreuse3" (bar . 2)))
@@ -366,11 +395,6 @@ you should place your code here."
   ;(setq neo-theme 'ascii)
   ;(setq neo-create-file-auto-open t)
   ;(setq projectile-switch-project-action 'neotree-projectile-action)
-
-  ;???
-  (remove-hook 'prog-mode-hook #'smartparens-mode)
-  (spacemacs/toggle-smartparens-globally-off)
-  (spacemacs/toggle-truncate-lines-on)
 
   )
 
