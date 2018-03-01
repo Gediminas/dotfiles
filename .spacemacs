@@ -370,7 +370,7 @@ you should place your code here."
     projectile-global-mode t
     projectile-switch-project-action 'neotree-projectile-action
 
-    deft-directory "~/Dropbox/org"
+    deft-directory "~/Dropbox/org/notes"
     deft-extensions '("md" "org" "txt")
     deft-recursive t
     deft-text-mode 'org-mode
@@ -379,7 +379,7 @@ you should place your code here."
     deft-markdown-mode-title-level 1
 
      org-CUA-compatible t
-;;     org-directory "p:/Notes/Org"
+     org-directory "~/Dropbox/org"
 ;;     org-use-sub-superscripts "{}"
 ;;     org-startup-truncated nil
 ;;     org-hide-emphasis-markers t
