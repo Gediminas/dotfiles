@@ -136,8 +136,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   dotspacemacs-default-font '("Courier New"
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -332,7 +332,7 @@ you should place your code here."
   (setq-default evil-escape-delay 0.2)
 
   (cua-mode t)
-  (evil-vimish-fold-mode t)
+  ;(evil-vimish-fold-mode t)
 
   ;; https://github.com/syl20bnr/spacemacs/issues/9603
   ;(org-defkey org-mode-map [(meta return)] 'org-meta-return)
