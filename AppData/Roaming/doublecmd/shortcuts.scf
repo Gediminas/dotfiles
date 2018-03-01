@@ -40,10 +40,6 @@
         <Command>cm_AddPathToCmdLine</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+Q</Shortcut>
-        <Command>cm_QuickView</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+S</Shortcut>
         <Command>cm_QuickSearch</Command>
       </Hotkey>
@@ -196,34 +192,9 @@
         <Command>cm_Options</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F16</Shortcut>
-        <Shortcut>Ctrl+F16</Shortcut>
-        <Command>cm_RenameOnly</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F15</Shortcut>
-        <Shortcut>Ctrl+F14</Shortcut>
-        <Command>cm_Edit</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F15</Shortcut>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Command>cm_Open</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F15</Shortcut>
-        <Shortcut>Ctrl+F15</Shortcut>
-        <Command>cm_View</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F24</Shortcut>
         <Shortcut>Ctrl+F23</Shortcut>
         <Command>cm_Rename</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F16</Shortcut>
-        <Shortcut>R</Shortcut>
-        <Command>cm_MultiRename</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+F24</Shortcut>
@@ -234,16 +205,6 @@
         <Shortcut>Ctrl+F21</Shortcut>
         <Shortcut>Ctrl+F20</Shortcut>
         <Command>cm_QuickSearch</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Command>cm_QuickFilter</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F13</Shortcut>
-        <Shortcut>Ctrl+F13</Shortcut>
-        <Command>cm_QuickView</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>F8</Shortcut>
@@ -325,11 +286,6 @@
         <Command>cm_DoAnyCmCommand</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F15</Shortcut>
-        <Shortcut>P</Shortcut>
-        <Command>cm_EditPath</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F21</Shortcut>
         <Shortcut>A</Shortcut>
         <Command>cm_FileAssoc</Command>
@@ -348,11 +304,6 @@
         <Shortcut>Ctrl+F21</Shortcut>
         <Shortcut>P</Shortcut>
         <Command>cm_FileProperties</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F13</Shortcut>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Command>cm_FlatView</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+F21</Shortcut>
@@ -378,11 +329,6 @@
         <Shortcut>Ctrl+F18</Shortcut>
         <Shortcut>Ctrl+F19</Shortcut>
         <Command>cm_PackFiles</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F15</Shortcut>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Command>cm_OpenArchive</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+F24</Shortcut>
@@ -477,6 +423,31 @@
       <Hotkey>
         <Shortcut>Ctrl+F</Shortcut>
         <Command>cm_Search</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F14</Shortcut>
+        <Command>cm_View</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F15</Shortcut>
+        <Command>cm_Edit</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F16</Shortcut>
+        <Command>cm_RenameOnly</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+F16</Shortcut>
+        <Command>cm_MultiRename</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F21</Shortcut>
+        <Shortcut>Ctrl+F21</Shortcut>
+        <Command>cm_QuickFilter</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F13</Shortcut>
+        <Command>cm_QuickView</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
