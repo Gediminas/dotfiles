@@ -336,17 +336,80 @@ you should place your code here."
   (cua-mode t)
   (cua-selection-mode t)
 
+  ;; VARIABLES ===================================
+
   (setq xterm-mouse-mode 1)
 
-  (setq deft-directory "~/Dropbox/org")
+  ;(setq deft-directory "~/Dropbox/org")
   (setq deft-text-mode 'org-mode)
   (setq deft-use-filename-as-title t)
   (setq deft-recursive t)
-  (global-set-key [f8] 'deft)
+  ;(setq neo-window-position 'right)
 
 
-  ;; VARIABLES ===================================
+ (setq-default
+;;     ;;;; Editing
+;;     ;beacon-mode t
+;;     ;company-idle-delay 2
+;;     ;company-tooltip-idle-delay 2
+;;     ;; company-tooltip-flip-when-above t
+;;     ;; cua-enable-cua-keys nil
+;;     ;; cua-highlight-region-shift-only t
+;;     ;cua-selection-mode t
+;;     ;; cua-toggle-set-mark nil
+;;     ;global-visual-line-mode t
+;;     ;global-company-mode t
+;;     ;global-subword-mode t
 
+   ;; Project Management
+   neo-smart-open t
+   neo-create-file-auto-open t
+   ;neo-window-position 'right
+   ;neo-theme 'ascii
+   ;neo-hidden-regexp-list '("^\\." "^\\.vagrant$" "^\\.git$" "\\.pyc$" "~$" "^#.*#$" "\\.elc$")
+    projectile-global-mode t
+    projectile-switch-project-action 'neotree-projectile-action
+
+    deft-directory "~/Dropbox/org"
+    deft-extensions '("md" "org" "txt")
+    deft-recursive t
+    deft-text-mode 'org-mode
+    deft-use-filename-as-title t
+    deft-org-mode-title-prefix t
+    deft-markdown-mode-title-level 1
+
+     org-CUA-compatible t
+;;     org-directory "p:/Notes/Org"
+;;     org-use-sub-superscripts "{}"
+;;     org-startup-truncated nil
+;;     org-hide-emphasis-markers t
+;;     org-list-allow-alphabetical t
+;;     org-list-use-circular-motion t
+;;     org-tags-column -85
+;;     org-pretty-entities t
+;;     org-pretty-entities-include-sub-superscripts t
+;;     org-display-inline-images t
+
+;;     markdown-command "multimarkdown"
+;;     markdown-enable-math t
+;;     markdown-italic-underscore t
+;;     markdown-asymmetric-header t
+
+;;     ;;;; UI
+;;     ;; golden-ratio-mode t
+;;     helm-fuzzier-mode t
+;;     pe/side 'right
+;;     frame-title-format '(:eval (get-current-file-name))
+
+;;     ;;;; Language-specific
+;;     ebal-operation-mode 'stack
+;;     haskell-process-type 'stack-ghci
+
+;;     ;;;; Other
+;;     ispell-program-name "aspell"
+;;     ispell-personal-dictionary "~/mydict.ispell"
+;;     paradox-github-token "edafcc569ba407330ad8d13e809bb90d47fdb4e9"
+   )
 
   ;; HOOKS =======================================
 
@@ -363,6 +426,7 @@ you should place your code here."
   ;; quit
   (evil-leader/set-key "q q" `spacemacs/frame-killer)
 
+  (global-set-key [f8] 'deft)
 
   ;; FUTURE ======================================
 
@@ -393,8 +457,6 @@ you should place your code here."
   ;;(global-set-key [f8] 'neotree-toggle)
   ;(setq neo-smart-open t)
   ;(setq neo-theme 'ascii)
-  ;(setq neo-create-file-auto-open t)
-  ;(setq projectile-switch-project-action 'neotree-projectile-action)
 
   )
 
