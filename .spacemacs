@@ -259,8 +259,7 @@ values."
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
-   ;dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling nil
 
    ;; Control line numbers activation.
    ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
@@ -453,6 +452,27 @@ you should place your code here."
   (spacemacs/toggle-truncate-lines-on)
 
   ;(evil-vimish-fold-mode t)
+
+  ;???
+  (setq server-kill-new-buffers t)
+
+  ;???
+  (with-eval-after-load 'org
+    ;; here goes your Org config :)
+    ;; ....
+    (setq org-directory (expand-file-name "~/Dropbox/org/")
+          org-agenda-files (expand-file-name "Agenda.org" org-directory)
+          org-default-journal-file (expand-file-name "Journal.org" org-directory)
+          org-default-archive-file (expand-file-name "Archive.org" org-directory)
+          org-archive-location (concat org-default-archive-file "::datetree/")
+          org-mobile-directory "~/Dropbox/Apps/MobileOrg/"
+          org-mobile-inbox-for-pull org-default-journal-file
+          )
+    )
+
+
+  ;???
+  ;(global-visual-line-mode 0) ; wrap line by default
 
   ;; https://github.com/syl20bnr/spacemacs/issues/9603
   ;(org-defkey org-mode-map [(meta return)] 'org-meta-return)
