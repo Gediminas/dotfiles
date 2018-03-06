@@ -364,11 +364,6 @@ you should place your code here."
 
   (setq xterm-mouse-mode 1)
 
-  ;(setq deft-directory "~/Dropbox/org")
-  (setq deft-text-mode 'org-mode)
-  (setq deft-use-filename-as-title t)
-  (setq deft-recursive t)
-  ;(setq neo-window-position 'right)
 
 
  (setq-default
@@ -394,31 +389,27 @@ you should place your code here."
     projectile-global-mode t
     projectile-switch-project-action 'neotree-projectile-action
 
-    deft-directory "~/Dropbox/org/notes"
-    deft-extensions '("md" "org" "txt")
+    ;; DEFT
+    deft-directory "~/Dropbox/org"
+    deft-extensions '("txt" "org" "md")
     deft-recursive t
-    deft-text-mode 'org-mode
+    deft-text-mode 'markdown-mode
+    ;deft-text-mode 'org-mode
     deft-use-filename-as-title t
     deft-org-mode-title-prefix t
     deft-markdown-mode-title-level 1
+    deft-text-mode 'org-mode
+    deft-use-filename-as-title t
+    deft-recursive t
+    ;neo-window-position 'right
+    ;(global-set-key (kbd "<F8>") 'deft)
+    ; http://wikemacs.org/wiki/Deft
+    ; Associate Org mode with .txt files in a directory org/
+    ;(add-to-list 'auto-mode-alist '("org/.*[.]txt$" . org-mode))
+
+
 
      org-CUA-compatible t
-     ;; org-directory "~/Dropbox/org/"
-     ;; org-journal-dir "~/Dropbox/org/journal/"
-     ;org-journal-fileorg-journal-date-prefix "#+TITLE: "
-     ;org-journal-date-format "%A, %B %d %Y"
-     ;org-journal-time-prefix "* "
-     ;org-journal-time-format ""-format "%Y-%m-%d"
-
-;;     org-use-sub-superscripts "{}"
-;;     org-startup-truncated nil
-;;     org-hide-emphasis-markers t
-;;     org-list-allow-alphabetical t
-;;     org-list-use-circular-motion t
-;;     org-tags-column -85
-;;     org-pretty-entities t
-;;     org-pretty-entities-include-sub-superscripts t
-;;     org-display-inline-images t
 
 ;;     markdown-command "multimarkdown"
 ;;     markdown-enable-math t
@@ -431,15 +422,42 @@ you should place your code here."
 ;;     pe/side 'right
 ;;     frame-title-format '(:eval (get-current-file-name))
 
-;;     ;;;; Language-specific
-;;     ebal-operation-mode 'stack
-;;     haskell-process-type 'stack-ghci
-
 ;;     ;;;; Other
 ;;     ispell-program-name "aspell"
 ;;     ispell-personal-dictionary "~/mydict.ispell"
-;;     paradox-github-token "edafcc569ba407330ad8d13e809bb90d47fdb4e9"
    )
+
+    ; ORG
+    (with-eval-after-load 'org
+      ;; here goes your Org config :)
+      ;; ....
+      (setq org-directory (expand-file-name "~/Dropbox/org/")
+
+            ;org-agenda-files (expand-file-name "Agenda.org" org-directory)
+            ;org-default-journal-file (expand-file-name "Journal.org" org-directory)
+            ;org-default-archive-file (expand-file-name "Archive.org" org-directory)
+            ;org-archive-location (concat org-default-archive-file "::datetree/")
+            ;org-mobile-directory "~/Dropbox/Apps/MobileOrg/"
+            ;org-mobile-inbox-for-pull org-default-journal-file
+
+            ;; org-directory "~/Dropbox/org/"
+            ;; org-journal-dir "~/Dropbox/org/journal/"
+                                          ;org-journal-fileorg-journal-date-prefix "#+TITLE: "
+                                          ;org-journal-date-format "%A, %B %d %Y"
+                                          ;org-journal-time-prefix "* "
+                                          ;org-journal-time-format ""-format "%Y-%m-%d"
+            ;;     org-use-sub-superscripts "{}"
+            ;;     org-startup-truncated nil
+            ;;     org-hide-emphasis-markers t
+            ;;     org-list-allow-alphabetical t
+            ;;     org-list-use-circular-motion t
+            ;;     org-tags-column -85
+            ;;     org-pretty-entities t
+            ;;     org-pretty-entities-include-sub-superscripts t
+            org-display-inline-images t
+
+        )
+      )
 
   ;; HOOKS =======================================
 
@@ -470,35 +488,12 @@ you should place your code here."
   ;???
   (setq server-kill-new-buffers t)
 
-  ;???
-  (with-eval-after-load 'org
-    ;; here goes your Org config :)
-    ;; ....
-    (setq org-directory (expand-file-name "~/Dropbox/org/")
-          ;org-agenda-files (expand-file-name "Agenda.org" org-directory)
-          ;org-default-journal-file (expand-file-name "Journal.org" org-directory)
-          ;org-default-archive-file (expand-file-name "Archive.org" org-directory)
-          ;org-archive-location (concat org-default-archive-file "::datetree/")
-          ;org-mobile-directory "~/Dropbox/Apps/MobileOrg/"
-          ;org-mobile-inbox-for-pull org-default-journal-file
-          )
-    )
-
 
   ;???
   ;(global-visual-line-mode 0) ; wrap line by default
 
   ;; https://github.com/syl20bnr/spacemacs/issues/9603
   ;(org-defkey org-mode-map [(meta return)] 'org-meta-return)
-
-  ; http://wikemacs.org/wiki/Deft
-  ;(global-set-key (kbd "<F8>") 'deft)
-  ;(add-to-list 'auto-mode-alist '("notes/.*[.]txt$" . org-mode))
-  ;(setq deft-directory "~/Dropbox/notes/")
-  ;(setq deft-extension "txt")
-  ;(setq deft-extension "txt")
-  ;(setq deft-text-mode 'markdown-mode)
-
 
   ;???
   ;(setq evil-emacs-state-cursor '("chartreuse3" (bar . 2)))
