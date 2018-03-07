@@ -383,8 +383,8 @@ you should place your code here."
    ;; Project Management
    neo-smart-open t
    neo-create-file-auto-open t
+   neo-theme 'ascii
    ;neo-window-position 'right
-   ;neo-theme 'ascii
    ;neo-hidden-regexp-list '("^\\." "^\\.vagrant$" "^\\.git$" "\\.pyc$" "~$" "^#.*#$" "\\.elc$")
     projectile-global-mode t
     projectile-switch-project-action 'neotree-projectile-action
