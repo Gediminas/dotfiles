@@ -40,3 +40,10 @@ $*.::SendInput {Blind}.
 ±::~
 
 #IfWinNotActive
+
+#IfWinActive ahk_exe ClearLock.exe
+$r::SendInput f
+$t::SendInput r
+$f::SendInput {Enter}
+$j::SendInput {Enter}
+#IfWinActive
