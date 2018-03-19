@@ -450,6 +450,14 @@
         <Command>cm_QuickView</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Ctrl+`</Shortcut>
+        <Command>cm_ChangeDirToHome</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+/</Shortcut>
+        <Command>cm_ChangeDirToRoot</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
         <Control>Files Panel</Control>
