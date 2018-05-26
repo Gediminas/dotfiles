@@ -15,6 +15,34 @@
                 },
                 "rules": [
                     {
+                        "description": "gds jk --> Esc",
+                        "manipulators": [
+                            {
+                                "from": {
+                                  "simultaneous": [
+                                    {
+                                      "key_code": "j"
+                                    },
+                                    {
+                                      "key_code": "k"
+                                    }
+                                  ],
+                                  "modifiers": {
+                                      "optional": [
+                                          "any"
+                                      ]
+                                  }
+                                },
+                                "to": [
+                                    {
+                                      "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "gds Caps --> Esc / Left_Ctrl (hold)",
                         "manipulators": [
                             {
