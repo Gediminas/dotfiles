@@ -193,7 +193,7 @@
                                 "to": [
                                     {
                                         "set_variable": {
-                                            "name": "touchcursor_extended_mode",
+                                            "name": "spacefn_mode",
                                             "value": 1
                                         }
                                     }
@@ -201,7 +201,7 @@
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
-                                            "name": "touchcursor_extended_mode",
+                                            "name": "spacefn_mode",
                                             "value": 0
                                         }
                                     }
@@ -216,7 +216,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -239,7 +239,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -262,7 +262,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -285,7 +285,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -308,7 +308,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -341,7 +341,7 @@
                                         "type": "frontmost_application_if"
                                     },
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -367,7 +367,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -390,7 +390,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -413,7 +413,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -436,7 +436,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -459,7 +459,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -482,7 +482,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -505,7 +505,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -528,7 +528,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -562,7 +562,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -593,7 +593,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -624,7 +624,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -651,7 +651,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -677,7 +677,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -703,7 +703,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -729,7 +729,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -755,7 +755,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -781,7 +781,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -807,7 +807,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -838,7 +838,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -847,7 +847,7 @@
                                     "key_code": "1",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -861,7 +861,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -870,7 +870,7 @@
                                     "key_code": "2",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -884,7 +884,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -893,7 +893,7 @@
                                     "key_code": "3",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -907,7 +907,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -916,7 +916,7 @@
                                     "key_code": "4",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -930,7 +930,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -939,7 +939,7 @@
                                     "key_code": "5",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -953,7 +953,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -962,7 +962,7 @@
                                     "key_code": "6",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -976,7 +976,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -985,7 +985,7 @@
                                     "key_code": "7",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -999,7 +999,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -1008,7 +1008,7 @@
                                     "key_code": "8",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -1022,7 +1022,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "touchcursor_extended_mode",
+                                        "name": "spacefn_mode",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -1031,7 +1031,7 @@
                                     "key_code": "equal_sign",
                                     "modifiers": {
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
