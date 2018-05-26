@@ -876,10 +876,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "č",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "č"
                                     }
                                 ],
                                 "type": "basic"
@@ -925,10 +922,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "ė",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "ė"
                                     }
                                 ],
                                 "type": "basic"
@@ -997,10 +991,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "ų",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "ų"
                                     }
                                 ],
                                 "type": "basic"
