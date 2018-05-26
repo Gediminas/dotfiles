@@ -833,7 +833,7 @@
                         ]
                     },
                     {
-                        "description": "gds TouchCursor Extended Mode [Space-{1-0,-,=} to {F1-F10,F11,F12}]",
+                        "description": "gds SpaceFnEx LT [Space-{1-0,-,=} to LT]",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -853,10 +853,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f1",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "ą"
                                     }
                                 ],
                                 "type": "basic"
@@ -879,7 +876,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f2",
+                                        "key_code": "č",
                                         "modifiers": [
                                             "fn"
                                         ]
@@ -905,10 +902,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f3",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "ę"
                                     }
                                 ],
                                 "type": "basic"
@@ -931,7 +925,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f4",
+                                        "key_code": "ė",
                                         "modifiers": [
                                             "fn"
                                         ]
@@ -957,10 +951,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f5",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "į"
                                     }
                                 ],
                                 "type": "basic"
@@ -983,10 +974,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f6",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "š"
                                     }
                                 ],
                                 "type": "basic"
@@ -1009,7 +997,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f7",
+                                        "key_code": "ų",
                                         "modifiers": [
                                             "fn"
                                         ]
@@ -1035,88 +1023,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f8",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "touchcursor_extended_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "9",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f9",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "touchcursor_extended_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "0",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f10",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "touchcursor_extended_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "hyphen",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f11",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "ū"
                                     }
                                 ],
                                 "type": "basic"
@@ -1139,10 +1046,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f12",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "key_code": "ž"
                                     }
                                 ],
                                 "type": "basic"
@@ -1489,59 +1393,6 @@
                                     },
                                     {
                                         "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "gds Home Row Modifiers",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "key_code": "left_command"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "semicolon"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "quote",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "key_code": "left_option"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "quote"
                                     }
                                 ],
                                 "type": "basic"
