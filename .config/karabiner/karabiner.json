@@ -672,7 +672,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "x",
+                                    "key_code": "u",
                                     "modifiers": {
                                         "optional": [
                                             "caps_lock"
@@ -698,7 +698,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "y",
                                     "modifiers": {
                                         "optional": [
                                             "caps_lock"
@@ -724,7 +724,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "v",
+                                    "key_code": "p",
                                     "modifiers": {
                                         "optional": [
                                             "caps_lock"
