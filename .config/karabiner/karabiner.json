@@ -541,15 +541,7 @@
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "key_code": "left_command"
-                                    }
-                                ],
-                                "to_if_alone": [
+                                "to: [
                                     {
                                         "key_code": "s",
                                         "modifiers": [
@@ -738,6 +730,58 @@
                                             "left_command"
                                         ]
                                     }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "spacefn_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                  {
+                                    "key_code": "period",
+                                    "modifiers": [
+                                      "left_command"
+                                    ]
+                                  }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "spacefn_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                  {
+                                    "key_code": "slash",
+                                    "modifiers": [
+                                      "left_command"
+                                    ]
+                                  }
                                 ],
                                 "type": "basic"
                             }
