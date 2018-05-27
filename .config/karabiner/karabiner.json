@@ -382,7 +382,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "page_up"
+                                        "key_code": "page_down"
                                     }
                                 ],
                                 "type": "basic"
@@ -405,7 +405,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "page_down"
+                                        "key_code": "page_up"
                                     }
                                 ],
                                 "type": "basic"
