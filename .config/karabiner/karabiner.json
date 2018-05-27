@@ -373,7 +373,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "m",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -396,7 +396,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "comma",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -419,7 +419,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "i",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -442,7 +442,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "p",
+                                    "key_code": "o",
                                     "modifiers": {
                                         "optional": [
                                             "any"
