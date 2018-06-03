@@ -541,7 +541,7 @@
                                         ]
                                     }
                                 },
-                                "to: [
+                                "to": [
                                     {
                                         "key_code": "s",
                                         "modifiers": [
