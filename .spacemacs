@@ -324,8 +324,8 @@ values."
    js2-strict-missing-semi-warning nil
 
    ;???
-   ;dotspacemacs-mode-line-theme 'spacemacs
-   dotspacemacs-mode-line-theme 'vim-powerline
+   dotspacemacs-mode-line-theme 'spacemacs
+   ;dotspacemacs-mode-line-theme 'vim-powerline
 
    ))
 
