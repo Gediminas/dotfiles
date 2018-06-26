@@ -192,16 +192,6 @@
         <Command>cm_Options</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F24</Shortcut>
-        <Shortcut>Ctrl+F23</Shortcut>
-        <Command>cm_Rename</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F24</Shortcut>
-        <Shortcut>Ctrl+F24</Shortcut>
-        <Command>cm_Copy</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F21</Shortcut>
         <Shortcut>Ctrl+F20</Shortcut>
         <Command>cm_QuickSearch</Command>
@@ -209,17 +199,6 @@
       <Hotkey>
         <Shortcut>F8</Shortcut>
         <Command>cm_Delete</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F23</Shortcut>
-        <Shortcut>Ctrl+F23</Shortcut>
-        <Command>cm_Delete</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F23</Shortcut>
-        <Shortcut>X</Shortcut>
-        <Command>cm_Delete</Command>
-        <Param>trashcan=reversesetting</Param>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+F18</Shortcut>
@@ -456,6 +435,14 @@
       <Hotkey>
         <Shortcut>Ctrl+/</Shortcut>
         <Command>cm_ChangeDirToRoot</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F23</Shortcut>
+        <Command>cm_Rename</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F24</Shortcut>
+        <Command>cm_Copy</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
