@@ -2,22 +2,30 @@
 ;;; MAC key bindings on Windows
 ;;; (Apple Magic Keyboard OR RDC)
 
-;; Windows navigation
-LWin & j::ShiftAltTab
-RWin & j::ShiftAltTab
-LWin & k::AltTab
-RWin & k::AltTab
-LWin & Tab::ShiftAltTab
-RWin & Tab::AltTab
+; SharpKeys remaps LWin/RWin --> RCtrl (non existing on magic keyboard)
+; AHK remaps CapsLock / Enter --> LCtrl (exists)
+; i.e.
+; <^ = standard shortucts sent by LCtrl (LCtrl / CapsLock / Enter physical keys)
+; >^ = system shortcuts sent by virtual RCtrl (LWin / RWin physical keys)
 
-;LCtrl::LWin
-LWin::LCtrl
+
+;; Windows navigation
+>^Tab::AltTab
+>^j::ShiftAltTab
+>^k::AltTab
 
 ;; Minimize windows
-^m::WinMinimize,a
+>^m::WinMinimize,a
 
 ;; Close windows
-^q::Send !{F4}
+>^q::Send !{F4}
+
+>!Tab::
+<!Tab::
+  return
+
+; #If GetKeyState("Shift", "")
+; #If
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
