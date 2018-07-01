@@ -8,18 +8,15 @@
   * Windows 10
 
 ## Soft:
-  * tmux 2.5   (Linux/Mac)
-  * vim 8.0
+  * tmux 2.6   (Linux/Mac)
+  * vim 8.1
     * versions:
       * vim    (Linux/Mac/Windows terminal)
       * gvim   (Linux/Windows)
       * MacVim (MacOS)
     * plugins:
         * NerdTree
-  * emacs 25   (Windows/Linux/Mac)
-    * plugins:
-        * evil
-        * neotree
+  * spacemacs (emacs 26.1, Windows/Linux/Mac)
 
 ## Keys
   * Karabiner Elements (Mac)
@@ -36,5 +33,10 @@
 	```
 	bash .vim/get_submodules.sh
 	bash .vim/install.sh
+	```
+  * spacemacs:
+	```
+    MacOS: brew cask install emacs
+    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 	```
   
