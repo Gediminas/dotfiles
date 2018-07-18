@@ -365,8 +365,8 @@ you should place your code here."
         (abbreviate-file-name (buffer-file-name))
       "%b"))
 
-  (cua-mode t)
-  (cua-selection-mode t)
+  ;(cua-mode t)
+  ;(cua-selection-mode t)
 
   ;; VARIABLES ===================================
 
@@ -408,14 +408,13 @@ you should place your code here."
     deft-use-filename-as-title t
     deft-recursive t
     ;neo-window-position 'right
-    ;(global-set-key (kbd "<F8>") 'deft)
     ; http://wikemacs.org/wiki/Deft
     ; Associate Org mode with .txt files in a directory org/
     ;(add-to-list 'auto-mode-alist '("org/.*[.]txt$" . org-mode))
 
 
 
-     org-CUA-compatible t
+     ;org-CUA-compatible t
 
 ;;     markdown-command "multimarkdown"
 ;;     markdown-enable-math t
@@ -481,6 +480,8 @@ you should place your code here."
   (evil-leader/set-key "q q" `spacemacs/frame-killer)
 
   (global-set-key [f8] 'deft)
+  (global-set-key (kbd "U") 'redo)
+  (global-set-key (kbd "M-i") 'imenu)
 
   ;; transparently decrypt/encrypt things
   (setq epa-armor t)
@@ -511,7 +512,6 @@ you should place your code here."
 
   ;???
   ;;neotree setting
-  ;;(global-set-key [f8] 'neotree-toggle)
   ;(setq neo-smart-open t)
   ;(setq neo-theme 'ascii)
 

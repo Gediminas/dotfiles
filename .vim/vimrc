@@ -112,6 +112,7 @@ inoremap jk <esc>
 " replace selected text with default register without yanking it
 vnoremap <leader>p "_dP
 
+nnoremap U <C-R>
 
 " " Single-handed HalfPageUp/Down
 map <A-j> <C-d>
