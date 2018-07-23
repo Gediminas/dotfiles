@@ -192,33 +192,8 @@
         <Command>cm_Options</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Command>cm_QuickSearch</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>F8</Shortcut>
         <Command>cm_Delete</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Command>cm_EditNew</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>Ctrl+F24</Shortcut>
-        <Command>cm_CompareContents</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>Ctrl+F24</Shortcut>
-        <Command>cm_CompareDirectories</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>Ctrl+F16</Shortcut>
-        <Command>cm_DirHistory</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+F5</Shortcut>
@@ -226,158 +201,7 @@
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>Ctrl+F18</Shortcut>
         <Command>cm_MakeDir</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Command>cm_EditNew</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>H</Shortcut>
-        <Command>cm_DirHotList</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F22</Shortcut>
-        <Shortcut>Ctrl+F22</Shortcut>
-        <Command>cm_RunTerm</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F22</Shortcut>
-        <Shortcut>Z</Shortcut>
-        <Command>cm_FocusCmdLine</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Command>cm_SymLink</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F24</Shortcut>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Command>cm_CountDirContent</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F22</Shortcut>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Command>cm_DoAnyCmCommand</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>A</Shortcut>
-        <Command>cm_FileAssoc</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Command>cm_FileSpliter</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>C</Shortcut>
-        <Command>cm_FileLinker</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>P</Shortcut>
-        <Command>cm_FileProperties</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>Space</Shortcut>
-        <Command>cm_FocusCmdLine</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Shortcut>O</Shortcut>
-        <Command>cm_OpenArchive</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Shortcut>T</Shortcut>
-        <Command>cm_TestArchive</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Command>cm_ExtractFiles</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Command>cm_PackFiles</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F24</Shortcut>
-        <Shortcut>Ctrl+F18</Shortcut>
-        <Command>cm_SetFileProperties</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Command>cm_SyncDirs</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Command>cm_SrcOpenDrives</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Command>cm_ShowSysFiles</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Shortcut>A</Shortcut>
-        <Command>cm_SortByAttr</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Shortcut>D</Shortcut>
-        <Command>cm_SortByDate</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Shortcut>E</Shortcut>
-        <Command>cm_SortByExt</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Shortcut>Z</Shortcut>
-        <Command>cm_SortBySize</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Shortcut>N</Shortcut>
-        <Command>cm_SortByName</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F19</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Shortcut>S</Shortcut>
-        <Command>cm_ReverseOrder</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>R</Shortcut>
-        <Command>cm_ViewHistory</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+=</Shortcut>
-        <Command>cm_TargetEqualSource</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F20</Shortcut>
-        <Shortcut>E</Shortcut>
-        <Command>cm_TargetEqualSource</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+H</Shortcut>
@@ -420,11 +244,6 @@
         <Command>cm_MultiRename</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Shortcut>Ctrl+F21</Shortcut>
-        <Command>cm_QuickFilter</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F13</Shortcut>
         <Command>cm_QuickView</Command>
       </Hotkey>
@@ -443,6 +262,22 @@
       <Hotkey>
         <Shortcut>Ctrl+F24</Shortcut>
         <Command>cm_Copy</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F19</Shortcut>
+        <Command>cm_SymLink</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F17</Shortcut>
+        <Command>cm_RunTerm</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F22</Shortcut>
+        <Command>cm_RunTerm</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F21</Shortcut>
+        <Command>cm_EditNew</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
