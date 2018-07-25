@@ -63,20 +63,20 @@ Space & c::SendInput ^c
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; RIGHT
 
-Space &  y::SendInput, {Blind}{Tab}
-Space &  u::SendInput, {Blind}{PgDn}
-Space &  i::SendInput, {Blind}{PgUp}
-Space &  o::SendInput, {Blind}{Home}
-Space &  p::SendInput, {Blind}{End}
+;Space &  y::SendInput, {Blind}{Tab}
+;Space &  u::SendInput, {Blind}{PgDn}
+;Space &  i::SendInput, {Blind}{PgUp}
+;Space &  o::SendInput, {Blind}{Home}
+;Space &  p::SendInput, {Blind}{End}
 
 Space &  h::SendInput, {Blind}{Left}
 Space &  j::SendInput, {Blind}{Down}
 Space &  k::SendInput, {Blind}{Up}
 Space &  l::SendInput, {Blind}{Right}
 Space & `;::SendInput, {Blind}{Backspace}
-Space &  '::SendInput, ^{Backspace}
+;Space &  '::SendInput, ^{Backspace}
 
-Space &  m::SendInput, {Blind}{Delete}
+;Space &  m::SendInput, {Blind}{Delete}
 Space & BS::SendInput, {Blind}{Delete}
 
 
@@ -86,12 +86,14 @@ Space & BS::SendInput, {Blind}{Delete}
 Space & Left:: SendInput ^#{Left}
 Space & Right::SendInput ^#{Right}
 
+Space & m::SendInput, {Blind}{PgDn}
+Space & ,::SendInput, {Blind}{PgUp}
+
+Space & .::Send, {LWin down}{LCtrl down}{Left}{LWin up}{LCtrl up}
+Space & /::Send, {LWin down}{LCtrl down}{Right}{LWin up}{LCtrl up}
+
 ;Space & ,::SendInput ^#{Left}
 ;Space & .::SendInput ^#{Right}
-
-
-Space & ,::Send, {LWin down}{LCtrl down}{Left}{LWin up}{LCtrl up}
-Space & .::Send, {LWin down}{LCtrl down}{Right}{LWin up}{LCtrl up}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

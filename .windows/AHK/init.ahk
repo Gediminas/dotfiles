@@ -41,3 +41,47 @@
 ;#Include include\TabModifier.ahk
 
 #Include include\Keyboard_Workarounds.ahk
+
+; GetOldestPIDFromProcessName(strProcessName) {
+
+;   for oProc in ComObjGet("winmgmts:").ExecQuery("Select ProcessID,CreationDate from Win32_Process WHERE Name = '" strProcessName "'") {           
+;     nOldestPID := (nOldestPIDCreationDate > oProc.CreationDate) ? oProc.ProcessID : nOldestPID ? nOldestPID : oProc.ProcessID
+;     nOldestPIDCreationDate := oProc.CreationDate    
+;   }
+;   return nOldestPID
+; }
+; ; Tab & d::WinActivate, % "ahk_pid " GetOldestPIDFromProcessName("chrome.exe")
+; Tab & d::
+;   ; Activate an existing chrome.exe window, or open a new one
+;   if WinExist("ahk_exe chrome.exe")
+;     WinActivate, ahk_exe chrome.exe
+;   else
+;     Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+;   return    
+
+
+ActivateOrDeactivateExe(exe, path=False) {
+  If WinExist("ahk_exe " . exe) {
+    If WinActive("ahk_exe " . exe) {
+        Send, !{tab}
+    } else {
+      WinActivate ahk_exe %exe%
+    }
+  } else {
+    If (path) {
+      Run, %path%
+    } else {
+      Run, %exe%
+    }
+  }
+}
+
+Tab & q::ActivateOrDeactivateExe("notepad.exe")
+Tab & e::ActivateOrDeactivateExe("emacs.exe")
+Tab & s::ActivateOrDeactivateExe("firefox.exe")
+Tab & d::ActivateOrDeactivateExe("chrome.exe")
+Tab & f::ActivateOrDeactivateExe("firefox.exe")
+Tab & c::ActivateOrDeactivateExe("cmd.exe")
+Tab & n::ActivateOrDeactivateExe("Messenger for Desktop.exe", "C:\Users\gds\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MessengerForDesktop.com\Messenger for Desktop.lnk")
+
+$*Tab::SendInput {Blind}{Tab} 
