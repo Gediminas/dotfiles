@@ -77,7 +77,7 @@ ActivateOrDeactivateExe(exe, path=False) {
 }
 
 Tab & q::ActivateOrDeactivateExe("notepad.exe")
-Tab & e::ActivateOrDeactivateExe("emacs.exe")
+Tab & e::ActivateOrDeactivateExe("emacs.exe", "runemacs.exe")
 Tab & s::ActivateOrDeactivateExe("firefox.exe")
 Tab & d::ActivateOrDeactivateExe("chrome.exe")
 Tab & f::ActivateOrDeactivateExe("firefox.exe")
