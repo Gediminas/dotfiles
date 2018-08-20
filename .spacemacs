@@ -371,6 +371,14 @@ you should place your code here."
         (abbreviate-file-name (buffer-file-name))
       "%b"))
 
+  (defun save-buffer-preserving-modtime ()
+    "Call `save-buffer', but keep the visited file's modtime the same."
+    (interactive)
+    (let ((original-time (visited-file-modtime)))
+      (save-buffer)
+      (set-file-times buffer-file-name original-time)
+      (set-visited-file-modtime original-time)))
+
   ;(cua-mode t)
   ;(cua-selection-mode t)
 
