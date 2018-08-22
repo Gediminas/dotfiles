@@ -157,6 +157,7 @@ values."
 
    dotspacemacs-themes '(molokai
                          monokai
+                         spacemacs-dark
                          spacemacs-light)
 
    ;; If non nil the cursor color matches the state color in GUI Emacs.
@@ -371,13 +372,19 @@ you should place your code here."
         (abbreviate-file-name (buffer-file-name))
       "%b"))
 
-  (defun save-buffer-preserving-modtime ()
-    "Call `save-buffer', but keep the visited file's modtime the same."
+  (defun save-buffer-keep-mtime ()
+    "Call `save-buffer', but and keep file's mtime"
     (interactive)
     (let ((original-time (visited-file-modtime)))
       (save-buffer)
       (set-file-times buffer-file-name original-time)
       (set-visited-file-modtime original-time)))
+
+
+  (defun toggle-save-buffer-keep-mtime ()
+    "Toggle keep file's mtime on `save-buffer'"
+    (interactive)
+    (setq keep-mtime (if (= keep-mtime 1) 0 1)))
 
   ;(cua-mode t)
   ;(cua-selection-mode t)
