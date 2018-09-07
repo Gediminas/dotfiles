@@ -34,7 +34,7 @@ $*,::SendInput {Blind},
 $*.::SendInput {Blind}.
 
 ; Apple Keyboard Magic on Win10
-*§::`
+;*§::`
 
 #IfWinNotActive
 
