@@ -155,8 +155,7 @@ values."
    ;dotspacemacs-themes '(spacemacs-dark
    ;                      spacemacs-light)
 
-   dotspacemacs-themes '(molokai
-                         monokai
+   dotspacemacs-themes '(zenburn
                          spacemacs-dark
                          spacemacs-light)
 
