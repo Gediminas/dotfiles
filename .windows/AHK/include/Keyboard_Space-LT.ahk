@@ -24,7 +24,7 @@ Space & 7::SendInput, {Blind}ų
 Space & 8::SendInput, {Blind}ū
 Space & 9::SendInput, {Blind}„
 Space & 0::SendInput, {Blind}“
-pace & -::SendInput, {Blind}–
+Space & -::SendInput, {Blind}–
 Space & =::SendInput, {Blind}ž
 
 ; $*Space::SendInput {Blind}{Space} 
