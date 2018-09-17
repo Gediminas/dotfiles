@@ -385,6 +385,26 @@ you should place your code here."
     (interactive)
     (setq keep-mtime (if (= keep-mtime 1) 0 1)))
 
+  (defun run-sh ()
+    (interactive)
+    (let ((shell-file-name "C:\\Program Files\\Git\\bin\\sh.exe"))
+      (shell "*sh.exe*")))
+
+  (defun run-bash ()
+    (interactive)
+    (let ((shell-file-name "C:\\Program Files\\Git\\bin\\bash.exe"))
+      (shell "*bash.exe*")))
+
+  (defun run-bash2 ()
+    (interactive)
+    (let ((shell-file-name "C:\\Program Files\\Git\\bin\\bash.exe"))
+      (shell "*bash.exe-2*")))
+
+  (defun run-cmdexe ()
+    (interactive)
+    (let ((shell-file-name "cmd.exe"))
+      (shell "*cmd.exe*")))
+
   ;(cua-mode t)
   ;(cua-selection-mode t)
 
