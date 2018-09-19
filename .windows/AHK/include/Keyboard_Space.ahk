@@ -83,14 +83,14 @@ Space & BS::SendInput, {Blind}{Delete}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; DESKTOP
 
-Space & Left:: SendInput ^#{Left}
-Space & Right::SendInput ^#{Right}
-
 Space & m::SendInput, {Blind}{PgDn}
 Space & ,::SendInput, {Blind}{PgUp}
 
-Space & .::Send, {LWin down}{LCtrl down}{Left}{LWin up}{LCtrl up}
-Space & /::Send, {LWin down}{LCtrl down}{Right}{LWin up}{LCtrl up}
+Space & .::SendInput ^#{Left}
+Space & /::SendInput ^#{Right}
+
+Space & Left:: SendInput ^#{Left}
+Space & Right::SendInput ^#{Right}
 
 ;Space & ,::SendInput ^#{Left}
 ;Space & .::SendInput ^#{Right}
