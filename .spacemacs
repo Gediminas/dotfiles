@@ -520,7 +520,7 @@ you should place your code here."
   (evil-leader/set-key "q q" `spacemacs/frame-killer)
 
   (global-set-key [f8] 'deft)
-  (global-set-key (kbd "U") 'redo)
+  ;(global-set-key (kbd "U") 'redo)
   (global-set-key (kbd "M-i") 'imenu)
 
   ;; transparently decrypt/encrypt things
@@ -528,6 +528,10 @@ you should place your code here."
   (setq epa-file-name-regexp "\\.\\(gpg\\|asc\\)$")
   (epa-file-name-regexp-update)
 
+  ;; (global-set-key [(super j)]  'windmove-down)
+  ;; (global-set-key [(super k)]  'windmove-up)
+  ;; (global-set-key [(super h)]  'windmove-left)
+  ;; (global-set-key [(super l)]  'windmove-right)
   ;; FUTURE ======================================
 
   ;???

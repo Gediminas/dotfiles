@@ -750,12 +750,12 @@
                                     }
                                 },
                                 "to": [
-                                  {
-                                    "key_code": "period",
-                                    "modifiers": [
-                                      "left_command"
-                                    ]
-                                  }
+                                    {
+                                        "key_code": "period",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
                                 ],
                                 "type": "basic"
                             },
@@ -776,12 +776,12 @@
                                     }
                                 },
                                 "to": [
-                                  {
-                                    "key_code": "slash",
-                                    "modifiers": [
-                                      "left_command"
-                                    ]
-                                  }
+                                    {
+                                        "key_code": "slash",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
                                 ],
                                 "type": "basic"
                             }
@@ -1020,14 +1020,15 @@
                                     }
                                 },
                                 "to": [
-                                  {
-                                    "key_code": "left_shift",
-                                    "modifiers": [
-                                      "left_command",
-                                      "left_control",
-                                      "left_option"
-                                    ]
-                                  }                                ],
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
