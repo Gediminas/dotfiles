@@ -64,7 +64,7 @@ values."
 
      ; OTHER
      deft
-     simplenote
+     ;simplenote
 
      ; LANGUAGES / FORMATS
      html
@@ -239,7 +239,7 @@ values."
    dotspacemacs-enable-paste-transient-state nil
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
-   dotspacemacs-which-key-delay 0.4
+   dotspacemacs-which-key-delay 1.0
    ;; Which-key frame position. Possible values are `right', `bottom' and
    ;; `right-then-bottom'. right-then-bottom tries to display the frame to the
    ;; right; if there is insufficient space it displays it at the bottom.
@@ -349,8 +349,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq-default
     ;; simplenote2
     simplenote2-email "aaaaaa@gmail.com"
-    simplenote2-password nil
-  ))
+    simplenote2-password nil)
+
+)
 
 ;; =================================================================================
 ;; USER-CONFIG
@@ -409,6 +410,34 @@ you should place your code here."
   ;(cua-selection-mode t)
 
   ;; VARIABLES ===================================
+
+
+  ;; SpaceLine: mode line time stamp
+  (setq display-time-24hr-format t)
+  (setq display-time-format "%H:%M")        ; add seconds
+  (setq display-time-interval 1)               ; update every second
+  (setq display-time-default-load-average nil) ; don't show load average
+  (setq display-time-mail-string "")           ; don't show mail
+  (spaceline-toggle-buffer-size-off)
+  (spaceline-toggle-version-control-off)
+  (spaceline-toggle-org-pomodoro-off)
+  (spaceline-toggle-battery-off)
+  (spaceline-toggle-which-function-off)
+  (spaceline-toggle-paradox-menu-off)
+  (spaceline-toggle-selection-info-off)
+  (spaceline-toggle-input-method-off)
+  (spaceline-toggle-buffer-encoding-abbrev-off)
+  (spaceline-toggle-line-column-off)
+  (spaceline-toggle-buffer-position-off)
+  (spaceline-toggle-hud-off)
+  (display-time-mode 1)                 ; show time in mode line on startup
+
+  ;; Change this ugly orange color
+  (set-face-attribute 'spaceline-unmodified nil :background "LightSkyBlue")
+
+
+  (setq spaceline-default-separator 'arrow)
+
 
   (setq xterm-mouse-mode 1)
 
@@ -568,9 +597,10 @@ you should place your code here."
   ;;???
   ;; (setq simplenote2-email "email@example.com")
   ;; (setq simplenote2-password "yourpassword")
-  (setq simplenote2-directory "~/.notes/spc_simplenote2")
+  ;(setq simplenote2-directory "~/.notes/spc_simplenote2")
   ;; (setq org-agenda-files (file-expand-wildcards "~/.notes/spc_simplenote2/notes/*"))
-  (simplenote2-setup)
+  ;(simplenote2-setup)
+
   )
 
 ;; =================================================================================
