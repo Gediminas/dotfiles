@@ -60,10 +60,6 @@
         <Command>cm_Exchange</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F1</Shortcut>
-        <Command>cm_BriefView</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F2</Shortcut>
         <Command>cm_ColumnsView</Command>
       </Hotkey>
