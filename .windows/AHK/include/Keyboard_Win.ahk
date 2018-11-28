@@ -11,14 +11,14 @@
 
 ;; Windows navigation
 >^Tab::AltTab
->^j::ShiftAltTab
->^k::AltTab
+>^k::ShiftAltTab
+>^j::AltTab
 
 ;; Minimize windows
 >^m::WinMinimize,a
 
 ;; Close windows
->^q::Send !{F4}
+;>^q::Send !{F4}
 
 >!Tab::
 <!Tab::
