@@ -18,6 +18,14 @@
                         "description": "gds jn --> Enter",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.microsoft.rdc.mac"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "modifiers": {
                                         "optional": [
@@ -46,6 +54,14 @@
                         "description": "gds jk --> Esc",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.microsoft.rdc.mac"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "modifiers": {
                                         "optional": [
@@ -71,9 +87,17 @@
                         ]
                     },
                     {
-                        "description": "gds Caps --> Left_Ctrl",
+                        "description": "gds Caps --> Esc, Left_Ctrl (hold)",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.microsoft.rdc.mac"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
@@ -87,6 +111,11 @@
                                         "key_code": "left_control"
                                     }
                                 ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -95,6 +124,14 @@
                         "description": "gds Enter --> Enter / Right_Ctrl (hold)",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.microsoft.rdc.mac"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "return_or_enter",
                                     "modifiers": {
@@ -177,7 +214,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.microsoft.rdc.mac$"
+                                            "^com.microsoft.rdc.mac"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -983,7 +1020,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.microsoft.rdc.mac$"
+                                            "^com.microsoft.rdc.mac"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1030,7 +1067,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.microsoft.rdc.mac$"
+                                            "^com.microsoft.rdc.mac"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1057,7 +1094,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.microsoft.rdc.mac$"
+                                            "^com.microsoft.rdc.mac"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1084,7 +1121,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com.microsoft.rdc.mac$"
+                                            "^com.microsoft.rdc.mac"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
