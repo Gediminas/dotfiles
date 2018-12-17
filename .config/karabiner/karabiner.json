@@ -456,7 +456,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "u",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -678,7 +678,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "x",
                                     "modifiers": {
                                         "optional": [
                                             "caps_lock"
@@ -704,7 +704,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "y",
+                                    "key_code": "c",
                                     "modifiers": {
                                         "optional": [
                                             "caps_lock"
@@ -730,7 +730,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "p",
+                                    "key_code": "v",
                                     "modifiers": {
                                         "optional": [
                                             "caps_lock"
@@ -743,6 +743,29 @@
                                         "modifiers": [
                                             "left_command"
                                         ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "spacefn_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "y",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar"
                                     }
                                 ],
                                 "type": "basic"
