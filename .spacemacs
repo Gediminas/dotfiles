@@ -692,6 +692,7 @@ before packages are loaded."
   (remove-hook 'prog-mode-hook #'smartparens-mode)
   (spacemacs/toggle-smartparens-globally-off)
   (spacemacs/toggle-truncate-lines-off)
+  (setq 80-column-rule t)
 
   ;(evil-vimish-fold-mode t)
 
