@@ -85,3 +85,12 @@ Tab & c::ActivateOrDeactivateExe("cmd.exe")
 Tab & n::ActivateOrDeactivateExe("Messenger for Desktop.exe", "C:\Users\gds\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MessengerForDesktop.com\Messenger for Desktop.lnk")
 
 $*Tab::SendInput {Blind}{Tab} 
+
+
+
+; WheelUp::
+; Send {WheelDown}
+; Return
+; WheelDown::
+; Send {WheelUp}
+; Return
