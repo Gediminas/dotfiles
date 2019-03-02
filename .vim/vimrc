@@ -107,7 +107,7 @@ set nrformats=
 noremap <Space> <Nop>
 sunmap <Space>
 let g:mapleader=" "
-inoremap jk <esc>
+"inoremap jk <esc>
 
 " replace selected text with default register without yanking it
 vnoremap <leader>p "_dP
