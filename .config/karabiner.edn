@@ -1,35 +1,35 @@
 {:applications {:rdc ["^com.microsoft.rdc.mac"]}
- :simlayers {:jfn {:key :j} :nfn {:key :n}}
+; :simlayers {:jfn {:key :j} :nfn {:key :n}}
  :main [
-{:des "Enter -> Enter / RCtrl" :rules [[:##caps_lock :left_control nil {:alone :return_or_enter}]]}
+{:des "Enter -> Enter / RCtrl" :rules [[:##return_or_enter :left_control nil {:alone :return_or_enter}]]}
 {:des "CapsLock -> Esc / LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
 {:des "JN -> Enter" :rules [[[:j :n] :return_or_enter [:!rdc]]] }
 {:des "JK -> Esc" :rules [[[:j :k] :escape [:!rdc]]] }
-{:des "SpaceFn"
-   :rules [
-           [:spacebar ["spcfn" 1] nil {:afterup ["spcfn" 0] :alone :spacebar}]
-           [:h                   :left_arrow          ["spcfn" 1]]
-           [:j                   :down_arrow          ["spcfn" 1]]
-           [:k                   :up_arrow            ["spcfn" 1]]
-           [:l                   :right_arrow         ["spcfn" 1]]
-           [:semicolon           :delete_or_backspace ["spcfn" 1]]
-           [:b                   :escape              ["spcfn" 1]]
-           [:n                   :return_or_enter     ["spcfn" 1]]
-           [:m                   :page_down           ["spcfn" 1]]
-           [:comma               :page_up             ["spcfn" 1]]
-           [:period              :!Cperiod            ["spcfn" 1]]
-           [:slash               :!Cslash             ["spcfn" 1]]
-           [:delete_or_backspace :delete_forward      ["spcfn" 1]]
-           [:#Ss                 :!C#Ss               ["spcfn" 1]]
-           [:#Sx                 :!C#Sx               ["spcfn" 1]]
-           [:#Sc                 :!C#Sc               ["spcfn" 1]]
-           [:#Sv                 :!C#Sv               ["spcfn" 1]]
-          ]}
-{:des "j-sim"
-   :rules [
-           [:k :escape :jfn]
-           [:n :return_or_enter :jfn]
+{:des "SpaceFn" :rules [
+  [:spacebar ["spcfn" 1] nil {:afterup ["spcfn" 0] :alone :spacebar}]
+  [:##h                 :##left_arrow          ["spcfn" 1]]
+  [:##j                 :##down_arrow          ["spcfn" 1]]
+  [:##k                 :##up_arrow            ["spcfn" 1]]
+  [:##l                 :##right_arrow         ["spcfn" 1]]
+  [:semicolon           :delete_or_backspace   ["spcfn" 1]]
+  [:b                   :escape                ["spcfn" 1]]
+  [:n                   :return_or_enter       ["spcfn" 1]]
+  [:m                   :page_down             ["spcfn" 1]]
+  [:comma               :page_up               ["spcfn" 1]]
+  [:period              :!Cperiod              ["spcfn" 1]]
+  [:slash               :!Cslash               ["spcfn" 1]]
+  [:#Sdelete_or_backspace :#Sdelete_forward    ["spcfn" 1]]
+  [:#Stab               :!C#Stab               ["spcfn" 1]]
+  [:#Sw                 :!T#Stab               ["spcfn" 1]]
+  [:#Ss                 :!C#Ss                 ["spcfn" 1]]
+  [:#Sx                 :!C#Sx                 ["spcfn" 1]]
+  [:#Sc                 :!C#Sc                 ["spcfn" 1]]
+  [:#Sv                 :!C#Sv                 ["spcfn" 1]]
 ]}
+;{:des "j-sim" :rules [
+  ;[:k :escape :jfn]
+  ;[:n :return_or_enter :jfn]
+;]}
 ;{:des "n-sim" :rules [ [:k :2 :nfn] [:j :3 :nfn] ]}
 ]}
     
