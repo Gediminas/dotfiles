@@ -20,8 +20,10 @@
 ; https://autohotkey.com/docs/KeyList.htm
 
 
+#Include LockScreen.ahk
+
 #Include include\Keyboard.ahk
-#Include include\Keyboard_Dual.ahk
+; #Include include\Keyboard_Dual.ahk
 #Include include\Keyboard_Space.ahk
 #Include include\Keyboard_Space-Magic.ahk
 #Include include\Keyboard_Space-LT.ahk
