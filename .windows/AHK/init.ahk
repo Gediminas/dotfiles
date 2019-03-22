@@ -32,7 +32,7 @@
 ; #Include include\Keyboard_N.ahk
 #Include include\Keyboard_Win.ahk
 
-#Include include\mouser6.ahk
+;#Include include\mouser6.ahk
 #Include include\CapsLockTapEscapeHoldControl.ahk
 
 ;#Include include\AdvancedWindowSnap.ahk

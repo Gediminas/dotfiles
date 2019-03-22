@@ -32,49 +32,61 @@ IniRead, UnlockDuration,  %IniPath%, LockScreen, UnlockDuration
 
 Hotkey, %LockHotkeyStart%, StartLock, UseErrorLevel
 Hotkey, ~%LockHotkeyEnd%, EndLock, UseErrorLevel
-Return
 
+lockDown := A_TickCount
+Return
 
 StartLock:
-	IfWinNotExist, BlackScreen1 ahk_class AutoHotkeyGUI
-	{
-		SetFormat Integer, Dec
-		SysGet, Monitors, MonitorCount ; Count monitors
-		Loop, %Monitors% ; Loop through each monitor
-		{
-			SysGet, Mon%A_Index%, Monitor, %A_Index% ; Get this monitor's stats
-			Width := Mon%A_Index%Right - Mon%A_Index%Left
-			Height := Mon%A_Index%Bottom - Mon%A_Index%Top
-			;MsgBox,  % "Left: " Mon%A_Index%Left " | Top: " Mon%A_Index%Top " | Right: " Mon%A_Index%Right " | Bottom: " Mon%A_Index%Bottom "`n" Width "x" Height
+    lockDiff := A_TickCount - lockDown
+    Sleep, 200
+    //MsgBox %lockDiff%
 
-			; Create a large black window to cover all other windows for each monitor
-			Gui %A_Index%: -Caption +ToolWindow +AlwaysOnTop
-			Gui %A_Index%: Color, Black
-			Gui %A_Index%: Font, s36 c555555
-			Gui %A_Index%: Add, Text, % "x" Width//2-85 " y" Height//2-80, Locked
-			Gui %A_Index%: Show, % "x" Mon%A_Index%Left " y" Mon%A_Index%Top " w" Width " h" Height Hide, BlackScreen%A_Index%
-			Gui %A_Index%: Show
-		}
-		IfEqual, RunScreenSaver, true
+    If (lockDiff > 1000) {
+        lockDown := A_TickCount
+
+        Run, %comspec% /c nircmd.exe mutesysvolume 1
+        Run, %comspec% /c nircmd.exe clipboard clear
+
+		SendInput, #^{Left}
+		Sleep, 20
+		SendInput, #^{Left}
+		Sleep, 20
+		SendInput, #^{Left}
+		Sleep, 20
+		SendInput, #^{Left}
+    }
+    Else {
+		SendInput, #^{Left}
+		Sleep, 20
+		SendInput, #^{Left}
+		Sleep, 20
+		SendInput, #^{Left}
+		Sleep, 20
+		SendInput, #^{Left}
+
+		IfWinNotExist, BlackScreen1 ahk_class AutoHotkeyGUI
 		{
-			RegRead, ScreenSaver, HKCU, Control Panel\Desktop, SCRNSAVE.EXE
-			If (ScreenSaver != "")
+			SetFormat Integer, Dec
+			SysGet, Monitors, MonitorCount ; Count monitors
+			Loop, %Monitors% ; Loop through each monitor
 			{
-				Run, %ScreenSaver% /s ; Start the Screen Saver
-				;SendMessage, 0x112, 0xF140, 0,, Program Manager ; 0x112 is WM_SYSCOMMAND -- 0xF140 is SC_SCREENSAVE
+				SysGet, Mon%A_Index%, Monitor, %A_Index% ; Get this monitor's stats
+				Width := Mon%A_Index%Right - Mon%A_Index%Left
+				Height := Mon%A_Index%Bottom - Mon%A_Index%Top
+
+				; Create a large black window to cover all other windows for each monitor
+				Gui %A_Index%: -Caption +ToolWindow +AlwaysOnTop
+				Gui %A_Index%: Color, Black
+				Gui %A_Index%: Show, % "x" Mon%A_Index%Left " y" Mon%A_Index%Top " w" Width " h" Height Hide, BlackScreen%A_Index%
+				Gui %A_Index%: Show
+	    		WinSet, Transparent, 130, ahk_class AutoHotkeyGUI
 			}
+
+			;WinActivate, BlackScreen1 ; Try to cover up the start bar
+
 		}
-		IfEqual, TurnOffScreen, true
-		{
-			SetFormat Integer, Hex
-			Loop 255 ; Loop through every character
-			{
-				Hotkey % "*vk" SubStr(A_Index+256,4), TurnOffScreen ; Set a hotkey for each character to turn off screen--very annoying
-			}
-		}
-		WinActivate, BlackScreen1 ; Try to cover up the start bar
 	}
-Return
+    Return
 
 EndLock:
 	IfWinExist BlackScreen1 ahk_class AutoHotkeyGUI
@@ -101,8 +113,4 @@ EndLock:
 		  Reload
 		}
 	}
-Return
-
-TurnOffScreen:
-	SendMessage, 0x112, 0xF170, 2,, Program Manager ; Turn off the monitor(s)
-Return
+    Return
