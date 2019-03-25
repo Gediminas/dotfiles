@@ -9,11 +9,11 @@ $*b::SendInput {Blind}b
 $*c::SendInput {Blind}c
 $*d::SendInput {Blind}d
 $*e::SendInput {Blind}e
-$*f::SendInput {Blind}f
+; $*f::SendInput {Blind}f
 $*g::SendInput {Blind}g
 $*h::SendInput {Blind}h
 $*i::SendInput {Blind}i
-$*j::SendInput {Blind}j
+; $*j::SendInput {Blind}j
 $*k::SendInput {Blind}k
 $*l::SendInput {Blind}l
 $*m::SendInput {Blind}m
@@ -37,10 +37,3 @@ $*.::SendInput {Blind}.
 ;*§::`
 
 #IfWinNotActive
-
-#IfWinActive ahk_exe ClearLock.exe
-$r::SendInput f
-$t::SendInput r
-$f::SendInput {Enter}
-$j::SendInput {Enter}
-#IfWinActive

@@ -7,11 +7,6 @@
 Space & F3:: SendInput, #{Tab}
 Space & F4:: SendInput, {LWin}
 
-Space & F5:: 
-  SendInput, +^s
-  Reload
-  Return
-
 Space & F7:: SendInput {Media_Prev}
 Space & F8:: SendInput {Media_Play_Pause}
 Space & F9:: SendInput {Media_Next}

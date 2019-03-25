@@ -1,4 +1,9 @@
-; Create shortcut to this file under: C:\Users\<YOURUSERNAME>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+;Create shortcut to this file under: C:\Users\<YOURUSERNAME>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+#SingleInstance force
+#Persistent
+
+SetKeyDelay, -1
 
 ; SetKeyDelay, -1
 ; SetControlDelay, -1
@@ -20,29 +25,43 @@
 ; https://autohotkey.com/docs/KeyList.htm
 
 
+; HACK: Win/ResophNotes does not allow to use Alt+Space (==nvAlt)
+!Space::#!F11
+  return
+
+F5 & F6:: 
+  SendInput, +^s
+  Reload
+  Return
+$*F5::Send {Blind}{F5}
+
 #Include LockScreen.ahk
 
-#Include include\Keyboard.ahk
-; #Include include\Keyboard_Dual.ahk
-#Include include\Keyboard_Space.ahk
-#Include include\Keyboard_Space-Magic.ahk
-#Include include\Keyboard_Space-LT.ahk
-; #Include include\Keyboard_Space-FN.ahk
-#Include include\Keyboard_V.ahk
-; #Include include\Keyboard_N.ahk
-#Include include\Keyboard_Win.ahk
+;#Include include\AutoReload.ahk
 
-;#Include include\mouser6.ahk
+#Include include\Keyboard_JFn.ahk
+#Include include\Keyboard_FFn.ahk
+#Include include\Keyboard_V.ahk
+#Include include\Keyboard_Space.ahk
+#Include include\Keyboard_Space-LT.ahk
+#Include include\Keyboard_Space-Magic.ahk
+#Include include\Keyboard_Win.ahk
+#Include include\Keyboard_Workarounds.ahk
 #Include include\CapsLockTapEscapeHoldControl.ahk
 
-;#Include include\AdvancedWindowSnap.ahk
-;#Include include\AlwaysOnTop.ahk
-;#Include include\Media.ahk
-;#Include include\Screenshots.ahk
-;#Include include\Spotlight.ahk
-;#Include include\TabModifier.ahk
 
-#Include include\Keyboard_Workarounds.ahk
+; #Include include\Keyboard.ahk
+
+; #Include include\Keyboard_Space-FN.ahk
+; #Include include\Keyboard_N.ahk
+; #Include include\Keyboard_Dual.ahk
+; #Include include\mouser6.ahk
+; #Include include\AdvancedWindowSnap.ahk
+; #Include include\AlwaysOnTop.ahk
+; #Include include\Media.ahk
+; #Include include\Screenshots.ahk
+; #Include include\Spotlight.ahk
+; #Include include\TabModifier.ahk
 
 ; GetOldestPIDFromProcessName(strProcessName) {
 

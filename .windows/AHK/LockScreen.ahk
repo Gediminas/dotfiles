@@ -4,8 +4,6 @@
 ; Version: 1.4 1/08/2015
 ; Copyright: GPL
 
-#SingleInstance, Force
-#Persistent
 
 IniPath = %A_ScriptDir%\LockScreen.ini
 
