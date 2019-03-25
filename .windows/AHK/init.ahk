@@ -24,21 +24,9 @@ SetKeyDelay, -1
 ; https://github.com/ahkscript/awesome-AutoHotkey
 ; https://autohotkey.com/docs/KeyList.htm
 
-
-; HACK: Win/ResophNotes does not allow to use Alt+Space (==nvAlt)
-!Space::#!F11
-  return
-
-F5 & F6:: 
-  SendInput, +^s
-  Reload
-  Return
-$*F5::Send {Blind}{F5}
-
-#Include LockScreen.ahk
-
 ;#Include include\AutoReload.ahk
 
+#Include LockScreen.ahk
 #Include include\Keyboard_JFn.ahk
 #Include include\Keyboard_FFn.ahk
 #Include include\Keyboard_V.ahk
@@ -49,6 +37,16 @@ $*F5::Send {Blind}{F5}
 #Include include\Keyboard_Workarounds.ahk
 #Include include\CapsLockTapEscapeHoldControl.ahk
 
+
+F5 & F6:: 
+  SendInput, +^s
+  Reload
+  Return
+  
+$*F5::Send {Blind}{F5}
+
+; HACK: Win/ResophNotes does not allow to use Alt+Space (==nvAlt)
+!Space::#!F11
 
 ; #Include include\Keyboard.ahk
 
