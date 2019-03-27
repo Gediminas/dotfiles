@@ -27,4 +27,24 @@ f & =::Send {+}
 
 f & d::Send {Esc}
 
+
+;+y::return
+;+u::return
+;+i::return
+;+o::return
+;+p::return
+;+h::return
+;+j::return
+;+k::return
+;+l::return
+;+n::return
+;+m::return
+;+7::return
+;+8::return
+;+9::return
+;+0::return
+;+-::return
+;+=::return
+
+
 $*f::Send {Blind}{f}

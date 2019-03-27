@@ -43,4 +43,26 @@ j & 6::Send +6
 
 j & k::Send {Esc}
 
+;+q::return
+;+w::return
+;+e::return
+;+r::return
+;+t::return
+;+a::return
+;+s::return
+;+d::return
+;+f::return
+;+g::return
+;+z::return
+;+x::return
+;+c::return
+;+v::return
+;+b::return
+;+1::return
+;+2::return
+;+3::return
+;+4::return
+;+5::return
+;+6::return
+
 $*j::Send {Blind}{j}
