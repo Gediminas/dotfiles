@@ -4,6 +4,7 @@
 
 #IfWinNotActive ahk_exe ClearLock.exe
 
+/*
 $*a::SendInput {Blind}a
 $*b::SendInput {Blind}b
 $*c::SendInput {Blind}c
@@ -32,6 +33,9 @@ $*y::SendInput {Blind}y
 $*z::SendInput {Blind}z
 $*,::SendInput {Blind},
 $*.::SendInput {Blind}.
+*/
+
+$*v::SendInput {Blind}v
 
 ; Apple Keyboard Magic on Win10
 ;*§::`
