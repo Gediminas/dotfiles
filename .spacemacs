@@ -49,14 +49,7 @@ This function should only modify configuration layer settings."
      ;(treemacs :variables treemacs-use-follow-mode t)
      neotree
      (org :variables
-          org-enable-org-journal-support t
-          org-journal-dir "~/Dropbox/org/journal/"
-          org-journal-file-format "%Y-%m-%d"
-          ;org-journal-date-prefix "#+TITLE: "
-          ;org-journal-date-format "%A, %B %d %Y"
-          ;org-journal-time-prefix "* "
-          ;org-journal-time-format ""
-          )
+          org-enable-org-journal-support t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -192,7 +185,9 @@ It should only modify the values of Spacemacs settings."
    ;; `recents' `bookmarks' `projects' `agenda' `todos'.
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   dotspacemacs-startup-lists '((recents . 5)
+   dotspacemacs-startup-lists '((agenda)
+                                (todos)
+                                (recents . 5)
                                 (projects . 7))
 
    ;; True if the home buffer should respond to resize events. (default t)
@@ -630,35 +625,37 @@ before packages are loaded."
 
     ; ORG
     (with-eval-after-load 'org
-      ;; here goes your Org config :)
-      ;; ....
-      (setq org-directory (expand-file-name "~/Dropbox/org/")
+      (setq
+       org-directory            (expand-file-name "~/Dropbox/org/")
+       org-agenda-files         '("~/Dropbox/org")
+       org-journal-dir          (expand-file-name "~/Dropbox/org/journal")
 
-            ;org-agenda-files (expand-file-name "Agenda.org" org-directory)
-            ;org-default-journal-file (expand-file-name "Journal.org" org-directory)
-            ;org-default-archive-file (expand-file-name "Archive.org" org-directory)
-            ;org-archive-location (concat org-default-archive-file "::datetree/")
-            ;org-mobile-directory "~/Dropbox/Apps/MobileOrg/"
-            ;org-mobile-inbox-for-pull org-default-journal-file
+       org-default-journal-file (expand-file-name "~/Dropbox/org/Journal.org")
 
-            ;; org-directory "~/Dropbox/org/"
-            ;; org-journal-dir "~/Dropbox/org/journal/"
-                                          ;org-journal-fileorg-journal-date-prefix "#+TITLE: "
-                                          ;org-journal-date-format "%A, %B %d %Y"
-                                          ;org-journal-time-prefix "* "
-                                          ;org-journal-time-format ""-format "%Y-%m-%d"
-            ;;     org-use-sub-superscripts "{}"
-            ;;     org-startup-truncated nil
-            ;;     org-hide-emphasis-markers t
-            ;;     org-list-allow-alphabetical t
-            ;;     org-list-use-circular-motion t
-            ;;     org-tags-column -85
-            ;;     org-pretty-entities t
-            ;;     org-pretty-entities-include-sub-superscripts t
-            org-display-inline-images t
+       ;org-default-archive-file (expand-file-name "~/Dropbox/org/Archive.org")
+       ;org-archive-location (concat org-default-archive-file "::datetree/")
+       ;org-mobile-directory "~/Dropbox/Apps/MobileOrg/"
+       ;org-mobile-inbox-for-pull org-default-journal-file
 
-        )
-      )
+       org-journal-file-format "%Y-%m-%d"
+
+       ;org-journal-fileorg-journal-date-prefix "#+TITLE: "
+       ;org-journal-date-format "%A, %B %d %Y"
+       ;org-journal-time-prefix "* "
+       ;org-journal-time-format ""-format "%Y-%m-%d"
+
+       ;org-use-sub-superscripts "{}"
+       ;org-startup-truncated nil
+       ;org-hide-emphasis-markers t
+       ;org-list-allow-alphabetical t
+       ;org-list-use-circular-motion t
+       ;org-tags-column -85
+       ;org-pretty-entities t
+       ;org-pretty-entities-include-sub-superscripts t
+
+       org-display-inline-images t
+
+    ))
 
   ;; HOOKS =======================================
 
