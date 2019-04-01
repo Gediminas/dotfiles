@@ -27,8 +27,7 @@ SetKeyDelay, -1
 ;#Include include\AutoReload.ahk
 
 #Include LockScreen.ahk
-#Include include\Keyboard_JFn.ahk
-#Include include\Keyboard_FFn.ahk
+#Include include\Keyboard_FJFn.ahk
 #Include include\Keyboard_V.ahk
 #Include include\Keyboard_Space.ahk
 #Include include\Keyboard_Space-LT.ahk
