@@ -3,11 +3,14 @@
 
 SetKeyDelay, 0
 
+
+;#IfWinNotActive ahk_exe cmd.exe
+
 $*f:: tickF := A_TickCount
 
 $*f up::
   If ((A_TickCount - tickF) < 200) {
-    Send {f}
+    Send {Blind}{f}
   }
 Return
 
@@ -15,11 +18,15 @@ $*j:: tickJ := A_TickCount
 
 $*j up::
   If ((A_TickCount - tickJ) < 200) {
-    Send {j}
+    Send {Blind}{j}
   }
 Return
 
+;#IfWinNotActive
+
+
 #If, GetKeyState("j", "P")
+
 1::+1
 2::+2
 3::+3
@@ -48,7 +55,6 @@ b::+b
 
 k::escape
 n::enter
-space::space
 
 #If, GetKeyState("f", "P")
 
@@ -84,3 +90,4 @@ m::+m
 b::+b
 
 #If
+
