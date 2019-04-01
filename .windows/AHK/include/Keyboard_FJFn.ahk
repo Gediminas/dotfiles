@@ -1,29 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Disable Shift
 
-SetKeyDelay, 0
+SetKeyDelay, -1
 
-
-;#IfWinNotActive ahk_exe cmd.exe
-
-$*f:: tickF := A_TickCount
-
-$*f up::
-  If ((A_TickCount - tickF) < 200) {
-    Send {Blind}{f}
-  }
-Return
-
-$*j:: tickJ := A_TickCount
-
-$*j up::
-  If ((A_TickCount - tickJ) < 200) {
-    Send {Blind}{j}
-  }
-Return
-
-;#IfWinNotActive
-
+#IfWinActive ahk_exe cmd.exe
 
 #If, GetKeyState("j", "P")
 
@@ -51,8 +31,8 @@ z::+z
 x::+x
 c::+c
 v::+v
-b::+b
 
+b::+b
 k::escape
 n::enter
 
@@ -88,6 +68,24 @@ m::+m
 /::+/
 
 b::+b
+d::escape
+v::enter
 
 #If
 
+
+$*f:: tickF := A_TickCount
+$*f up::
+  If ((A_TickCount - tickF) < 200) {
+    Send {Blind}{f}
+  }
+  Return
+
+$*j:: tickJ := A_TickCount
+$*j up::
+  If ((A_TickCount - tickJ) < 200) {
+    Send {Blind}{j}
+  }
+  Return
+
+#IfWinNotActive
