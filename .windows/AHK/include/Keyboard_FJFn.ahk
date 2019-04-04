@@ -3,9 +3,8 @@
 
 SetKeyDelay, -1
 
-#IfWinActive ahk_exe cmd.exe
 
-#If, GetKeyState("j", "P")
+#If (GetKeyState("j", "P")) and (not WinActive ahk_exe cmd.exe)
 
 1::+1
 2::+2
@@ -36,7 +35,7 @@ b::+b
 k::escape
 n::enter
 
-#If, GetKeyState("f", "P")
+#If (GetKeyState("f", "P")) and (not WinActive ahk_exe cmd.exe)
 
 7::+7
 8::+8
@@ -57,9 +56,9 @@ h::+h
 j::+j
 k::+k
 l::+l
-`;:::
+`;:+:
 '::+'
-\::?
+\::+\
 
 n::+n
 m::+m
@@ -88,4 +87,3 @@ $*j up::
   }
   Return
 
-#IfWinNotActive
