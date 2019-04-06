@@ -32,7 +32,7 @@
 
 {:des "FJFn" :rules
  [
-  [:1 :!S0 :JFn]
+  [:1 :!S1 :JFn]
   [:2 :!S2 :JFn]
   [:3 :!S3 :JFn]
   [:4 :!S4 :JFn]

@@ -1576,7 +1576,7 @@
             "key_code" : "1"
           },
           "to" : [ {
-            "key_code" : "0",
+            "key_code" : "1",
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
@@ -1596,7 +1596,7 @@
               "value" : 1
             }
           }, {
-            "key_code" : "0",
+            "key_code" : "1",
             "modifiers" : [ "left_shift" ]
           } ],
           "from" : {
