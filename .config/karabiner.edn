@@ -1,165 +1,100 @@
 {
-:profiles {:G {:default true
-         :sim     50
-         :delay   500
-         :alone   1000
-         :held    500}}
-:applications {:Rdc ["^com.microsoft.Rdc.mac"]}
-:simlayers {:JFn {:key :j} :FFn {:key :f}}
-:main [
-
-; {:des "Enter->Enter/RCtrl" :rules [[:##return_or_enter :left_control    nil {:alone :return_or_enter} ]]}
-; {:des "CLock->Esc/LCtrl"   :rules [[:##caps_lock       :left_control    nil {:alone :escape}          ]]}
-;; {:des "JN->Enter"          :rules [[ [:j :n]           :return_or_enter [:!Rdc] ]]}
-;; {:des "JK->Esc"            :rules [[ [:j :k]           :escape          [:!Rdc] ]]}
-
-{:des "SpaceFn" :rules [
-  [:spacebar ["SpcFn" 1] nil {:afterup ["SpcFn" 0] :alone :spacebar}]
-  [:##h                   :##left_arrow        ["SpcFn" 1]]
-  [:##j                   :##down_arrow        ["SpcFn" 1]]
-  [:##k                   :##up_arrow          ["SpcFn" 1]]
-  [:##l                   :##right_arrow       ["SpcFn" 1]]
-  [:semicolon             :delete_or_backspace ["SpcFn" 1]]
-  [:b                     :escape              ["SpcFn" 1]]
-  [:n                     :return_or_enter     ["SpcFn" 1]]
-  [:m                     :page_down           ["SpcFn" 1]]
-  [:comma                 :page_up             ["SpcFn" 1]]
-  [:period                :!Cperiod            ["SpcFn" 1]]
-  [:slash                 :!Cslash             ["SpcFn" 1]]
-  [:#Sdelete_or_backspace :#Sdelete_forward    ["SpcFn" 1]]
-  [:#Stab                 :!C#Stab             ["SpcFn" 1]]
-  [:#Sw                   :!T#Stab             ["SpcFn" 1]]
-  [:#Ss                   :!C#Ss               ["SpcFn" 1]]
-  [:#Sx                   :!C#Sx               ["SpcFn" 1]]
-  [:#Sc                   :!C#Sc               ["SpcFn" 1]]
-  [:#Sv                   :!C#Sv               ["SpcFn" 1]]
-]}
-
-{:des "FJFn" :rules
+ :profiles
+ {:G {:default true
+      :sim     50
+      :delay   500
+      :alone   1000
+      :held    500}}
+ :applications {:Rdc ["^com.microsoft.Rdc.mac"]}
+ :simlayers {:j-mode {:key :j}
+             :f-mode {:key :f}}
+ :main
  [
-  [:1 :!S1 :JFn]
-  [:2 :!S2 :JFn]
-  [:3 :!S3 :JFn]
-  [:4 :!S4 :JFn]
-  [:5 :!S5 :JFn]
-  [:6 :!S6 :JFn]
-  [:7 :!S7 :FFn]
-  [:8 :!S8 :FFn]
-  [:9 :!S9 :FFn]
-  [:0 :!S0 :FFn]
-  [:hyphen     :!Shyphen :FFn]
-  [:equal_sign :!Sequal_sign :FFn]
+  {:des "spc-mode (essential)"
+   :rules [
+           [:spacebar ["spc-mode" 1] nil {:afterup ["spc-mode" 0] :alone :spacebar}]
+           [:##h                   :##left_arrow        ["spc-mode" 1]]
+           [:##j                   :##down_arrow        ["spc-mode" 1]]
+           [:##k                   :##up_arrow          ["spc-mode" 1]]
+           [:##l                   :##right_arrow       ["spc-mode" 1]]
+           [:semicolon             :delete_or_backspace ["spc-mode" 1]]
+           [:b                     :escape              ["spc-mode" 1]]
+           [:n                     :return_or_enter     ["spc-mode" 1]]
+           [:m                     :page_down           ["spc-mode" 1]]
+           [:comma                 :page_up             ["spc-mode" 1]]
+           [:period                :!Cperiod            ["spc-mode" 1]]
+           [:slash                 :!Cslash             ["spc-mode" 1]]
+           [:#Sdelete_or_backspace :#Sdelete_forward    ["spc-mode" 1]]
+           [:#Stab                 :!C#Stab             ["spc-mode" 1]]
+           [:#Sw                   :!T#Stab             ["spc-mode" 1]]
+           [:#Ss                   :!C#Ss               ["spc-mode" 1]]
+           [:#Sx                   :!C#Sx               ["spc-mode" 1]]
+           [:#Sc                   :!C#Sc               ["spc-mode" 1]]
+           [:#Sv                   :!C#Sv               ["spc-mode" 1]]
+           ]}
 
-  [:q :!Sq :JFn]
-  [:w :!Sw :JFn]
-  [:e :!Se :JFn]
-  [:r :!Sr :JFn]
-  [:t :!St :JFn]
-  [:y :!Sy :FFn]
-  [:u :!Su :FFn]
-  [:i :!Si :FFn]
-  [:o :!So :FFn]
-  [:p :!Sp :FFn]
-  [:open_bracket  :!Sopen_bracket  :FFn]
-  [:close_bracket :!Sclose_bracket :FFn]
+  {:des "j-mode (RShift)"
+   :rules [:j-mode
+           [:1 :!S1]
+           [:2 :!S2]
+           [:3 :!S3]
+           [:4 :!S4]
+           [:5 :!S5]
+           [:6 :!S6]
 
-  [:a :!Sa :JFn]
-  [:s :!Ss :JFn]
-  [:d :!Sd :JFn]
-  [:f :!Sf :JFn]
-  [:g :!Sg :JFn]
-  [:h :!Sh :FFn]
-  [:j :!Sj :FFn]
-  [:k :!Sk :FFn]
-  [:l :!Sl :FFn]
-  [:semicolon        :!Ssemicolon        :FFn]
-  [:quote            :!Squote            :FFn]
-  [:non_us_backslash :!Snon_us_backslash :FFn]
+           [:q :!Sq]
+           [:w :!Sw]
+           [:e :!Se]
+           [:r :!Sr]
+           [:t :!St]
 
-  [:grave_accent_and_tilde :!Sgrave_accent_and_tilde :JFn]
-  [:z :!Sz :JFn]
-  [:x :!Sx :JFn]
-  [:c :!Sc :JFn]
-  [:v :!Sv :JFn]
-  [:b :!Sb :JFn]
-  [:b :!Sb :FFn]
-  [:n :!Sn :FFn]
-  [:m :!Sm :FFn]
-  [:comma  :!Scomma  :FFn]
-  [:period :!Speriod :FFn]
-  [:slash  :!Sslash  :FFn]
-]}
+           [:a :!Sa]
+           [:s :!Ss]
+           [:d :!Sd]
+           [:f :!Sf]
+           [:g :!Sg]
 
-; {:des "JFn" :rules [
-;   [:##j ["JFn" 1] nil {:afterup ["JFn" 0] :alone :##j}]
-;   [:##f ["FFn" 1] nil {:afterup ["FFn" 0] :alone :##f}]
-;   [:q :!Sq ["JFn" 1]]
-;   [:w :!Sw ["JFn" 1]]
-;   [:e :!Se ["JFn" 1]]
-;   [:r :!Sr ["JFn" 1]]
-;   [:t :!St ["JFn" 1]]
-;   [:a :!Sa ["JFn" 1]]
-;   [:s :!Ss ["JFn" 1]]
-;   [:d :!Sd ["JFn" 1]]
-;   [:f :!Sf ["JFn" 1]]
-;   [:g :!Sg ["JFn" 1]]
-;   [:z :!Sz ["JFn" 1]]
-;   [:x :!Sx ["JFn" 1]]
-;   [:c :!Sc ["JFn" 1]]
-;   [:v :!Sv ["JFn" 1]]
-;   [:b :!Sb ["JFn" 1]]
-;   [:y :!Sy ["FFn" 1]]
-;   [:u :!Su ["FFn" 1]]
-;   [:i :!Si ["FFn" 1]]
-;   [:o :!So ["FFn" 1]]
-;   [:p :!Sp ["FFn" 1]]
-;   [:h :!Sh ["FFn" 1]]
-;   [:j :!Sj ["FFn" 1]]
-;   [:k :!Sk ["FFn" 1]]
-;   [:l :!Sl ["FFn" 1]]
-;   [:b :!Sb ["FFn" 1]]
-;   [:n :!Sn ["FFn" 1]]
-;   [:m :!Sm ["FFn" 1]]
-; ]}
+           [:grave_accent_and_tilde :!Sgrave_accent_and_tilde]
+           [:z :!Sz]
+           [:x :!Sx]
+           [:c :!Sc]
+           [:v :!Sv]
+           [:b :!Sb]
+           ]}
 
+  {:des "f-mode (LShift)"
+   :rules [:f-mode
+           [:7 :!S7]
+           [:8 :!S8]
+           [:9 :!S9]
+           [:0 :!S0]
+           [:hyphen     :!Shyphen]
+           [:equal_sign :!Sequal_sign]
 
-;; {:des "JFn1" :rules [
-  ;; [:##j   ["JFn" 1] nil {:afterup ["JFn" 0] :alone :##j}]
-  ;; [:##a   :##a    ["JFn" 1]]
-  ;; [:##s   :##s    ["JFn" 1]]
-  ;; [:##d   :##d    ["JFn" 1]]
-  ;; [:##f   :##f    ["JFn" 1]]
-  ;; [:##v   :##v    ["JFn" 1]]
-  ;; [:k     :escape ["JFn" 1]]
-;; ]}
+           [:y :!Sy]
+           [:u :!Su]
+           [:i :!Si]
+           [:o :!So]
+           [:p :!Sp]
+           [:open_bracket  :!Sopen_bracket]
+           [:close_bracket :!Sclose_bracket]
 
-;; {:des "J->J/RShift" :rules [
-  ;; [:##j :right_shift nil {:alone :j} ]
-;; ]}
+           [:h :!Sh]
+           [:j :!Sj]
+           [:k :!Sk]
+           [:l :!Sl]
+           [:semicolon        :!Ssemicolon]
+           [:quote            :!Squote]
+           [:non_us_backslash :!Snon_us_backslash]
 
-{:des "F->F/LShift" :rules [[:##f :left_shift  nil {:alone :f} ]]}
+           [:b :!Sb]
+           [:n :!Sn]
+           [:m :!Sm]
+           [:comma  :!Scomma]
+           [:period :!Speriod]
+           [:slash  :!Sslash]
+           ]}
+  ]}
 
-
-;; {:des "F->F/LShift" :rules [[:##f :left_shift  nil {:alone :f} ]]}
-
-;; {:des "V->V/LShift" :rules [[:##v :left_shift  nil {:alone :v} ]]}
-;; {:des "N->N/RShift" :rules [[:##n :right_shift nil {:alone :n} ]]}
-
-;; {:des "JFn" :rules [
-;;   [:j ["JHold" 1] nil {:afterup ["JHold" 0] :alone :j}]
-;; ]}
-
-; {:des "DFn" :rules [
-  ; [:d ["DHold" 1] nil {:afterup ["DHold" 0] :alone :d}]
-  ; [:f :!Cperiod ["DHold" 1]]
-  ; [:v :!Cslash  ["DHold" 1]]
-; ]}
-
-;; {:des "j-sim" :rules [
-;;  [:k :escape          :JFn]
-;;  [:n :return_or_enter :JFn]
-;; ]}
-
-;; {:des "n-sim" :rules [ [:k :2 :nfn] [:j :3 :nfn] ]}
-
-]}
+                                        ;{:des "Enter->Enter/RCtrl" :rules [[:##return_or_enter :left_control nil {:alone :return_or_enter} ]]}
+                                        ;{:des "CLock->Esc/LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape} ]]}
