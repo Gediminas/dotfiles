@@ -8,7 +8,10 @@
       }}
  :applications {:Rdc ["^com.microsoft.Rdc.mac"]}
  :simlayers {:j-mode {:key :j}
-             :f-mode {:key :f}}
+             :f-mode {:key :f}
+             :k-mode {:key :k}
+             :d-mode {:key :d}
+             }
  :main
  [
   {:des "spc-mode (essential)"
@@ -61,6 +64,9 @@
            [:c :!Sc]
            [:v :!Sv]
            [:b :!Sb]
+
+           [:n :return_or_enter]
+           [:k :escape]
            ]}
 
   {:des "f-mode (f + opposite => LShift + opposite)"
@@ -94,7 +100,27 @@
            [:comma  :!Scomma]
            [:period :!Speriod]
            [:slash  :!Sslash]
+
+           [:v :return_or_enter]
+           [:d :escape]
            ]}
+
+  {:des "d-mode"
+   :rules [:d-mode
+           [:f :escape]
+           ]}
+
+  {:des "k-mode"
+   :rules [:k-mode
+           [:j :escape]
+           ]}
+
+  {:des "jk-mode"
+   :rules [
+           [[:j :k] :escape]
+           ]}
+
+
   ]}
 
                                         ;{:des "Enter->Enter/RCtrl" :rules [[:##return_or_enter :left_control nil {:alone :return_or_enter} ]]}
