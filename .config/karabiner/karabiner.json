@@ -1570,7 +1570,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "j-mode (RShift)",
+        "description" : "j-mode (j + opposite => RShift + opposite)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "1"
@@ -2607,7 +2607,7 @@
           }
         } ]
       }, {
-        "description" : "f-mode (LShift)",
+        "description" : "f-mode (f + opposite => LShift + opposite)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "7"

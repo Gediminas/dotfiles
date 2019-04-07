@@ -4,7 +4,8 @@
       :sim     50
       :delay   500
       :alone   1000
-      :held    500}}
+      :held    500
+      }}
  :applications {:Rdc ["^com.microsoft.Rdc.mac"]}
  :simlayers {:j-mode {:key :j}
              :f-mode {:key :f}}
@@ -33,7 +34,7 @@
            [:#Sv                   :!C#Sv               ["spc-mode" 1]]
            ]}
 
-  {:des "j-mode (RShift)"
+  {:des "j-mode (j + opposite => RShift + opposite)"
    :rules [:j-mode
            [:1 :!S1]
            [:2 :!S2]
@@ -62,7 +63,7 @@
            [:b :!Sb]
            ]}
 
-  {:des "f-mode (LShift)"
+  {:des "f-mode (f + opposite => LShift + opposite)"
    :rules [:f-mode
            [:7 :!S7]
            [:8 :!S8]
