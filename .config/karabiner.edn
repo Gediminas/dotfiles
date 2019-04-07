@@ -1,4 +1,9 @@
 {
+:profiles {:Goku {:default true
+         :sim     50
+         :delay   500
+         :alone   1000
+         :held    500}}
 :applications {:Rdc ["^com.microsoft.Rdc.mac"]}
 :simlayers {:JFn {:key :j} :FFn {:key :f}}
 :main [
