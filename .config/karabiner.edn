@@ -1,127 +1,185 @@
 {
- :profiles
- {:G {:default true
-      :sim     50
-      :delay   500
-      :alone   1000
-      :held    500
-      }}
- :applications {:Rdc ["^com.microsoft.Rdc.mac"]}
- :simlayers {:j-mode {:key :j}
-             :f-mode {:key :f}
-             :k-mode {:key :k}
-             :d-mode {:key :d}
-             }
+ :profiles {:G {:default true
+                :sim     50
+                :delay   500
+                :alone   1000
+                :held    500
+                }}
+ :applications {:Rdc ["^com.microsoft.Rdc.mac"]
+                }
+ :simlayers
+ {
+  :j-mode {:key :j}
+  :f-mode {:key :f}
+  :k-mode {:key :k}
+  :d-mode {:key :d}
+  :tab-mode              {:key :tab :afterup [{:set ["chunkwm-move-mode" 0]}
+                                              {:set ["chunkwm-scale-mode" 0]}]}
+  :chunkwm-move-mode     {:key :f :condi :tab-mode}
+  :chunkwm-scale-mode    {:key :c :condi :tab-mode}
+  :chunkwm-insert-mode   {:key :i :condi :tab-mode}
+  }
+
  :main
  [
   {:des "spc-mode (essential)"
-   :rules [
-           [:spacebar ["spc-mode" 1] nil {:afterup ["spc-mode" 0] :alone :spacebar}]
-           [:##h                   :##left_arrow        ["spc-mode" 1]]
-           [:##j                   :##down_arrow        ["spc-mode" 1]]
-           [:##k                   :##up_arrow          ["spc-mode" 1]]
-           [:##l                   :##right_arrow       ["spc-mode" 1]]
-           [:semicolon             :delete_or_backspace ["spc-mode" 1]]
-           [:b                     :escape              ["spc-mode" 1]]
-           [:n                     :return_or_enter     ["spc-mode" 1]]
-           [:m                     :page_down           ["spc-mode" 1]]
-           [:comma                 :page_up             ["spc-mode" 1]]
-           [:period                :!Cperiod            ["spc-mode" 1]]
-           [:slash                 :!Cslash             ["spc-mode" 1]]
-           [:#Sdelete_or_backspace :#Sdelete_forward    ["spc-mode" 1]]
-           [:#Stab                 :!C#Stab             ["spc-mode" 1]]
-           [:#Sw                   :!T#Stab             ["spc-mode" 1]]
-           [:#Ss                   :!C#Ss               ["spc-mode" 1]]
-           [:#Sx                   :!C#Sx               ["spc-mode" 1]]
-           [:#Sc                   :!C#Sc               ["spc-mode" 1]]
-           [:#Sv                   :!C#Sv               ["spc-mode" 1]]
-           ]}
+   :rules
+   [
+    [:spacebar ["spc-mode" 1] nil {:afterup ["spc-mode" 0] :alone :spacebar}]
+    [:##h                   :##left_arrow        ["spc-mode" 1]]
+    [:##j                   :##down_arrow        ["spc-mode" 1]]
+    [:##k                   :##up_arrow          ["spc-mode" 1]]
+    [:##l                   :##right_arrow       ["spc-mode" 1]]
+    [:semicolon             :delete_or_backspace ["spc-mode" 1]]
+    [:b                     :escape              ["spc-mode" 1]]
+    [:n                     :return_or_enter     ["spc-mode" 1]]
+    [:m                     :page_down           ["spc-mode" 1]]
+    [:comma                 :page_up             ["spc-mode" 1]]
+    [:period                :!Cperiod            ["spc-mode" 1]]
+    [:slash                 :!Cslash             ["spc-mode" 1]]
+    [:#Sdelete_or_backspace :#Sdelete_forward    ["spc-mode" 1]]
+    [:#Stab                 :!C#Stab             ["spc-mode" 1]]
+    [:#Sw                   :!T#Stab             ["spc-mode" 1]]
+    [:#Ss                   :!C#Ss               ["spc-mode" 1]]
+    [:#Sx                   :!C#Sx               ["spc-mode" 1]]
+    [:#Sc                   :!C#Sc               ["spc-mode" 1]]
+    [:#Sv                   :!C#Sv               ["spc-mode" 1]]
+    ]}
 
   {:des "j-mode (j + opposite => RShift + opposite)"
-   :rules [:j-mode
-           [:1 :!S1]
-           [:2 :!S2]
-           [:3 :!S3]
-           [:4 :!S4]
-           [:5 :!S5]
-           [:6 :!S6]
+   :rules
+   [:j-mode
+    [:1 :!S1]
+    [:2 :!S2]
+    [:3 :!S3]
+    [:4 :!S4]
+    [:5 :!S5]
+    [:6 :!S6]
 
-           [:q :!Sq]
-           [:w :!Sw]
-           [:e :!Se]
-           [:r :!Sr]
-           [:t :!St]
+    [:q :!Sq]
+    [:w :!Sw]
+    [:e :!Se]
+    [:r :!Sr]
+    [:t :!St]
 
-           [:a :!Sa]
-           [:s :!Ss]
-           [:d :!Sd]
-           [:f :!Sf]
-           [:g :!Sg]
+    [:a :!Sa]
+    [:s :!Ss]
+    [:d :!Sd]
+    [:f :!Sf]
+    [:g :!Sg]
 
-           [:grave_accent_and_tilde :!Sgrave_accent_and_tilde]
-           [:z :!Sz]
-           [:x :!Sx]
-           [:c :!Sc]
-           [:v :!Sv]
-           [:b :!Sb]
+    [:grave_accent_and_tilde :!Sgrave_accent_and_tilde]
+    [:z :!Sz]
+    [:x :!Sx]
+    [:c :!Sc]
+    [:v :!Sv]
+    [:b :!Sb]
 
-           [:n :return_or_enter]
-           [:k :escape]
-           ]}
+    [:n :return_or_enter]
+    [:k :escape]
+    ]}
 
   {:des "f-mode (f + opposite => LShift + opposite)"
-   :rules [:f-mode
-           [:7 :!S7]
-           [:8 :!S8]
-           [:9 :!S9]
-           [:0 :!S0]
-           [:hyphen     :!Shyphen]
-           [:equal_sign :!Sequal_sign]
+   :rules
+   [:f-mode
+    [:7 :!S7]
+    [:8 :!S8]
+    [:9 :!S9]
+    [:0 :!S0]
+    [:hyphen     :!Shyphen]
+    [:equal_sign :!Sequal_sign]
 
-           [:y :!Sy]
-           [:u :!Su]
-           [:i :!Si]
-           [:o :!So]
-           [:p :!Sp]
-           [:open_bracket  :!Sopen_bracket]
-           [:close_bracket :!Sclose_bracket]
+    [:y :!Sy]
+    [:u :!Su]
+    [:i :!Si]
+    [:o :!So]
+    [:p :!Sp]
+    [:open_bracket  :!Sopen_bracket]
+    [:close_bracket :!Sclose_bracket]
 
-           [:h :!Sh]
-           [:j :!Sj]
-           [:k :!Sk]
-           [:l :!Sl]
-           [:semicolon        :!Ssemicolon]
-           [:quote            :!Squote]
-           [:non_us_backslash :!Snon_us_backslash]
+    [:h :!Sh]
+    [:j :!Sj]
+    [:k :!Sk]
+    [:l :!Sl]
+    [:semicolon        :!Ssemicolon]
+    [:quote            :!Squote]
+    [:non_us_backslash :!Snon_us_backslash]
 
-           [:b :!Sb]
-           [:n :!Sn]
-           [:m :!Sm]
-           [:comma  :!Scomma]
-           [:period :!Speriod]
-           [:slash  :!Sslash]
+    [:b :!Sb]
+    [:n :!Sn]
+    [:m :!Sm]
+    [:comma  :!Scomma]
+    [:period :!Speriod]
+    [:slash  :!Sslash]
 
-           [:v :return_or_enter]
-           [:d :escape]
-           ]}
+    [:v :return_or_enter]
+    [:d :escape]
+    ]}
 
   {:des "d-mode"
-   :rules [:d-mode
-           [:f :escape]
-           ]}
+   :rules
+   [:d-mode
+    [:f :escape]
+    ]}
 
   {:des "k-mode"
-   :rules [:k-mode
-           [:j :escape]
-           ]}
+   :rules
+   [:k-mode
+    [:j :escape]
+    ]}
 
-  {:des "jk-mode"
-   :rules [
-           [[:j :k] :escape]
-           ]}
+  {:des   "chunkwm mode"
+   :rules
+   [
+    [:!COSf "/usr/local/bin/chunkc tiling::window --toggle native-fullscreen"]
+    :chunkwm-insert-mode
+    [:spacebar "/usr/local/bin/chunkc tiling::window --use-insertion-point cancel"]
+    [:h "/usr/local/bin/chunkc tiling::window --use-insertion-point west"]
+    [:j "/usr/local/bin/chunkc tiling::window --use-insertion-point south"]
+    [:k "/usr/local/bin/chunkc tiling::window --use-insertion-point north"]
+    [:l "/usr/local/bin/chunkc tiling::window --use-insertion-point east"]
+    :chunkwm-move-mode
+    ;; move windows
+    [:h "/usr/local/bin/chunkc tiling::window --warp west"]
+    [:j "/usr/local/bin/chunkc tiling::window --warp south"]
+    [:k "/usr/local/bin/chunkc tiling::window --warp north"]
+    [:l "/usr/local/bin/chunkc tiling::window --warp east"]
+    :chunkwm-scale-mode
+    ;; scale windows
+    [:h "~/local/bin/chunkwm-resize left"]
+    [:j "~/local/bin/chunkwm-resize down"]
+    [:k "~/local/bin/chunkwm-resize up"]
+    [:l "~/local/bin/chunkwm-resize right"]
+    ;; equalize size of windows
+    [:spacebar "/usr/local/bin/chunkc tiling::desktop --equalize"]
+    :tab-mode
+    [:return_or_enter "~/local/bin/chunkwm-change-mode"]
+    [:grave_accent_and_tilde "/usr/local/bin/brew services restart chunkwm"]
+    ;; change gap setting, reload chunkwmrc
+    [:backslash "~/local/bin/chunkwm-gaps 10 10 5 5 7.5"]
+    [:delete_or_backspace "~/local/bin/chunkwm-gaps 0 0 0 0 0"]
+    [:h "/usr/local/bin/chunkc tiling::window --focus west"]
+    [:j "/usr/local/bin/chunkc tiling::window --focus south"]
+    [:k "/usr/local/bin/chunkc tiling::window --focus north"]
+    [:l "/usr/local/bin/chunkc tiling::window --focus east"]
+    [:n "/usr/local/bin/chunkc tiling::window --focus next"]
+    [:p "/usr/local/bin/chunkc tiling::window --focus prev"]
+    ;; rotate windows clockwise and anticlockwise
+    [:r "/usr/local/bin/chunkc tiling::desktop --rotate 90"]
+    [:!Sr "/usr/local/bin/chunkc tiling::desktop --rotate 270"]
+    ;; rotate on x and y axis
+    [:y "/usr/local/bin/chunkc tiling::desktop --mirror vertical"]
+    [:!Sy "/usr/local/bin/chunkc tiling::desktop --mirror horizontal"]
+    [:spacebar "/usr/local/bin/chunkc tiling::window --toggle fullscreen"]
+    [:a "/usr/local/bin/chunkc tiling::window --toggle float"]
+    [:b "/usr/local/bin/chunkc tiling::desktop --layout bsp"]
+    [:m "/usr/local/bin/chunkc tiling::desktop --layout monocle"]
+    [:x "/usr/local/bin/chunkc tiling::window --close"]
+    [:delete_or_backspace "/usr/local/bin/chunkc tiling::window --close"]
+    [:open_bracket "/usr/local/bin/chunkc tiling::window --send-to-monitor prev"]
+    [:close_bracket "/usr/local/bin/chunkc tiling::window --send-to-monitor next"]]}
+  ]
+ }
 
-
-  ]}
-
-                                        ;{:des "Enter->Enter/RCtrl" :rules [[:##return_or_enter :left_control nil {:alone :return_or_enter} ]]}
-                                        ;{:des "CLock->Esc/LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape} ]]}
+;{:des "Enter->Enter/RCtrl" :rules [[:##return_or_enter :left_control nil {:alone :return_or_enter} ]]}
+;{:des "CLock->Esc/LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape} ]]}
