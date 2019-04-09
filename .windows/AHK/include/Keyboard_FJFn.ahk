@@ -75,14 +75,14 @@ v::enter
 
 $*f:: tickF := A_TickCount
 $*f up::
-  If ((A_TickCount - tickF) < 200) {
+  If ((A_TickCount - tickF) < 150) {
     Send {Blind}{f}
   }
   Return
 
 $*j:: tickJ := A_TickCount
 $*j up::
-  If ((A_TickCount - tickJ) < 200) {
+  If ((A_TickCount - tickJ) < 150) {
     Send {Blind}{j}
   }
   Return

@@ -188,7 +188,8 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-startup-lists '((agenda)
                                 (todos)
                                 (recents . 5)
-                                (projects . 7))
+                                (projects . 7)
+                                (bookmarks))
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
