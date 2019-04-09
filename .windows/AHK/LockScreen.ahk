@@ -77,7 +77,7 @@ StartLock:
 				Gui %A_Index%: Color, Black
 				Gui %A_Index%: Show, % "x" Mon%A_Index%Left " y" Mon%A_Index%Top " w" Width " h" Height Hide, BlackScreen%A_Index%
 				Gui %A_Index%: Show
-	    		WinSet, Transparent, 130, ahk_class AutoHotkeyGUI
+	    		WinSet, Transparent, 70, ahk_class AutoHotkeyGUI
 			}
 
 			;WinActivate, BlackScreen1 ; Try to cover up the start bar
