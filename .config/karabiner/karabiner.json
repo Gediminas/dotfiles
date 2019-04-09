@@ -4111,721 +4111,710 @@
         "description" : "chunkwm mode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "mandatory" : [ "left_command", "left_option", "left_shift" ]
+            "key_code" : "spacebar"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point cancel"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-insert-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-insert-mode",
+              "value" : 1
             }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point cancel"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "spacebar"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-insert-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point west"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-insert-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-insert-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point west"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "h"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-insert-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "j"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point south"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-insert-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-insert-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point south"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "j"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-insert-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point north"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-insert-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-insert-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point north"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "k"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-insert-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point east"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-insert-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-insert-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point east"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "w"
+            }, {
+              "key_code" : "l"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-insert-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp west"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-move-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-move-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp west"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "q"
+            }, {
+              "key_code" : "h"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-move-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "j"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp south"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-move-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-move-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp south"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "q"
+            }, {
+              "key_code" : "j"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-move-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp north"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-move-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-move-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp north"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "q"
+            }, {
+              "key_code" : "k"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-move-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp east"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-move-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-move-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp east"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "q"
+            }, {
+              "key_code" : "l"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-move-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "shell_command" : "~/.local/bin/chunkwm-resize left"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-scale-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-scale-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "~/.local/bin/chunkwm-resize left"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "s"
+            }, {
+              "key_code" : "h"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-scale-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "j"
+          },
+          "to" : [ {
+            "shell_command" : "~/.local/bin/chunkwm-resize down"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-scale-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-scale-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "~/.local/bin/chunkwm-resize down"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "s"
+            }, {
+              "key_code" : "j"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-scale-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "shell_command" : "~/.local/bin/chunkwm-resize up"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-scale-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-scale-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "~/.local/bin/chunkwm-resize up"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "s"
+            }, {
+              "key_code" : "k"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-scale-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "shell_command" : "~/.local/bin/chunkwm-resize right"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-scale-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-scale-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "~/.local/bin/chunkwm-resize right"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "s"
+            }, {
+              "key_code" : "l"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-scale-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "spacebar"
+          },
+          "to" : [ {
+            "shell_command" : "/usr/local/bin/chunkc tiling::desktop --equalize"
+          } ],
+          "conditions" : [ {
+            "name" : "chunkwm-scale-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "chunkwm-scale-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "/usr/local/bin/chunkc tiling::desktop --equalize"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "s"
+            }, {
+              "key_code" : "spacebar"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "chunkwm-scale-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          },
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ]
+        }, {
+          "from" : {
+            "key_code" : "f"
           },
           "to" : [ {
             "shell_command" : "/usr/local/bin/chunkc tiling::window --toggle native-fullscreen"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "spacebar"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point cancel"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-insert-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-insert-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point cancel"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "i"
-            }, {
-              "key_code" : "spacebar"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-insert-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "h"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point west"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-insert-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-insert-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point west"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "i"
-            }, {
-              "key_code" : "h"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-insert-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "j"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point south"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-insert-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-insert-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point south"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "i"
-            }, {
-              "key_code" : "j"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-insert-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "k"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point north"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-insert-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-insert-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point north"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "i"
-            }, {
-              "key_code" : "k"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-insert-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "l"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point east"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-insert-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-insert-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --use-insertion-point east"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "i"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-insert-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "h"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp west"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-move-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-move-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp west"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f"
-            }, {
-              "key_code" : "h"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-move-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "j"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp south"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-move-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-move-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp south"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f"
-            }, {
-              "key_code" : "j"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-move-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "k"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp north"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-move-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-move-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp north"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f"
-            }, {
-              "key_code" : "k"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-move-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "l"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp east"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-move-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-move-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::window --warp east"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "f"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-move-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "h"
-          },
-          "to" : [ {
-            "shell_command" : "~/local/bin/chunkwm-resize left"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-scale-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-scale-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "~/local/bin/chunkwm-resize left"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "c"
-            }, {
-              "key_code" : "h"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-scale-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "j"
-          },
-          "to" : [ {
-            "shell_command" : "~/local/bin/chunkwm-resize down"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-scale-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-scale-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "~/local/bin/chunkwm-resize down"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "c"
-            }, {
-              "key_code" : "j"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-scale-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "k"
-          },
-          "to" : [ {
-            "shell_command" : "~/local/bin/chunkwm-resize up"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-scale-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-scale-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "~/local/bin/chunkwm-resize up"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "c"
-            }, {
-              "key_code" : "k"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-scale-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "l"
-          },
-          "to" : [ {
-            "shell_command" : "~/local/bin/chunkwm-resize right"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-scale-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-scale-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "~/local/bin/chunkwm-resize right"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "c"
-            }, {
-              "key_code" : "l"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-scale-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "spacebar"
-          },
-          "to" : [ {
-            "shell_command" : "/usr/local/bin/chunkc tiling::desktop --equalize"
-          } ],
-          "conditions" : [ {
-            "name" : "chunkwm-scale-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "type" : "basic",
-          "parameters" : {
-            "basic.simultaneous_threshold_milliseconds" : 250
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "chunkwm-scale-mode",
-              "value" : 1
-            }
-          }, {
-            "shell_command" : "/usr/local/bin/chunkc tiling::desktop --equalize"
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "c"
-            }, {
-              "key_code" : "spacebar"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : true,
-              "key_down_order" : "strict",
-              "key_up_order" : "strict_inverse",
-              "key_up_when" : "any",
-              "to_after_key_up" : [ {
-                "set_variable" : {
-                  "name" : "chunkwm-scale-mode",
-                  "value" : 0
-                }
-              } ]
-            }
-          },
-          "conditions" : [ {
-            "name" : "tab-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ]
-        }, {
-          "from" : {
-            "key_code" : "return_or_enter"
-          },
-          "to" : [ {
-            "shell_command" : "~/local/bin/chunkwm-change-mode"
           } ],
           "conditions" : [ {
             "name" : "tab-mode",
@@ -4844,7 +4833,62 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "~/local/bin/chunkwm-change-mode"
+            "shell_command" : "/usr/local/bin/chunkc tiling::window --toggle native-fullscreen"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "tab"
+            }, {
+              "key_code" : "f"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "tab-mode",
+                  "value" : 0
+                }
+              }, {
+                "set_variable" : {
+                  "name" : "chunkwm-move-mode",
+                  "value" : 0
+                }
+              }, {
+                "set_variable" : {
+                  "name" : "chunkwm-scale-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "return_or_enter"
+          },
+          "to" : [ {
+            "shell_command" : "~/.local/bin/chunkwm-change-mode"
+          } ],
+          "conditions" : [ {
+            "name" : "tab-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "tab-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "~/.local/bin/chunkwm-change-mode"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -4935,7 +4979,7 @@
             "key_code" : "backslash"
           },
           "to" : [ {
-            "shell_command" : "~/local/bin/chunkwm-gaps 10 10 5 5 7.5"
+            "shell_command" : "~/.local/bin/chunkwm-gaps 10 10 5 5 7.5"
           } ],
           "conditions" : [ {
             "name" : "tab-mode",
@@ -4954,7 +4998,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "~/local/bin/chunkwm-gaps 10 10 5 5 7.5"
+            "shell_command" : "~/.local/bin/chunkwm-gaps 10 10 5 5 7.5"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -4990,7 +5034,7 @@
             "key_code" : "delete_or_backspace"
           },
           "to" : [ {
-            "shell_command" : "~/local/bin/chunkwm-gaps 0 0 0 0 0"
+            "shell_command" : "~/.local/bin/chunkwm-gaps 0 0 0 0 0"
           } ],
           "conditions" : [ {
             "name" : "tab-mode",
@@ -5009,7 +5053,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "~/local/bin/chunkwm-gaps 0 0 0 0 0"
+            "shell_command" : "~/.local/bin/chunkwm-gaps 0 0 0 0 0"
           } ],
           "from" : {
             "simultaneous" : [ {
