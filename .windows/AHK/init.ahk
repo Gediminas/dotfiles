@@ -78,7 +78,8 @@ $*F5::Send {Blind}{F5}
 ;   return    
 
 
-
+WheelUp::WheelDown
+WheelDown::WheelUp
 
 b & q::WinActivateBottomOnCurrentVirtualDesktop("notepad.exe")
 b & e::WinActivateBottomOnCurrentVirtualDesktop("emacs.exe", "emacsclientw.exe -nqc -a notepad")
