@@ -42,6 +42,7 @@ Space & s::
   }
 Return
 
+/*
 Space & d::
   SendInput {Ctrl Down}
   Return
@@ -54,6 +55,7 @@ Space & e::
 Space & e up::
   SendInput {Shift Up}
   Return
+ */
 
 Space & z::SendInput ^z
 Space & x::SendInput ^x
