@@ -667,8 +667,8 @@ before packages are loaded."
   ;; KEYBINDINGS =================================
 
   ;; Set escape keybinding to "jk"
-  (setq-default evil-escape-key-sequence "jk")
-  (setq-default evil-escape-delay 0.2)
+  ;(setq-default evil-escape-key-sequence "jk")
+  ;(setq-default evil-escape-delay 0.2)
 
   ;; quit
   (evil-leader/set-key "q q" `spacemacs/frame-killer)
