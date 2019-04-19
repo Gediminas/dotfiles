@@ -10,9 +10,9 @@ PROMPT_DIRTRIM=3
 
 PS1="\w>"
 
-alias ..b="cd ~/repo/builder"
-alias ..s="cd ~/repo/builder/server"
-alias ..c="cd ~/repo/builder/client"
+alias ..b="cd /Files/Dev/repo/builder"
+alias ..s="cd /Files/Dev/repo/builder/server"
+alias ..c="cd /Files/Dev/repo/builder/client"
 
 alias ..="cd .."
 alias ...="cd ../.."
