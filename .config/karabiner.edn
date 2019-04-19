@@ -22,6 +22,11 @@
 
  :main
  [
+
+  {:des "Enter => Enter/RCtrl" :rules [[:##return_or_enter :right_control nil {:alone :return_or_enter} ]]}
+  {:des "CapsLock => Esc/LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape} ]]}
+  {:des "jk => Esc" :rules [[[:j :k] :escape]]}
+
   {:des "spc-mode (essential)"
    :rules
    [
@@ -46,7 +51,7 @@
     [:#Sv                   :!C#Sv               ["spc-mode" 1]]
     ]}
   
-  {:des "j-mode (j + opposite => RShift + opposite)"
+  {:des "j-mode (opp-side => LShift; else => spec)"
    :rules
    [:j-mode
     [:1 :!S1]
@@ -77,9 +82,11 @@
 
     [:n :return_or_enter]
     [:k :escape]
+    [:h :!TOdelete_or_backspace]
+    [:l :tab]
     ]}
 
-  {:des "f-mode (f + opposite => LShift + opposite)"
+  {:des "f-mode (opp-side => LShift; else => spec)"
    :rules
    [:f-mode
     [:7 :!S7]
@@ -114,6 +121,8 @@
 
     [:v :return_or_enter]
     [:d :escape]
+    [:g :!TOdelete_forward]
+    [:s :tab]
     ]}
 
   {:des "d-mode"
@@ -128,7 +137,7 @@
     [:j :escape]
     ]}
 
-  {:des   "chunkwm mode"
+  {:des   "tab-mode (chunkwm)"
    :rules
    [
     :tab-mode
@@ -191,6 +200,3 @@
    ]}
   ]
  }
-
-;{:des "Enter->Enter/RCtrl" :rules [[:##return_or_enter :left_control nil {:alone :return_or_enter} ]]}
-;{:des "CLock->Esc/LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape} ]]}
