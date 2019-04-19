@@ -6,9 +6,7 @@ export GOPATH=~/dev/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 
-PROMPT_DIRTRIM=3
-
-PS1="\w>"
+PS1="\w$ "
 
 alias ..b="cd ~/repo/builder"
 alias ..s="cd ~/repo/builder/server"

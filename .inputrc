@@ -1,3 +1,1 @@
 set editing-mode vi
-export PS1='\[\e[0;36m\]\w>\[\e[0m\]'
-
