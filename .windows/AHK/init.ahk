@@ -33,6 +33,7 @@ SetKeyDelay, -1
 #Include include\mode-Space-Magic.ahk
 #Include include\mode-Win.ahk
 #Include include\mode-CapsLock.ahk
+#Include include\mode-Enter.ahk
 #Include include\Workarounds.ahk
 
 
