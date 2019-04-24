@@ -1,19 +1,18 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Enter => Esc / LCtrl (hold)
+
+SetKeyDelay, -1
 
 $*Enter::
-  Send {Blind}{LCtrl Down}
+  Send {Blind}{RCtrl Down}
   cDown := A_TickCount
   Return
 
 $*Enter up::
   If ((A_TickCount-cDown)<200) {
-    If WinActive("ahk_exe ClearLock.exe") {
-      Send {Blind}{LCtrl Up}
-    }
-    else {
-      Send {Blind}{LCtrl Up}{Enter}
-    }
+    Send {Blind}{RCtrl Up}{Enter}
   }
   Else {
-    Send {Blind}{LCtrl Up}
+    Send {Blind}{RCtrl Up}
   }
   Return
