@@ -26,7 +26,8 @@ SetKeyDelay, -1
 
 #Include LockScreen.ahk
 #Include include\mode-B.ahk
-#Include include\mode-FJ.ahk
+;;#Include include\mode-FJ.ahk
+#Include include\mode-VN.ahk
 #Include include\mode-V.ahk
 #Include include\mode-Space.ahk
 #Include include\mode-Space-LT.ahk
@@ -48,12 +49,12 @@ $*F5::Send {Blind}{F5}
 WheelUp::WheelDown
 WheelDown::WheelUp
 
-space & d:: SendInput ^#{Left}
-space & f::SendInput ^#{Right}
+;; space & d:: SendInput ^#{Left}
+;; space & f::SendInput ^#{Right}
 
-d & f:: SendInput ^#{Left}
-d & v::SendInput ^#{Right}
-$*d::SendInput {Blind}{d} 
+;;d & f:: SendInput ^#{Left}
+;;d & v::SendInput ^#{Right}
+;;$*d::SendInput {Blind}{d} 
 
 
 

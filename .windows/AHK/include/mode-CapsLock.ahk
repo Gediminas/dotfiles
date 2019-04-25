@@ -17,5 +17,6 @@ $*CapsLock up::
   }
   Return
 
+$*Esc:: Return
 
 ; https://superuser.com/questions/581692/remap-caps-lock-in-windows-escape-and-control

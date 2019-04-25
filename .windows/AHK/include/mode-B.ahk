@@ -1,6 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; B-mode (Hyper key)
 
+
 b & q::WinActivateBottomOnCurrentVirtualDesktop("notepad.exe")
 b & e::WinActivateBottomOnCurrentVirtualDesktop("emacs.exe", "emacsclientw.exe -nqc -a notepad")
 b & s::WinActivateBottomOnCurrentVirtualDesktop("firefox.exe")
