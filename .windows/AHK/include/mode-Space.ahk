@@ -3,8 +3,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; LEFT
 
-;; Space & Tab::SendInput, !{Tab}
-;; 
+Space & Tab::SendInput, ^{Tab}
+ 
 ;; Space & q::
 ;;  WinGetClass, ActiveClass, A
 ;;  WinActivateBottom, ahk_class %ActiveClass%
@@ -100,9 +100,11 @@ Space & Right::SendInput ^#{Right}
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; n => Enter
+;; n/m => Enter/Escape
 
 Space & n::SendInput, {Blind}{Enter}
+Space & m::SendInput, {Blind}{Esc}
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; d/y/p => VIM cut/copy/paste
