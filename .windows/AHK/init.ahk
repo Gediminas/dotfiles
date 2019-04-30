@@ -3,7 +3,7 @@
 #SingleInstance force
 #Persistent
 
-SetKeyDelay, -1
+SetKeyDelay, -1, -1, -1
 
 ; SetKeyDelay, -1
 ; SetControlDelay, -1

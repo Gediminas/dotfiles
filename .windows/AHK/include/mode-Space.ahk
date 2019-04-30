@@ -109,7 +109,7 @@ Space & m::SendInput, {Blind}{Esc}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; d/y/p => VIM cut/copy/paste
 
-Space & d::SendInput ^x
+Space & x::SendInput ^x
 Space & y::SendInput ^c
 Space & p::SendInput ^v
 
@@ -120,7 +120,6 @@ Space & p::SendInput ^v
 
 Space & v::
 Space & c::
-Space & x::
   Return
 
 #If (not GetKeyState("c", "P")) and (GetKeyState("v", "P"))
@@ -128,6 +127,8 @@ Space & x::
   Space & j::SendInput, {Blind}+{Down}
   Space & k::SendInput, {Blind}+{Up}
   Space & l::SendInput, {Blind}+{Right}
+  Space & d::SendInput, {Blind}+{Up}
+  Space & f::SendInput, {Blind}+{Down}
 
 #If (GetKeyState("c", "P")) and (not GetKeyState("v", "P"))
   Space & h::SendInput, {Blind}^{Left}
@@ -142,10 +143,12 @@ Space & x::
   Space & l::SendInput, {Blind}^+{Right}
 
 #If
-  Space &  h::SendInput, {Blind}{Left}
-  Space &  j::SendInput, {Blind}{Down}
-  Space &  k::SendInput, {Blind}{Up}
-  Space &  l::SendInput, {Blind}{Right}
+  Space & h::SendInput, {Blind}{Left}
+  Space & j::SendInput, {Blind}{Down}
+  Space & k::SendInput, {Blind}{Up}
+  Space & l::SendInput, {Blind}{Right}
+  Space & d::SendInput, {Blind}{Up}
+  Space & f::SendInput, {Blind}{Down}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
