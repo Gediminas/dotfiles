@@ -1,6 +1,6 @@
 {
  :profiles {:G {:default true
-                :sim     50
+                :sim     150
                 :delay   500
                 :alone   1000
                 :held    500
@@ -19,9 +19,9 @@
 
   {:des "Enter => Enter/RCtrl" :rules [[:##return_or_enter :right_control nil {:alone :return_or_enter} ]]}
   {:des "CapsLock => Esc/LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape} ]]}
-  ;{:des "jk => Esc" :rules [[[:j :k] :escape]]}
+  {:des "jk => Esc" :rules [[[:j :k] :escape]]}
 
-  ;{:des "b => b/Hyper" :rules [[:##b [:right_shift :right_option :right_control :right_command] nil {:alone :b} ]]}
+  ;{:des "z => z/Hyper" :rules [[:##z [:right_shift :right_option :right_control :right_command] nil {:alone :z} ]]}
 
   {:des "spc-mode (essential)"
    :rules
@@ -36,20 +36,20 @@
     [:##k                   :##up_arrow          [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
     [:##l                   :##right_arrow       [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
 
-    [:##h                   :!S!Oleft_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
-    [:##j                   :!S!Odown_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
-    [:##k                   :!S!Oup_arrow        [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
-    [:##l                   :!S!Oright_arrow     [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
+    [:##h                   :!Sleft_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
+    [:##j                   :!Sdown_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
+    [:##k                   :!Sup_arrow        [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
+    [:##l                   :!Sright_arrow     [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
 
     [:##h                   :!O##left_arrow      [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 1]] ]
     [:##j                   :!O##down_arrow      [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 1]] ]
     [:##k                   :!O##up_arrow        [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 1]] ]
     [:##l                   :!O##right_arrow     [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 1]] ]
 
-    [:##h                   :!S!O##left_arrow    [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
-    [:##j                   :!S!O##down_arrow    [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
-    [:##k                   :!S!O##up_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
-    [:##l                   :!S!O##right_arrow   [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
+    [:h                   :!S!Oleft_arrow    [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
+    [:j                   :!S!Odown_arrow    [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
+    [:k                   :!S!Oup_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
+    [:l                   :!S!Oright_arrow   [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
 
 
     [:semicolon             :delete_or_backspace [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
