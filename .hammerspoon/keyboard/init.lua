@@ -39,6 +39,6 @@ require('keyboard.hyper')
 -- require('keyboard.panes')
 -- require('keyboard.super')
 -- require('keyboard.windows')
-require('keyboard.pomodoor')
+-- require('keyboard.pomodoor')
 
 hs.notify.new({title='Hammerspoon', informativeText='🤘 Ready to rock'}):send()
