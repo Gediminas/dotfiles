@@ -8,9 +8,9 @@ export PATH=$PATH:$GOPATH/bin
 
 PS1="\w$ "
 
-alias ..b="cd ~/repo/builder"
-alias ..s="cd ~/repo/builder/server"
-alias ..c="cd ~/repo/builder/client"
+alias ..b="cd ~/dev/repo/builder"
+alias ..s="cd ~/dev/repo/builder/server"
+alias ..c="cd ~/dev/repo/builder/client"
 
 alias ..="cd .."
 alias ...="cd ../.."
