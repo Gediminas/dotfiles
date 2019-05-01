@@ -64,9 +64,9 @@ hs.hotkey.bind(hyper, "0", function()
 end)
 
 
-wifiWatcher = hs.wifi.watcher.new(ssidChangedCallback)
-wifiWatcher:watchingFor({ "SSIDChange", "BSSIDChange", "linkChange", "linkQualityChange", "powerChange" }) --
-wifiWatcher:start()
-ssidChangedCallback()
+-- wifiWatcher = hs.wifi.watcher.new(ssidChangedCallback)
+-- wifiWatcher:watchingFor({ "SSIDChange", "BSSIDChange", "linkChange", "linkQualityChange", "powerChange" }) --
+-- wifiWatcher:start()
+-- ssidChangedCallback()
 
 
