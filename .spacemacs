@@ -268,7 +268,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil then the last auto saved layouts are resumed automatically upon
    ;; start. (default nil)
-   dotspacemacs-auto-resume-layouts nil
+   dotspacemacs-auto-resume-layouts t
 
    ;; If non-nil, auto-generate layout name when creating new layouts. Only has
    ;; effect when using the "jump to layout by number" commands. (default nil)
@@ -580,6 +580,8 @@ before packages are loaded."
 ;;     ;global-visual-line-mode t
 ;;     ;global-company-mode t
 ;;     ;global-subword-mode t
+
+   truncate-lines t
 
    ;; Project Management
    neo-smart-open t
