@@ -5,7 +5,7 @@
 -- your preferred shortcuts.
 return {
   { 's', 'Firefox' },    -- Secondary browser
-  { 'd', 'Chrome' },     -- Dev browser
+  { 'd', 'Google Chrome' },     -- Dev browser
   { 'f', 'Safari' },     -- First browser
   { 'e', 'Emacs' },      -- Editor
   { 'n', 'nvALT' },      -- Notes
