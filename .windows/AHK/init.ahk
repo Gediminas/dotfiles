@@ -3,6 +3,10 @@
 #SingleInstance force
 #Persistent
 
+; https://gist.github.com/jitbit/e948cf198f54cbf3992c 
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
+
 SetKeyDelay, -1, -1, -1
 
 ; SetKeyDelay, -1
@@ -13,7 +17,6 @@ SetKeyDelay, -1, -1, -1
 ; Process, Priority,, High
 ; ListLines Off
 ; #KeyHistory 0
-; #NoEnv
 
 ; # Win (Windows logo key)
 ; ! Alt
@@ -37,14 +40,12 @@ SetKeyDelay, -1, -1, -1
 #Include include\mode-Enter.ahk
 #Include include\Workarounds.ahk
 
-
 F5 & F6:: 
   SendInput, +^s
   Reload
   Return
   
 $*F5::Send {Blind}{F5}
-
 
 WheelUp::WheelDown
 WheelDown::WheelUp

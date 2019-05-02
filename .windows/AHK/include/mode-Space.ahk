@@ -2,7 +2,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; LEFT
-
+Space & Esc::SendInput !{F4}
 Space & Tab::SendInput, ^{Tab}
  
 ;; Space & q::
