@@ -21,6 +21,9 @@
   {:des "CapsLock => Esc/LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape} ]]}
   {:des "jk => Esc" :rules [[[:j :k] :escape]]}
 
+  {:des "Esc => none" :rules [:escape :vk_none]}
+  {:des "§ => Esc/Hyper2" :rules [[:non_us_backslash :escape]]}
+
   ;{:des "z => z/Hyper" :rules [[:##z [:right_shift :right_option :right_control :right_command] nil {:alone :z} ]]}
 
   {:des "spc-mode (essential)"
@@ -57,6 +60,7 @@
     [:m                     :escape              [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
     [:#Ss                   :!C#Ss               [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
 
+    [:non_us_backslash      :!Cq              ["spc-mode" 1] ]
     ;[:period                :!Cperiod            ["spc-mode" 1]]
     ;[:slash                 :!Cslash             ["spc-mode" 1]]
     ;[:#Sdelete_or_backspace :#Sdelete_forward    ["spc-mode" 1]]
