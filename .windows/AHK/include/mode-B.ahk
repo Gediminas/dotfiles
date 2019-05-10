@@ -8,7 +8,8 @@ b & s::WinActivateBottomOnCurrentVirtualDesktop("firefox.exe")
 b & d::WinActivateBottomOnCurrentVirtualDesktop("chrome.exe")
 b & f::WinActivateBottomOnCurrentVirtualDesktop("firefox.exe")
 b & t::WinActivateBottomOnCurrentVirtualDesktop("cmd.exe")
-b & c::WinActivateBottomOnCurrentVirtualDesktop("Messenger for Desktop.exe", "C:\Users\gds\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MessengerForDesktop.com\Messenger for Desktop.lnk")
+b & c::WinActivateBottomOnCurrentVirtualDesktop("doublecmd.exe")
+b & m::WinActivateBottomOnCurrentVirtualDesktop("Messenger for Desktop.exe", "C:\Users\gds\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MessengerForDesktop.com\Messenger for Desktop.lnk")
 b & v::WinActivateBottomOnCurrentVirtualDesktop("devenv.exe")
 b & space::WinMinimize, A
 

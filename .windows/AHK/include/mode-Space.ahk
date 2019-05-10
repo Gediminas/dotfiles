@@ -147,8 +147,8 @@ Space & c::
   Space & j::SendInput, {Blind}{Down}
   Space & k::SendInput, {Blind}{Up}
   Space & l::SendInput, {Blind}{Right}
-  Space & d::SendInput, {Blind}{Up}
-  Space & f::SendInput, {Blind}{Down}
+  Space & f::SendInput, {Blind}{Up}
+  Space & d::SendInput, {Blind}{Down}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
