@@ -1,54 +1,42 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; For home-row (sdfv njkl) for debugging c++
 
+; https://gist.github.com/jitbit/e948cf198f54cbf3992c 
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
+
 SetKeyDelay, -1
 
 #If (GetKeyState("SPACE", "P"))
-
-	v & q:: SendInput, {Blind}!^{F13}
-	v & w:: SendInput, {Blind}!^{F14}
-	v & e:: SendInput, {Blind}!^{F15}
-	v & r:: SendInput, {Blind}!^{F16}
-	v & t:: SendInput, {Blind}!^{F17}
-	v & a:: SendInput, {Blind}!^{F18}
-	v & s:: SendInput, {Blind}!^{F19}
-	v & d:: SendInput, {Blind}!^{F20}
-	v & f:: SendInput, {Blind}!^{F21}
-	v & z:: SendInput, {Blind}!^{F22}
-	v & x:: SendInput, {Blind}!^{F23}
-	v & c:: SendInput, {Blind}!^{F24}
-
+    v & tab:: SendInput, {Blind}+!^{F13}
+	v & q:: SendInput, {Blind}+!^q
+	v & w:: SendInput, {Blind}+!^w
+	v & e:: SendInput, {Blind}+!^e
+	v & r:: SendInput, {Blind}+!^r
+	v & t:: SendInput, {Blind}+!^t
+	v & a:: SendInput, {Blind}+!^a
+	v & s:: SendInput, {Blind}+!^s
+	v & d:: SendInput, {Blind}+!^d
+	v & f:: SendInput, {Blind}+!^f
+	v & g:: SendInput, {Blind}+!^g
+	v & z:: SendInput, {Blind}+!^z
+	v & x:: SendInput, {Blind}+!^x
+	v & c:: SendInput, {Blind}+!^c
 #If
 
-;; v & 1::SendInput, {Blind}{F1}
-;; v & 2::SendInput, {Blind}{F2}
-;; v & 3::SendInput, {Blind}{F3}
-;; v & 4::SendInput, {Blind}{F4}
-;; v & 5::SendInput, {Blind}{F5}
-;; v & 6::SendInput, {Blind}{F6}
-;; v & 7::SendInput, {Blind}{F7}
-;; v & 8::SendInput, {Blind}{F8}
-;; v & 9::SendInput, {Blind}{F9}
-;; v & 0::SendInput, {Blind}{F10}
-;; v & -::SendInput, {Blind}{F11}
-;; v & =::SendInput, {Blind}{F12}
-
-v & q:: SendInput, {Blind}^{F13}
-v & w:: SendInput, {Blind}^{F14}
-v & e:: SendInput, {Blind}^{F15}
-v & r:: SendInput, {Blind}^{F16}
-v & t:: SendInput, {Blind}^{F17}
-v & a:: SendInput, {Blind}^{F18}
-v & s:: SendInput, {Blind}^{F19}
-v & d:: SendInput, {Blind}^{F20}
-v & f:: SendInput, {Blind}^{F21}
-v & z:: SendInput, {Blind}^{F22}
-v & x:: SendInput, {Blind}^{F23}
-v & c:: SendInput, {Blind}^{F24}
-
-;; v & g::SendInput, {Enter}
-;; v & b::SendInput, {Blind}{v}
-;; v & n::Return
-;; v & space::Return
+v & tab:: SendInput, {Blind}!^{F13}
+v & q:: SendInput, {Blind}!^q
+v & w:: SendInput, {Blind}!^w
+v & e:: SendInput, {Blind}!^e
+v & r:: SendInput, {Blind}!^r
+v & t:: SendInput, {Blind}!^t
+v & a:: SendInput, {Blind}!^a
+v & s:: SendInput, {Blind}!^s
+v & d:: SendInput, {Blind}!^d
+v & f:: SendInput, {Blind}!^f
+v & g:: SendInput, {Blind}!^g
+v & z:: SendInput, {Blind}!^z
+v & x:: SendInput, {Blind}!^x
+v & c:: SendInput, {Blind}!^c
 
 ;; $*v::SendInput {Blind}{v}

@@ -1,37 +1,41 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; n/v + opposite => Shift
 
+; https://gist.github.com/jitbit/e948cf198f54cbf3992c 
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
+
 SetKeyDelay, -1, -1, -1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; n + opposite => Shift
 
-n & 1:: SendInput +1
-n & 2:: SendInput +2
-n & 3:: SendInput +3
-n & 4:: SendInput +4
-n & 5:: SendInput +5
-n & 6:: SendInput +6
+n & 1:: Send +1
+n & 2:: Send +2
+n & 3:: Send +3
+n & 4:: Send +4
+n & 5:: Send +5
+n & 6:: Send +6
 
-n & q:: SendInput +q
-n & w:: SendInput +w
-n & e:: SendInput +e
-n & r:: SendInput +r
-n & t:: SendInput +t
+n & q:: Send +q
+n & w:: Send +w
+n & e:: Send +e
+n & r:: Send +r
+n & t:: Send +t
 
-n & a:: SendInput +a
-n & s:: SendInput +s
-n & d:: SendInput +d
-n & f:: SendInput +f
-n & g:: SendInput +g
+n & a:: Send +a
+n & s:: Send +s
+n & d:: Send +d
+n & f:: Send +f
+n & g:: Send +g
 
-n & `:: SendInput ~
-n & z:: SendInput +z
-n & x:: SendInput +x
-n & c:: SendInput +c
-n & v:: SendInput +v
+n & `:: Send ~
+n & z:: Send +z
+n & x:: Send +x
+n & c:: Send +c
+n & v:: Send +v
 
-n & b:: SendInput +b
+n & b:: Send +b
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -85,5 +89,5 @@ v & b:: Send +b
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-$*n::SendInput {Blind}{n} 
-$*v::SendInput {Blind}{v} 
+$*n::Send {Blind}{n} 
+$*v::Send {Blind}{v} 
