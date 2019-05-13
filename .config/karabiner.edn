@@ -139,7 +139,8 @@
     [:period :!Speriod]
     [:slash  :!Sslash]
 
-    ;[:v :return_or_enter]
+
+    [:##f :##f19]
     ;[:d :escape]
     ;[:g :!TOdelete_forward]
     ;[:s :tab]
