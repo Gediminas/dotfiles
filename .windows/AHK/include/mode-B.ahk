@@ -13,7 +13,7 @@ b & m::WinActivateBottomOnCurrentVirtualDesktop("Messenger for Desktop.exe", "C:
 b & v::WinActivateBottomOnCurrentVirtualDesktop("devenv.exe")
 b & space::WinMinimize, A
 
-$*b::SendInput {Blind}{b} 
+;$*b::SendInput {Blind}{b} 
 
 
 ; https://stackoverflow.com/questions/50576354/how-to-make-ifwinactive-and-winactivatebottom-to-use-only-the-current-deskto

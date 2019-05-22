@@ -89,5 +89,5 @@ v & b:: Send +b
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-$*n::Send {Blind}{n} 
-$*v::Send {Blind}{v} 
+;$*n::Send {Blind}{n} 
+;$*v::Send {Blind}{v} 

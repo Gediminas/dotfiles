@@ -4,7 +4,7 @@
 ;;; LEFT
 Space & Esc::SendInput !{F4}
 Space & Tab::SendInput, ^{Tab}
- 
+     
 ;; Space & q::
 ;;  WinGetClass, ActiveClass, A
 ;;  WinActivateBottom, ahk_class %ActiveClass%
@@ -70,11 +70,8 @@ Return
 ;Space &  o::SendInput, {Blind}{Home}
 ;Space &  p::SendInput, {Blind}{End}
 
-;; Space & `;::SendInput, {Blind}{Backspace}
 ;; ;Space &  '::SendInput, ^{Backspace}
 
-;Space &  m::SendInput, {Blind}{Delete}
-Space & BS::SendInput, {Blind}{Delete}
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -83,11 +80,8 @@ Space & BS::SendInput, {Blind}{Delete}
 Space & Left:: SendInput ^#{Left}
 Space & Right::SendInput ^#{Right}
 
-;; Space & .::SendInput ^#{Left}
-;; Space & /::SendInput ^#{Right}
-
-;; Space & ,::SendInput ^#{Left}
-;; Space & .::SendInput ^#{Right}
+Space & ,::SendInput ^#{Left}
+Space & .::SendInput ^#{Right}
 
 ;; Space & m::SendInput, {Blind}{PgDn}
 ;; Space & ,::SendInput, {Blind}{PgUp}
@@ -102,9 +96,10 @@ Space & Right::SendInput ^#{Right}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; n/m => Enter/Escape
 
-Space & n::SendInput, {Blind}{Enter}
+Space & n::SendInput, {Enter}
 Space & m::SendInput, {Blind}{Esc}
-
+Space & `;::SendInput, {Blind}{Backspace}
+Space & BS::SendInput, {Blind}{Delete}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; d/y/p => VIM cut/copy/paste
@@ -152,4 +147,4 @@ Space & c::
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-$*Space:: SendInput {Blind}{Space}
+;$*Space:: SendInput {Blind}{Space}
