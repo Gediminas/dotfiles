@@ -22,6 +22,7 @@
     [:left_command :left_control]
     [:left_control :left_command]
     [:right_control :right_command]
+    [:non_us_backslash :escape]
    ]}
 
   {:des "Enter => Enter/RCtrl" :rules
@@ -36,11 +37,6 @@
 
   ;;{:des "jk => Esc" :rules [[[:j :k] :escape]]}
 
-  ;{:des "Esc => none" :rules [:escape :vk_none]}
-  {:des "§ => Esc/Hyper2" :rules
-   [
-    :!appRdc
-    [:non_us_backslash :escape]]}
 
   ;{:des "z => z/Hyper" :rules [[:##z [:right_shift :right_option :right_control :right_command] nil {:alone :z} ]]}
 

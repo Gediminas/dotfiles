@@ -1311,6 +1311,18 @@
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "non_us_backslash"
+          },
+          "to" : [ {
+            "key_code" : "escape"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Enter => Enter/RCtrl",
@@ -1347,21 +1359,6 @@
           },
           "to" : [ {
             "key_code" : "left_control"
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
-            "type" : "frontmost_application_unless"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "§ => Esc/Hyper2",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "non_us_backslash"
-          },
-          "to" : [ {
-            "key_code" : "escape"
           } ],
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
