@@ -1,34 +1,53 @@
 {
  :profiles {:G {:default true
-                :sim     150
+                :sim     50
                 :delay   500
-                :alone   1000
+                :alone   500
                 :held    500
                 }}
- :applications {:Rdc ["^com.microsoft.Rdc.mac"]
+ :applications {:appRdc ["^com.microsoft.rdc.mac"]
                 }
  :simlayers
  {
-  :n-mode {:key :n}
-  :v-mode {:key :v}
-  :b-mode {:key :b}
+  :n-mode {:key :n :condi :!appRdc}
+  :v-mode {:key :v :condi :!appRdc}
+  :b-mode {:key :b :condi :!appRdc}
  }
 
  :main
  [
+  {:des "RDC" :rules
+   [
+    :appRdc
+    [:left_command :left_control]
+    [:left_control :left_command]
+    [:right_control :right_command]
+   ]}
 
-  {:des "Enter => Enter/RCtrl" :rules [[:##return_or_enter :right_control nil {:alone :return_or_enter} ]]}
-  {:des "CapsLock => Esc/LCtrl" :rules [[:##caps_lock :left_control nil {:alone :escape} ]]}
-  {:des "jk => Esc" :rules [[[:j :k] :escape]]}
+  {:des "Enter => Enter/RCtrl" :rules
+   [
+    :!appRdc
+    [:##return_or_enter :right_control nil {:alone :return_or_enter} ]]}
 
-  {:des "Esc => none" :rules [:escape :vk_none]}
-  {:des "§ => Esc/Hyper2" :rules [[:non_us_backslash :escape]]}
+  {:des "CapsLock => Esc/LCtrl" :rules
+   [
+    :!appRdc
+    [:##caps_lock :left_control nil {:alone :escape} ]]}
+
+  ;;{:des "jk => Esc" :rules [[[:j :k] :escape]]}
+
+  ;{:des "Esc => none" :rules [:escape :vk_none]}
+  {:des "§ => Esc/Hyper2" :rules
+   [
+    :!appRdc
+    [:non_us_backslash :escape]]}
 
   ;{:des "z => z/Hyper" :rules [[:##z [:right_shift :right_option :right_control :right_command] nil {:alone :z} ]]}
 
   {:des "spc-mode (essential)"
    :rules
    [
+    :!appRdc
     [:spacebar [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] nil
        {:afterup [["spc-mode" 0]["spc-v-mode" 0]["spc-c-mode" 0]] :alone :spacebar}]
     [:##v                   ["spc-v-mode" 1]     ["spc-mode" 1]  {:afterup ["spc-v-mode" 0]}]
@@ -63,7 +82,7 @@
     [:non_us_backslash      :!Cq              ["spc-mode" 1] ]
     ;[:period                :!Cperiod            ["spc-mode" 1]]
     ;[:slash                 :!Cslash             ["spc-mode" 1]]
-    ;[:#Sdelete_or_backspace :#Sdelete_forward    ["spc-mode" 1]]
+    [:#Sdelete_or_backspace :#Sdelete_forward    ["spc-mode" 1]]
     ;[:#Stab                 :!C#Stab             ["spc-mode" 1]]
     ;[:#Sw                   :!T#Stab             ["spc-mode" 1]]
     [:#Sd                   :!C#Sx               ["spc-mode" 1]]

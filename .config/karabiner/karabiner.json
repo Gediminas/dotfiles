@@ -1268,12 +1268,51 @@
   }, {
     "complex_modifications" : {
       "parameters" : {
-        "basic.simultaneous_threshold_milliseconds" : 150,
+        "basic.simultaneous_threshold_milliseconds" : 50,
         "basic.to_delayed_action_delay_milliseconds" : 500,
-        "basic.to_if_alone_timeout_milliseconds" : 1000,
+        "basic.to_if_alone_timeout_milliseconds" : 500,
         "basic.to_if_held_down_threshold_milliseconds" : 500
       },
       "rules" : [ {
+        "description" : "RDC",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_control"
+          },
+          "to" : [ {
+            "key_code" : "left_command"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "right_control"
+          },
+          "to" : [ {
+            "key_code" : "right_command"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Enter => Enter/RCtrl",
         "manipulators" : [ {
           "to_if_alone" : [ {
@@ -1287,6 +1326,10 @@
           },
           "to" : [ {
             "key_code" : "right_control"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
         } ]
@@ -1305,26 +1348,9 @@
           "to" : [ {
             "key_code" : "left_control"
           } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "jk => Esc",
-        "manipulators" : [ {
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "j"
-            }, {
-              "key_code" : "k"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : false,
-              "key_down_order" : "insensitive",
-              "key_up_order" : "insensitive",
-              "key_up_when" : "any"
-            }
-          },
-          "to" : [ {
-            "key_code" : "escape"
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
         } ]
@@ -1336,6 +1362,10 @@
           },
           "to" : [ {
             "key_code" : "escape"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
         } ]
@@ -1380,6 +1410,10 @@
               "value" : 0
             }
           } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ],
           "type" : "basic"
         }, {
           "to_after_key_up" : [ {
@@ -1401,6 +1435,9 @@
             }
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1426,6 +1463,9 @@
             }
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1442,6 +1482,9 @@
             "key_code" : "left_arrow"
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1466,6 +1509,9 @@
             "key_code" : "down_arrow"
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1490,6 +1536,9 @@
             "key_code" : "up_arrow"
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1514,6 +1563,9 @@
             "key_code" : "right_arrow"
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1539,6 +1591,9 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1564,6 +1619,9 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1589,6 +1647,9 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1614,6 +1675,9 @@
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1639,6 +1703,9 @@
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1664,6 +1731,9 @@
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1689,6 +1759,9 @@
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1714,6 +1787,9 @@
             "modifiers" : [ "left_option" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1736,6 +1812,9 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1758,6 +1837,9 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1780,6 +1862,9 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1802,6 +1887,9 @@
             "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1823,6 +1911,9 @@
             "key_code" : "delete_or_backspace"
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1844,6 +1935,9 @@
             "key_code" : "return_or_enter"
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1865,6 +1959,9 @@
             "key_code" : "escape"
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1890,6 +1987,9 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1912,6 +2012,28 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : {
+              "optional" : [ "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_forward"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1929,6 +2051,9 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1946,6 +2071,9 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -1963,6 +2091,9 @@
             "modifiers" : [ "left_command" ]
           } ],
           "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          }, {
             "name" : "spc-mode",
             "value" : 1,
             "type" : "variable_if"
@@ -2017,7 +2148,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "2"
@@ -2064,7 +2199,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "3"
@@ -2111,7 +2250,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "4"
@@ -2158,7 +2301,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "5"
@@ -2205,7 +2352,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "6"
@@ -2252,7 +2403,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "q"
@@ -2299,7 +2454,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "w"
@@ -2346,7 +2505,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "e"
@@ -2393,7 +2556,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "r"
@@ -2440,7 +2607,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "t"
@@ -2487,7 +2658,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "a"
@@ -2534,7 +2709,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "s"
@@ -2581,7 +2760,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "d"
@@ -2628,7 +2811,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "f"
@@ -2675,7 +2862,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "g"
@@ -2722,7 +2913,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "grave_accent_and_tilde"
@@ -2769,7 +2964,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "z"
@@ -2816,7 +3015,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "x"
@@ -2863,7 +3066,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "c"
@@ -2910,7 +3117,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "v"
@@ -2957,7 +3168,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "b"
@@ -3004,7 +3219,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         } ]
       }, {
         "description" : "v-mode (opp-side => LShift; else => spec)",
@@ -3054,7 +3273,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "8"
@@ -3101,7 +3324,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "9"
@@ -3148,7 +3375,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "0"
@@ -3195,7 +3426,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "hyphen"
@@ -3242,7 +3477,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "equal_sign"
@@ -3289,7 +3528,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "y"
@@ -3336,7 +3579,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "u"
@@ -3383,7 +3630,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "i"
@@ -3430,7 +3681,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "o"
@@ -3477,7 +3732,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "p"
@@ -3524,7 +3783,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "open_bracket"
@@ -3571,7 +3834,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "close_bracket"
@@ -3618,7 +3885,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "h"
@@ -3665,7 +3936,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "j"
@@ -3712,7 +3987,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "k"
@@ -3759,7 +4038,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "l"
@@ -3806,7 +4089,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "semicolon"
@@ -3853,7 +4140,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "quote"
@@ -3900,7 +4191,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "non_us_backslash"
@@ -3947,7 +4242,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "b"
@@ -3994,7 +4293,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "n"
@@ -4041,7 +4344,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "m"
@@ -4088,7 +4395,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "comma"
@@ -4135,7 +4446,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "period"
@@ -4182,7 +4497,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "slash"
@@ -4229,7 +4548,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "f",
@@ -4277,7 +4600,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         } ]
       }, {
         "description" : "b-mode (hyper)",
@@ -4327,7 +4654,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "2"
@@ -4374,7 +4705,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "3"
@@ -4421,7 +4756,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "4"
@@ -4468,7 +4807,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "5"
@@ -4515,7 +4858,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "6"
@@ -4562,7 +4909,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "7"
@@ -4609,7 +4960,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "8"
@@ -4656,7 +5011,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "9"
@@ -4703,7 +5062,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "0"
@@ -4750,7 +5113,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "hyphen"
@@ -4797,7 +5164,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "equal_sign"
@@ -4844,7 +5215,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "q"
@@ -4891,7 +5266,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "w"
@@ -4938,7 +5317,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "e"
@@ -4985,7 +5368,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "r"
@@ -5032,7 +5419,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "t"
@@ -5079,7 +5470,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "y"
@@ -5126,7 +5521,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "u"
@@ -5173,7 +5572,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "i"
@@ -5220,7 +5623,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "o"
@@ -5267,7 +5674,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "p"
@@ -5314,7 +5725,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "open_bracket"
@@ -5361,7 +5776,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "close_bracket"
@@ -5408,7 +5827,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "a"
@@ -5455,7 +5878,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "s"
@@ -5502,7 +5929,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "d"
@@ -5549,7 +5980,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "f"
@@ -5596,7 +6031,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "g"
@@ -5643,7 +6082,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "h"
@@ -5690,7 +6133,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "j"
@@ -5737,7 +6184,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "k"
@@ -5784,7 +6235,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "l"
@@ -5831,7 +6286,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "semicolon"
@@ -5878,7 +6337,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "quote"
@@ -5925,7 +6388,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "non_us_backslash"
@@ -5972,7 +6439,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "z"
@@ -6019,7 +6490,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "x"
@@ -6066,7 +6541,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "c"
@@ -6113,7 +6592,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "v"
@@ -6160,7 +6643,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "n"
@@ -6207,7 +6694,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "m"
@@ -6254,7 +6745,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "comma"
@@ -6301,7 +6796,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "period"
@@ -6348,7 +6847,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         }, {
           "from" : {
             "key_code" : "slash"
@@ -6395,7 +6898,11 @@
                 }
               } ]
             }
-          }
+          },
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
         } ]
       } ]
     },
