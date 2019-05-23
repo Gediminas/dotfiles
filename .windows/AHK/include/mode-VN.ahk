@@ -6,6 +6,14 @@
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 
 SetKeyDelay, -1, -1, -1
+; SetKeyDelay, -1
+; SetControlDelay, -1
+; SetWinDelay, -1
+; SetMouseDelay, -1
+; SetBatchLines, -1
+; Process, Priority,, High
+; ListLines Off
+; #KeyHistory 0
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; n + opposite => Shift
@@ -89,5 +97,3 @@ v & b:: Send +b
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;$*n::Send {Blind}{n} 
-;$*v::Send {Blind}{v} 
