@@ -7,6 +7,11 @@
                 }}
  :applications {:appRdc ["^com.microsoft.rdc.mac"]
                 }
+ :layers
+ {
+  :spc-mode {:key :spacebar :condi :!appRdc}
+  }
+
  :simlayers
  {
   :n-mode {:key :n :condi :!appRdc}
@@ -35,55 +40,26 @@
     :!appRdc
     [:##caps_lock :left_control nil {:alone :escape} ]]}
 
-  ;;{:des "jk => Esc" :rules [[[:j :k] :escape]]}
-
-
-  ;{:des "z => z/Hyper" :rules [[:##z [:right_shift :right_option :right_control :right_command] nil {:alone :z} ]]}
-
   {:des "spc-mode (essential)"
    :rules
-   [
-    :!appRdc
-    [:spacebar [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] nil
-       {:afterup [["spc-mode" 0]["spc-v-mode" 0]["spc-c-mode" 0]] :alone :spacebar}]
-    [:##v                   ["spc-v-mode" 1]     ["spc-mode" 1]  {:afterup ["spc-v-mode" 0]}]
-    [:##c                   ["spc-c-mode" 1]     ["spc-mode" 1]  {:afterup ["spc-c-mode" 0]}]
-
-    [:##h                   :##left_arrow        [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
-    [:##j                   :##down_arrow        [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
-    [:##k                   :##up_arrow          [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
-    [:##l                   :##right_arrow       [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
-
-    [:##h                   :!Sleft_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
-    [:##j                   :!Sdown_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
-    [:##k                   :!Sup_arrow        [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
-    [:##l                   :!Sright_arrow     [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 0]] ]
-
-    [:##h                   :!O##left_arrow      [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 1]] ]
-    [:##j                   :!O##down_arrow      [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 1]] ]
-    [:##k                   :!O##up_arrow        [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 1]] ]
-    [:##l                   :!O##right_arrow     [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 1]] ]
-
-    [:h                   :!S!Oleft_arrow    [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
-    [:j                   :!S!Odown_arrow    [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
-    [:k                   :!S!Oup_arrow      [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
-    [:l                   :!S!Oright_arrow   [["spc-mode" 1]["spc-v-mode" 1]["spc-c-mode" 1]] ]
-
-
-    [:semicolon             :delete_or_backspace [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
-    [:n                     :return_or_enter     [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
-    [:m                     :escape              [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
-    [:#Ss                   :!C#Ss               [["spc-mode" 1]["spc-v-mode" 0]["spc-c-mode" 0]] ]
-
-    [:non_us_backslash      :!Cq              ["spc-mode" 1] ]
-    ;[:period                :!Cperiod            ["spc-mode" 1]]
-    ;[:slash                 :!Cslash             ["spc-mode" 1]]
-    [:#Sdelete_or_backspace :#Sdelete_forward    ["spc-mode" 1]]
-    ;[:#Stab                 :!C#Stab             ["spc-mode" 1]]
-    ;[:#Sw                   :!T#Stab             ["spc-mode" 1]]
-    [:#Sd                   :!C#Sx               ["spc-mode" 1]]
-    [:#Sy                   :!C#Sc               ["spc-mode" 1]]
-    [:#Sp                   :!C#Sv               ["spc-mode" 1]]
+   [:spc-mode
+    [:##h                   :##left_arrow]
+    [:##j                   :##down_arrow]
+    [:##k                   :##up_arrow]
+    [:##l                   :##right_arrow]
+    [:semicolon             :delete_or_backspace]
+    [:n                     :return_or_enter]
+    [:m                     :escape]
+    [:#Ss                   :!C#Ss]
+    [:non_us_backslash      :!Cq]
+    [:#Sdelete_or_backspace :#Sdelete_forward]
+    [:#Sd                   :!C#Sx]
+    [:#Sy                   :!C#Sc]
+    [:#Sp                   :!C#Sv]
+    ;[:period                :!Cperiod]
+    ;[:slash                 :!Cslash]
+    ;[:#Stab                 :!C#Stab]
+    ;[:#Sw                   :!T#Stab]
     ]}
   
   {:des "n-mode (opp-side => LShift; else => spec)"
