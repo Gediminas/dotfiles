@@ -36,5 +36,5 @@ $*y::SendInput {Blind}y
 $*z::SendInput {Blind}z
 $*,::SendInput {Blind},
 $*.::SendInput {Blind}.
-$*space::Send {Blind}{space} 
-$*tab::Send {Blind}{tab} 
+$*space::SendInput {Blind}{space} 
+$*tab::SendInput {Blind}{tab} 

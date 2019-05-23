@@ -32,10 +32,11 @@ SetKeyDelay, -1, -1, -1
 ;#Include include\mode-Win.ahk
 #Include include\mode-CapsLock.ahk
 #Include include\mode-Enter.ahk
-#Include include\Workarounds.ahk
 
 tab & q:: 
   dual.reset()
   SendInput, +^s
   Reload
   Return
+  
+#Include include\Workarounds.ahk
