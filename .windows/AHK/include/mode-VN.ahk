@@ -1,19 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; n/v + opposite => Shift
 
-; https://gist.github.com/jitbit/e948cf198f54cbf3992c 
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
-
-SetKeyDelay, -1, -1, -1
-; SetKeyDelay, -1
-; SetControlDelay, -1
-; SetWinDelay, -1
-; SetMouseDelay, -1
-; SetBatchLines, -1
-; Process, Priority,, High
-; ListLines Off
-; #KeyHistory 0
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; n + opposite => Shift
@@ -79,21 +66,6 @@ v & .:: Send +.
 v & /:: Send +/
 
 v & b:: Send +b
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; n + same-side => Shift
-
-;;n & j::     Send escape
-;;n & space:: Send enter
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; v + same-side => Shift
-
-;;v & f::     Send escape
-;;v & space:: Send ^v
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
