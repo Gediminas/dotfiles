@@ -67,5 +67,10 @@ n & b:: Send +b
 
 n & tab:: Send +{tab}
 
+
+;; reset
+n & space::return
+n & j::Send {Esc}   
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

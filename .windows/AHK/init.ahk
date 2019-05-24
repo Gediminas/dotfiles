@@ -20,12 +20,13 @@ SetKeyDelay, -1, -1, -1
 
 
 #Include LockScreen.ahk
+#Include include\Workarounds.ahk
 #Include include\mode-B.ahk
 ;;#Include include\mode-FJ.ahk
+#Include include\mode-mod-V-same.ahk
+#Include include\mode-mod-V-opp.ahk
 #Include include\mode-mod-C-opp.ahk
 #Include include\mode-mod-X-opp.ahk
-#Include include\mode-mod-V-opp.ahk
-#Include include\mode-mod-V-same.ahk
 #Include include\mode-Space.ahk
 #Include include\mode-Space-LT.ahk
 ;#Include include\mode-Space-Magic.ahk
@@ -35,8 +36,15 @@ SetKeyDelay, -1, -1, -1
 
 tab & q:: 
   dual.reset()
-  SendInput, +^s
+  If WinActive("ahk_exe emacs.exe") {
+    SendInput, {Esc}:w{Enter}
+  } Else If WinActive("ahk_exe emacsclient.exe") {
+    SendInput, {Esc}:w{Enter}
+  } Else If WinActive("ahk_exe putty_tray_64.exe") {
+    SendInput, {Esc}:w{Enter}
+  } Else {
+    SendInput {Blind}^s
+  }
   Reload
   Return
   
-#Include include\Workarounds.ahk

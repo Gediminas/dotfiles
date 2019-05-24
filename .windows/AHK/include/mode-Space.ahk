@@ -2,38 +2,12 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; LEFT
-Space & Esc::SendInput !{F4}
 Space & Tab::SendInput, ^{Tab}
      
-;; Space & q::
-;;  WinGetClass, ActiveClass, A
-;;  WinActivateBottom, ahk_class %ActiveClass%
-;;  return
-
-;;Space & w::
-;;  If WinActive("ahk_exe emacs.exe") {
-;;  	SendInput, {Space}{Tab}
-;;  } Else If WinActive("ahk_exe putty_tray_64.exe") {
-;;  	SendInput, {Space}{Tab}
-;;  } Else {
-;;    SendInput, ^{Tab}
-;;  }
-;;  Return
-;;
-;;Space & r::SendInput, ^{F5}
-;;
-;;Space & a::
-;;  If WinActive("ahk_exe emacs.exe") {
-;;    SendInput, {Esc}:wa{Enter}
-;;  } Else If WinActive("ahk_exe putty_tray_64.exe") {
-;;    SendInput, {Esc}:wa{Enter}
-;;  } Else {
-;;    SendInput {Blind}^+s
-;;  }
-;;Return
-
 Space & s::
   If WinActive("ahk_exe emacs.exe") {
+    SendInput, {Esc}:w{Enter}
+  } Else If WinActive("ahk_exe emacsclient.exe") {
   	SendInput, {Esc}:w{Enter}
   } Else If WinActive("ahk_exe putty_tray_64.exe") {
     SendInput, {Esc}:w{Enter}
@@ -42,109 +16,46 @@ Space & s::
   }
 Return
 
-
-;;Space & d::
-;;  SendInput {Ctrl Down}
-;;  Return
-;;Space & d up::
-;;  SendInput {Ctrl Up}
-;;  Return
-;;Space & e::
-;;  SendInput {Shift Down}
-;;  Return
-;;Space & e up::
-;;  SendInput {Shift Up}
-;;  Return
-
-;; Space & z::SendInput ^z
-;; Space & x::SendInput ^x
-;; Space & c::SendInput ^c
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; RIGHT
-
-;Space &  y::SendInput, {Blind}{Tab}
-;Space &  u::SendInput, {Blind}{PgDn}
-;Space &  i::SendInput, {Blind}{PgUp}
-;Space &  o::SendInput, {Blind}{Home}
-;Space &  p::SendInput, {Blind}{End}
-
-;; ;Space &  '::SendInput, ^{Backspace}
-
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; DESKTOP
 
 Space & Left:: SendInput ^#{Left}
 Space & Right::SendInput ^#{Right}
 
-Space & ,::SendInput ^#{Left}
-Space & .::SendInput ^#{Right}
-
-;; Space & m::SendInput, {Blind}{PgDn}
-;; Space & ,::SendInput, {Blind}{PgUp}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;; Space & b::SendInput, {Blind}{Space}
-;; Space & v::SendInput, ^v
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; n/m => Enter/Escape
 
-Space & n::SendInput, {Enter}
-Space & m::SendInput, {Blind}{Esc}
 Space & `;::SendInput, {Blind}{Backspace}
 Space & BS::SendInput, {Blind}{Delete}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; d/y/p => VIM cut/copy/paste
 
-Space & x::SendInput ^x
-Space & y::SendInput ^c
-Space & p::SendInput ^v
+Space & y::    Send ^c
+Space & p::    Send ^v
+Space & b::    Send {Enter}
+Space & RCtrl::Send {Blind}{Esc}
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; h/j/k/l => VIM navigation 
-;; c/v     => + Ctrl/Shift
+Space & v::   Send {LShift down}
+Space & v up::Send {LShift up}
+Space & n::   Send {RShift down}
+Space & n up::Send {RShift up}
 
-Space & v::
-Space & c::
-  Return
+Space & c::   Send {LCtrl down}
+Space & c up::Send {LCtrl up}
+Space & m::   Send {RCtrl down}
+Space & m up::Send {RCtrl up}
 
-#If (not GetKeyState("c", "P")) and (GetKeyState("v", "P"))
-  Space & h::SendInput, {Blind}+{Left}
-  Space & j::SendInput, {Blind}+{Down}
-  Space & k::SendInput, {Blind}+{Up}
-  Space & l::SendInput, {Blind}+{Right}
-  Space & d::SendInput, {Blind}+{Up}
-  Space & f::SendInput, {Blind}+{Down}
+Space & x::   Send {LAlt down}
+Space & x up::Send {LAlt up}
+Space & ,::   Send {RAlt down}
+Space & , up::Send {RAlt up}
 
-#If (GetKeyState("c", "P")) and (not GetKeyState("v", "P"))
-  Space & h::SendInput, {Blind}^{Left}
-  Space & j::SendInput, {Blind}^{Down}
-  Space & k::SendInput, {Blind}^{Up}
-  Space & l::SendInput, {Blind}^{Right}
 
-#If (GetKeyState("c", "P")) and (GetKeyState("v", "P"))
-  Space & h::SendInput, {Blind}^+{Left}
-  Space & j::SendInput, {Blind}^+{Down}
-  Space & k::SendInput, {Blind}^+{Up}
-  Space & l::SendInput, {Blind}^+{Right}
-
-#If
-  Space & h::SendInput, {Blind}{Left}
-  Space & j::SendInput, {Blind}{Down}
-  Space & k::SendInput, {Blind}{Up}
-  Space & l::SendInput, {Blind}{Right}
-  Space & f::SendInput, {Blind}{Up}
-  Space & d::SendInput, {Blind}{Down}
+Space & h::SendInput, {Blind}{Left}
+Space & j::SendInput, {Blind}{Down}
+Space & k::SendInput, {Blind}{Up}
+Space & l::SendInput, {Blind}{Right}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;$*Space:: SendInput {Blind}{Space}

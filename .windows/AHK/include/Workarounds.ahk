@@ -8,33 +8,46 @@
 
 ; prevent space up delay "gitp ush" (git push)
 
-$*a::SendInput {Blind}a
-$*b::SendInput {Blind}b
-$*c::SendInput {Blind}c
-$*d::SendInput {Blind}d
-$*e::SendInput {Blind}e
-$*f::SendInput {Blind}f
-$*g::SendInput {Blind}g
-$*h::SendInput {Blind}h
-$*i::SendInput {Blind}i
-$*j::SendInput {Blind}j
-$*k::SendInput {Blind}k
-$*l::SendInput {Blind}l
-$*m::SendInput {Blind}m
-$*n::SendInput {Blind}n
-$*o::SendInput {Blind}o
-$*p::SendInput {Blind}p
-$*q::SendInput {Blind}q
-$*r::SendInput {Blind}r
-$*s::SendInput {Blind}s
-$*t::SendInput {Blind}t
-$*u::SendInput {Blind}u
-$*v::SendInput {Blind}v
-$*w::SendInput {Blind}w
-$*x::SendInput {Blind}x
-$*y::SendInput {Blind}y
-$*z::SendInput {Blind}z
-$*,::SendInput {Blind},
-$*.::SendInput {Blind}.
-$*space::SendInput {Blind}{space} 
-$*tab::SendInput {Blind}{tab} 
+*0::Send {Blind}0
+*1::Send {Blind}1
+*2::Send {Blind}2
+*3::Send {Blind}3
+*4::Send {Blind}4
+*5::Send {Blind}5
+*6::Send {Blind}6
+*7::Send {Blind}7
+*8::Send {Blind}8
+*9::Send {Blind}9
+
+*a::Send {Blind}a
+*b::Send {Blind}b
+*c::Send {Blind}c
+*d::Send {Blind}d
+*e::Send {Blind}e
+*f::Send {Blind}f
+*g::Send {Blind}g
+*h::Send {Blind}h
+*i::Send {Blind}i
+*j::Send {Blind}j
+*k::Send {Blind}k
+*l::Send {Blind}l
+*m::Send {Blind}m
+*n::Send {Blind}n
+*o::Send {Blind}o
+*p::Send {Blind}p
+*q::Send {Blind}q
+*r::Send {Blind}r
+*s::Send {Blind}s
+*t::Send {Blind}t
+*u::Send {Blind}u
+*v::Send {Blind}v
+*w::Send {Blind}w
+*x::Send {Blind}x
+*y::Send {Blind}y
+*z::Send {Blind}z
+
+*,::Send {Blind},
+*.::Send {Blind}.
+
+*space::Send {Blind}{space} 
+*tab::  Send {Blind}{tab} 
