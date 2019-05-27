@@ -1,34 +1,30 @@
 ﻿; Space + [1..9,0,-,=] => Lithuanian letters
 
-n & m::   
-m & n::    
-  return
-
-#If GetKeyState("n", "P")
-  m & 1::Send {Blind}Ą
-  m & 2::Send {Blind}Č
-  m & 3::Send {Blind}Ę
-  m & 4::Send {Blind}Ė
-  m & 5::Send {Blind}Į
-  m & 6::Send {Blind}Š
-  c & 7::Send {Blind}Ų
-  c & 8::Send {Blind}Ū
-  c & 9::Send {Blind}„
-  c & 0::Send {Blind}“
-  c & -::Send {Blind}–
-  c & =::Send {Blind}Ž
+#If GetKeyState("Shift", "P")
+Space & 1::SendInput, {Blind}Ą
+Space & 2::SendInput, {Blind}Č
+Space & 3::SendInput, {Blind}Ę
+Space & 4::SendInput, {Blind}Ė
+Space & 5::SendInput, {Blind}Į
+Space & 6::SendInput, {Blind}Š
+Space & 7::SendInput, {Blind}Ų
+Space & 8::SendInput, {Blind}Ū
+Space & 9::SendInput, {Blind}„
+Space & 0::SendInput, {Blind}“
+Space & -::SendInput, {Blind}–
+Space & =::SendInput, {Blind}Ž
 #If
+Space & 1::SendInput, {Blind}ą
+Space & 2::SendInput, {Blind}č
+Space & 3::SendInput, {Blind}ę
+Space & 4::SendInput, {Blind}ė
+Space & 5::SendInput, {Blind}į
+Space & 6::SendInput, {Blind}š
+Space & 7::SendInput, {Blind}ų
+Space & 8::SendInput, {Blind}ū
+Space & 9::SendInput, {Blind}„
+Space & 0::SendInput, {Blind}“
+Space & -::SendInput, {Blind}–
+Space & =::SendInput, {Blind}ž
 
-m & 1::Send {Blind}ą
-m & 2::Send {Blind}č
-m & 3::Send {Blind}ę
-m & 4::Send {Blind}ė
-m & 5::Send {Blind}į
-m & 6::Send {Blind}š
-c & 7::Send {Blind}ų
-c & 8::Send {Blind}ū
-c & 9::Send {Blind}„
-c & 0::Send {Blind}“
-c & -::Send {Blind}–
-c & =::Send {Blind}ž
-
+; $*Space::SendInput {Blind}{Space} 

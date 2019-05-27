@@ -26,36 +26,54 @@ Space & Right::SendInput ^#{Right}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; n/m => Enter/Escape
 
+Space & n::SendInput, {Enter}
+Space & m::SendInput, {Blind}{Esc}
 Space & `;::SendInput, {Blind}{Backspace}
 Space & BS::SendInput, {Blind}{Delete}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; d/y/p => VIM cut/copy/paste
 
-Space & y::    Send ^c
-Space & p::    Send ^v
-Space & b::    Send {Enter}
-Space & RCtrl::Send {Blind}{Esc}
+Space & x::SendInput ^x
+Space & y::SendInput ^c
+Space & p::SendInput ^v
 
-
-Space & v::   Send {LShift down}
-Space & v up::Send {LShift up}
-Space & n::   Send {RShift down}
-Space & n up::Send {RShift up}
-
-Space & c::   Send {LCtrl down}
-Space & c up::Send {LCtrl up}
-Space & m::   Send {RCtrl down}
-Space & m up::Send {RCtrl up}
-
-Space & x::   Send {LAlt down}
-Space & x up::Send {LAlt up}
-Space & ,::   Send {RAlt down}
-Space & , up::Send {RAlt up}
-
-
-Space & h::SendInput, {Blind}{Left}
-Space & j::SendInput, {Blind}{Down}
-Space & k::SendInput, {Blind}{Up}
-Space & l::SendInput, {Blind}{Right}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; h/j/k/l => VIM navigation 
+;; c/v     => + Ctrl/Shift
+
+Space & v::
+Space & c::
+  Return
+
+#If (not GetKeyState("c", "P")) and (GetKeyState("v", "P"))
+  Space & h::SendInput, {Blind}+{Left}
+  Space & j::SendInput, {Blind}+{Down}
+  Space & k::SendInput, {Blind}+{Up}
+  Space & l::SendInput, {Blind}+{Right}
+  Space & d::SendInput, {Blind}+{Up}
+  Space & f::SendInput, {Blind}+{Down}
+
+#If (GetKeyState("c", "P")) and (not GetKeyState("v", "P"))
+  Space & h::SendInput, {Blind}^{Left}
+  Space & j::SendInput, {Blind}^{Down}
+  Space & k::SendInput, {Blind}^{Up}
+  Space & l::SendInput, {Blind}^{Right}
+
+#If (GetKeyState("c", "P")) and (GetKeyState("v", "P"))
+  Space & h::SendInput, {Blind}^+{Left}
+  Space & j::SendInput, {Blind}^+{Down}
+  Space & k::SendInput, {Blind}^+{Up}
+  Space & l::SendInput, {Blind}^+{Right}
+
+#If
+  Space & h::SendInput, {Blind}{Left}
+  Space & j::SendInput, {Blind}{Down}
+  Space & k::SendInput, {Blind}{Up}
+  Space & l::SendInput, {Blind}{Right}
+  Space & f::SendInput, {Blind}{Up}
+  Space & d::SendInput, {Blind}{Down}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
