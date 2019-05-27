@@ -26,6 +26,7 @@ SetKeyDelay, -1, -1, -1
 #Include include\mode-VN.ahk
 #Include include\mode-V.ahk
 #Include include\mode-Space.ahk
+#Include include\mode-Space-FN.ahk
 #Include include\mode-Space-LT.ahk
 ;#Include include\mode-Space-Magic.ahk
 ;#Include include\mode-Win.ahk
