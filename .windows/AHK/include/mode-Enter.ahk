@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Enter => Esc / LCtrl (hold)
 
-SetKeyDelay, -1
+;SetKeyDelay, -1
 
 $*Enter::
   Send {Blind}{RCtrl Down}

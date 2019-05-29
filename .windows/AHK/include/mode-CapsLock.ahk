@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; CapsLock => Esc / LCtrl (hold)
 
-SetKeyDelay, -1
+;SetKeyDelay, -1
 
 $*CapsLock::
   Send {Blind}{LCtrl Down}
