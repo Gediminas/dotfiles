@@ -27,43 +27,88 @@
 ; Space & -::SendInput, {Blind}–
 ; Space & =::SendInput, {Blind}ž
 
-m & n::
-n & space::
-n & m::
-m & space::
-  Return
+n & .::Return
+. & n::Return
 
 #If (not GetKeyState("n", "P") and not GetKeyState("Shift", "P"))
-  m & a::Send {Blind}ą
-  m & c::Send {Blind}č
-  m & e::Send {Blind}ę
-  m & d::Send {Blind}ė
-  m & r::Send {Blind}į
-  m & s::Send {Blind}š
-  m & v::Send {Blind}ų
-  m & f::Send {Blind}ū
-  m & q::Send {Blind}„
-  m & w::Send {Blind}“
-  m & `::Send {Blind}–
-  m & z::Send {Blind}ž
-  m & t::Return
-  m & x::Return
+  . & a::Send {Blind}ą
+  . & c::Send {Blind}č
+  . & e::Send {Blind}ę
+  . & d::Send {Blind}ė
+  . & r::Send {Blind}į
+  . & s::Send {Blind}š
+  . & v::Send {Blind}ų
+  . & f::Send {Blind}ū
+  . & q::Send {Blind}„
+  . & w::Send {Blind}“
+  . & `::Send {Blind}–
+  . & z::Send {Blind}ž
+  . & t::Return
+  . & x::Return
 
 #If (GetKeyState("n", "P") or GetKeyState("Shift", "P"))
-  m & a::Send {Blind}Ą
-  m & c::Send {Blind}Č
-  m & e::Send {Blind}Ę
-  m & d::Send {Blind}Ė
-  m & r::Send {Blind}Į
-  m & s::Send {Blind}Š
-  m & v::Send {Blind}Ų
-  m & f::Send {Blind}Ū
-  m & q::Send „“{Left}
-  m & w::Send „“{Left}
-  m & `::Send {Blind}–
-  m & z::Send {Blind}Ž
-  m & t::Return
-  m & x::Return
+  . & a::Send {Blind}Ą
+  . & c::Send {Blind}Č
+  . & e::Send {Blind}Ę
+  . & d::Send {Blind}Ė
+  . & r::Send {Blind}Į
+  . & s::Send {Blind}Š
+  . & v::Send {Blind}Ų
+  . & f::Send {Blind}Ū
+  . & q::Send „“{Left}
+  . & w::Send „“{Left}
+  . & `::Send {Blind}–
+  . & z::Send {Blind}Ž
+  . & t::Return
+  . & x::Return
 
 #If
 
+n & ,::Return
+, & n::Return
+
+#If (not GetKeyState("n", "P"))
+
+  , & q::Send .
+  , & w::Send .
+  , & e::Send [
+  , & r::Send ]
+  , & t::Send ``
+
+  , & a::Send .
+  , & s::Send .
+  , & d::Send (
+  , & f::Send )
+  , & g::Send `"
+
+  , & `::Return
+  , & z::Send .
+  , & x::Send {{}
+  , & c::Send {}}
+  , & v::Send '
+
+#If (GetKeyState("n", "P"))
+  , & 4::Send ${{}{}}{Left} 
+  , & 5::Send `%`%{Left}
+
+  , & q::Send .
+  , & w::Send .
+  , & e::Send []{Left}
+  , & r::Send .
+  , & t::Send ````{Left}
+
+  , & a::Send .
+  , & s::Send .
+  , & d::Send (){Left}
+  , & f::Send .
+  , & g::Send `"`"{Left}
+
+  , & `::Return
+  , & z::Send .
+  , & x::Send {{}{}}{Left}
+  , & c::Send .
+  , & v::Send ''{Left}
+
+  , & space::Send {Enter}
+
+#If
