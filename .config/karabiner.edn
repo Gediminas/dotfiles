@@ -1,22 +1,24 @@
 {
  :profiles {:G {:default true
-                :sim     50
-                :delay   500
-                :alone   500
-                :held    500
+                :sim     500
+                :delay   1000
+                :alone   1000
+                :held    1000
                 }}
  :applications {:appRdc ["^com.microsoft.rdc.mac"]
                 }
  :layers
  {
-  :spc-mode {:key :spacebar :condi :!appRdc}
-  }
+  :spc-mode      {:key :spacebar :condi :!appRdc}
+  :lt-lower-mode {:key :period   :condi :!appRdc}
+  :symbol-mode   {:key :comma    :condi :!appRdc}
+ }
 
  :simlayers
  {
+  :b-mode {:key :b :condi :!appRdc}
   :n-mode {:key :n :condi :!appRdc}
   :v-mode {:key :v :condi :!appRdc}
-  :b-mode {:key :b :condi :!appRdc}
  }
 
  :main
@@ -135,6 +137,46 @@
     ;[:d :escape]
     ;[:g :!TOdelete_forward]
     ;[:s :tab]
+    ]}
+
+  {:des "LT"
+   :rules
+   [
+    [[:period :n] ["lt-upper-mode" 1] nil {:afterup ["lt-upper-mode" 0]}]
+
+    :lt-lower-mode
+    [:a [:!O0 :!O1 :!O0 :!O5]] ;a,
+    [:c [:!O0 :!O1 :!O0 :!Od]] ;cv
+    [:e [:!O0 :!O1 :!O1 :!O9]] ;e,
+    [:d [:!O0 :!O1 :!O1 :!O7]] ;e*
+    [:x [:!O0 :!O1 :!O2 :!Of]] ;i,
+    [:s [:!O0 :!O1 :!O6 :!O1]] ;sv
+    [:v [:!O0 :!O1 :!O7 :!O3]] ;u,
+    [:f [:!O0 :!O1 :!O6 :!Ob]] ;u-
+    [:z [:!O0 :!O1 :!O7 :!Oe]] ;zv
+    [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
+    [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
+    [:t :period]
+    [:g :period]
+    [:r :period]
+    [:b :period]
+
+    :lt-upper-mode
+    [:a [:!O0 :!O1 :!O0 :!O4]] ;A,
+    [:c [:!O0 :!O1 :!O0 :!Oc]] ;Cv
+    [:e [:!O0 :!O1 :!O1 :!O8]] ;E,
+    [:d [:!O0 :!O1 :!O1 :!O6]] ;E*
+    [:x [:!O0 :!O1 :!O2 :!Oe]] ;I,
+    [:s [:!O0 :!O1 :!O6 :!O0]] ;Sv
+    [:v [:!O0 :!O1 :!O7 :!O2]] ;U,
+    [:f [:!O0 :!O1 :!O6 :!Oa]] ;U-
+    [:z [:!O0 :!O1 :!O7 :!Od]] ;Zv
+    [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
+    [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
+    [:t :period]
+    [:g :period]
+    [:r :period]
+    [:b :period]
     ]}
 
   {:des "b-mode (hyper)"
