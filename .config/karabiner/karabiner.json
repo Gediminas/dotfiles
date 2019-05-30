@@ -1305,7 +1305,7 @@
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
-              "name" : "lt-lower-mode",
+              "name" : "lt-mode",
               "value" : 1
             }
           } ],
@@ -1314,7 +1314,7 @@
           },
           "to_after_key_up" : [ {
             "set_variable" : {
-              "name" : "lt-lower-mode",
+              "name" : "lt-mode",
               "value" : 0
             }
           } ],
@@ -1675,6 +1675,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -1726,6 +1734,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -1777,6 +1793,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -1828,6 +1852,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -1879,6 +1911,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -1930,6 +1970,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -1981,6 +2029,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2032,6 +2088,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2083,6 +2147,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2134,6 +2206,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2185,6 +2265,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2236,6 +2324,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2287,6 +2383,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2338,6 +2442,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2389,6 +2501,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2440,6 +2560,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2491,6 +2619,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2542,6 +2678,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2593,6 +2737,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2644,6 +2796,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2695,6 +2855,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "from" : {
@@ -2746,6 +2914,14 @@
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
+          }, {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         } ]
       }, {
@@ -4132,338 +4308,6 @@
       }, {
         "description" : "LT",
         "manipulators" : [ {
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "lt-upper-mode",
-              "value" : 0
-            }
-          } ],
-          "from" : {
-            "simultaneous" : [ {
-              "key_code" : "period"
-            }, {
-              "key_code" : "n"
-            } ],
-            "simultaneous_options" : {
-              "detect_key_down_uninterruptedly" : false,
-              "key_down_order" : "insensitive",
-              "key_up_order" : "insensitive",
-              "key_up_when" : "any"
-            }
-          },
-          "to" : [ {
-            "set_variable" : {
-              "name" : "lt-upper-mode",
-              "value" : 1
-            }
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "a"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "5",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "c"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "d",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "e"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "9",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "d"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "7",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "x"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "2",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "f",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "s"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "6",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "v"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "7",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "3",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "f"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "6",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "b",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "z"
-          },
-          "to" : [ {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "7",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "e",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "q"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "e",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "w"
-          },
-          "to" : [ {
-            "key_code" : "2",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "0",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "1",
-            "modifiers" : [ "left_option" ]
-          }, {
-            "key_code" : "c",
-            "modifiers" : [ "left_option" ]
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "t"
-          },
-          "to" : [ {
-            "key_code" : "period"
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "g"
-          },
-          "to" : [ {
-            "key_code" : "period"
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "r"
-          },
-          "to" : [ {
-            "key_code" : "period"
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "b"
-          },
-          "to" : [ {
-            "key_code" : "period"
-          } ],
-          "conditions" : [ {
-            "name" : "lt-lower-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
           "from" : {
             "key_code" : "a"
           },
@@ -4764,6 +4608,333 @@
           } ],
           "conditions" : [ {
             "name" : "lt-upper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "lt-upper-mode",
+              "value" : 0
+            }
+          } ],
+          "from" : {
+            "key_code" : "n"
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "lt-upper-mode",
+              "value" : 1
+            }
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "5",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "d",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "9",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "2",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "f",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "3",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "6",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "b",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "7",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "e",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "e",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "0",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "1",
+            "modifiers" : [ "left_option" ]
+          }, {
+            "key_code" : "c",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "key_code" : "period"
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "key_code" : "period"
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r"
+          },
+          "to" : [ {
+            "key_code" : "period"
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b"
+          },
+          "to" : [ {
+            "key_code" : "period"
+          } ],
+          "conditions" : [ {
+            "name" : "lt-mode",
             "value" : 1,
             "type" : "variable_if"
           } ],

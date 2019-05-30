@@ -9,15 +9,15 @@
                 }
  :layers
  {
-  :spc-mode      {:key :spacebar :condi :!appRdc}
-  :lt-lower-mode {:key :period   :condi :!appRdc}
-  :symbol-mode   {:key :comma    :condi :!appRdc}
+  :spc-mode    {:key :spacebar :condi :!appRdc}
+  :symbol-mode {:key :comma    :condi :!appRdc}
+  :lt-mode     {:key :period   :condi :!appRdc}
  }
 
  :simlayers
  {
   :b-mode {:key :b :condi :!appRdc}
-  :n-mode {:key :n :condi :!appRdc}
+  :n-mode {:key :n :condi [:!appRdc :!lt-mode :!lt-upper-mode]}
   :v-mode {:key :v :condi :!appRdc}
  }
 
@@ -142,9 +142,28 @@
   {:des "LT"
    :rules
    [
-    [[:period :n] ["lt-upper-mode" 1] nil {:afterup ["lt-upper-mode" 0]}]
+    ;[[:period :n] ["lt-upper-mode" 1] nil {:afterup ["lt-upper-mode" 0]}]
 
-    :lt-lower-mode
+
+    ;:lt-upper-mode
+    [:a [:!O0 :!O1 :!O0 :!O4] ["lt-upper-mode" 1]] ;A,
+    [:c [:!O0 :!O1 :!O0 :!Oc] ["lt-upper-mode" 1]] ;Cv
+    [:e [:!O0 :!O1 :!O1 :!O8] ["lt-upper-mode" 1]] ;E,
+    [:d [:!O0 :!O1 :!O1 :!O6] ["lt-upper-mode" 1]] ;E*
+    [:x [:!O0 :!O1 :!O2 :!Oe] ["lt-upper-mode" 1]] ;I,
+    [:s [:!O0 :!O1 :!O6 :!O0] ["lt-upper-mode" 1]] ;Sv
+    [:v [:!O0 :!O1 :!O7 :!O2] ["lt-upper-mode" 1]] ;U,
+    [:f [:!O0 :!O1 :!O6 :!Oa] ["lt-upper-mode" 1]] ;U-
+    [:z [:!O0 :!O1 :!O7 :!Od] ["lt-upper-mode" 1]] ;Zv
+    [:q [:!O2 :!O0 :!O1 :!Oe] ["lt-upper-mode" 1]] ;"
+    [:w [:!O2 :!O0 :!O1 :!Oc] ["lt-upper-mode" 1]] ;"
+    [:t :period ["lt-upper-mode" 1]]
+    [:g :period ["lt-upper-mode" 1]]
+    [:r :period ["lt-upper-mode" 1]]
+    [:b :period ["lt-upper-mode" 1]]
+
+    :lt-mode
+    [:n ["lt-upper-mode" 1] nil {:afterup ["lt-upper-mode" 0]}]
     [:a [:!O0 :!O1 :!O0 :!O5]] ;a,
     [:c [:!O0 :!O1 :!O0 :!Od]] ;cv
     [:e [:!O0 :!O1 :!O1 :!O9]] ;e,
@@ -154,23 +173,6 @@
     [:v [:!O0 :!O1 :!O7 :!O3]] ;u,
     [:f [:!O0 :!O1 :!O6 :!Ob]] ;u-
     [:z [:!O0 :!O1 :!O7 :!Oe]] ;zv
-    [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
-    [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
-    [:t :period]
-    [:g :period]
-    [:r :period]
-    [:b :period]
-
-    :lt-upper-mode
-    [:a [:!O0 :!O1 :!O0 :!O4]] ;A,
-    [:c [:!O0 :!O1 :!O0 :!Oc]] ;Cv
-    [:e [:!O0 :!O1 :!O1 :!O8]] ;E,
-    [:d [:!O0 :!O1 :!O1 :!O6]] ;E*
-    [:x [:!O0 :!O1 :!O2 :!Oe]] ;I,
-    [:s [:!O0 :!O1 :!O6 :!O0]] ;Sv
-    [:v [:!O0 :!O1 :!O7 :!O2]] ;U,
-    [:f [:!O0 :!O1 :!O6 :!Oa]] ;U-
-    [:z [:!O0 :!O1 :!O7 :!Od]] ;Zv
     [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
     [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
     [:t :period]
