@@ -9,9 +9,9 @@
                 }
  :layers
  {
-  :spc-mode    {:key :spacebar :condi :!appRdc}
-  :symbol-mode {:key :comma    :condi :!appRdc}
-  :lt-mode     {:key :period   :condi :!appRdc}
+  :spc-mode   {:key :spacebar :condi :!appRdc}
+  :punct-mode {:key :comma    :condi :!appRdc}
+  :lt-mode    {:key :period   :condi :!appRdc}
  }
 
  :simlayers
@@ -139,28 +139,66 @@
     ;[:s :tab]
     ]}
 
+  {:des "Dev Punctuation"
+   :rules
+   [
+    :punct-upper-mode
+    [:q :comma]              ;
+    [:w :comma]              ;
+    [:e :comma]              ;
+    [:r :comma]              ;
+    [:t :comma]              ;
+    [:a :comma]              ;
+    [:s :comma]              ;
+    [:d :comma]              ;
+    [:f :comma]              ;
+    [:g :comma]              ;
+    [:z :comma]              ;
+    [:x :comma]              ;
+    [:c :comma]              ;
+    [:v :comma]              ;
+    [:b :comma]              ;
+
+    :punct-mode
+    [:n ["punct-upper-mode" 1] nil {:afterup ["punct-upper-mode" 0]}]
+    [:q :!Sbackslash]            ; |
+    [:w :!Sslash]                ; ?
+    [:e :open_bracket]           ; [
+    [:r :close_bracket]          ; ]
+    [:t :grave_accent_and_tilde] ; `
+
+    [:a :backslash]              ; \
+    [:s :slash]                  ; /
+    [:d :!S9]                    ; (
+    [:f :!S0]                    ; )
+    [:g :!Squote]                ; "
+
+    [:z :comma]                  ;
+    [:x :!Sopen_bracket]         ; {
+    [:c :!Sclose_bracket]        ; }
+    [:v :quote]                  ; '
+    [:b :comma]                  ;
+    ]}
+
   {:des "LT"
    :rules
    [
-    ;[[:period :n] ["lt-upper-mode" 1] nil {:afterup ["lt-upper-mode" 0]}]
-
-
-    ;:lt-upper-mode
-    [:a [:!O0 :!O1 :!O0 :!O4] ["lt-upper-mode" 1]] ;A,
-    [:c [:!O0 :!O1 :!O0 :!Oc] ["lt-upper-mode" 1]] ;Cv
-    [:e [:!O0 :!O1 :!O1 :!O8] ["lt-upper-mode" 1]] ;E,
-    [:d [:!O0 :!O1 :!O1 :!O6] ["lt-upper-mode" 1]] ;E*
-    [:x [:!O0 :!O1 :!O2 :!Oe] ["lt-upper-mode" 1]] ;I,
-    [:s [:!O0 :!O1 :!O6 :!O0] ["lt-upper-mode" 1]] ;Sv
-    [:v [:!O0 :!O1 :!O7 :!O2] ["lt-upper-mode" 1]] ;U,
-    [:f [:!O0 :!O1 :!O6 :!Oa] ["lt-upper-mode" 1]] ;U-
-    [:z [:!O0 :!O1 :!O7 :!Od] ["lt-upper-mode" 1]] ;Zv
-    [:q [:!O2 :!O0 :!O1 :!Oe] ["lt-upper-mode" 1]] ;"
-    [:w [:!O2 :!O0 :!O1 :!Oc] ["lt-upper-mode" 1]] ;"
-    [:t :period ["lt-upper-mode" 1]]
-    [:g :period ["lt-upper-mode" 1]]
-    [:r :period ["lt-upper-mode" 1]]
-    [:b :period ["lt-upper-mode" 1]]
+    :lt-upper-mode
+    [:a [:!O0 :!O1 :!O0 :!O4]] ;A,
+    [:c [:!O0 :!O1 :!O0 :!Oc]] ;Cv
+    [:e [:!O0 :!O1 :!O1 :!O8]] ;E,
+    [:d [:!O0 :!O1 :!O1 :!O6]] ;E*
+    [:x [:!O0 :!O1 :!O2 :!Oe]] ;I,
+    [:s [:!O0 :!O1 :!O6 :!O0]] ;Sv
+    [:v [:!O0 :!O1 :!O7 :!O2]] ;U,
+    [:f [:!O0 :!O1 :!O6 :!Oa]] ;U-
+    [:z [:!O0 :!O1 :!O7 :!Od]] ;Zv
+    [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
+    [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
+    [:t :period]
+    [:g :period]
+    [:r :period]
+    [:b :period]
 
     :lt-mode
     [:n ["lt-upper-mode" 1] nil {:afterup ["lt-upper-mode" 0]}]
