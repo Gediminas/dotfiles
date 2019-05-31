@@ -69,45 +69,47 @@ n & ,::Return
 
 #If (not GetKeyState("n", "P"))
 
-  , & q::Send .
-  , & w::Send .
+  , & q::Send |
+  , & w::Send ?
   , & e::Send [
   , & r::Send ]
   , & t::Send ``
 
-  , & a::Send .
-  , & s::Send .
+  , & a::Send \
+  , & s::Send /
   , & d::Send (
   , & f::Send )
   , & g::Send `"
 
   , & `::Return
-  , & z::Send .
+  , & z::Send {,}
   , & x::Send {{}
   , & c::Send {}}
-  , & v::Send '
+  , & v::Send {'}
+  , & b::Send {,}
 
 #If (GetKeyState("n", "P"))
   , & 4::Send ${{}{}}{Left} 
   , & 5::Send `%`%{Left}
 
-  , & q::Send .
-  , & w::Send .
+  , & q::Send {,}
+  , & w::Send {,}
   , & e::Send []{Left}
-  , & r::Send .
+  , & r::Send {,}
   , & t::Send ````{Left}
 
-  , & a::Send .
-  , & s::Send .
+  , & a::Send {,}
+  , & s::Send {,}
   , & d::Send (){Left}
-  , & f::Send .
+  , & f::Send {,}
   , & g::Send `"`"{Left}
 
   , & `::Return
-  , & z::Send .
+  , & z::Send {,}
   , & x::Send {{}{}}{Left}
-  , & c::Send .
+  , & c::Send {,}
   , & v::Send ''{Left}
+  , & b::Send {,}
 
   , & space::Send {Enter}
 

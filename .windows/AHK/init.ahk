@@ -21,13 +21,18 @@ SetKeyDelay, -1, -1, -1
 
 #Include LockScreen.ahk
 #Include include\Workarounds.ahk
-#Include include\mode-B.ahk
+;#Include include\mode-B.ahk
 ;;#Include include\mode-FJ.ahk
+
+;#Include include\mode-V-dual.ahk
 #Include include\mode-VN.ahk
 #Include include\mode-V.ahk
+
+;#Include include\mode-Space-dual.ahk
 #Include include\mode-Space.ahk
 #Include include\mode-Space-FN.ahk
 #Include include\mode-Space-LT.ahk
+
 ;#Include include\mode-Space-Magic.ahk
 ;#Include include\mode-Win.ahk
 #Include include\mode-CapsLock.ahk
