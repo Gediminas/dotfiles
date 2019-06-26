@@ -15,18 +15,23 @@
 ; <^ = standard shortucts sent by LCtrl (LCtrl / CapsLock / Enter physical keys)
 ; >^ = system shortcuts sent by virtual RCtrl (LWin / RWin physical keys)
 
+; LWin / RWin
+;>^d::Send {RCtrl up}{LCtrl down}{LWin down}{Left}{LWin up}{LCtrl up}{RCtrl down}
+;>^f::Send {RCtrl up}{LCtrl down}{LWin down}{Right}{LWin up}{LCtrl up}{RCtrl down}
 
-;; Windows navigation
->^Tab::AltTab
 >^k::ShiftAltTab
 >^j::AltTab
+>^Tab::AltTab
+
+;!Tab::Send #Tab
+
 
 ;; Minimize windows
 ; >^m::WinMinimize,a
 
-; >!Tab::
-; <!Tab::
-;   return
+ >!Tab::
+ <!Tab::
+   return
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
