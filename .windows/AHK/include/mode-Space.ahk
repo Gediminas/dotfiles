@@ -2,7 +2,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; LEFT
-Space & Tab::Send, ^{Tab}
+Space & Tab::ShiftAltTab
+Space & w::Send ^{Tab}
      
 Space & s::
   If WinActive("ahk_exe emacs.exe") {
@@ -19,8 +20,8 @@ Return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; DESKTOP
 
-Space & Left:: Send ^#{Left}
-Space & Right::Send ^#{Right}
+;Space & Left:: Send ^#{Left}
+;Space & Right::Send ^#{Right}
 Space & d::Send ^#{Left}
 Space & f::Send ^#{Right}
 

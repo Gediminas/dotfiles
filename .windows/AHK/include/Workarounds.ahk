@@ -4,7 +4,14 @@
 ; Win/ResophNotes does not allow to use Alt+Space (==nvAlt)
 ; Alt+Space => Cmd+Alt+F11
 
-!Space::#!F11
+; ResophNotes (~=nvAlt)
+$>^Space::Send #{F11}
+
+; Everything (~=Finder search)
+;$#!Space::Send #!{F11}
+
+; Start menu (~=Spotlight)
+LAlt & Space::Send {LAlt up}{LCtrl down}{Esc}{LCtrl up}
 
 ; prevent space up delay "gitp ush" (git push)
 

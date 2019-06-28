@@ -16,9 +16,6 @@
 ; >^ = system shortcuts sent by virtual RCtrl (LWin / RWin physical keys)
 
 ; LWin / RWin
-;>^d::Send {RCtrl up}{LCtrl down}{LWin down}{Left}{LWin up}{LCtrl up}{RCtrl down}
-;>^f::Send {RCtrl up}{LCtrl down}{LWin down}{Right}{LWin up}{LCtrl up}{RCtrl down}
-
 >^k::ShiftAltTab
 >^j::AltTab
 >^Tab::AltTab
