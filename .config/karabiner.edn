@@ -1,17 +1,19 @@
 {
  :profiles {:G {:default true
-                :sim     500
-                :delay   1000
-                :alone   1000
-                :held    1000
+                :sim     300
+                :delay   500
+                :alone   500
+                :held    500
                 }}
  :applications {:appRdc ["^com.microsoft.rdc.mac"]
                 }
  :layers
  {
-  :spc-mode   {:key :spacebar :condi :!appRdc}
-  :punct-mode {:key :comma    :condi :!appRdc}
-  :lt-mode    {:key :period   :condi :!appRdc}
+  :spc-mode-rdc {:key :spacebar  :condi :appRdc}
+  :spc-mode     {:key :spacebar  :condi :!appRdc}
+  :num-mode     {:key :semicolon :condi :!appRdc}
+  :punct-mode   {:key :comma     :condi :!appRdc}
+  :lt-mode      {:key :period    :condi :!appRdc}
  }
 
  :simlayers
@@ -26,9 +28,9 @@
   {:des "RDC" :rules
    [
     :appRdc
-    [:left_command :left_control]
-    [:left_control :left_command]
-    [:right_control :right_command]
+    [:left_command  :right_control]
+    [:right_command :right_control]
+    [:left_control  :left_command]
     [:non_us_backslash :escape]
    ]}
 
@@ -44,7 +46,8 @@
 
   {:des "spc-mode (essential)"
    :rules
-   [:spc-mode
+   [
+    :spc-mode
     [:##h                   :##left_arrow]
     [:##j                   :##down_arrow]
     [:##k                   :##up_arrow]
@@ -53,9 +56,10 @@
     [:n                     :return_or_enter]
     [:m                     :escape]
     [:#Ss                   :!C#Ss]
+    [:#Sd                   :!TOleft_arrow]
+    [:#Sf                   :!TOright_arrow]
     [:non_us_backslash      :!Cq]
     [:#Sdelete_or_backspace :#Sdelete_forward]
-    [:#Sd                   :!C#Sx]
     [:#Sy                   :!C#Sc]
     [:#Sp                   :!C#Sv]
     ;[:period                :!Cperiod]
@@ -63,7 +67,7 @@
     ;[:#Stab                 :!C#Stab]
     ;[:#Sw                   :!T#Stab]
     ]}
-  
+
   {:des "n-mode (opp-side => LShift; else => spec)"
    :rules
    [:n-mode
@@ -139,25 +143,68 @@
     ;[:s :tab]
     ]}
 
+  {:des "Numbers"
+   :rules
+   [
+    :num-upper-mode
+    [:q :0]
+    [:w :0]
+    [:e :0]
+    [:r :0]
+    [:t :0]
+
+    [:a :0]
+    [:s :0]
+    [:d :0]
+    [:f :0]
+    [:g :0]
+
+    [:z :0]
+    [:x :0]
+    [:c :0]
+    [:v :0]
+    [:b :0]
+
+    :num-mode
+    [:n ["num-upper-mode" 1] nil {:afterup ["num-upper-mode" 0]}]
+    [:q :0]
+    [:w :9]
+    [:e :8]
+    [:r :7]
+    [:t :0]
+
+    [:a :0]
+    [:s :6]
+    [:d :5]
+    [:f :4]
+    [:g :0]
+
+    [:z :3]
+    [:x :2]
+    [:c :1]
+    [:v :0]
+    [:b :return_or_enter]
+    ]}
+
   {:des "Dev Punctuation"
    :rules
    [
     :punct-upper-mode
     [:q :comma]              ;
     [:w :comma]              ;
-    [:e :comma]              ;
+    [:e [:open_bracket :close_bracket :left_arrow]]              ;
     [:r :comma]              ;
     [:t :comma]              ;
     [:a :comma]              ;
     [:s :comma]              ;
-    [:d :comma]              ;
+    [:d [:!S9 :!S0 :left_arrow]] ;
     [:f :comma]              ;
     [:g :comma]              ;
     [:z :comma]              ;
-    [:x :comma]              ;
+    [:x [:!Sopen_bracket :!Sclose_bracket :left_arrow]]              ;
     [:c :comma]              ;
     [:v :comma]              ;
-    [:b :comma]              ;
+    [:b [:return_or_enter :return_or_enter :left_arrow ]]              ;
 
     :punct-mode
     [:n ["punct-upper-mode" 1] nil {:afterup ["punct-upper-mode" 0]}]
@@ -177,7 +224,7 @@
     [:x :!Sopen_bracket]         ; {
     [:c :!Sclose_bracket]        ; }
     [:v :quote]                  ; '
-    [:b :comma]                  ;
+    [:b [:left_arrow :return_or_enter :return_or_enter :left_arrow ]]
     ]}
 
   {:des "LT"
