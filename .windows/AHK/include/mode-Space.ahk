@@ -2,7 +2,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; LEFT
-Space & Tab::ShiftAltTab
+Space & Tab::AltTab
 Space & w::Send ^{Tab}
      
 Space & s::
