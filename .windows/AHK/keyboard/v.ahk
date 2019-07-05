@@ -36,4 +36,12 @@ v & c:: SendInput, {Blind}!^c
 
 ; *v::Send {Blind}v
 v::Send v
+
 +v::Send +v
+^v::Send ^v
+!v::Send !v
+#v::Send #v
+
++^v::Send +^v
++!v::Send +!v
++#v::Send +#v
