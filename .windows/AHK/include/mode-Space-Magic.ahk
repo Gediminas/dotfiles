@@ -13,5 +13,3 @@ Space & F9:: SendInput {Media_Next}
 Space & F10::SendInput {Volume_Mute}
 Space & F11::SendInput {Volume_Down}
 Space & F12::SendInput {Volume_Up}
-
-; $*Space::SendInput {Blind}{Space} 

@@ -12,6 +12,4 @@ Space & 9::Send, {Blind}{F9}
 Space & 0::Send, {Blind}{F10}
 Space & -::Send, {Blind}{F11}
 Space & =::Send, {Blind}{F12}
-
-; $*Space::SendInput {Blind}{Space} 
  
