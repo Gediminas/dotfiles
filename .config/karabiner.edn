@@ -28,22 +28,20 @@
  [
   {:des "NEW" :rules
    [
-    :!appRdc
-    [:left_command  :right_control ]
-    [:right_command :right_shift]
-    [:left_control  :left_command]
+     :!appRdc
+    ;[:left_control  :left_command]
+    ;[:left_command  :left_control]
+    [:right_command :left_shift]
+    [:non_us_backslash :escape]
    ]}
 
   {:des "RDC" :rules
    [
-    [:right_command  :right_shift :appRdc]
-
     :appRdc
-    [:left_command  :right_control]
-    [:right_command :right_control]
     [:left_control  :left_command]
+    [:left_command  :left_control]
+    [:right_command :left_shift]
     [:non_us_backslash :escape]
-
    ]}
 
   ;; {:des "Enter => Enter/RCtrl" :rules
