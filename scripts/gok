@@ -1,0 +1,3 @@
+#!/bin/bash
+
+fswatch -otv ~/.config/karabiner.edn | xargs -n1 -I{} goku
