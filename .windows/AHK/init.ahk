@@ -19,6 +19,7 @@ SetKeyDelay, -1, -1, -1
 #Include keyboard\v.ahk
 #Include keyboard\Lt.ahk
 #Include keyboard\Punct.ahk
+#Include keyboard\WinMng.ahk
  
 tab & q:: 
   If WinActive("ahk_exe emacs.exe") {
