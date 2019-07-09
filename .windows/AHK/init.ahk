@@ -17,10 +17,11 @@ SetKeyDelay, -1, -1, -1
 #Include keyboard\spc.ahk
 #Include keyboard\capslock.ahk
 #Include keyboard\enter.ahk
-#Include keyboard\v.ahk
 #Include keyboard\Lt.ahk
 #Include keyboard\Punct.ahk
 #Include keyboard\WinMng.ahk
+#Include keyboard\Hyper.ahk
+#Include keyboard\MsDev.ahk
  
 tab & q:: 
   If WinActive("ahk_exe emacs.exe") {

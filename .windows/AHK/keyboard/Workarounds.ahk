@@ -58,4 +58,3 @@ $^Space::Send #{F11}
 
 
 
-$*Tab::Send {Blind}{Tab}
