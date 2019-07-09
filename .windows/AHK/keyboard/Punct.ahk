@@ -19,10 +19,9 @@
 , & v::Send {'}
 , & b::Send {,}
 
-; */::Send {Blind}/
-/::Send /
-?::Send ?
-
+; *,::Send {Blind},
+,::Send,,
+<::Send <
 
 ;; #If (GetKeyState("n", "P"))
 ;; , & 4::Send ${{}{}}{Left} 

@@ -32,10 +32,11 @@
 / & g::Return
 / & x::Return
 
-; *,::Send {Blind},
 ; *.::Send {Blind}.
-,::Send,,
 .::Send .
-<::Send <
 >::Send >
+
+; */::Send {Blind}/
+/::Send /
+?::Send ?
 

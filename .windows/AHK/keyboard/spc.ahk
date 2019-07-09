@@ -80,6 +80,7 @@ Space & `;::Send, {Blind}{Backspace}
 Space & BS::Send, {Blind}{Delete}
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;; ELSE
 
-*Space::Send {Blind}{space} 
+*Space::return
+*Space up::Send {Blind}{space} 

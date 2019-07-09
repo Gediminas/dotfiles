@@ -13,6 +13,7 @@ SetKeyDelay, -1, -1, -1
 
 #Include LockScreen.ahk
 
+#Include keyboard\Workarounds.ahk
 #Include keyboard\spc.ahk
 #Include keyboard\capslock.ahk
 #Include keyboard\enter.ahk
