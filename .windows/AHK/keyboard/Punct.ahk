@@ -1,28 +1,25 @@
 ﻿; Punctuation marks
 
-, & q::Send |
-, & w::Send ?
-, & e::Send [
-, & r::Send ]
-, & t::Send ``
+#If (GetKeyState("RAlt","P"))
+  e::Send [
+  r::Send ]
+  d::Send (
+  f::Send )
+  x::Send {{}
+  c::Send {}}
+  space::Send {Enter} 
+#If
 
-, & a::Send \
-, & s::Send /
-, & d::Send (
-, & f::Send )
-, & g::Send `"
-
-, & `::Return
-, & z::Send {,}
-, & x::Send {{}
-, & c::Send {}}
-, & v::Send {'}
-, & b::Send {,}
-
-; *,::Send {Blind},
-,::Send,,
-<::Send <
-
+;, & q::Send |
+;, & w::Send ?
+;, & t::Send ``
+;, & a::Send \
+;, & s::Send /
+;, & g::Send `"
+;, & `::Return
+;, & z::Send {,}
+;, & v::Send {'}
+;, & b::Send {,}
 ;; #If (GetKeyState("n", "P"))
 ;; , & 4::Send ${{}{}}{Left} 
 ;; , & 5::Send `%`%{Left}
