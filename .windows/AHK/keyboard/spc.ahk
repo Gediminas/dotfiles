@@ -82,5 +82,4 @@ Space & BS::Send, {Blind}{Delete}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;; ELSE
 
-*Space::return
-*Space up::Send {Blind}{space} 
+$Space::Send {Blind}{space} 
