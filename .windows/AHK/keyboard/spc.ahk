@@ -74,8 +74,27 @@ Space & j::Send {Blind}{Down}
 Space & k::Send {Blind}{Up}
 Space & l::Send {Blind}{Right}
 
-Space & n::Send, {Enter}
-Space & m::Send, {Blind}{Esc}
+Space & n::
+  Send {Blind}{Esc}
+  cN++
+  Return
+
+Space & m::
+  Send {Enter}
+  cM++
+  Return
+
+Space & y::
+  if (shown=1) {
+    Tooltip 
+    shown=0
+  }
+  else {
+    Tooltip Esc(n)=%cN% vs Enter(m)=%cM%
+    shown=1
+  }
+  Return
+
 Space & `;::Send, {Blind}{Backspace}
 Space & BS::Send, {Blind}{Delete}
 
