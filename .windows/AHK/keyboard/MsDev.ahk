@@ -15,4 +15,26 @@
 	v & z:: SendInput, {Blind}!^z
 	v & x:: SendInput, {Blind}!^x
 	v & c:: SendInput, {Blind}!^c
+
+	$v::Send {v} 
+
+	$+v::Send {Blind}{v} 
+	$^v::Send {Blind}{v} 
+	$!v::Send {Blind}{v} 
+	$#v::Send {Blind}{v} 
+
+	$+^v::Send {Blind}{v} 
+	$+!v::Send {Blind}{v} 
+	$+#v::Send {Blind}{v} 
+	$!^v::Send {Blind}{v} 
+	$!#v::Send {Blind}{v} 
+	$#^v::Send {Blind}{v} 
+
+	$+^!v::Send {Blind}{v} 
+	$+^#v::Send {Blind}{v} 
+	$+!#v::Send {Blind}{v} 
+	$^!#v::Send {Blind}{v} 
+
+	$+#!^v::Send {Blind}{v} 
 #If
+
