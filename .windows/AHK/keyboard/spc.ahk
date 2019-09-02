@@ -41,7 +41,7 @@ Space & =::Send, {Blind}{F12}
 ;;; LEFT
 
 Space & Tab::AltTab
-Space & w::Send ^{Tab}
+Space & w::Send {LCtrl down}{Tab}{LCtrl up}
      
 Space & s::
   If WinActive("ahk_exe emacs.exe") {
@@ -76,23 +76,17 @@ Space & l::Send {Blind}{Right}
 
 Space & n::
   Send {Blind}{Esc}
-  cN++
+  Return
+
+Space & b::
+  Send {Enter}
   Return
 
 Space & m::
-  Send {Enter}
-  cM++
   Return
 
 Space & y::
-  if (shown=1) {
-    Tooltip 
-    shown=0
-  }
-  else {
-    Tooltip Esc(n)=%cN% vs Enter(m)=%cM%
-    shown=1
-  }
+  Send {Space}
   Return
 
 Space & `;::Send, {Blind}{Backspace}

@@ -23,6 +23,11 @@ SetKeyDelay, -1, -1, -1
 #Include keyboard\Hyper.ahk
 #Include keyboard\MsDev.ahk
  
+;LCtrl & Tab::AltTab
+
+RButton & WheelUp::Send ^#{Left}
+RButton & WheelDown::Send ^#{Right}
+
 tab & q:: 
   If WinActive("ahk_exe emacs.exe") {
     SendInput, {Esc}:w{Enter}
