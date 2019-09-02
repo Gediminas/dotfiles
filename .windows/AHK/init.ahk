@@ -23,7 +23,7 @@ SetKeyDelay, -1, -1, -1
 #Include keyboard\Hyper.ahk
 #Include keyboard\MsDev.ahk
  
-;LCtrl & Tab::AltTab
+LCtrl & Tab::AltTab
 
 RButton & WheelUp::Send ^#{Left}
 RButton & WheelDown::Send ^#{Right}
