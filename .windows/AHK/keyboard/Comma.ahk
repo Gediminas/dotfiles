@@ -6,6 +6,7 @@
 , & f::Send )
 , & x::Send {{}
 , & c::Send {}}
+, & v::Send {'}
 , & b::Send {Enter} 
 
 $*,::Send {Blind}{,}

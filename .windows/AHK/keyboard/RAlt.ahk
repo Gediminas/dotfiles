@@ -22,6 +22,7 @@
   
   x::Send {{}
   c::Send {}}
+  v::Send {'}
   b::Send {Enter} 
 
   +1::Send Ą
