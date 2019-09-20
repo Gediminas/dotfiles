@@ -18,6 +18,7 @@ SetKeyDelay, -1, -1, -1
 #Include keyboard\Space.ahk
 #Include keyboard\RAlt.ahk
 #Include keyboard\Tab.ahk
+#Include keyboard\Comma.ahk
 #Include keyboard\app_MsDev.ahk
 
 ;; #Include keyboard\Lt.ahk
