@@ -8,49 +8,49 @@ RButton & Enter::
 RButton & f::
 / & f::
   WinRestore, A
-  WinMove, A,, 0, A_ScreenHeight/2, A_ScreenWidth, A_ScreenHeight/2
+  WinMove, A,, -5, -15+A_ScreenHeight/2, 20+A_ScreenWidth, -7+A_ScreenHeight/2
   return
 
 RButton & d::
 / & d::
   WinRestore, A
-  WinMove, A,, 0, 0, A_ScreenWidth, A_ScreenHeight/2
+  WinMove, A,, -5, 0, 20+A_ScreenWidth, -7+A_ScreenHeight/2
   return
 
 RButton & s::
 / & s::
   WinRestore, A
-  WinMove, A,, 0, 0, A_ScreenWidth/2, A_ScreenHeight
+  WinMove, A,, -5, 0, 10+A_ScreenWidth/2, -23+A_ScreenHeight
   return
 
 RButton & g::
 / & g::
   WinRestore, A
-  WinMove, A,, A_ScreenWidth/2, 0, A_ScreenWidth/2, A_ScreenHeight
+  WinMove, A,, -10+A_ScreenWidth/2, 0, 15+A_ScreenWidth/2, -23+A_ScreenHeight
   return
 
 RButton & e::
 / & e::
   WinRestore, A
-  WinMove, A,, 0, 0, A_ScreenWidth/2, A_ScreenHeight/2
+  WinMove, A,, -5, 0, 10+A_ScreenWidth/2, -7+A_ScreenHeight/2
   return
 
 RButton & r::
 / & r::
   WinRestore, A
-  WinMove, A,, A_ScreenWidth/2, 0, A_ScreenWidth/2, A_ScreenHeight/2
+  WinMove, A,, -10+A_ScreenWidth/2, 0, 15+A_ScreenWidth/2, -7+A_ScreenHeight/2
   return
 
 RButton & x::
 / & x::
   WinRestore, A
-  WinMove, A,, 0, A_ScreenHeight/2, A_ScreenWidth/2, A_ScreenHeight/2
+  WinMove, A,, -5, -15+A_ScreenHeight/2, 10+A_ScreenWidth/2, -7+A_ScreenHeight/2
   return
 
 RButton & c::
 / & c::
   WinRestore, A
-  WinMove, A,, A_ScreenWidth/2, A_ScreenHeight/2, A_ScreenWidth/2, A_ScreenHeight/2
+  WinMove, A,, -10+A_ScreenWidth/2, -15+A_ScreenHeight/2, 15+A_ScreenWidth/2, -7+A_ScreenHeight/2
   return
 
 RButton & space::
