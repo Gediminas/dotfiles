@@ -19,11 +19,11 @@ SetKeyDelay, -1, -1, -1
 #Include keyboard\RAlt.ahk
 #Include keyboard\Tab.ahk
 #Include keyboard\Comma.ahk
+#Include keyboard\WinMng.ahk
 #Include keyboard\app_MsDev.ahk
 
 ;; #Include keyboard\Lt.ahk
 ;; #Include keyboard\Punct.ahk
-;; #Include keyboard\WinMng.ahk
 ;; #Include keyboard\Hyper.ahk
  
 LCtrl & Tab::AltTab

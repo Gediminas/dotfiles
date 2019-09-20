@@ -1,48 +1,60 @@
  ; WinGetPos,,, Width, Height, A
 
-Tab & Enter::Send +!{Tab}
+RButton & Enter::
+/ & Enter::
+  Send +!{Tab}
+  return
 
-Tab & j::
+RButton & f::
+/ & f::
   WinRestore, A
   WinMove, A,, 0, A_ScreenHeight/2, A_ScreenWidth, A_ScreenHeight/2
   return
 
-Tab & k::
+RButton & d::
+/ & d::
   WinRestore, A
   WinMove, A,, 0, 0, A_ScreenWidth, A_ScreenHeight/2
   return
 
-Tab & h::
+RButton & s::
+/ & s::
   WinRestore, A
   WinMove, A,, 0, 0, A_ScreenWidth/2, A_ScreenHeight
   return
 
-Tab & l::
+RButton & g::
+/ & g::
   WinRestore, A
   WinMove, A,, A_ScreenWidth/2, 0, A_ScreenWidth/2, A_ScreenHeight
   return
 
-Tab & u::
+RButton & e::
+/ & e::
   WinRestore, A
   WinMove, A,, 0, 0, A_ScreenWidth/2, A_ScreenHeight/2
   return
 
-Tab & i::
+RButton & r::
+/ & r::
   WinRestore, A
   WinMove, A,, A_ScreenWidth/2, 0, A_ScreenWidth/2, A_ScreenHeight/2
   return
 
-Tab & m::
+RButton & x::
+/ & x::
   WinRestore, A
   WinMove, A,, 0, A_ScreenHeight/2, A_ScreenWidth/2, A_ScreenHeight/2
   return
 
-Tab & ,::
+RButton & c::
+/ & c::
   WinRestore, A
   WinMove, A,, A_ScreenWidth/2, A_ScreenHeight/2, A_ScreenWidth/2, A_ScreenHeight/2
   return
 
-Tab & space::
+RButton & space::
+/ & space::
   WinGet, OutputVar, MinMax, A
   if (OutputVar == 1) {
     WinRestore, A
@@ -51,4 +63,4 @@ Tab & space::
   }
   return
 
-$*Tab::Send {Blind}{Tab}
+$*/::Send {Blind}{/}
