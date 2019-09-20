@@ -14,32 +14,24 @@ SetKeyDelay, -1, -1, -1
 #Include LockScreen.ahk
 
 #Include keyboard\Workarounds.ahk
-#Include keyboard\spc.ahk
-#Include keyboard\capslock.ahk
-#Include keyboard\enter.ahk
-#Include keyboard\Lt.ahk
-#Include keyboard\Punct.ahk
-#Include keyboard\WinMng.ahk
-#Include keyboard\Hyper.ahk
-#Include keyboard\MsDev.ahk
+#Include keyboard\CLock.ahk
+#Include keyboard\Space.ahk
+#Include keyboard\RAlt.ahk
+#Include keyboard\Tab.ahk
+#Include keyboard\app_MsDev.ahk
+
+;; #Include keyboard\Lt.ahk
+;; #Include keyboard\Punct.ahk
+;; #Include keyboard\WinMng.ahk
+;; #Include keyboard\Hyper.ahk
  
 LCtrl & Tab::AltTab
 
 RButton & WheelUp::Send ^#{Left}
 RButton & WheelDown::Send ^#{Right}
+RButton::Send {RButton}
 
-tab & q:: 
-  If WinActive("ahk_exe emacs.exe") {
-    SendInput, {Esc}:w{Enter}
-  } Else If WinActive("ahk_exe emacsclient.exe") {
-    SendInput, {Esc}:w{Enter}
-  } Else If WinActive("ahk_exe putty_tray_64.exe") {
-    SendInput, {Esc}:w{Enter}
-  } Else {
-    SendInput {Blind}^s
-  }
-  Reload
-  Return
+
   
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; # Win (Windows logo key)

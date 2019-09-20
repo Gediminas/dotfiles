@@ -44,14 +44,6 @@
         <Param>trashcan=reversesetting</Param>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+7</Shortcut>
-        <Command>cm_ShowCmdLineHistory</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Down</Shortcut>
-        <Command>cm_ShowCmdLineHistory</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+B</Shortcut>
         <Command>cm_FlatView</Command>
       </Hotkey>
@@ -65,10 +57,6 @@
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+H</Shortcut>
-        <Command>cm_DirHistory</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Alt+Down</Shortcut>
         <Command>cm_DirHistory</Command>
       </Hotkey>
       <Hotkey>
@@ -341,6 +329,18 @@
       <Hotkey>
         <Shortcut>Ctrl+`</Shortcut>
         <Command>cm_ChangeDirToHome</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+=</Shortcut>
+        <Command>cm_MarkPlus</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+-</Shortcut>
+        <Command>cm_MarkMinus</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Alt+Down</Shortcut>
+        <Command>cm_ViewHistory</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
