@@ -1,0 +1,33 @@
+{
+    "~9" = (insertText:, "„");
+    "~0" = (insertText:, "“");
+
+    "~w" = (insertText:, "ß");
+    "~r" = (insertText:, "ę");
+    "~t" = (insertText:, "į");
+
+    "~a" = (insertText:, "ą");
+    "~s" = (insertText:, "š");
+    "~d" = (insertText:, "ė");
+    "~f" = (insertText:, "ū");
+
+    "~z" = (insertText:, "ž");
+    "~x" = (insertText:, "ç");
+    "~c" = (insertText:, "č");
+    "~v" = (insertText:, "ų");
+    "~b" = ("insertNewline:") ;
+
+
+    "~R" = (insertText:, "Ę");
+    "~T" = (insertText:, "Į");
+
+    "~A" = (insertText:, "Ą");
+    "~S" = (insertText:, "Š");
+    "~D" = (insertText:, "Ė");
+    "~F" = (insertText:, "Ū");
+
+    "~Z" = (insertText:, "Ž");
+    "~X" = (insertText:, "Ç");
+    "~C" = (insertText:, "Č");
+    "~V" = (insertText:, "Ų");
+}
