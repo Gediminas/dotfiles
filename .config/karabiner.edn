@@ -10,8 +10,9 @@
  :layers
  {
   :spc-mode      {:key :spacebar   :condi :!appRdc}
-  :sym-mode      {:key :period     :condi :!appRdc}
   :num-mode      {:key :comma      :condi :!appRdc}
+  :sym-mode      {:key :period     :condi :!appRdc}
+  :snp-mode      {:key :semicolon  :condi :!appRdc}
   ;:num-mode      {:key :non_us_backslash :condi :!appRdc}
   ;:num-mode      {:key :semicolon :condi :!appRdc}
   ;:lt-mode       {:key :period    :condi :!appRdc}
@@ -95,14 +96,14 @@
     [:y :keypad_period]
 
     [:a :keypad_hyphen]
-    [:s :keypad_6]
-    [:d :keypad_5]
-    [:f :keypad_4]
+    [:s :keypad_3]
+    [:d :keypad_2]
+    [:f :keypad_1]
     [:g :keypad_slash]
 
-    [:z :keypad_3]
-    [:x :keypad_2]
-    [:c :keypad_1]
+    [:z :keypad_6]
+    [:x :keypad_5]
+    [:c :keypad_4]
     [:v :keypad_0]
 
     [:b :keypad_enter]
@@ -130,6 +131,22 @@
     [:x :!Sopen_bracket]         ; {
     [:c :!Sclose_bracket]        ; }
     [:v :quote]                  ; '
+
+    [:b :keypad_enter]
+    [:n :escape]
+    [:h :delete_or_backspace]
+    ]}
+
+  {:des "snp-mode"
+   :rules
+   [
+    :snp-mode
+    [:e [:open_bracket :close_bracket :left_arrow]]
+
+    [:d [:!S9 :!S0 :left_arrow]]
+    [:f [:hyphen :!Speriod]]
+
+    [:x [:!Sopen_bracket :!Sclose_bracket :left_arrow]]
 
     [:b :keypad_enter]
     [:n :escape]
