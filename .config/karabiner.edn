@@ -9,30 +9,23 @@
                 }
  :layers
  {
-  ;; :spc-mode-rdc {:key :spacebar  :condi :appRdc}
-  :spc-mode      {:key :spacebar  :condi :!appRdc}
-  :num-mode      {:key :semicolon :condi :!appRdc}
-  :punct-mode    {:key :comma     :condi :!appRdc}
-  :lt-mode       {:key :period    :condi :!appRdc}
-  :lt-upper-mode {:key :slash     :condi :!appRdc}
+  :spc-mode      {:key :spacebar   :condi :!appRdc}
+  :sym-mode      {:key :period     :condi :!appRdc}
+  :num-mode      {:key :comma      :condi :!appRdc}
+  ;:num-mode      {:key :non_us_backslash :condi :!appRdc}
+  ;:num-mode      {:key :semicolon :condi :!appRdc}
+  ;:lt-mode       {:key :period    :condi :!appRdc}
+  ;:lt-upper-mode {:key :slash     :condi :!appRdc}
  }
-
- ;; :simlayers
- ;; {
- ;;  :b-mode {:key :b :condi :!appRdc}
- ;;  :n-mode {:key :n :condi [:!appRdc :!lt-mode :!lt-upper-mode]}
- ;;  :v-mode {:key :v :condi :!appRdc}
- ;; }
 
  :main
  [
-  {:des "NEW" :rules
+  {:des "Global" :rules
    [
-     :!appRdc
-    ;[:left_control  :left_command]
-    ;[:left_command  :left_control]
-    [:right_command :left_shift]
     [:non_us_backslash :escape]
+    [:left_shift       :vk_none]
+    [:right_shift      :vk_none]
+    [:right_command    :right_shift]
    ]}
 
   {:des "RDC" :rules
@@ -40,19 +33,25 @@
     :appRdc
     [:left_control  :left_command]
     [:left_command  :left_control]
-    [:right_command :left_shift]
-    [:non_us_backslash :escape]
+    ]}
+
+  {:des "notRDC" :rules
+   [
+     :!appRdc
+    ;[:left_control  :left_command]
+    ;[:left_command  :left_control]
+    ;[:right_command :left_shift]
    ]}
 
-  ;; {:des "Enter => Enter/RCtrl" :rules
-  ;;  [
-  ;;   :!appRdc
-  ;;   [:##return_or_enter :right_control nil {:alone :return_or_enter} ]]}
+  ;;{:des "Enter => Enter/RCtrl" :rules
+    ;;[
+     ;;:!appRdc
+     ;;[:##return_or_enter :right_control nil {:alone :return_or_enter} ]]}
 
-  ;; {:des "CapsLock => Esc/LCtrl" :rules
-  ;;  [
-  ;;   :!appRdc
-  ;;   [:##caps_lock :left_control nil {:alone :escape} ]]}
+  {:des "CapsLock => Esc/LCtrl" :rules
+   [
+    :!appRdc
+    [:##caps_lock :left_control nil {:alone :escape} ]]}
 
   {:des "spc-mode (essential)"
    :rules
@@ -63,13 +62,13 @@
     [:##k                   :##up_arrow]
     [:##l                   :##right_arrow]
     [:semicolon             :delete_or_backspace]
-    [:n                     :return_or_enter]
-    [:m                     :escape]
+    [:b                     :return_or_enter]
+    [:n                     :escape]
     [:#Ss                   :!C#Ss]
     [:#Sz                   :!C#Sz]
-    [:#Sx                   :!C#Sx]
-    [:#Sc                   :!C#Sc]
-    [:#Sv                   :!C#Sv]
+    [:#Sx                   :!Cx]
+    [:#Sc                   :!Cc]
+    [:#Sv                   :!Cv]
     [:#Sd                   :!TOleft_arrow]
     [:#Sf                   :!TOright_arrow]
     [:non_us_backslash      :!Cq]
@@ -78,148 +77,43 @@
     [:#Sp                   :!C#Sv]
     ;[:period                :!Cperiod]
     ;[:slash                 :!Cslash]
-    ;[:#Stab                 :!C#Stab]
-    ;[:#Sw                   :!T#Stab]
+    [:#Stab                 :!C#Stab]
+    [:#Sw                   :!T#Stab]
     ]}
 
-  ;; {:des "n-mode (opp-side => LShift; else => spec)"
-  ;;  :rules
-  ;;  [:n-mode
-  ;;   [:1 :!S1]
-  ;;   [:2 :!S2]
-  ;;   [:3 :!S3]
-  ;;   [:4 :!S4]
-  ;;   [:5 :!S5]
-  ;;   [:6 :!S6]
-
-  ;;   [:q :!Sq]
-  ;;   [:w :!Sw]
-  ;;   [:e :!Se]
-  ;;   [:r :!Sr]
-  ;;   [:t :!St]
-
-  ;;   [:a :!Sa]
-  ;;   [:s :!Ss]
-  ;;   [:d :!Sd]
-  ;;   [:f :!Sf]
-  ;;   [:g :!Sg]
-
-  ;;   [:grave_accent_and_tilde :!Sgrave_accent_and_tilde]
-  ;;   [:z :!Sz]
-  ;;   [:x :!Sx]
-  ;;   [:c :!Sc]
-  ;;   [:v :!Sv]
-  ;;   [:b :!Sb]
-
-  ;;   ;[:n :return_or_enter]
-  ;;   ;[:k :escape]
-  ;;   ;[:h :!TOdelete_or_backspace]
-  ;;   ;[:l :tab]
-  ;;   ]}
-
-  ;; {:des "v-mode (opp-side => LShift; else => spec)"
-  ;;  :rules
-  ;;  [:v-mode
-  ;;   [:7 :!S7]
-  ;;   [:8 :!S8]
-  ;;   [:9 :!S9]
-  ;;   [:0 :!S0]
-  ;;   [:hyphen     :!Shyphen]
-  ;;   [:equal_sign :!Sequal_sign]
-
-  ;;   [:y :!Sy]
-  ;;   [:u :!Su]
-  ;;   [:i :!Si]
-  ;;   [:o :!So]
-  ;;   [:p :!Sp]
-  ;;   [:open_bracket  :!Sopen_bracket]
-  ;;   [:close_bracket :!Sclose_bracket]
-
-  ;;   [:h :!Sh]
-  ;;   [:j :!Sj]
-  ;;   [:k :!Sk]
-  ;;   [:l :!Sl]
-  ;;   [:semicolon        :!Ssemicolon]
-  ;;   [:quote            :!Squote]
-  ;;   [:non_us_backslash :!Snon_us_backslash]
-
-  ;;   [:b :!Sb]
-  ;;   [:n :!Sn]
-  ;;   [:m :!Sm]
-  ;;   [:comma  :!Scomma]
-  ;;   [:period :!Speriod]
-  ;;   [:slash  :!Sslash]
-
-
-  ;;   [:##f :##f19]
-  ;;   ;[:d :escape]
-  ;;   ;[:g :!TOdelete_forward]
-  ;;   ;[:s :tab]
-  ;;   ]}
-
-  {:des "Numbers"
+  {:des "num-mode"
    :rules
    [
-    :num-upper-mode
-    [:q :0]
-    [:w :0]
-    [:e :0]
-    [:r :0]
-    [:t :0]
-
-    [:a :0]
-    [:s :0]
-    [:d :0]
-    [:f :0]
-    [:g :0]
-
-    [:z :0]
-    [:x :0]
-    [:c :0]
-    [:v :0]
-    [:b :0]
-
     :num-mode
-    [:n ["num-upper-mode" 1] nil {:afterup ["num-upper-mode" 0]}]
-    [:q :0]
-    [:w :9]
-    [:e :8]
-    [:r :7]
-    [:t :0]
+    [:left_control :period]
 
-    [:a :0]
-    [:s :6]
-    [:d :5]
-    [:f :4]
-    [:g :0]
+    [:q :keypad_plus]
+    [:w :keypad_9]
+    [:e :keypad_8]
+    [:r :keypad_7]
+    [:t :keypad_asterisk]
+    [:y :keypad_period]
 
-    [:z :3]
-    [:x :2]
-    [:c :1]
-    [:v :0]
-    [:b :return_or_enter]
+    [:a :keypad_hyphen]
+    [:s :keypad_6]
+    [:d :keypad_5]
+    [:f :keypad_4]
+    [:g :keypad_slash]
+
+    [:z :keypad_3]
+    [:x :keypad_2]
+    [:c :keypad_1]
+    [:v :keypad_0]
+
+    [:b :keypad_enter]
+    [:n :escape]
+    [:h :delete_or_backspace]
     ]}
 
-  {:des "Dev Punctuation" :rules [
-    ;; :punct-upper-mode
-    ;; [:q :comma]              ;
-    ;; [:w :comma]              ;
-    ;; [:e [:open_bracket :close_bracket :left_arrow]]              ;
-    ;; [:r :comma]              ;
-    ;; [:t :comma]              ;
-    ;; [:a :comma]              ;
-    ;; [:s :comma]              ;
-    ;; [:d [:!S9 :!S0 :left_arrow]] ;
-    ;; [:f :comma]              ;
-    ;; [:g :comma]              ;
-    ;; [:z :comma]              ;
-    ;; [:x [:!Sopen_bracket :!Sclose_bracket :left_arrow]]              ;
-    ;; [:c :comma]              ;
-    ;; [:v :comma]              ;
-    ;; [:b [:return_or_enter :return_or_enter :left_arrow ]]              ;
-
-    :punct-mode
-    [:n ["punct-upper-mode" 1] nil {:afterup ["punct-upper-mode" 0]}]
+  {:des "sym-mode"
+   :rules
+   [
+    :sym-mode
     [:q :!Sbackslash]            ; |
     [:w :!Sslash]                ; ?
     [:e :open_bracket]           ; [
@@ -236,47 +130,50 @@
     [:x :!Sopen_bracket]         ; {
     [:c :!Sclose_bracket]        ; }
     [:v :quote]                  ; '
-    [:b [:left_arrow :return_or_enter :return_or_enter :left_arrow ]]
+
+    [:b :keypad_enter]
+    [:n :escape]
+    [:h :delete_or_backspace]
    ]}
 
-  {:des "LT"
-   :rules
-   [
-    :lt-mode
-    [:a [:!O0 :!O1 :!O0 :!O5]] ;a,
-    [:c [:!O0 :!O1 :!O0 :!Od]] ;cv
-    [:e [:!O0 :!O1 :!O1 :!O9]] ;e,
-    [:d [:!O0 :!O1 :!O1 :!O7]] ;e*
-    [:x [:!O0 :!O1 :!O2 :!Of]] ;i,
-    [:s [:!O0 :!O1 :!O6 :!O1]] ;sv
-    [:v [:!O0 :!O1 :!O7 :!O3]] ;u,
-    [:f [:!O0 :!O1 :!O6 :!Ob]] ;u-
-    [:z [:!O0 :!O1 :!O7 :!Oe]] ;zv
-    [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
-    [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
-    [:t :period]
-    [:g :period]
-    [:r :period]
-    [:b :period]
+  ;; {:des "LT"
+  ;;  :rules
+  ;;  [
+  ;;   :lt-mode
+  ;;   [:a [:!O0 :!O1 :!O0 :!O5]] ;a,
+  ;;   [:c [:!O0 :!O1 :!O0 :!Od]] ;cv
+  ;;   [:e [:!O0 :!O1 :!O1 :!O9]] ;e,
+  ;;   [:d [:!O0 :!O1 :!O1 :!O7]] ;e*
+  ;;   [:x [:!O0 :!O1 :!O2 :!Of]] ;i,
+  ;;   [:s [:!O0 :!O1 :!O6 :!O1]] ;sv
+  ;;   [:v [:!O0 :!O1 :!O7 :!O3]] ;u,
+  ;;   [:f [:!O0 :!O1 :!O6 :!Ob]] ;u-
+  ;;   [:z [:!O0 :!O1 :!O7 :!Oe]] ;zv
+  ;;   [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
+  ;;   [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
+  ;;   [:t :period]
+  ;;   [:g :period]
+  ;;   [:r :period]
+  ;;   [:b :period]
 
-    :lt-upper-mode
-    [:a [:!O0 :!O1 :!O0 :!O4]] ;A,
-    [:c [:!O0 :!O1 :!O0 :!Oc]] ;Cv
-    [:e [:!O0 :!O1 :!O1 :!O8]] ;E,
-    [:d [:!O0 :!O1 :!O1 :!O6]] ;E*
-    [:x [:!O0 :!O1 :!O2 :!Oe]] ;I,
-    [:s [:!O0 :!O1 :!O6 :!O0]] ;Sv
-    [:v [:!O0 :!O1 :!O7 :!O2]] ;U,
-    [:f [:!O0 :!O1 :!O6 :!Oa]] ;U-
-    [:z [:!O0 :!O1 :!O7 :!Od]] ;Zv
-    [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
-    [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
-    [:t :period]
-    [:g :period]
-    [:r :period]
-    [:b :period]
+  ;;   :lt-upper-mode
+  ;;   [:a [:!O0 :!O1 :!O0 :!O4]] ;A,
+  ;;   [:c [:!O0 :!O1 :!O0 :!Oc]] ;Cv
+  ;;   [:e [:!O0 :!O1 :!O1 :!O8]] ;E,
+  ;;   [:d [:!O0 :!O1 :!O1 :!O6]] ;E*
+  ;;   [:x [:!O0 :!O1 :!O2 :!Oe]] ;I,
+  ;;   [:s [:!O0 :!O1 :!O6 :!O0]] ;Sv
+  ;;   [:v [:!O0 :!O1 :!O7 :!O2]] ;U,
+  ;;   [:f [:!O0 :!O1 :!O6 :!Oa]] ;U-
+  ;;   [:z [:!O0 :!O1 :!O7 :!Od]] ;Zv
+  ;;   [:q [:!O2 :!O0 :!O1 :!Oe]] ;"
+  ;;   [:w [:!O2 :!O0 :!O1 :!Oc]] ;"
+  ;;   [:t :period]
+  ;;   [:g :period]
+  ;;   [:r :period]
+  ;;   [:b :period]
 
-   ]}
+  ;;  ]}
 
   ;; {:des "b-mode (hyper)"
   ;;  :rules
