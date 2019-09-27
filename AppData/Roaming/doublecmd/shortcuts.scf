@@ -48,10 +48,6 @@
         <Command>cm_FlatView</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+D</Shortcut>
-        <Command>cm_DirHotList</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F</Shortcut>
         <Command>cm_QuickFilter</Command>
       </Hotkey>
@@ -172,7 +168,7 @@
         <Command>cm_NextTab</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+Up</Shortcut>
+        <Shortcut>Ctrl+D</Shortcut>
         <Command>cm_OpenDirInNewTab</Command>
       </Hotkey>
       <Hotkey>

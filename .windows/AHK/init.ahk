@@ -32,11 +32,11 @@ SetKeyDelay, -1, -1, -1
 ;; #Include keyboard\Hyper.ahk
 
 
-LCtrl & Tab::AltTab
+;LCtrl & Tab::AltTab
 
-RButton & WheelUp::Send ^#{Left}
-RButton & WheelDown::Send ^#{Right}
-RButton::Send {RButton}
+;RButton & WheelUp::Send ^#{Left}
+;RButton & WheelDown::Send ^#{Right}
+;RButton::Send {RButton}
 
 Tab & q:: 
   If WinActive("ahk_exe emacs.exe") {
@@ -50,6 +50,7 @@ Tab & q::
   }
   Reload
   Return
+$*Tab::Send {Blind}{Tab}
 
   
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
