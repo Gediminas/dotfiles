@@ -6,6 +6,7 @@
                 :held    500
                 }}
  :applications {:appRdc ["^com.microsoft.rdc.mac"]
+                :appEmacs ["^org.gnu.Emacs"]
                 }
  :layers
  {
@@ -24,8 +25,8 @@
   {:des "Global" :rules
    [
     [:non_us_backslash :escape]
-    [:left_shift       :vk_none]
-    [:right_shift      :vk_none]
+    [:caps_lock        :left_control]
+    [:right_shift      :right_control]
     [:right_command    :right_shift]
    ]}
 
@@ -49,10 +50,10 @@
      ;;:!appRdc
      ;;[:##return_or_enter :right_control nil {:alone :return_or_enter} ]]}
 
-  {:des "CapsLock => Esc/LCtrl" :rules
-   [
-    :!appRdc
-    [:##caps_lock :left_control nil {:alone :escape} ]]}
+  ;; {:des "CapsLock => Esc/LCtrl" :rules
+  ;;  [
+  ;;   :!appRdc
+  ;;   [:##caps_lock :left_control nil {:alone :escape} ]]}
 
   {:des "spc-mode (essential)"
    :rules
@@ -62,9 +63,13 @@
     [:##j                   :##down_arrow]
     [:##k                   :##up_arrow]
     [:##l                   :##right_arrow]
-    [:semicolon             :delete_or_backspace]
+    [:##m                   :##delete_or_backspace]
     [:b                     :return_or_enter]
     [:n                     :escape]
+    [:u                     :!S6           [:appEmacs]]
+    [:i                     :!S4           [:appEmacs]]
+    [:u                     :!Cleft_arrow  [:!appEmacs]]
+    [:i                     :!Cright_arrow [:!appEmacs]]
     [:#Ss                   :!C#Ss]
     [:#Sz                   :!C#Sz]
     [:#Sx                   :!Cx]
@@ -73,7 +78,7 @@
     [:#Sd                   :!TOleft_arrow]
     [:#Sf                   :!TOright_arrow]
     [:non_us_backslash      :!Cq]
-    [:#Sdelete_or_backspace :#Sdelete_forward]
+    [:#Sdelete_or_backspace :delete_forward]
     [:#Sy                   :!C#Sc]
     [:#Sp                   :!C#Sv]
     ;[:period                :!Cperiod]
