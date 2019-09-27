@@ -82,14 +82,11 @@ Space & b::
   Send {Enter}
   Return
 
-Space & m::
-  Return
-
 Space & y::
   Send {Space}
   Return
 
-Space & `;::Send, {Blind}{Backspace}
+Space & m::Send, {Blind}{Backspace}
 Space & BS::Send, {Blind}{Delete}
 
 
