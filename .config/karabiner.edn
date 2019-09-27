@@ -66,10 +66,12 @@
     [:##m                   :##delete_or_backspace]
     [:b                     :return_or_enter]
     [:n                     :escape]
+
     [:u                     :!S6           [:appEmacs]]
     [:i                     :!S4           [:appEmacs]]
     [:u                     :!Cleft_arrow  [:!appEmacs]]
     [:i                     :!Cright_arrow [:!appEmacs]]
+
     [:#Ss                   :!C#Ss]
     [:#Sz                   :!C#Sz]
     [:#Sx                   :!Cx]
@@ -111,9 +113,13 @@
     [:c :keypad_4]
     [:v :keypad_0]
 
-    [:b :keypad_enter]
-    [:n :escape]
-    [:h :delete_or_backspace]
+    [:##h :##left_arrow]
+    [:##j :##down_arrow]
+    [:##k :##up_arrow]
+    [:##l :##right_arrow]
+    [:##m :##delete_or_backspace]
+    [:b   :keypad_enter]
+    [:n   :escape]
     ]}
 
   {:des "sym-mode"
@@ -137,9 +143,13 @@
     [:c :!Sclose_bracket]        ; }
     [:v :quote]                  ; '
 
-    [:b :keypad_enter]
-    [:n :escape]
-    [:h :delete_or_backspace]
+    [:##h :##left_arrow]
+    [:##j :##down_arrow]
+    [:##k :##up_arrow]
+    [:##l :##right_arrow]
+    [:##m :##delete_or_backspace]
+    [:b   :return_or_enter]
+    [:n   :escape]
     ]}
 
   {:des "snp-mode"
@@ -153,9 +163,13 @@
 
     [:x [:!Sopen_bracket :!Sclose_bracket :left_arrow]]
 
-    [:b :keypad_enter]
-    [:n :escape]
-    [:h :delete_or_backspace]
+    [:##h :##left_arrow]
+    [:##j :##down_arrow]
+    [:##k :##up_arrow]
+    [:##l :##right_arrow]
+    [:##m :##delete_or_backspace]
+    [:b   :return_or_enter]
+    [:n   :escape]
    ]}
 
   ;; {:des "LT"
