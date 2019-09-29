@@ -46,21 +46,44 @@
     ;[:right_command :left_shift]
    ]}
 
-  {:des "training mode" :rules
+  {:des "training-mode" :rules
    [
     :!spc-mode
-    [:##1          :vk_none]
-    [:##2          :vk_none]
-    [:##3          :vk_none]
-    [:##4          :vk_none]
-    [:##5          :vk_none]
-    [:##6          :vk_none]
-    [:##7          :vk_none]
-    [:##8          :vk_none]
-    [:##9          :vk_none]
-    [:##0          :vk_none]
-    [:##hyphen     :vk_none]
-    [:##equal_sign :vk_none]
+
+    [:f1           :!Ff1]
+    [:f2           :!Ff2]
+    [:f3           :!Ff3]
+    [:f4           :!Ff4]
+    [:f5           :!Ff5]
+    [:f6           :!Ff6]
+    [:f7           :!Ff7]
+    [:f8           :!Ff8]
+    [:f9           :!Ff9]
+    [:f10          :!Ff10]
+    [:f11          :!Ff11]
+    [:f12          :!Ff12]
+
+    [:##grave_accent_and_tilde :##left_shift]
+    [:##1          :##f1]
+    [:##2          :##f2]
+    [:##3          :##f3]
+    [:##4          :##f4]
+    [:##5          :##f5]
+    [:##6          :##f6]
+    [:##7          :##f7]
+    [:##8          :##f8]
+    [:##9          :##f9]
+    [:##0          :##f10]
+    [:##hyphen     :##f11]
+    [:##equal_sign :##f12]
+    [:##delete_or_backspace :vk_none]
+
+    [:backslash :return_or_enter]
+
+    [:open_bracket     :vk_none]
+    [:close_bracket    :vk_none]
+    [:quote            :vk_none]
+   ;[:non_us_backslash :vk_none]
    ]
   }
 
@@ -116,101 +139,101 @@
    :rules
    [
     :num-mode
-    [:q :keypad_plus]               ;q +
-    [:w :keypad_9]                  ;w 9
-    [:e :keypad_8]                  ;e 8
-    [:r :keypad_7]                  ;r 7
-    [:t :keypad_asterisk]           ;t *
-    [:y :!Ssemicolon]               ;y :
+    [:##q :##keypad_plus]               ;q +
+    [:##w :##9]                         ;w 9 )
+    [:##e :##8]                         ;e 8 *
+    [:##r :##7]                         ;r 7 &
+    [:##t :##keypad_asterisk]           ;t *
+    [:##y :!Ssemicolon]                 ;y :
 
-    [:a :keypad_hyphen]             ;a -
-    [:s :keypad_3]                  ;s 3
-    [:d :keypad_2]                  ;d 2
-    [:f :keypad_1]                  ;f 1
-    [:g :keypad_slash]              ;g /
+    [:##a :##hyphen]                    ;a - _
+    [:##s :##3]                         ;s 3 #
+    [:##d :##2]                         ;d 2 @
+    [:##f :##1]                         ;f 1 !
+    [:##g :##slash]                     ;g / ?
 
-    [:z :keypad_6]                  ;z 6
-    [:x :keypad_5]                  ;x 5
-    [:c :keypad_4]                  ;c 4
-    [:v :keypad_0]                  ;v 0
+    [:##z :##6]                         ;z 6 ^
+    [:##x :##5]                         ;x 5 %
+    [:##c :##4]                         ;c 4 $
+    [:##v :##0]                         ;v 0 )
 
-    [:u :!SO2]                      ;u €
-    [:period :keypad_period]        ;. .
-    [:caps_lock :keypad_equal_sign] ;capslock =
+    [:u :!SO2]                          ;u €
+    [:##period :##period]               ;. . >
+    [:##caps_lock :##keypad_equal_sign] ;L =
 
     [:##h :##left_arrow]
     [:##j :##down_arrow]
     [:##k :##up_arrow]
     [:##l :##right_arrow]
     [:##m :##delete_or_backspace]
-    [:b   :keypad_enter]
-    [:n   :escape]
+    [:##b :##keypad_enter]
+    [:##n :##escape]
     ]}
 
   {:des "sym-mode"
    :rules
    [
     :sym-mode
-    [:q :!Sbackslash]              ;q |
-    [:w :!S7]                      ;z &
-    [:e :open_bracket]             ;e [
-    [:r :close_bracket]            ;r ]
-    [:t :grave_accent_and_tilde]   ;t `
-    [:y :!Sgrave_accent_and_tilde] ;y ~
+    [:##q :!Sbackslash]              ;q |
+    [:##w :!S7]                      ;z &
+    [:##e :##open_bracket]           ;e [
+    [:##r :##close_bracket]          ;r ]
+    [:##t :##grave_accent_and_tilde] ;t `
+    [:##y :!Sgrave_accent_and_tilde] ;y ~
 
-    [:a :!Ssemicolon]              ;a :
-    [:s :hyphen]                   ;s -
-    [:d :!S9]                      ;d (
-    [:f :!S0]                      ;f )
-    [:g :!Squote]                  ;g "
+    [:##a :!Ssemicolon]              ;a :
+    [:##s :!Shyphen]                 ;s _
+    [:##d :!S9]                      ;d (
+    [:##f :!S0]                      ;f )
+    [:##g :!Squote]                  ;g "
 
-    [:z :semicolon]                ;z ;
-    [:x :!Sopen_bracket]           ;x {
-    [:c :!Sclose_bracket]          ;c }
-    [:v :quote]                    ;v '
+    [:##z :##semicolon]              ;z ;
+    [:##x :!Sopen_bracket]           ;x {
+    [:##c :!Sclose_bracket]          ;c }
+    [:##v :##quote]                  ;v '
 
-    [:caps_lock :equal_sign] ;capslock =
+    [:##caps_lock :##equal_sign]     ;capslock =
 
     [:##h :##left_arrow]
     [:##j :##down_arrow]
     [:##k :##up_arrow]
     [:##l :##right_arrow]
     [:##m :##delete_or_backspace]
-    [:b   :return_or_enter]
-    [:n   :escape]
+    [:##b :##return_or_enter]
+    [:##n :##escape]
     ]}
 
   {:des "sy2-mode"
    :rules
    [
     :sy2-mode
-    [:q :!S3]                      ;q #
-    [:w :!S2]                      ;w @
-    [:e :!S5]                      ;e %
-    [:r :!S1]                      ;r !
-    [:t :!S8]                      ;t *
-    [:y :!Sgrave_accent_and_tilde] ;y ~
+    [:##q :!S3]                      ;q #
+    [:##w :!S2]                      ;w @
+    [:##e :!S6]                      ;d ^
+    [:##r :!S4]                      ;f $
+    [:##t :!S1]                      ;r !
+    [:##y :!Sgrave_accent_and_tilde] ;y ~
 
-    [:a :!Ssemicolon]              ;a :
-    [:s :hyphen]                   ;s -
-    [:d :!S6]                      ;d ^
-    [:f :!S4]                      ;f $
-    [:g :slash]                    ;g /
+    [:##a :!Ssemicolon]              ;a :
+    [:##s :##hyphen]                 ;s -
+    [:##d :!Sslash]                  ;v ?
+    [:##f :##slash]                  ;g /
+    [:##g :!S5]                      ;e %
 
-    [:z :backslash]                ;z \
-    [:x :!Scomma]                  ;x <
-    [:c :!Speriod]                 ;c >
-    [:v :!Sslash]                  ;v ?
+    [:##z :##backslash]              ;z \
+    [:##x :!Scomma]                  ;x <
+    [:##c :!Speriod]                 ;c >
+    [:##v :!S8]                      ;t *
 
-    [:caps_lock :equal_sign] ;capslock =
+    [:##caps_lock :##equal_sign]     ;capslock =
 
     [:##h :##left_arrow]
     [:##j :##down_arrow]
     [:##k :##up_arrow]
     [:##l :##right_arrow]
     [:##m :##delete_or_backspace]
-    [:b   :return_or_enter]
-    [:n   :escape]
+    [:##b :##return_or_enter]
+    [:##n :##escape]
     ]}
 
   {:des "snp-mode"
