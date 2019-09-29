@@ -26,7 +26,7 @@
   {:des "Global" :rules
    [
     [:non_us_backslash :escape]
-    [:caps_lock        :left_control [:!num-mode]]
+    [:caps_lock        :left_control [:!num-mode :!sym-mode :!sy2-mode]]
     [:right_shift      :right_control]
     [:right_command    :right_shift]
    ]}
@@ -49,18 +49,18 @@
   {:des "training mode" :rules
    [
     :!spc-mode
-    [:1          :vk_none]
-    [:2          :vk_none]
-    [:3          :vk_none]
-    [:4          :vk_none]
-    [:5          :vk_none]
-    [:6          :vk_none]
-    [:7          :vk_none]
-    [:8          :vk_none]
-    [:9          :vk_none]
-    [:0          :vk_none]
-    [:hyphen     :vk_none]
-    [:equal_sign :vk_none]
+    [:##1          :vk_none]
+    [:##2          :vk_none]
+    [:##3          :vk_none]
+    [:##4          :vk_none]
+    [:##5          :vk_none]
+    [:##6          :vk_none]
+    [:##7          :vk_none]
+    [:##8          :vk_none]
+    [:##9          :vk_none]
+    [:##0          :vk_none]
+    [:##hyphen     :vk_none]
+    [:##equal_sign :vk_none]
    ]
   }
 
@@ -169,7 +169,7 @@
     [:c :!Sclose_bracket]          ;c }
     [:v :quote]                    ;v '
 
-    [:caps_lock :keypad_equal_sign] ;capslock =
+    [:caps_lock :equal_sign] ;capslock =
 
     [:##h :##left_arrow]
     [:##j :##down_arrow]
@@ -186,9 +186,9 @@
     :sy2-mode
     [:q :!S3]                      ;q #
     [:w :!S2]                      ;w @
-    ;e
+    [:e :!S5]                      ;e %
     [:r :!S1]                      ;r !
-    [:t :!S5]                      ;t %
+    [:t :!S8]                      ;t *
     [:y :!Sgrave_accent_and_tilde] ;y ~
 
     [:a :!Ssemicolon]              ;a :
@@ -202,7 +202,7 @@
     [:c :!Speriod]                 ;c >
     [:v :!Sslash]                  ;v ?
 
-    [:caps_lock :keypad_equal_sign] ;capslock =
+    [:caps_lock :equal_sign] ;capslock =
 
     [:##h :##left_arrow]
     [:##j :##down_arrow]

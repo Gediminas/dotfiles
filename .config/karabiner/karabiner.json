@@ -1311,30 +1311,6 @@
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
-              "name" : "spc-mode",
-              "value" : 1
-            }
-          } ],
-          "from" : {
-            "key_code" : "spacebar"
-          },
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "spc-mode",
-              "value" : 0
-            }
-          } ],
-          "to_if_alone" : [ {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
-            "type" : "frontmost_application_unless"
-          } ]
-        }, {
-          "type" : "basic",
-          "to" : [ {
-            "set_variable" : {
               "name" : "sym-mode",
               "value" : 1
             }
@@ -1374,6 +1350,30 @@
           } ],
           "to_if_alone" : [ {
             "key_code" : "semicolon"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
+        }, {
+          "type" : "basic",
+          "to" : [ {
+            "set_variable" : {
+              "name" : "spc-mode",
+              "value" : 1
+            }
+          } ],
+          "from" : {
+            "key_code" : "spacebar"
+          },
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "spc-mode",
+              "value" : 0
+            }
+          } ],
+          "to_if_alone" : [ {
+            "key_code" : "spacebar"
           } ],
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
@@ -1423,6 +1423,14 @@
           } ],
           "conditions" : [ {
             "name" : "num-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "sym-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "sy2-mode",
             "value" : 1,
             "type" : "variable_unless"
           } ],
@@ -1475,7 +1483,10 @@
         "description" : "training mode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "1"
+            "key_code" : "1",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1488,7 +1499,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "2"
+            "key_code" : "2",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1501,7 +1515,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "3"
+            "key_code" : "3",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1514,7 +1531,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "4"
+            "key_code" : "4",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1527,7 +1547,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "5"
+            "key_code" : "5",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1540,7 +1563,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "6"
+            "key_code" : "6",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1553,7 +1579,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "7"
+            "key_code" : "7",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1566,7 +1595,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "8"
+            "key_code" : "8",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1579,7 +1611,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "9"
+            "key_code" : "9",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1592,7 +1627,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "0"
+            "key_code" : "0",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1605,7 +1643,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "hyphen"
+            "key_code" : "hyphen",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -1618,7 +1659,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "equal_sign"
+            "key_code" : "equal_sign",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "vk_none"
@@ -2772,7 +2816,7 @@
             "key_code" : "caps_lock"
           },
           "to" : [ {
-            "key_code" : "keypad_equal_sign"
+            "key_code" : "equal_sign"
           } ],
           "conditions" : [ {
             "name" : "sym-mode",
@@ -2919,6 +2963,20 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "e"
+          },
+          "to" : [ {
+            "key_code" : "5",
+            "modifiers" : [ "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "sy2-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "r"
           },
           "to" : [ {
@@ -2936,7 +2994,7 @@
             "key_code" : "t"
           },
           "to" : [ {
-            "key_code" : "5",
+            "key_code" : "8",
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3087,7 +3145,7 @@
             "key_code" : "caps_lock"
           },
           "to" : [ {
-            "key_code" : "keypad_equal_sign"
+            "key_code" : "equal_sign"
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",
