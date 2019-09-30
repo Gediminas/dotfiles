@@ -1,23 +1,29 @@
 ﻿; Comma Layer
 
-, & q::Send +
-, & w::Send 9
-, & e::Send 8
-, & r::Send 7
-, & t::Send *
+, & 1::Send {:}
+, & 2::Send {€}
+, & 3::Send {#}
+, & 4::Send {$}
+, & 5::Send {`%}
+, & 6::Send {^}
 
-, & a::Send -
-, & s::Send 3
-, & d::Send 2
-, & f::Send 1
-, & g::Send /
+, & q::Send {+}
+, & w::Send {9}
+, & e::Send {8}
+, & r::Send {7}
+, & t::Send {*}
+, & y::Send {=}
 
-, & z::Send 6
-, & x::Send 5
-, & c::Send 4
-, & v::Send 0
+, & a::Send {-}
+, & s::Send {3}
+, & d::Send {2}
+, & f::Send {1}
+, & g::Send {/}
 
-, & .::Send .
+, & z::Send {6}
+, & x::Send {5}
+, & c::Send {4}
+, & v::Send {0}
 
 , & h::Send {Blind}{Left}
 , & j::Send {Blind}{Down}

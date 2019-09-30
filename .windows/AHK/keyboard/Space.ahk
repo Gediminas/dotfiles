@@ -74,6 +74,9 @@ Space & j::Send {Blind}{Down}
 Space & k::Send {Blind}{Up}
 Space & l::Send {Blind}{Right}
 
+Space & u::Send {Home}
+Space & i::Send {End}
+
 Space & n::
   Send {Blind}{Esc}
   Return

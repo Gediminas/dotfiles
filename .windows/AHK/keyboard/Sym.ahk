@@ -2,15 +2,17 @@
 
 . & e::Send [
 . & r::Send ]
+. & t::Send {`}
+. & y::Send {~}
 
+. & a::Send \
+. & s::Send /
 . & d::Send (
 . & f::Send )
+. & g::Send {"}
 
 . & x::Send {{}
 . & c::Send {}}
-
-. & t::Send {`}
-. & g::Send {"}
 . & v::Send {'}
 
 . & h::Send {Blind}{Left}
