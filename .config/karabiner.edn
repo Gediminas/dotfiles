@@ -48,7 +48,8 @@
 
   {:des "training-mode" :rules
    [
-    :!spc-mode
+    ;; :!spc-mode
+    :!appRdc
 
     [:f1           :!Ff1]
     [:f2           :!Ff2]
@@ -76,13 +77,13 @@
     [:##0          :##f10]
     [:##hyphen     :##f11]
     [:##equal_sign :##f12]
-    [:##delete_or_backspace :vk_none]
+    ;[:##delete_or_backspace :vk_none]
 
-    [:backslash :return_or_enter]
+    ;[:backslash :return_or_enter]
 
-    [:open_bracket     :vk_none]
-    [:close_bracket    :vk_none]
-    [:quote            :vk_none]
+    ;[:open_bracket     :vk_none]
+    ;[:close_bracket    :vk_none]
+    ;[:quote            :vk_none]
    ;[:non_us_backslash :vk_none]
    ]
   }
@@ -92,18 +93,18 @@
    :rules
    [
     :spc-mode
-    [:##1          :##1]
-    [:##2          :##2]
-    [:##3          :##3]
-    [:##4          :##4]
-    [:##5          :##5]
-    [:##6          :##6]
-    [:##7          :##7]
-    [:##8          :##8]
-    [:##9          :##9]
-    [:##0          :##0]
-    [:##hyphen     :##hyphen]
-    [:##equal_sign :##equal_sign]
+    ;; [:##1          :##1]
+    ;; [:##2          :##2]
+    ;; [:##3          :##3]
+    ;; [:##4          :##4]
+    ;; [:##5          :##5]
+    ;; [:##6          :##6]
+    ;; [:##7          :##7]
+    ;; [:##8          :##8]
+    ;; [:##9          :##9]
+    ;; [:##0          :##0]
+    ;; [:##hyphen     :##hyphen]
+    ;; [:##equal_sign :##equal_sign]
 
     [:##h                   :##left_arrow]
     [:##j                   :##down_arrow]
