@@ -16,13 +16,66 @@ SetKeyDelay, -1, -1, -1
 #Include LockScreen.ahk
 
 #Include keyboard\Workarounds.ahk
+
+
+;; Training mode
+;; f1::Ff1
+;; f2::Ff2
+;; f3::Ff3
+;; f4::Ff4
+;; f5::Ff5
+;; f6::Ff6
+;; f7::Ff7
+;; f8::Ff8
+;; f9::Ff9
+;; f10::Ff10
+;; f11::Ff11
+;; f12::Ff12
+
+;`::LShift
+;; 1::f1
+;; 2::f2
+;; 3::f3
+;; 4::f4
+;; 5::f5
+;; 6::f6
+;; 7::f7
+;; 8::f8
+;; 9::f9
+;; 0::f10
+;; -::f11
+;; =::f12
+;*1::
+;*2::
+;*3::
+;*4::
+;*5::
+;*6::
+;*7::
+;*8::
+;*9::
+;*0::
+*-::
+*=::
+  return
+
+;SC001::return ;esc
+;SC00E::return ;backspace
+SC02B::Enter  ;\
+SC01A::return ;[
+SC01B::return ;]
+SC028::return ;'  
+;SC029::return ;`
+;SC056::return ;parg
+
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
 ;#Include keyboard\RAlt.ahk
 #Include keyboard\Lt.ahk
 #Include keyboard\Num.ahk
 #Include keyboard\Sym.ahk
-#Include keyboard\Snp.ahk
+#Include keyboard\Sy2.ahk
+;#Include keyboard\Snp.ahk
 ;#Include keyboard\Tab.ahk
 #Include keyboard\WinMng.ahk
 #Include keyboard\app_MsDev.ahk
@@ -32,9 +85,9 @@ SetKeyDelay, -1, -1, -1
 ;; #Include keyboard\Hyper.ahk
 
 
+
 ;LCtrl & Tab::AltTab
 
-\::Enter
 RButton & WheelUp::Send ^#{Left}
 RButton & WheelDown::Send ^#{Right}
 RButton::Send {RButton}

@@ -1,4 +1,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; CapsLock => super
 
-*CapsLock::LCtrl
+;*CapsLock::LCtrl
