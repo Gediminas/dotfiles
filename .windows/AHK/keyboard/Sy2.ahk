@@ -7,8 +7,8 @@
 `; & y::Send {~}
 
 `; & a::Send {:}
-`; & s::Send {-}
-`; & d::Send {?}
+`; & s::Send {?}
+`; & d::Send {-}
 `; & f::Send {/}
 `; & g::Send {`%}
 
@@ -27,6 +27,7 @@
 `; & b::Send {Enter} 
 `; & n::Send {Esc} 
 `; & m::Send {Backspace} 
+`; & ,::Send {Backspace} 
 
 
 

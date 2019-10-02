@@ -18,6 +18,7 @@ SetKeyDelay, -1, -1, -1
 #Include keyboard\Workarounds.ahk
 
 
+/*
 ;; Training mode
 ;; f1::Ff1
 ;; f2::Ff2
@@ -45,6 +46,7 @@ SetKeyDelay, -1, -1, -1
 ;; 0::f10
 ;; -::f11
 ;; =::f12
+
 ;*1::
 ;*2::
 ;*3::
@@ -61,12 +63,14 @@ SetKeyDelay, -1, -1, -1
 
 ;SC001::return ;esc
 ;SC00E::return ;backspace
-SC02B::Enter  ;\
 SC01A::return ;[
 SC01B::return ;]
 SC028::return ;'  
 ;SC029::return ;`
 ;SC056::return ;parg
+*/
+
+SC02B::Enter  ;\
 
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk

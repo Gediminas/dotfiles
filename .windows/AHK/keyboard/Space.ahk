@@ -90,7 +90,7 @@ Space & y::
   Return
 
 Space & m::Send, {Blind}{Backspace}
-;;Space & BS::Send, {Blind}{Delete}
+Space & BS::Send, {Blind}{Delete}
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;; ELSE

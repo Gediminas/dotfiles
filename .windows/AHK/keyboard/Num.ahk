@@ -8,22 +8,22 @@
 ;; , & 6::Send {^}
 
 , & q::Send {+}
-, & w::Send {9}
-, & e::Send {8}
-, & r::Send {7}
+, & w::Send {Blind}{9}
+, & e::Send {Blind}{8}
+, & r::Send {Blind}{7}
 , & t::Send {*}
 , & y::Send {:}
 
-, & a::Send {-}
-, & s::Send {3}
-, & d::Send {2}
-, & f::Send {1}
-, & g::Send {/}
+, & a::Send {Blind}{-}
+, & s::Send {Blind}{3}
+, & d::Send {Blind}{2}
+, & f::Send {Blind}{1}
+, & g::Send {Blind}{/}
 
-, & z::Send {6}
-, & x::Send {5}
-, & c::Send {4}
-, & v::Send {0}
+, & z::Send {Blind}{6}
+, & x::Send {Blind}{5}
+, & c::Send {Blind}{4}
+, & v::Send {Blind}{0}
 
 , & CapsLock::Send {Blind}{=}
 

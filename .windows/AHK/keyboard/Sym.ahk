@@ -27,6 +27,7 @@
 . & b::Send {Enter} 
 . & n::Send {Esc} 
 . & m::Send {Backspace} 
+. & ,::Send {Backspace} 
 
 
 
