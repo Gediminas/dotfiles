@@ -3020,7 +3020,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "3",
+            "key_code" : "1",
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3088,7 +3088,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "1",
+            "key_code" : "3",
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3122,7 +3122,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "semicolon",
+            "key_code" : "equal_sign",
             "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
@@ -3139,7 +3139,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "hyphen"
+            "key_code" : "slash",
+            "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",
@@ -3155,8 +3156,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "slash",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "slash"
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",
@@ -3172,7 +3172,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "slash"
+            "key_code" : "8",
+            "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",
@@ -3255,8 +3256,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "8",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "hyphen"
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",
@@ -3346,22 +3346,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "m",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "delete_or_backspace"
-          } ],
-          "conditions" : [ {
-            "name" : "sy2-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "b",
             "modifiers" : {
               "optional" : [ "any" ]
@@ -3385,6 +3369,38 @@
           },
           "to" : [ {
             "key_code" : "escape"
+          } ],
+          "conditions" : [ {
+            "name" : "sy2-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
+          } ],
+          "conditions" : [ {
+            "name" : "sy2-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",

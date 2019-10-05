@@ -208,23 +208,23 @@
    :rules
    [
     :sy2-mode
-    [:##q :!S3]                      ;q #
+    [:##q :!S1]                      ;r !
     [:##w :!S2]                      ;w @
     [:##e :!S6]                      ;d ^
     [:##r :!S4]                      ;f $
-    [:##t :!S1]                      ;r !
+    [:##t :!S3]                      ;q #
     [:##y :!Sgrave_accent_and_tilde] ;y ~
 
-    [:##a :!Ssemicolon]              ;a :
-    [:##s :##hyphen]                 ;s -
-    [:##d :!Sslash]                  ;v ?
-    [:##f :##slash]                  ;g /
+    [:##a :!Sequal_sign]             ;a +
+    [:##s :!Sslash]                  ;v ?
+    [:##d :##slash]                  ;g /
+    [:##f :!S8]                      ;t *
     [:##g :!S5]                      ;e %
 
     [:##z :##backslash]              ;z \
     [:##x :!Scomma]                  ;x <
     [:##c :!Speriod]                 ;c >
-    [:##v :!S8]                      ;t *
+    [:##v :##hyphen]                 ;s -
 
     [:##caps_lock :##equal_sign]     ;capslock =
 
@@ -232,9 +232,10 @@
     [:##j :##down_arrow]
     [:##k :##up_arrow]
     [:##l :##right_arrow]
-    [:##m :##delete_or_backspace]
     [:##b :##return_or_enter]
     [:##n :##escape]
+    [:##m :##delete_or_backspace]
+    [:##comma :##delete_or_backspace]
     ]}
 
   {:des "snp-mode"
