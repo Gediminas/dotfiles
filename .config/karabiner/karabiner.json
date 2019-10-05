@@ -2806,8 +2806,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "quote",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "semicolon"
           } ],
           "conditions" : [ {
             "name" : "sym-mode",
@@ -2823,7 +2822,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "semicolon"
+            "key_code" : "quote",
+            "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "sym-mode",

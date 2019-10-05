@@ -186,9 +186,9 @@
     [:##s :!Shyphen]                 ;s _
     [:##d :!S9]                      ;d (
     [:##f :!S0]                      ;f )
-    [:##g :!Squote]                  ;g "
+    [:##g :##semicolon]              ;z ;
 
-    [:##z :##semicolon]              ;z ;
+    [:##z :!Squote]                  ;g "
     [:##x :!Sopen_bracket]           ;x {
     [:##c :!Sclose_bracket]          ;c }
     [:##v :##quote]                  ;v '
