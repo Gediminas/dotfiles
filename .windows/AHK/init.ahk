@@ -18,34 +18,33 @@ SetKeyDelay, -1, -1, -1
 #Include keyboard\Workarounds.ahk
 
 
-/*
 ;; Training mode
-;; f1::Ff1
-;; f2::Ff2
-;; f3::Ff3
-;; f4::Ff4
-;; f5::Ff5
-;; f6::Ff6
-;; f7::Ff7
-;; f8::Ff8
-;; f9::Ff9
-;; f10::Ff10
-;; f11::Ff11
-;; f12::Ff12
+;f1::Ff1
+;f2::Ff2
+;f3::Ff3
+;f4::Ff4
+;f5::Ff5
+;f6::Ff6
+;f7::Ff7
+;f8::Ff8
+;f9::Ff9
+;f10::Ff10
+;f11::Ff11
+;f12::Ff12
 
 ;`::LShift
-;; 1::f1
-;; 2::f2
-;; 3::f3
-;; 4::f4
-;; 5::f5
-;; 6::f6
-;; 7::f7
-;; 8::f8
-;; 9::f9
-;; 0::f10
-;; -::f11
-;; =::f12
+1::f1
+2::f2
+3::f3
+4::f4
+5::f5
+6::f6
+7::f7
+8::f8
+9::f9
+0::f10
+-::f11
+=::f12
 
 ;*1::
 ;*2::
@@ -57,9 +56,9 @@ SetKeyDelay, -1, -1, -1
 ;*8::
 ;*9::
 ;*0::
-*-::
-*=::
-  return
+;*-::
+;*=::
+;  return
 
 ;SC001::return ;esc
 ;SC00E::return ;backspace
@@ -68,7 +67,6 @@ SC01B::return ;]
 SC028::return ;'  
 ;SC029::return ;`
 ;SC056::return ;parg
-*/
 
 SC02B::Enter  ;\
 

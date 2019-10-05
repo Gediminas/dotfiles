@@ -10,9 +10,9 @@
 . & s::Send {_}
 . & d::Send {(}
 . & f::Send {)}
-. & g::Send {"}
+. & g::Send {;}
 
-. & z::Send {;}
+. & z::Send {"}
 . & x::Send {{}
 . & c::Send {}}
 . & v::Send {'}
