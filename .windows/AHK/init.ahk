@@ -80,7 +80,7 @@ SC02B::Enter  ;\
 ;#Include keyboard\Snp.ahk
 ;#Include keyboard\Tab.ahk
 #Include keyboard\WinMng.ahk
-#Include keyboard\app_MsDev.ahk
+;#Include keyboard\app_MsDev.ahk
 
 ;; #Include keyboard\Lt.ahk
 ;; #Include keyboard\Punct.ahk
