@@ -1,9 +1,9 @@
 ﻿; Comma Layer
-`; & q::Send {#}
+`; & q::Send {!}
 `; & w::Send {@}
 `; & e::Send {^}
 `; & r::Send {$}
-`; & t::Send {!}
+`; & t::Send {#}
 `; & y::Send {~}
 
 `; & a::Send {+}
