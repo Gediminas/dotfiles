@@ -7,15 +7,15 @@
 `; & y::Send {~}
 
 `; & a::Send {+}
-`; & s::Send {?}
-`; & d::Send {/}
+`; & s::Send {-}
+`; & d::Send {?}
 `; & f::Send {*}
 `; & g::Send {`%}
 
 `; & z::Send {\}
 `; & x::Send {<}
 `; & c::Send {>}
-`; & v::Send {-}
+`; & v::Send {/}
 
 `; & CapsLock::Send {Blind}{=}
 
