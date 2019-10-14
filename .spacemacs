@@ -205,9 +205,15 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(zenburn
-                         spacemacs-dark
-                         spacemacs-light)
+   dotspacemacs-themes '(leuven
+                         default
+                         tango
+                         dichromacy
+                         ;;spacemacs-light
+                         ;;whiteboard
+                         zenburn
+                         ;;spacemacs-dark
+                         )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -220,7 +226,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
-   dotspacemacs-colorize-cursor-according-to-state t
+   dotspacemacs-colorize-cursor-according-to-state nil
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
@@ -559,7 +565,7 @@ before packages are loaded."
   (display-time-mode 1)                 ; show time in mode line on startup
 
   ;; Change this ugly orange color
-  (set-face-attribute 'spaceline-unmodified nil :background "LightSkyBlue")
+  ;;(set-face-attribute 'spaceline-unmodified nil :background "LightSkyBlue")
 
 
   (setq spaceline-default-separator 'arrow)
@@ -783,13 +789,4 @@ This function is called at the very end of Spacemacs initialization."
  '(tool-bar-mode nil)
  ;; END
 )
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- ;; START
- '(isearch ((t (:background "yellow" :foreground "black" :weight bold))))
- '(lazy-highlight ((t (:background "dark goldenrod" :foreground "dark slate gray" :weight bold)))))
- ;; END
 )
