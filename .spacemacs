@@ -776,7 +776,7 @@ This function is called at the very end of Spacemacs initialization."
   )
 
  ;; START
- '(blink-cursor-mode nil)
+ '(blink-cursor-mode t)
  '(column-number-mode t)
  '(display-line-numbers-type (quote relative))
  '(display-time-mode t)
