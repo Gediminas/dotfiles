@@ -3139,8 +3139,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "slash",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "hyphen"
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",
@@ -3156,7 +3155,8 @@
             }
           },
           "to" : [ {
-            "key_code" : "slash"
+            "key_code" : "slash",
+            "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",
@@ -3256,7 +3256,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "hyphen"
+            "key_code" : "slash"
           } ],
           "conditions" : [ {
             "name" : "sy2-mode",

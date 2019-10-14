@@ -216,15 +216,15 @@
     [:##y :!Sgrave_accent_and_tilde] ;y ~
 
     [:##a :!Sequal_sign]             ;a +
-    [:##s :!Sslash]                  ;v ?
-    [:##d :##slash]                  ;g /
+    [:##s :##hyphen]                 ;s -
+    [:##d :!Sslash]                  ;v ?
     [:##f :!S8]                      ;t *
     [:##g :!S5]                      ;e %
 
     [:##z :##backslash]              ;z \
     [:##x :!Scomma]                  ;x <
     [:##c :!Speriod]                 ;c >
-    [:##v :##hyphen]                 ;s -
+    [:##v :##slash]                  ;g /
 
     [:##caps_lock :##equal_sign]     ;capslock =
 
