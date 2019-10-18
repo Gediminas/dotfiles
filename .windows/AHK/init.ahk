@@ -33,6 +33,10 @@ SetKeyDelay, -1, -1, -1
 ;f12::Ff12
 
 ;`::LShift
+;f13 & 2::Send {Blind}!{f2}
+;f13 & 3::Send {Blind}!{f3}
+;f13 & 4::Send {Blind}!{f4}
+
 1::f1
 2::f2
 3::f3
@@ -60,12 +64,13 @@ SetKeyDelay, -1, -1, -1
 ;*=::
 ;  return
 
-;SC001::return ;esc
+SC001::f13 ;esc
+SC029::f13  ;` mx keyboard
+
 ;SC00E::return ;backspace
 SC01A::return ;[
 SC01B::return ;]
 SC028::return ;'  
-;SC029::return ;`
 ;SC056::return ;parg
 
 SC02B::Enter  ;\
