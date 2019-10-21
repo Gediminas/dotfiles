@@ -64,9 +64,9 @@ SetKeyDelay, -1, -1, -1
 ;*=::
 ;  return
 
-SC001::f13 ;esc
 SC029::f13  ;` mx keyboard
 
+;SC001::return ;esc
 ;SC00E::return ;backspace
 SC01A::return ;[
 SC01B::return ;]
