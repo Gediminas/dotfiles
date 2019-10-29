@@ -1,8 +1,8 @@
 "inoremap jk <esc>
 
 " Single-handed HalfPageUp/Down
-map <A-j> <C-d>
-map <A-k> <C-u>
+map <C-j> <C-d>
+map <C-k> <C-u>
 
 " http://vim.wikia.com/wiki/Replace_a_word_with_yanked_text
 nnoremap S "_diw"0P
