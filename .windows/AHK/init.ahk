@@ -50,20 +50,6 @@ SetKeyDelay, -1, -1, -1
 -::f11
 =::f12
 
-;*1::
-;*2::
-;*3::
-;*4::
-;*5::
-;*6::
-;*7::
-;*8::
-;*9::
-;*0::
-;*-::
-;*=::
-;  return
-
 SC029::f13  ;` mx keyboard
 
 ;SC001::return ;esc
@@ -77,16 +63,16 @@ SC02B::Enter  ;\
 
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
-;#Include keyboard\RAlt.ahk
 #Include keyboard\Lt.ahk
 #Include keyboard\Num.ahk
 #Include keyboard\Sym.ahk
 #Include keyboard\Sy2.ahk
+
+;#Include keyboard\RAlt.ahk
 ;#Include keyboard\Snp.ahk
 ;#Include keyboard\Tab.ahk
-#Include keyboard\WinMng.ahk
+;#Include keyboard\WinMng.ahk
 ;#Include keyboard\app_MsDev.ahk
-
 ;; #Include keyboard\Lt.ahk
 ;; #Include keyboard\Punct.ahk
 ;; #Include keyboard\Hyper.ahk

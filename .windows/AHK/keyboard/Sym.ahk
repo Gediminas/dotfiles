@@ -1,4 +1,5 @@
 ﻿; Comma Layer
+
 . & q::Send {|}
 . & w::Send {&}
 . & e::Send {[}
@@ -17,8 +18,6 @@
 . & c::Send {}}
 . & v::Send {'}
 
-. & CapsLock::Send {Blind}{=}
-
 . & h::Send {Blind}{Left}
 . & j::Send {Blind}{Down}
 . & k::Send {Blind}{Up}
@@ -29,6 +28,8 @@
 . & m::Send {Backspace} 
 . & ,::Send {Backspace} 
 
+. & LShift::Send {Blind}{.}
+. & LCtrl::Send {Blind}{=}
 
 
 $*.::Send {Blind}{.}

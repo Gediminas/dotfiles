@@ -1,31 +1,32 @@
 ﻿; Lithuanian letters
 
 #If (GetKeyState("RAlt","P"))
-  a::Send ą
-  c::Send č
-  r::Send ę
-  d::Send ė
-  t::Send į
-  s::Send š
-  v::Send ų
-  f::Send ū
+  1::Send ą
+  2::Send č
+  3::Send ę
+  4::Send ė
+  5::Send į
+  6::Send š
+  7::Send ų
+  8::Send ū
   9::Send „
   0::Send “
   -::Send –
-  z::Send ž
+  =::Send ž
 
-  +a::Send Ą
-  +c::Send Č
-  +r::Send Ę
-  +d::Send Ė
-  +t::Send Į
-  +s::Send Š
-  +v::Send Ų
-  +f::Send Ū
+  +1::Send Ą
+  +2::Send Č
+  +3::Send Ę
+  +4::Send Ė
+  +5::Send Į
+  +6::Send Š
+  +7::Send Ų
+  +8::Send Ū
   +9::Send „“{Left}
   +0::Send „“{Left}
   +-::Send –
-  +z::Send Ž
+  +=::Send Ž
+
 #If
 
 *RAlt::return
