@@ -1292,7 +1292,7 @@
             }
           } ],
           "from" : {
-            "key_code" : "comma"
+            "key_code" : "semicolon"
           },
           "to_after_key_up" : [ {
             "set_variable" : {
@@ -1301,46 +1301,46 @@
             }
           } ],
           "to_if_alone" : [ {
+            "key_code" : "semicolon"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
+        }, {
+          "type" : "basic",
+          "to" : [ {
+            "set_variable" : {
+              "name" : "sym-mode",
+              "value" : 1
+            }
+          } ],
+          "from" : {
+            "key_code" : "period"
+          },
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "sym-mode",
+              "value" : 0
+            }
+          } ],
+          "to_if_alone" : [ {
+            "key_code" : "period"
+          } ],
+          "conditions" : [ {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ]
+        }, {
+          "type" : "basic",
+          "to" : [ {
+            "set_variable" : {
+              "name" : "sy2-mode",
+              "value" : 1
+            }
+          } ],
+          "from" : {
             "key_code" : "comma"
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
-            "type" : "frontmost_application_unless"
-          } ]
-        }, {
-          "type" : "basic",
-          "to" : [ {
-            "set_variable" : {
-              "name" : "sym-mode",
-              "value" : 1
-            }
-          } ],
-          "from" : {
-            "key_code" : "period"
-          },
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "sym-mode",
-              "value" : 0
-            }
-          } ],
-          "to_if_alone" : [ {
-            "key_code" : "period"
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
-            "type" : "frontmost_application_unless"
-          } ]
-        }, {
-          "type" : "basic",
-          "to" : [ {
-            "set_variable" : {
-              "name" : "sy2-mode",
-              "value" : 1
-            }
-          } ],
-          "from" : {
-            "key_code" : "semicolon"
           },
           "to_after_key_up" : [ {
             "set_variable" : {
@@ -1349,7 +1349,7 @@
             }
           } ],
           "to_if_alone" : [ {
-            "key_code" : "semicolon"
+            "key_code" : "comma"
           } ],
           "conditions" : [ {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
@@ -1433,6 +1433,22 @@
             "name" : "sy2-mode",
             "value" : 1,
             "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_control"
+          },
+          "to" : [ {
+            "key_code" : "left_command"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "key_code" : "right_option"
           } ],
           "type" : "basic"
         }, {

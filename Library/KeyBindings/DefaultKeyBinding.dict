@@ -1,33 +1,45 @@
 {
-    "~9" = (insertText:, "„");
-    "~0" = (insertText:, "“");
+    "~n" = (insertText:, "ą");
+    "~j" = (insertText:, "č");
+    "~k" = (insertText:, "ę");
+    "~l" = (insertText:, "ė");
+    "~i" = (insertText:, "į");
+    "~h" = (insertText:, "š");
+    "~u" = (insertText:, "ų");
+    "~p" = (insertText:, "ū");
+    "~[" = (insertText:, "„");
+    "~]" = (insertText:, "“");
+    "~;" = (insertText:, "ž");
 
-    "~w" = (insertText:, "ß");
-    "~r" = (insertText:, "ę");
-    "~t" = (insertText:, "į");
+    "~N" = (insertText:, "Ą");
+    "~J" = (insertText:, "Č");
+    "~K" = (insertText:, "Ę");
+    "~L" = (insertText:, "Ė");
+    "~I" = (insertText:, "Į");
+    "~H" = (insertText:, "Š");
+    "~U" = (insertText:, "Ų");
+    "~P" = (insertText:, "Ū");
+    "~:" = (insertText:, "Ž");
 
-    "~a" = (insertText:, "ą");
-    "~s" = (insertText:, "š");
-    "~d" = (insertText:, "ė");
-    "~f" = (insertText:, "ū");
 
-    "~z" = (insertText:, "ž");
-    "~x" = (insertText:, "ç");
-    "~c" = (insertText:, "č");
-    "~v" = (insertText:, "ų");
+    "~q" = (insertText:, "+");
+    "~w" = (insertText:, "9");
+    "~e" = (insertText:, "8");
+    "~r" = (insertText:, "7");
+    "~t" = (insertText:, "*");
+    "~y" = (insertText:, ":");
+
+    "~a" = (insertText:, "-");
+    "~s" = (insertText:, "3");
+    "~d" = (insertText:, "2");
+    "~f" = (insertText:, "1");
+    "~g" = (insertText:, "/");
+
+    "~z" = (insertText:, "6");
+    "~x" = (insertText:, "5");
+    "~c" = (insertText:, "4");
+    "~v" = (insertText:, "0");
     "~b" = ("insertNewline:") ;
 
 
-    "~R" = (insertText:, "Ę");
-    "~T" = (insertText:, "Į");
-
-    "~A" = (insertText:, "Ą");
-    "~S" = (insertText:, "Š");
-    "~D" = (insertText:, "Ė");
-    "~F" = (insertText:, "Ū");
-
-    "~Z" = (insertText:, "Ž");
-    "~X" = (insertText:, "Ç");
-    "~C" = (insertText:, "Č");
-    "~V" = (insertText:, "Ų");
 }

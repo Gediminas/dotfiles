@@ -11,9 +11,9 @@
  :layers
  {
   :spc-mode      {:key :spacebar   :condi :!appRdc}
-  :num-mode      {:key :comma      :condi :!appRdc}
+  :num-mode      {:key :semicolon  :condi :!appRdc}
   :sym-mode      {:key :period     :condi :!appRdc}
-  :sy2-mode      {:key :semicolon  :condi :!appRdc}
+  :sy2-mode      {:key :comma      :condi :!appRdc}
   :snp-mode      {:key :slash      :condi :!appRdc}
   ;:num-mode      {:key :non_us_backslash :condi :!appRdc}
   ;:num-mode      {:key :semicolon :condi :!appRdc}
@@ -27,6 +27,8 @@
    [
     [:non_us_backslash :escape]
     [:caps_lock        :left_control [:!num-mode :!sym-mode :!sy2-mode]]
+    [:left_control     :left_command]
+    [:left_command     :right_option]
     [:right_shift      :right_control]
     [:right_command    :right_shift]
    ]}
