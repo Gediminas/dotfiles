@@ -26,11 +26,14 @@
   {:des "Global" :rules
    [
     [:non_us_backslash :escape]
+
     [:caps_lock        :left_control [:!num-mode :!sym-mode :!sy2-mode]]
     [:left_control     :left_command]
     [:left_command     :right_option]
-    [:right_shift      :right_control]
+
     [:right_command    :right_shift]
+    [:right_option     :left_option]
+    [:right_shift      :right_control]
    ]}
 
   {:des "RDC" :rules
