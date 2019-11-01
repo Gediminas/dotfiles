@@ -214,9 +214,9 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(default
                          leuven
-                         tango
-                         dichromacy
-                         ;;spacemacs-light
+                         spacemacs-light
+                         ;;tango
+                         ;;dichromacy
                          ;;whiteboard
                          zenburn
                          ;;spacemacs-dark
@@ -401,7 +401,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server t
+   dotspacemacs-enable-server nil
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
