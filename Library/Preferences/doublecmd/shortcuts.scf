@@ -276,6 +276,18 @@
         <Command>cm_RunTerm</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>WinKey+C</Shortcut>
+        <Command>cm_CopyToClipboard</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>WinKey+V</Shortcut>
+        <Command>cm_PasteFromClipboard</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>WinKey+X</Shortcut>
+        <Command>cm_CutToClipboard</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
         <Control>Files Panel</Control>
