@@ -281,7 +281,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil then the last auto saved layouts are resumed automatically upon
    ;; start. (default nil)
-   dotspacemacs-auto-resume-layouts t
+   dotspacemacs-auto-resume-layouts nil
 
    ;; If non-nil, auto-generate layout name when creating new layouts. Only has
    ;; effect when using the "jump to layout by number" commands. (default nil)
@@ -692,8 +692,9 @@ before packages are loaded."
   (evil-leader/set-key "q q" `spacemacs/frame-killer)
 
   (global-set-key [f8] 'deft)
-  ;(global-set-key (kbd "U") 'redo)
+  (global-set-key (kbd "U") 'redo)
   (global-set-key (kbd "M-i") 'imenu)
+  (global-set-key (kbd "<C-tab>") 'evil-switch-to-windows-last-buffer)
 
   ;; transparently decrypt/encrypt things
   (setq epa-armor t)
