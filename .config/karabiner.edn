@@ -25,7 +25,7 @@
  [
   {:des "Global" :rules
    [
-    [:non_us_backslash :escape]
+    ;[:non_us_backslash :escape]
 
     [:caps_lock        :left_control [:!num-mode :!sym-mode :!sy2-mode]]
     [:left_control     :left_command]
