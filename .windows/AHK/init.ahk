@@ -50,14 +50,14 @@ SetKeyDelay, -1, -1, -1
 -::f11
 =::f12
 
-SC029::f13  ;` mx keyboard
+SC029::f13 ;` mx apple magic
+SC056::f13 ;\ nm apple magic
 
 ;SC001::return ;esc
 ;SC00E::return ;backspace
 SC01A::return ;[
 SC01B::return ;]
 SC028::return ;'  
-;SC056::return ;parg
 
 SC02B::Enter  ;\
 
