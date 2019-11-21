@@ -1,1 +1,2 @@
-sub/chemacs  git@github.com:plexus/chemacs.git  master   eol
+sub/chemacs     git@github.com:plexus/chemacs.git       master    eol
+sub/doom-emacs  git@github.com:hlissner/doom-emacs.git  develop   eol
