@@ -12,8 +12,8 @@
  {
   :spc-mode      {:key :spacebar   :condi :!appRdc}
   :num-mode      {:key :semicolon  :condi :!appRdc}
-  :sym-mode      {:key :period     :condi :!appRdc}
-  :sy2-mode      {:key :comma      :condi :!appRdc}
+  :sym-mode      {:key :comma      :condi :!appRdc}
+  :cod-mode      {:key :period     :condi :!appRdc}
   :snp-mode      {:key :slash      :condi :!appRdc}
   ;:num-mode      {:key :non_us_backslash :condi :!appRdc}
   ;:num-mode      {:key :semicolon :condi :!appRdc}
@@ -27,7 +27,7 @@
    [
     ;[:non_us_backslash :escape]
 
-    [:caps_lock        :left_control [:!num-mode :!sym-mode :!sy2-mode]]
+    [:caps_lock        :left_control [:!num-mode :!cod-mode :!sym-mode]]
     [:left_control     :left_command]
     [:left_command     :right_option]
 
@@ -180,39 +180,6 @@
    :rules
    [
     :sym-mode
-    [:##q :!Sbackslash]              ;q |
-    [:##w :!S7]                      ;z &
-    [:##e :##open_bracket]           ;e [
-    [:##r :##close_bracket]          ;r ]
-    [:##t :##grave_accent_and_tilde] ;t `
-    [:##y :!Sgrave_accent_and_tilde] ;y ~
-
-    [:##a :!Ssemicolon]              ;a :
-    [:##s :!Shyphen]                 ;s _
-    [:##d :!S9]                      ;d (
-    [:##f :!S0]                      ;f )
-    [:##g :##semicolon]              ;z ;
-
-    [:##z :!Squote]                  ;g "
-    [:##x :!Sopen_bracket]           ;x {
-    [:##c :!Sclose_bracket]          ;c }
-    [:##v :##quote]                  ;v '
-
-    [:##caps_lock :##equal_sign]     ;capslock =
-
-    [:##h :##left_arrow]
-    [:##j :##down_arrow]
-    [:##k :##up_arrow]
-    [:##l :##right_arrow]
-    [:##m :##delete_or_backspace]
-    [:##b :##return_or_enter]
-    [:##n :##escape]
-    ]}
-
-  {:des "sy2-mode"
-   :rules
-   [
-    :sy2-mode
     [:##q :!S1]                      ;r !
     [:##w :!S2]                      ;w @
     [:##e :!S6]                      ;d ^
@@ -241,6 +208,39 @@
     [:##n :##escape]
     [:##m :##delete_or_backspace]
     [:##comma :##delete_or_backspace]
+    ]}
+
+  {:des "cod-mode"
+   :rules
+   [
+    :cod-mode
+    [:##q :!Sbackslash]              ;q |
+    [:##w :!S7]                      ;z &
+    [:##e :##open_bracket]           ;e [
+    [:##r :##close_bracket]          ;r ]
+    [:##t :##grave_accent_and_tilde] ;t `
+    [:##y :!Sgrave_accent_and_tilde] ;y ~
+
+    [:##a :!Ssemicolon]              ;a :
+    [:##s :!Shyphen]                 ;s _
+    [:##d :!S9]                      ;d (
+    [:##f :!S0]                      ;f )
+    [:##g :##semicolon]              ;z ;
+
+    [:##z :!Squote]                  ;g "
+    [:##x :!Sopen_bracket]           ;x {
+    [:##c :!Sclose_bracket]          ;c }
+    [:##v :##quote]                  ;v '
+
+    [:##caps_lock :##equal_sign]     ;capslock =
+
+    [:##h :##left_arrow]
+    [:##j :##down_arrow]
+    [:##k :##up_arrow]
+    [:##l :##right_arrow]
+    [:##m :##delete_or_backspace]
+    [:##b :##return_or_enter]
+    [:##n :##escape]
     ]}
 
   {:des "snp-mode"
