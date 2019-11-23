@@ -1379,30 +1379,6 @@
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_unless"
           } ]
-        }, {
-          "type" : "basic",
-          "to" : [ {
-            "set_variable" : {
-              "name" : "snp-mode",
-              "value" : 1
-            }
-          } ],
-          "from" : {
-            "key_code" : "slash"
-          },
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "snp-mode",
-              "value" : 0
-            }
-          } ],
-          "to_if_alone" : [ {
-            "key_code" : "slash"
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
-            "type" : "frontmost_application_unless"
-          } ]
         } ]
       }, {
         "description" : "Global",
@@ -1411,7 +1387,7 @@
             "key_code" : "caps_lock"
           },
           "to" : [ {
-            "key_code" : "left_control"
+            "key_code" : "vk_none"
           } ],
           "conditions" : [ {
             "name" : "num-mode",
@@ -1440,7 +1416,7 @@
             "key_code" : "left_command"
           },
           "to" : [ {
-            "key_code" : "right_option"
+            "key_code" : "left_control"
           } ],
           "type" : "basic"
         }, {
@@ -1449,14 +1425,6 @@
           },
           "to" : [ {
             "key_code" : "right_shift"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "right_option"
-          },
-          "to" : [ {
-            "key_code" : "left_option"
           } ],
           "type" : "basic"
         }, {

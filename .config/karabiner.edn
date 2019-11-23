@@ -14,11 +14,11 @@
   :num-mode      {:key :semicolon  :condi :!appRdc}
   :sym-mode      {:key :comma      :condi :!appRdc}
   :cod-mode      {:key :period     :condi :!appRdc}
-  :snp-mode      {:key :slash      :condi :!appRdc}
-  ;:num-mode      {:key :non_us_backslash :condi :!appRdc}
-  ;:num-mode      {:key :semicolon :condi :!appRdc}
-  ;:lt-mode       {:key :period    :condi :!appRdc}
-  ;:lt-upper-mode {:key :slash     :condi :!appRdc}
+  ; :snp-mode      {:key :slash      :condi :!appRdc}
+  ; :num-mode      {:key :non_us_backslash :condi :!appRdc}
+  ; :num-mode      {:key :semicolon :condi :!appRdc}
+  ; :lt-mode       {:key :period    :condi :!appRdc}
+  ; :lt-upper-mode {:key :slash     :condi :!appRdc}
  }
 
  :main
@@ -27,12 +27,13 @@
    [
     ;[:non_us_backslash :escape]
 
-    [:caps_lock        :left_control [:!num-mode :!cod-mode :!sym-mode]]
+    ;[:caps_lock        :left_control [:!num-mode :!cod-mode :!sym-mode]]
+    [:caps_lock        :vk_none [:!num-mode :!cod-mode :!sym-mode]]
     [:left_control     :left_command]
-    [:left_command     :right_option]
+    [:left_command     :left_control]
 
     [:right_command    :right_shift]
-    [:right_option     :left_option]
+    ;[:right_option     :left_option]
     [:right_shift      :right_control]
    ]}
 
