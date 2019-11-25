@@ -10,6 +10,7 @@
                 }
  :layers
  {
+  :spc-mode-all  {:key :spacebar   :condi :!appRdc}
   :spc-mode      {:key :spacebar   :condi :!appRdc}
   :num-mode      {:key :semicolon  :condi :!appRdc}
   :sym-mode      {:key :comma      :condi :!appRdc}
@@ -125,7 +126,8 @@
     [:u                     :!Cleft_arrow  [:!appEmacs]]
     [:i                     :!Cright_arrow [:!appEmacs]]
 
-    [:#Ss                   :!C#Ss]
+    [:s                   :!C#Ss           [:!appEmacs]]
+    [:s                   [:spacebar :b :!Ss] [:appEmacs]]
     [:#Sz                   :!C#Sz]
     [:#Sx                   :!Cx]
     [:#Sc                   :!Cc]
