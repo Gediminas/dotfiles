@@ -1,4 +1,0 @@
-#!/bin/bash
-/usr/local/bin/emacsclient -c -n -F "((fullscreen . fullboth))" -a ''
-
-# fullscreen . maximized
