@@ -69,13 +69,21 @@ Space & z::Send ^z
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; RIGHT
 
+#If (GetKeyState("Ctrl","P") && GetKeyState("Shift","P"))
+  Space & j::Send +{PgDn}
+  Space & k::Send +{PgUp}
+#If (GetKeyState("LCtrl","P"))
+  Space & j::Send {PgDn}
+  Space & k::Send {PgUp}
+#If
+
 Space & h::Send {Blind}{Left}
 Space & j::Send {Blind}{Down}
 Space & k::Send {Blind}{Up}
 Space & l::Send {Blind}{Right}
 
-Space & u::Send {Home}
-Space & i::Send {End}
+Space & u::Send {Blind}{Home}
+Space & i::Send {Blind}{End}
 
 Space & n::
   Send {Blind}{Esc}
@@ -83,10 +91,6 @@ Space & n::
 
 Space & b::
   Send {Enter}
-  Return
-
-Space & y::
-  Send {Space}
   Return
 
 Space & m::Send, {Blind}{Backspace}
