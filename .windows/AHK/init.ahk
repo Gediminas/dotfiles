@@ -32,11 +32,6 @@ SetKeyDelay, -1, -1, -1
 ;f11::Ff11
 ;f12::Ff12
 
-;`::LShift
-;f13 & 2::Send {Blind}!{f2}
-;f13 & 3::Send {Blind}!{f3}
-;f13 & 4::Send {Blind}!{f4}
-
 1::f1
 2::f2
 3::f3
@@ -63,10 +58,10 @@ SC02B::Enter  ;\
 
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
-#Include keyboard\Lt.ahk
+#Include keyboard\Ltu.ahk
 #Include keyboard\Num.ahk
 #Include keyboard\Sym.ahk
-#Include keyboard\Sy2.ahk
+#Include keyboard\Cod.ahk
 
 ;#Include keyboard\RAlt.ahk
 ;#Include keyboard\Snp.ahk
