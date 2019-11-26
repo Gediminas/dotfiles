@@ -1,4 +1,5 @@
-﻿; Comma Layer
+﻿; sym Layer
+
 , & q::Send {!}
 , & w::Send {@}
 , & e::Send {^}
@@ -16,7 +17,6 @@
 , & x::Send {<}
 , & c::Send {>}
 , & v::Send {/}
-
 
 , & h::Send {Blind}{Left}
 , & j::Send {Blind}{Down}
