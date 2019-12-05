@@ -35,6 +35,8 @@ Space & 9::Send, {Blind}{F9}
 Space & 0::Send, {Blind}{F10}
 Space & -::Send, {Blind}{F11}
 Space & =::Send, {Blind}{F12}
+Space & SC029::Send, {Blind}{F13} ;` mx apple magic
+Space & SC056::Send, {Blind}{F13} ;\ nm apple magic
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
