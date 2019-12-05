@@ -56,6 +56,8 @@ SC028::return ;'
 
 SC02B::Enter  ;\
 
+CapsLock::Backspace ;Colemak
+
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
 #Include keyboard\Ltu.ahk
