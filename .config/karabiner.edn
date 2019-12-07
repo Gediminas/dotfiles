@@ -17,7 +17,6 @@
   :cod-mode      {:key :period     :condi :!appRdc}
   ; :snp-mode      {:key :slash      :condi :!appRdc}
   ; :num-mode      {:key :non_us_backslash :condi :!appRdc}
-  ; :num-mode      {:key :semicolon :condi :!appRdc}
   ; :lt-mode       {:key :period    :condi :!appRdc}
   ; :lt-upper-mode {:key :slash     :condi :!appRdc}
  }
@@ -26,16 +25,12 @@
  [
   {:des "Global" :rules
    [
-    ;[:non_us_backslash :escape]
+    [:caps_lock      :escape [:!num-mode :!cod-mode :!sym-mode]]
+    [:right_command  :right_shift]
 
-    ;[:caps_lock        :left_control [:!num-mode :!cod-mode :!sym-mode]]
-    [:caps_lock        :vk_none [:!num-mode :!cod-mode :!sym-mode]]
-    [:left_control     :left_command]
-    [:left_command     :left_control]
-
-    [:right_command    :right_shift]
-    ;[:right_option     :left_option]
-    [:right_shift      :right_control]
+    [:right_shift              :vk_none]
+    [:##grave_accent_and_tilde :##vk_none]
+    [:##non_us_backslash      :##vk_none]
    ]}
 
   {:des "RDC" :rules
@@ -44,14 +39,6 @@
     [:left_control  :left_command]
     [:left_command  :left_control]
     ]}
-
-  {:des "notRDC" :rules
-   [
-    :!appRdc
-    ;[:left_control  :left_command]
-    ;[:left_command  :left_control]
-    ;[:right_command :left_shift]
-   ]}
 
   {:des "training-mode" :rules
    [
@@ -71,19 +58,6 @@
     [:f11          :!Ff11]
     [:f12          :!Ff12]
 
-    [:##grave_accent_and_tilde :##left_shift]
-    [:##1          :##f1]
-    [:##2          :##f2]
-    [:##3          :##f3]
-    [:##4          :##f4]
-    [:##5          :##f5]
-    [:##6          :##f6]
-    [:##7          :##f7]
-    [:##8          :##f8]
-    [:##9          :##f9]
-    [:##0          :##f10]
-    [:##hyphen     :##f11]
-    [:##equal_sign :##f12]
     ;[:##delete_or_backspace :vk_none]
 
     ;[:backslash :return_or_enter]
@@ -100,31 +74,42 @@
    :rules
    [
     :spc-mode
-    ;; [:##1          :##1]
-    ;; [:##2          :##2]
-    ;; [:##3          :##3]
-    ;; [:##4          :##4]
-    ;; [:##5          :##5]
-    ;; [:##6          :##6]
-    ;; [:##7          :##7]
-    ;; [:##8          :##8]
-    ;; [:##9          :##9]
-    ;; [:##0          :##0]
-    ;; [:##hyphen     :##hyphen]
-    ;; [:##equal_sign :##equal_sign]
+    [:##1          :##f1]
+    [:##2          :##f2]
+    [:##3          :##f3]
+    [:##4          :##f4]
+    [:##5          :##f5]
+    [:##6          :##f6]
+    [:##7          :##f7]
+    [:##8          :##f8]
+    [:##9          :##f9]
+    [:##0          :##f10]
+    [:##hyphen     :##f11]
+    [:##equal_sign :##f12]
 
-    [:##h                   :##left_arrow]
-    [:##j                   :##down_arrow]
-    [:##k                   :##up_arrow]
-    [:##l                   :##right_arrow]
-    [:##m                   :##delete_or_backspace]
+    [:#Sh                   :#Sleft_arrow]
+    [:#Sj                   :#Sdown_arrow]
+    [:#Sk                   :#Sup_arrow]
+    [:#Sl                   :#Sright_arrow]
+
+    [:!C#Sh                   :!Oup_arrow]
+    [:!C#Sj                   :!O#Sleft_arrow]
+    [:!C#Sk                   :!O#Sright_arrow]
+    [:!C#Sl                   :!Odown_arrow]
+
+    [:m                     :delete_or_backspace]
+    [:!Sm                   :!Sdelete_or_backspace]
+    [:!Cm                   :!Odelete_or_backspace]
     [:b                     :return_or_enter]
     [:n                     :escape]
 
     [:u                     :!S6           [:appEmacs]]
     [:i                     :!S4           [:appEmacs]]
-    [:u                     :!Cleft_arrow  [:!appEmacs]]
-    [:i                     :!Cright_arrow [:!appEmacs]]
+    [:u                     :#Spage_down  [:!appEmacs]]
+    [:i                     :#Spage_up [:!appEmacs]]
+
+    [:!Cu                   :!Cdown_arrow  [:!appEmacs]]
+    [:!Ci                   :!Cup_arrow    [:!appEmacs]]
 
     [:s                   :!C#Ss           [:!appEmacs]]
     [:s                   [:spacebar :b :!Ss] [:appEmacs]]
