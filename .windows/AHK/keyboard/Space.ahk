@@ -45,6 +45,7 @@ Space & SC056::Send, {Blind}{F13} ;\ nm apple magic
 Space & Tab::AltTab
 Space & w::Send {LCtrl down}{Tab}{LCtrl up}
      
+Space & a::
 Space & s::
   If WinActive("ahk_exe emacs.exe") {
     Send, {Esc}:w{Enter}
@@ -57,12 +58,11 @@ Space & s::
   }
   Return
 
-Space & d::Send ^#{Left}
-Space & f::Send ^#{Right}
+Space & SC020::Send ^#{Left}  ;d
+Space & SC021::Send ^#{Right} ;f
 ;Space & Left:: Send ^#{Left}
 ;Space & Right::Send ^#{Right}
 
-Space & a::Send ^a
 Space & x::Send ^x
 Space & c::Send ^c
 Space & v::Send ^v
@@ -71,31 +71,32 @@ Space & z::Send ^z
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; RIGHT
 
-#If (GetKeyState("Ctrl","P") && GetKeyState("Shift","P"))
-  Space & j::Send +{PgDn}
-  Space & k::Send +{PgUp}
-#If (GetKeyState("LCtrl","P"))
-  Space & j::Send {PgDn}
-  Space & k::Send {PgUp}
-#If
+;#If (GetKeyState("Ctrl","P") && GetKeyState("Shift","P"))
+;  Space & j::Send +{PgDn}
+;  Space & k::Send +{PgUp}
+;#If (GetKeyState("LCtrl","P"))
+;  Space & j::Send {PgDn}
+;  Space & k::Send {PgUp}
+;#If
 
-Space & h::Send {Blind}{Left}
-Space & j::Send {Blind}{Down}
-Space & k::Send {Blind}{Up}
-Space & l::Send {Blind}{Right}
+Space & SC024::Send {Blind}{Left} ;j
+Space & SC017::Send {Blind}{Up}   ;i
+Space & SC025::Send {Blind}{Down} ;k
+Space & SC026::Send {Blind}{Right};l
+Space & SC016::Send {Blind}{Home} ;u
+Space & SC018::Send {Blind}{End}  ;o
 
-Space & u::Send {Blind}{Home}
-Space & i::Send {Blind}{End}
-
-Space & n::
-  Send {Blind}{Esc}
+Space & SC031::
+;  Send {Blind}{Esc}
   Return
+
 
 Space & b::
   Send {Enter}
   Return
 
 Space & m::Send, {Blind}{Backspace}
+
 Space & BS::Send, {Blind}{Delete}
 
 

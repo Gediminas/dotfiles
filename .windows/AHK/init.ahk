@@ -56,7 +56,7 @@ SC028::return ;'
 
 SC02B::Enter  ;\
 
-CapsLock::Backspace ;Colemak
+CapsLock::Esc
 
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
