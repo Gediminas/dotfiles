@@ -10,12 +10,11 @@
                 }
  :layers
  {
-  :spc-mode-all  {:key :spacebar   :condi :!appRdc}
   :spc-mode      {:key :spacebar   :condi :!appRdc}
-  :num-mode      {:key :semicolon  :condi :!appRdc}
-  :sym-mode      {:key :comma      :condi :!appRdc}
-  :cod-mode      {:key :period     :condi :!appRdc}
-  ; :snp-mode      {:key :slash      :condi :!appRdc}
+;;  :num-mode      {:key :semicolon  :condi :!appRdc}
+;;  :sym-mode      {:key :comma      :condi :!appRdc}
+  :cod-mode      {:key :slash     :condi :!appRdc}
+  ; :snp-mode      {:key :period      :condi :!appRdc}
   ; :num-mode      {:key :non_us_backslash :condi :!appRdc}
   ; :lt-mode       {:key :period    :condi :!appRdc}
   ; :lt-upper-mode {:key :slash     :condi :!appRdc}
@@ -86,14 +85,46 @@
     [:##hyphen     :##f11]
     [:##equal_sign :##f12]
 
-    [:j                   :#Sleft_arrow]
-    [:k                   :#Sdown_arrow]
-    [:i                   :#Sup_arrow]
-    [:l                   :#Sright_arrow]
+    [:#Sj   :#Sleft_arrow]
+    [:#Sk   :#Sdown_arrow]
+    [:#Si   :#Sup_arrow]
+    [:#Sl   :#Sright_arrow]
 
-    [:s                   :!C#Ss           [:!appEmacs]]
-    [:s                   [:spacebar :b :!Ss] [:appEmacs]]
+    [:!C#Sj   :!O#Sleft_arrow]
+    [:!C#Sl   :!O#Sright_arrow]
 
+    [:!O#Sj   :!C#Sleft_arrow]
+    [:!O#Sl   :!C#Sright_arrow]
+
+    ; qwerty
+    [:s     :!C#Ss           [:!appEmacs]]
+    [:s     [:spacebar :b :!Sd] [:appEmacs]]
+
+    ; colemak
+    [:a     :!C#Ss           [:!appEmacs]]
+    [:a     [:spacebar :b :!Sd] [:appEmacs]]
+
+    [:#Sz   :!C#Sz]
+    [:#Sx   :!C#Sx]
+    [:#Sc   :!C#Sc]
+    [:#Sv   :!C#Sv]
+
+    [:#Sd   :!TOleft_arrow]
+    [:#Sf   :!TOright_arrow]
+
+    [:u     :!S6             [:appEmacs]]
+    [:o     :!S4             [:appEmacs]]
+    [:##u   :!C#Sleft_arrow  [:!appEmacs]]
+    [:##o   :!C#Sright_arrow [:!appEmacs]]
+
+    [:m                     :delete_or_backspace]
+    [:!Cm                   :!Odelete_or_backspace]
+    [:!Om                   :!Cdelete_or_backspace]
+    [:!Sm                   :delete_forward]
+    [:#Sdelete_or_backspace :delete_forward]
+
+    [:b                     :return_or_enter]
+    [:n                     :escape]
 
     ;; [:#Sh                   :#Sleft_arrow]
     ;; [:#Sj                   :#Sdown_arrow]
@@ -206,10 +237,10 @@
   ;;   [:##comma :##delete_or_backspace]
   ;;   ]}
 
-  ;; {:des "cod-mode"
-  ;;  :rules
-  ;;  [
-  ;;   :cod-mode
+  {:des "cod-mode"
+   :rules
+   [
+     :cod-mode
   ;;   [:##q :!Sbackslash]              ;q |
   ;;   [:##w :!S7]                      ;z &
   ;;   [:##e :##open_bracket]           ;e [
@@ -219,8 +250,8 @@
 
   ;;   [:##a :!Ssemicolon]              ;a :
   ;;   [:##s :!Shyphen]                 ;s _
-  ;;   [:##d :!S9]                      ;d (
-  ;;   [:##f :!S0]                      ;f )
+     [:##d :!S9]                      ;d (
+     [:##f :!S0]                      ;f )
   ;;   [:##g :##semicolon]              ;z ;
 
   ;;   [:##z :!Squote]                  ;g "
@@ -230,14 +261,15 @@
 
   ;;   [:##caps_lock :##equal_sign]     ;capslock =
 
-  ;;   [:##h :##left_arrow]
-  ;;   [:##j :##down_arrow]
-  ;;   [:##k :##up_arrow]
-  ;;   [:##l :##right_arrow]
-  ;;   [:##m :##delete_or_backspace]
-  ;;   [:##b :##return_or_enter]
-  ;;   [:##n :##escape]
-  ;;   ]}
+     [:##j :##left_arrow]
+     [:##k :##down_arrow]
+     [:##i :##up_arrow]
+     [:##l :##right_arrow]
+     [:##m :##delete_or_backspace]
+     [:##b :##return_or_enter]
+     ;[:##spacebar :##return_or_enter]
+     ;[:##n :##escape]
+   ]}
 
   ;; {:des "snp-mode"
   ;;  :rules
