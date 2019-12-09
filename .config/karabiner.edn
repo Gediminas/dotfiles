@@ -243,20 +243,20 @@
      :cod-mode
   ;;   [:##q :!Sbackslash]              ;q |
   ;;   [:##w :!S7]                      ;z &
-  ;;   [:##e :##open_bracket]           ;e [
-  ;;   [:##r :##close_bracket]          ;r ]
+     [:##e :##open_bracket]           ;e [
+     [:##r :##close_bracket]          ;r ]
   ;;   [:##t :##grave_accent_and_tilde] ;t `
   ;;   [:##y :!Sgrave_accent_and_tilde] ;y ~
 
   ;;   [:##a :!Ssemicolon]              ;a :
-  ;;   [:##s :!Shyphen]                 ;s _
+     [:##a :!Shyphen]                 ;s _
      [:##d :!S9]                      ;d (
      [:##f :!S0]                      ;f )
-  ;;   [:##g :##semicolon]              ;z ;
+     [:##g :##semicolon]              ;z ;
 
   ;;   [:##z :!Squote]                  ;g "
-  ;;   [:##x :!Sopen_bracket]           ;x {
-  ;;   [:##c :!Sclose_bracket]          ;c }
+     [:##c :!Sopen_bracket]           ;x {
+     [:##v :!Sclose_bracket]          ;c }
   ;;   [:##v :##quote]                  ;v '
 
   ;;   [:##caps_lock :##equal_sign]     ;capslock =
