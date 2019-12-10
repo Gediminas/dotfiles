@@ -17,52 +17,19 @@ SetKeyDelay, -1, -1, -1
 
 #Include keyboard\Workarounds.ahk
 
-
-;; Training mode
-;f1::Ff1
-;f2::Ff2
-;f3::Ff3
-;f4::Ff4
-;f5::Ff5
-;f6::Ff6
-;f7::Ff7
-;f8::Ff8
-;f9::Ff9
-;f10::Ff10
-;f11::Ff11
-;f12::Ff12
-
-;1::f1
-;2::f2
-;3::f3
-;4::f4
-;5::f5
-;6::f6
-;7::f7
-;8::f8
-;9::f9
-;0::f10
-;-::f11
-;=::f12
-
-SC029::f13 ;` mx apple magic
-SC056::f13 ;\ nm apple magic
+;SC029::f13 ;` mx apple magic
+;SC056::f13 ;\ nm apple magic
 
 ;SC001::return ;esc
-;SC00E::return ;backspace
-SC01A::return ;[
-SC01B::return ;]
-SC028::return ;'  
-
 SC02B::Enter  ;\
-
 CapsLock::Esc
+F15::Esc
 
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
 #Include keyboard\Ltu.ahk
-#Include keyboard\Num.ahk
-#Include keyboard\Sym.ahk
+;#Include keyboard\Num.ahk
+;#Include keyboard\Sym.ahk
 #Include keyboard\Cod.ahk
 
 ;#Include keyboard\RAlt.ahk
