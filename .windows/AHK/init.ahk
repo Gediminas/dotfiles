@@ -23,7 +23,7 @@ SetKeyDelay, -1, -1, -1
 ;SC001::return ;esc
 SC02B::Enter  ;\
 CapsLock::Esc
-F15::Esc
+F15::return
 
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
