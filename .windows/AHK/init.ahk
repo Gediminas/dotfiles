@@ -17,13 +17,13 @@ SetKeyDelay, -1, -1, -1
 
 #Include keyboard\Workarounds.ahk
 
-;SC029::f13 ;` mx apple magic
-;SC056::f13 ;\ nm apple magic
+;SC029::F13     ;` mx apple magic
+;SC056::F13     ;\ nm apple magic
+;SC001::return  ;esc
+;SC02B::Enter   ;\
 
-;SC001::return ;esc
-SC02B::Enter  ;\
-CapsLock::Esc
-F15::return
+SC03A::Esc      ;CapsLock
+F15::return     ;RCmd
 
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
@@ -49,7 +49,8 @@ RButton & WheelUp::Send ^#{Left}
 RButton & WheelDown::Send ^#{Right}
 RButton::Send {RButton}
 
-Tab & q:: 
+;Tab & q
+Tab & SC010::
   If WinActive("ahk_exe emacs.exe") {
     SendInput, {Esc}:w{Enter}
   } Else If WinActive("ahk_exe emacsclient.exe") {
@@ -61,6 +62,7 @@ Tab & q::
   }
   Reload
   Return
+
 $*Tab::Send {Blind}{Tab}
 
   

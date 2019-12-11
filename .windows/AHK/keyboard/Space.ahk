@@ -40,33 +40,28 @@ Space & SC056::Send, {Blind}{F13} ;\ nm apple magic
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-Space & SC020::Send ^#{Left}  ;d
-Space & SC021::Send ^#{Right} ;f
-
-Space & SC024::Send {Blind}{Left}   ;j
-Space & SC017::Send {Blind}{Up}     ;i
-Space & SC025::Send {Blind}{Down}   ;k
-Space & SC026::Send {Blind}{Right}  ;l
+Space & SC010::return             ;q
+                                  ;w
+Space & SC011::Send {LCtrl down}{Tab}{LCtrl up}
+Space & SC012::return               ;e
+Space & SC013::return               ;r
+Space & SC014::return               ;t
+Space & SC015::return               ;y
 Space & SC016::Send {Blind}{Home}   ;u
+Space & SC017::Send {Blind}{Up}     ;i
 Space & SC018::Send {Blind}{End}    ;o
+Space & SC019::return               ;p
 
-Space & x::Send ^x
-Space & c::Send ^c
-Space & v::Send ^v
-Space & z::Send ^z
-Space & b::Send {Enter}
-Space & m::Send {Blind}{Backspace}
-Space & BS::Send {Blind}{Delete}
-Space & w::Send {LCtrl down}{Tab}{LCtrl up}
-Space & Tab::AltTab
-     
+Space & SC01A::return               ;[
+Space & SC01B::return               ;]
+Space & SC02B::return               ;\
 
-Space & a::
+Space & SC01E::                     ;a
+Space & SC01F::                     ;s
   If WinActive("ahk_exe emacs.exe") {
     Send, {Esc}:w{Enter}
   } Else If WinActive("ahk_exe emacsclient.exe") {
-  	Send, {Esc}:w{Enter}
+    Send, {Esc}:w{Enter}
   } Else If WinActive("ahk_exe putty_tray_64.exe") {
     Send, {Esc}:w{Enter}
   } Else {
@@ -74,13 +69,36 @@ Space & a::
   }
   Return
 
-Space & s::
-  return
+Space & SC020::Send ^#{Left}  ;d
+Space & SC021::Send ^#{Right} ;f
+Space & SC022::return               ;g
+Space & SC023::return               ;h
+Space & SC024::Send {Blind}{Left}   ;j
+Space & SC025::Send {Blind}{Down}   ;k
+Space & SC026::Send {Blind}{Right}  ;l
+Space & SC027::return               ;;
+Space & SC028::return               ;'
 
-Space & SC031::
-  ;Send {Blind}{Esc}
-  Return
+Space & SC02C::Send ^z              ;z
+Space & SC02D::Send ^x              ;x
+Space & SC02E::Send ^c              ;c
+Space & SC02F::Send ^v              ;v
+Space & SC030::Send {Enter}         ;b
+Space & SC031::return               ;n
+Space & SC032::Send {Blind}{Backspace}  ;m 
+Space & SC033::return               ;,
+Space & SC034::Send {Enter}               ;.
+Space & SC035::return               ;/
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;; ELSE
+;Space & SC02A::return               ;LShift
+;Space & SC03A::return               ;CapsLock
+
+
+
+Space & BS::Send {Blind}{Delete}
+Space & Tab::AltTab
+     
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;; ELSE
 
 $Space::Send {Blind}{space} 
