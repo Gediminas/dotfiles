@@ -72,7 +72,7 @@ SC02B::Enter  ;\
 ;; #Include keyboard\Punct.ahk
 ;; #Include keyboard\Hyper.ahk
 
-
+Capslock::Esc
 
 ;LCtrl & Tab::AltTab
 
