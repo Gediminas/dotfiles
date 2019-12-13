@@ -26,92 +26,36 @@
  [
   {:des "Global" :rules
    [
-    ;[:non_us_backslash :escape]
-
-    ;[:caps_lock        :left_control [:!num-mode :!cod-mode :!sym-mode]]
-    [:caps_lock        :vk_none [:!num-mode :!cod-mode :!sym-mode]]
-    [:left_control     :left_command]
-    [:left_command     :left_control]
-
     [:right_command    :right_shift]
-    ;[:right_option     :left_option]
-    [:right_shift      :right_control]
-   ]}
+    [:non_us_backslash :right_shift]
+    [:caps_lock        :escape [:!num-mode :!cod-mode :!sym-mode]]
+    [:##grave_accent_and_tilde :##left_shift]
+    ;[:non_us_backslash :vk_none]
 
-  {:des "RDC" :rules
-   [
+    :!appRdc
+    ;[:caps_lock [:!CTOleft_shift] [:!num-mode :!cod-mode :!sym-mode] {:alone :escape}]
+
     :appRdc
     [:left_control  :left_command]
     [:left_command  :left_control]
-    ]}
-
-  {:des "notRDC" :rules
-   [
-    :!appRdc
-    ;[:left_control  :left_command]
-    ;[:left_command  :left_control]
-    ;[:right_command :left_shift]
    ]}
-
-  {:des "training-mode" :rules
-   [
-    ;; :!spc-mode
-    :!appRdc
-
-    [:f1           :!Ff1]
-    [:f2           :!Ff2]
-    [:f3           :!Ff3]
-    [:f4           :!Ff4]
-    [:f5           :!Ff5]
-    [:f6           :!Ff6]
-    [:f7           :!Ff7]
-    [:f8           :!Ff8]
-    [:f9           :!Ff9]
-    [:f10          :!Ff10]
-    [:f11          :!Ff11]
-    [:f12          :!Ff12]
-
-    [:##grave_accent_and_tilde :##left_shift]
-    [:##1          :##f1]
-    [:##2          :##f2]
-    [:##3          :##f3]
-    [:##4          :##f4]
-    [:##5          :##f5]
-    [:##6          :##f6]
-    [:##7          :##f7]
-    [:##8          :##f8]
-    [:##9          :##f9]
-    [:##0          :##f10]
-    [:##hyphen     :##f11]
-    [:##equal_sign :##f12]
-    ;[:##delete_or_backspace :vk_none]
-
-    ;[:backslash :return_or_enter]
-
-    ;[:open_bracket     :vk_none]
-    ;[:close_bracket    :vk_none]
-    ;[:quote            :vk_none]
-   ;[:non_us_backslash :vk_none]
-   ]
-  }
-
 
   {:des "spc-mode (essential)"
    :rules
    [
     :spc-mode
-    ;; [:##1          :##1]
-    ;; [:##2          :##2]
-    ;; [:##3          :##3]
-    ;; [:##4          :##4]
-    ;; [:##5          :##5]
-    ;; [:##6          :##6]
-    ;; [:##7          :##7]
-    ;; [:##8          :##8]
-    ;; [:##9          :##9]
-    ;; [:##0          :##0]
-    ;; [:##hyphen     :##hyphen]
-    ;; [:##equal_sign :##equal_sign]
+    [:##1          :##1]
+    [:##2          :##2]
+    [:##3          :##3]
+    [:##4          :##4]
+    [:##5          :##5]
+    [:##6          :##6]
+    [:##7          :##7]
+    [:##8          :##8]
+    [:##9          :##9]
+    [:##0          :##0]
+    [:##hyphen     :##hyphen]
+    [:##equal_sign :##equal_sign]
 
     [:##h                   :##left_arrow]
     [:##j                   :##down_arrow]
