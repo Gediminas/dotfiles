@@ -45,16 +45,16 @@ SetKeyDelay, -1, -1, -1
 ;-::f11
 ;=::f12
 
-SC029::f13 ;` mx apple magic
-SC056::f13 ;\ nm apple magic
+SC056::LShift ;\ nm apple magic
 
+;SC029::f13 ;` mx apple magic
+;SC056::f13 ;\ nm apple magic
 ;SC001::return ;esc
 ;SC00E::return ;backspace
-SC01A::return ;[
-SC01B::return ;]
-SC028::return ;'  
-
-SC02B::Enter  ;\
+;SC01A::return ;[
+;SC01B::return ;]
+;SC028::return ;'  
+;SC02B::Enter  ;\
 
 #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
@@ -73,6 +73,8 @@ SC02B::Enter  ;\
 ;; #Include keyboard\Hyper.ahk
 
 Capslock::Esc
+RShift::RCtrl
+F15::RShift
 
 ;LCtrl & Tab::AltTab
 
