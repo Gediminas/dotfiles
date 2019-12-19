@@ -7,3 +7,4 @@
 ;; (package! builtin-package :disable t)
 
 (package! flatui-theme)
+(package! zenburn-theme)
