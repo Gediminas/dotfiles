@@ -7,3 +7,6 @@ echo \[BASH_CONF = $BASH_CONF\]
 
 source /Users/gds/.bashrc
 
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
