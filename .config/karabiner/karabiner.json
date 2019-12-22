@@ -1328,8 +1328,13 @@
             "key_code" : "period"
           } ],
           "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
-            "type" : "frontmost_application_unless"
+            "name" : "appRdcs",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "type" : "basic",
@@ -1352,8 +1357,13 @@
             "key_code" : "comma"
           } ],
           "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
-            "type" : "frontmost_application_unless"
+            "name" : "appRdcs",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ]
         }, {
           "type" : "basic",
@@ -1720,6 +1730,20 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "b"
           },
           "to" : [ {
@@ -1920,14 +1944,11 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "d",
-            "modifiers" : {
-              "optional" : [ "left_shift" ]
-            }
+            "key_code" : "d"
           },
           "to" : [ {
             "key_code" : "left_arrow",
-            "modifiers" : [ "left_control", "left_option" ]
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "conditions" : [ {
             "name" : "spc-mode",
@@ -1937,14 +1958,11 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "optional" : [ "left_shift" ]
-            }
+            "key_code" : "f"
           },
           "to" : [ {
             "key_code" : "right_arrow",
-            "modifiers" : [ "left_control", "left_option" ]
+            "modifiers" : [ "left_command", "left_control", "left_option" ]
           } ],
           "conditions" : [ {
             "name" : "spc-mode",

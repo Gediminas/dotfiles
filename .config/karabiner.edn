@@ -10,11 +10,10 @@
                 }
  :layers
  {
-  :spc-mode-all  {:key :spacebar   :condi :!appRdc}
   :spc-mode      {:key :spacebar   :condi :!appRdc}
   :num-mode      {:key :semicolon  :condi :!appRdc}
-  :sym-mode      {:key :comma      :condi :!appRdc}
-  :cod-mode      {:key :period     :condi :!appRdc}
+  :sym-mode      {:key :comma      :condi [:!appRdcs :!spc-mode]}
+  :cod-mode      {:key :period     :condi [:!appRdcs :!spc-mode]}
   ; :snp-mode      {:key :slash      :condi :!appRdc}
   ; :num-mode      {:key :non_us_backslash :condi :!appRdc}
   ; :num-mode      {:key :semicolon :condi :!appRdc}
@@ -62,6 +61,7 @@
     [:##k                   :##up_arrow]
     [:##l                   :##right_arrow]
     [:##m                   :##delete_or_backspace]
+    [:comma                 :!Odelete_or_backspace]
     [:b                     :return_or_enter]
     [:n                     :escape]
 
@@ -76,8 +76,8 @@
     [:#Sx                   :!Cx]
     [:#Sc                   :!Cc]
     [:#Sv                   :!Cv]
-    [:#Sd                   :!TOleft_arrow]
-    [:#Sf                   :!TOright_arrow]
+    [:d                     :!CTOleft_arrow]
+    [:f                     :!CTOright_arrow]
     [:non_us_backslash      :!Cq]
     [:#Sdelete_or_backspace :delete_forward]
     [:#Sy                   :!C#Sc]
