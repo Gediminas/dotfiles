@@ -10,4 +10,6 @@
 ;(load-theme 'zenburn-care t)
 ;(load-theme 'zenburn t)
 
-(enable-theme 'doom-one)
+;(enable-theme 'doom-one)
+
+(set-face-attribute 'hl-line nil :background "#BBBBBB")
