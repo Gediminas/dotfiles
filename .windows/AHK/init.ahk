@@ -73,7 +73,7 @@ SC056::LShift ;\ nm apple magic
 ;; #Include keyboard\Hyper.ahk
 
 Capslock::Esc
-RShift::RCtrl
+;RShift::RCtrl
 F15::RShift
 
 ;LCtrl & Tab::AltTab
