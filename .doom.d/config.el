@@ -4,8 +4,8 @@
 ;; refresh' after modifying this file!
 
 
-;; Some functionality uses this to identify you, e.g. GPG configuration, email
-;; clients, file templates and snippets.
+;; These are used for a number of things, particularly for GPG configuration,
+;; some email clients, file templates and snippets.
 (setq user-full-name "John Doe"
       user-mail-address "john@doe.com")
 
@@ -18,19 +18,22 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "monospace" :size 14))
+;;(setq doom-font (font-spec :family "monospace" :size 14))
+(setq doom-font (font-spec :family "hack" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. These are the defaults.
-(setq doom-theme 'doom-one)
+;;(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-one-light)
 
 ;; If you intend to use org, it is recommended you change this!
 (setq org-directory "~/org/")
 
 ;; If you want to change the style of line numbers, change this to `relative' or
 ;; `nil' to disable it:
-(setq display-line-numbers-type t)
+;;(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -48,3 +51,33 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+
+(setq mac-command-modifier 'control)
+
+(setq irony-additional-clang-options '("-std=c++17"))
+
+;(add-to-list 'custom-theme-load-path "~/.emacs.d/.local/themes/")
+;(load-theme 'zenburn-care t)
+;(load-theme 'zenburn t)
+
+;(enable-theme 'doom-one)
+
+;;(set-face-attribute 'hl-line nil :background "#BBBBBB")
+
+;(load-file "~/.doom.d/plugins/devenv-emulation.elc")
+;
+
+
+;(require 'rtags) ;; optional, must have rtags installed
+;(require 'cmake-ide)
+;(cmake-ide-setup)
+
+;(require 'realgud-node-inspect)
+;(global-set-key [f5] 'gud-cont)
+;(global-set-key [f4] 'gud-next)
+;(global-set-key [f3] 'gud-step)
+;(global-set-key [f1] 'gud-break)
+
+;(require 'indium)
+;(add-hook 'js-mode-hook #'indium-interaction-mode)
