@@ -5,6 +5,9 @@ export LC_ALL=en_US.UTF-8
 #export PATH=$PATH:$GOROOT/bin
 #export PATH=$PATH:$GOPATH/bin
 
+ZSH=~/.oh-my-zsh/oh-my-zsh.sh
+source ~/.oh-my-zsh/templates/zshrc.zsh-template
+
 #export PATH=/usr/local/bin:$PATH:~/scripts
 
 # Enable Vim mode in ZSH
@@ -14,7 +17,8 @@ bindkey -v
 #export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 #export CLICOLOR=1
 #export LSCOLORS=ExFxBxDxCxegedabagacad
-alias ls='ls -GFh'
+
+#alias ls='ls -GFh'
 
 
 
@@ -49,4 +53,14 @@ alias .............="cd ../../../../../../../../../../../.."
 #bind '"\e[A":history-search-backward'
 #bind '"\e[B":history-search-forward'
 
-
+PS1+='${VIMODE}'
+#   '$' for normal insert mode
+#   a big red 'I' for command mode - to me this is 'NOT insert' because red
+function zle-line-init zle-keymap-select {
+    DOLLAR='%B%F{green}$%f%b '
+    GIANT_I='%B%F{red}I%f%b '
+    VIMODE="${${KEYMAP/vicmd/$GIANT_I}/(main|viins)/$DOLLAR}"
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
