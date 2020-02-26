@@ -1,11 +1,11 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
-;; refresh' after modifying this file!
+;; sync' after modifying this file!
 
 
-;; These are used for a number of things, particularly for GPG configuration,
-;; some email clients, file templates and snippets.
+;; Some functionality uses this to identify you, e.g. GPG configuration, email
+;; clients, file templates and snippets.
 (setq user-full-name "John Doe"
       user-mail-address "john@doe.com")
 
@@ -14,7 +14,8 @@
 ;;
 ;; + `doom-font'
 ;; + `doom-variable-pitch-font'
-;; + `doom-big-font' -- used for `doom-big-font-mode'
+;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
+;;   presentations or streaming.
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
@@ -23,14 +24,15 @@
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. These are the defaults.
+;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 
-;; If you intend to use org, it is recommended you change this!
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-;; If you want to change the style of line numbers, change this to `relative' or
-;; `nil' to disable it:
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
 ;;(setq display-line-numbers-type t)
 (setq display-line-numbers-type 'relative)
 
@@ -40,8 +42,9 @@
 ;; - `load!' for loading external *.el files relative to this one
 ;; - `use-package' for configuring packages
 ;; - `after!' for running code after a package has loaded
-;; - `add-load-path!' for adding directories to the `load-path', where Emacs
-;;   looks when you load packages with `require' or `use-package'.
+;; - `add-load-path!' for adding directories to the `load-path', relative to
+;;   this file. Emacs searches the `load-path' when you load packages with
+;;   `require' or `use-package'.
 ;; - `map!' for binding new keys
 ;;
 ;; To get information about any of these functions/macros, move the cursor over
@@ -51,32 +54,31 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-
-(setq mac-command-modifier 'control)
-
-(setq irony-additional-clang-options '("-std=c++17"))
-
-;(add-to-list 'custom-theme-load-path "~/.emacs.d/.local/themes/")
-;(load-theme 'zenburn-care t)
-;(load-theme 'zenburn t)
-
-;(enable-theme 'doom-one)
-
-;;(set-face-attribute 'hl-line nil :background "#BBBBBB")
-
-;(load-file "~/.doom.d/plugins/devenv-emulation.elc")
+;(setq mac-command-modifier 'control)
 ;
-
-
-;(require 'rtags) ;; optional, must have rtags installed
-;(require 'cmake-ide)
-;(cmake-ide-setup)
-
-;(require 'realgud-node-inspect)
-;(global-set-key [f5] 'gud-cont)
-;(global-set-key [f4] 'gud-next)
-;(global-set-key [f3] 'gud-step)
-;(global-set-key [f1] 'gud-break)
-
-;(require 'indium)
-;(add-hook 'js-mode-hook #'indium-interaction-mode)
+;(setq irony-additional-clang-options '("-std=c++17"))
+;
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/.local/themes/")
+;;(load-theme 'zenburn-care t)
+;;(load-theme 'zenburn t)
+;
+;;(enable-theme 'doom-one)
+;
+;;;(set-face-attribute 'hl-line nil :background "#BBBBBB")
+;
+;;(load-file "~/.doom.d/plugins/devenv-emulation.elc")
+;;
+;
+;
+;;(require 'rtags) ;; optional, must have rtags installed
+;;(require 'cmake-ide)
+;;(cmake-ide-setup)
+;
+;;(require 'realgud-node-inspect)
+;;(global-set-key [f5] 'gud-cont)
+;;(global-set-key [f4] 'gud-next)
+;;(global-set-key [f3] 'gud-step)
+;;(global-set-key [f1] 'gud-break)
+;
+;;(require 'indium)
+;;(add-hook 'js-mode-hook #'indium-interaction-mode)
