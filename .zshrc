@@ -12,7 +12,7 @@ source ~/.oh-my-zsh/templates/zshrc.zsh-template
 
 # Enable Vim mode in ZSH
 bindkey -v
-
+plugins=(brew git github emacs node npm osx)
 
 #export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 #export CLICOLOR=1
