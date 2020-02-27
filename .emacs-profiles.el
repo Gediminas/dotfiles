@@ -1,8 +1,7 @@
 (
- ("default" . ((user-emacs-directory . "~/.emacs.d")))
+ ("default" . ((user-emacs-directory . "~/sub/gds-emacs")))
  ("doom" .    ((user-emacs-directory . "~/sub/doom-emacs")))
- ("2018" .    ((user-emacs-directory . "~/sub/gds-emacs-2018")))
- ("2020" .    ((user-emacs-directory . "~/sub/gds-emacs-2020")))
+ ("gds" .     ((user-emacs-directory . "~/sub/gds-emacs")))
  ("prelude" . ((user-emacs-directory . "~/sub/prelude-emacs")))
  ("space" .   ((user-emacs-directory . "~/sub/spacemacs")))
  )
