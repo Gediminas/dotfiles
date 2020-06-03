@@ -84,8 +84,10 @@ Space & j::Send {Blind}{Down}
 Space & k::Send {Blind}{Up}
 Space & l::Send {Blind}{Right}
 
-Space & u::Send {Blind}{Home}
-Space & i::Send {Blind}{End}
+Space & y::Send {Blind}{Home}
+Space & u::Send {PgDn}
+Space & i::Send {PgUp}
+Space & o::Send {Blind}{End}
 
 Space & n::
   Send {Blind}{Esc}
