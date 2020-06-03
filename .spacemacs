@@ -212,15 +212,9 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(default
-                         leuven
+   dotspacemacs-themes '(zenburn
                          spacemacs-light
-                         ;;tango
-                         ;;dichromacy
-                         ;;whiteboard
-                         zenburn
-                         ;;spacemacs-dark
-                         )
+                         default)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -689,7 +683,8 @@ before packages are loaded."
   ;(setq-default evil-escape-delay 0.2)
 
   ;; quit
-  (evil-leader/set-key "q q" `spacemacs/frame-killer)
+  ;(evil-leader/set-key "q q" `spacemacs/frame-killer)
+  (global-set-key (kbd "<C-s>") 'save-buffer)
 
   (global-set-key [f8] 'deft)
   (global-set-key (kbd "U") 'redo)

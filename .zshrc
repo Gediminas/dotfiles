@@ -9,7 +9,7 @@ export LC_ALL=en_US.UTF-8
 ##ZSH_THEME="agnoster"
 ##source ~/.oh-my-zsh/templates/zshrc.zsh-template
 
-#export PATH=/usr/local/bin:$PATH:~/scripts
+export PATH=/usr/local/bin:$PATH:~/scripts
 
 # Enable Vim mode in ZSH
 bindkey -v
@@ -167,3 +167,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
