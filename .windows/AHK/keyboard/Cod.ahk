@@ -1,17 +1,24 @@
 ﻿; cod Layer
 
+. & 1::Send {!}
+. & 2::Send {@}
+. & 3::Send {#}
+. & 4::Send {$}
+. & 5::Send {`%}
+. & 6::Send {^}
+
 . & q::Send {|}
 . & w::Send {&}
 . & e::Send {[}
 . & r::Send {]}
-. & t::Send {`}
+. & t::Send {;}
 . & y::Send {~}
 
 . & a::Send {:}
 . & s::Send {_}
 . & d::Send {(}
 . & f::Send {)}
-. & g::Send {;}
+. & g::Send {`}
 
 . & z::Send {"}
 . & x::Send {{}
