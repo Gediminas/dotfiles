@@ -288,6 +288,14 @@
         <Command>cm_CutToClipboard</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>WinKey+F</Shortcut>
+        <Command>cm_Search</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>WinKey+R</Shortcut>
+        <Command>cm_Rename</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
         <Control>Files Panel</Control>
