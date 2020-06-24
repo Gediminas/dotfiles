@@ -64,10 +64,6 @@
         <Command>cm_DirHotList</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F</Shortcut>
-        <Command>cm_QuickFilter</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+H</Shortcut>
         <Command>cm_DirHistory</Command>
       </Hotkey>
@@ -96,16 +92,8 @@
         <Command>cm_QuickView</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+S</Shortcut>
-        <Command>cm_QuickSearch</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+R</Shortcut>
         <Command>cm_Refresh</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+T</Shortcut>
-        <Command>cm_NewTab</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+U</Shortcut>
@@ -294,6 +282,18 @@
       <Hotkey>
         <Shortcut>WinKey+R</Shortcut>
         <Command>cm_Rename</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+T</Shortcut>
+        <Command>cm_RunTerm</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>WinKey+Q</Shortcut>
+        <Command>cm_QuickView</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F</Shortcut>
+        <Command>cm_Search</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
