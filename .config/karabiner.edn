@@ -60,26 +60,51 @@
     [:##j                   :##down_arrow]
     [:##k                   :##up_arrow]
     [:##l                   :##right_arrow]
-    [:##m                   :##delete_or_backspace]
-    [:comma                 :!Odelete_or_backspace]
+
     [:b                     :return_or_enter]
     [:n                     :escape]
+    [:##m                   :##delete_or_backspace]
+    [:comma                 :!Odelete_or_backspace]
 
-    [:u                     :!S6           [:appEmacs]]
-    [:i                     :!S4           [:appEmacs]]
-    [:u                     :!Cleft_arrow  [:!appEmacs]]
-    [:i                     :!Cright_arrow [:!appEmacs]]
+    [:u                     :!Oleft_arrow  [:!appRdc]]
+    [:i                     :!Oright_arrow [:!appRdc]]
+    [:o                     :!Cleft_arrow  [:!appRdc]]
+    [:p                     :!Cright_arrow [:!appRdc]]
 
-    [:s                     :!C#Ss              [:!appEmacs]]
+    [:u                     :!Tleft_arrow  [:appRdc]]
+    [:i                     :!Tright_arrow [:appRdc]]
+    [:o                     :!Fleft_arrow  [:appRdc]]
+    [:p                     :!Fright_arrow [:appRdc]]
+
+    ;; [:u                     :!S6           [:appEmacs]]
+    ;; [:i                     :!S4           [:appEmacs]]
+    ;; [:u                     :!Cleft_arrow  [:!appEmacs]]
+    ;; [:i                     :!Cright_arrow [:!appEmacs]]
+
+    [:s                     :!C#Ss              [:!appRdc :!appEmacs]]
+    [:s                     :!Ts                [:appRdc]]
+    [:!Rs                   :!T!Ss              [:appRdc]]
     [:s                     [:spacebar :b :!Ss] [:appEmacs]]
-    [:#Sz                   :!C#Sz]
-    [:#Sx                   :!Cx]
-    [:#Sc                   :!Cc]
-    [:#Sv                   :!Cv]
+
+    [:#Sz                   :!C#Sz [:!appRdc]]
+    [:#Sx                   :!Cx   [:!appRdc]]
+    [:#Sc                   :!Cc   [:!appRdc]]
+    [:#Sv                   :!Cv   [:!appRdc]]
+
+    [:#Sz                   :!T#Sz [:appRdc]]
+    [:#Sx                   :!Tx   [:appRdc]]
+    [:#Sc                   :!Tc   [:appRdc]]
+    [:#Sv                   :!Tv   [:appRdc]]
+
     [:d                     :!CTOleft_arrow  [:!appRdc]]
     [:f                     :!CTOright_arrow [:!appRdc]]
+
+    [:d                     :!CTleft_arrow  [:appRdc]]
+    [:f                     :!CTright_arrow [:appRdc]]
+
     [:!Rd                   :!CTOleft_arrow]
     [:!Rf                   :!CTOright_arrow]
+
     [:non_us_backslash      :!Cq]
     [:#Sdelete_or_backspace :delete_forward]
     [:#Sy                   :!C#Sc]
