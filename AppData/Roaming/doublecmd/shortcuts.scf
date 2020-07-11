@@ -48,10 +48,6 @@
         <Command>cm_FlatView</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F</Shortcut>
-        <Command>cm_QuickFilter</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+H</Shortcut>
         <Command>cm_DirHistory</Command>
       </Hotkey>
@@ -74,10 +70,6 @@
       <Hotkey>
         <Shortcut>Ctrl+Q</Shortcut>
         <Command>cm_QuickView</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+S</Shortcut>
-        <Command>cm_QuickSearch</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+R</Shortcut>
@@ -337,6 +329,10 @@
       <Hotkey>
         <Shortcut>Alt+Down</Shortcut>
         <Command>cm_ViewHistory</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+F</Shortcut>
+        <Command>cm_Search</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
