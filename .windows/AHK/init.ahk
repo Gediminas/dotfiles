@@ -2,9 +2,9 @@
 
 #SingleInstance force
 #Persistent
-#NoEnv         ; performance and compatibility with future AutoHotkey releases.
-SendMode Input ; superior speed and reliability.
-SetKeyDelay, -1, -1, -1
+; #NoEnv         ; performance and compatibility with future AutoHotkey releases.
+; SendMode Input ; superior speed and reliability.
+; SetKeyDelay, -1, -1, -1
 
 
 ;; ; https://github.com/ahkscript/awesome-AutoHotkey
@@ -13,9 +13,9 @@ SetKeyDelay, -1, -1, -1
 ;;RAlt::RShift
 ;;RShift::RAlt
 
-#Include LockScreen.ahk
+; #Include LockScreen.ahk
 
-#Include keyboard\Workarounds.ahk
+;#Include keyboard\Workarounds.ahk
 
 
 ;; Training mode
@@ -56,12 +56,12 @@ SC056::LShift ;\ nm apple magic
 ;SC028::return ;'  
 ;SC02B::Enter  ;\
 
-#Include keyboard\CLock.ahk
+; #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
-#Include keyboard\Ltu.ahk
-#Include keyboard\Num.ahk
-#Include keyboard\Sym.ahk
-#Include keyboard\Cod.ahk
+; #Include keyboard\Ltu.ahk
+; #Include keyboard\Num.ahk
+; #Include keyboard\Sym.ahk
+; #Include keyboard\Cod.ahk
 
 ;#Include keyboard\RAlt.ahk
 ;#Include keyboard\Snp.ahk
@@ -73,28 +73,28 @@ SC056::LShift ;\ nm apple magic
 ;; #Include keyboard\Hyper.ahk
 
 Capslock::Esc
-;RShift::RCtrl
 F15::RShift
 
 ;LCtrl & Tab::AltTab
 
-RButton & WheelUp::Send ^#{Left}
-RButton & WheelDown::Send ^#{Right}
-RButton::Send {RButton}
+; RButton & WheelUp::Send ^#{Left}
+; RButton & WheelDown::Send ^#{Right}
+; RButton::Send {RButton}
 
-Tab & q:: 
+Tab & q::{
   If WinActive("ahk_exe emacs.exe") {
-    SendInput, {Esc}:w{Enter}
+    SendInput "{Esc}:w{Enter}"
   } Else If WinActive("ahk_exe emacsclient.exe") {
-    SendInput, {Esc}:w{Enter}
+    SendInput "{Esc}:w{Enter}"
   } Else If WinActive("ahk_exe putty_tray_64.exe") {
-    SendInput, {Esc}:w{Enter}
+    SendInput "{Esc}:w{Enter}"
   } Else {
-    SendInput {Blind}^s
+    SendInput "{Blind}^s"
   }
   Reload
   Return
-$*Tab::Send {Blind}{Tab}
+}
+$*Tab::Send "{Blind}{Tab}"
 
   
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
