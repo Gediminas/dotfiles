@@ -58,10 +58,10 @@ SC056::LShift ;\ nm apple magic
 
 ; #Include keyboard\CLock.ahk
 #Include keyboard\Space.ahk
-; #Include keyboard\Ltu.ahk
+#Include keyboard\Ltu.ahk
 ; #Include keyboard\Num.ahk
-; #Include keyboard\Sym.ahk
-; #Include keyboard\Cod.ahk
+#Include keyboard\Sym.ahk
+#Include keyboard\Cod.ahk
 
 ;#Include keyboard\RAlt.ahk
 ;#Include keyboard\Snp.ahk

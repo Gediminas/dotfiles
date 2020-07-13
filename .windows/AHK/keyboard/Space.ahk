@@ -1,6 +1,5 @@
 ; ; AHK script implementing hjkl navigation like TouchCursor 
 ; 
-; 
 ; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; ;;; Emulate Apple F1-F12 on Windows 10
 ; 
@@ -60,7 +59,6 @@ Space & s::{
   }
 }
 
-
 Space & d::Send "^#{Left}"
 Space & f::Send "^#{Right}"
 Space & Left:: Send "^#{Left}"
@@ -72,16 +70,12 @@ Space & c::^c
 Space & v::^v
 Space & z::^z
  
-; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; ;;; RIGHT
-; 
-; #If (GetKeyState("Ctrl","P") && GetKeyState("Shift","P"))
-;   Space & j::Send +{PgDn}
-;   Space & k::Send +{PgUp}
-; #If (GetKeyState("LCtrl","P"))
-;   Space & j::Send {PgDn}
-;   Space & k::Send {PgUp}
-; #If
+Space & t::Send "{Blind}{PgUp}"
+Space & g::Send "{Blind}{PgDn}"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; RIGHT
 
 Space & h::Send "{Blind}{Left}"
 Space & j::Send "{Blind}{Down}"
@@ -93,15 +87,20 @@ Space & u::Send "{Blind}^{Left}"
 Space & i::Send "{Blind}^{Right}"
 Space & o::Send "{Blind}{End}"
 
-Space & t::Send "{Blind}{PgUp}"
-Space & g::Send "{Blind}{PgDn}"
-
 Space & n:: Send "{Blind}{Esc}"
 Space & b:: Send "{Enter}"
 Space & m:: Send "{Blind}{Backspace}"
 Space & BS::Send "{Blind}{Delete}"
 
+; #If (GetKeyState("Ctrl","P") && GetKeyState("Shift","P"))
+;   Space & j::Send +{PgDn}
+;   Space & k::Send +{PgUp}
+; #If (GetKeyState("LCtrl","P"))
+;   Space & j::Send {PgDn}
+;   Space & k::Send {PgUp}
+; #If
 
-; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;; ELSE
-; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; ELSE
+ 
 $Space::Send "{Blind}{space}"

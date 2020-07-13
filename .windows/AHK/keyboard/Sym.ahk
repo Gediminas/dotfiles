@@ -1,40 +1,40 @@
 ﻿; sym Layer
 
-, & 1::Send {!}
-, & 2::Send {@}
-, & 3::Send {#}
-, & 4::Send {$}
-, & 5::Send {`%}
-, & 6::Send {^}
+, & 1::!
+, & 2::@
+, & 3::#
+, & 4::$
+, & 5::%
+, & 6::^
 
-, & q::Send {!}
-, & w::Send {@}
-, & e::Send {^}
-, & r::Send {$}
-, & t::Send {#}
-, & y::Send {~}
+, & q::!
+, & w::@
+, & e::^
+, & r::$
+, & t::#
+, & y::~
 
-, & a::Send {+}
-, & s::Send {-}
-, & d::Send {?}
-, & f::Send {*}
-, & g::Send {`%}
+, & a::+
+, & s::-
+, & d::?
+, & f::*
+, & g::%
 
-, & z::Send {\}
-, & x::Send {<}
-, & c::Send {>}
-, & v::Send {/}
+, & z::\
+, & x::<
+, & c::>
+, & v::/
 
-, & h::Send {Blind}{Left}
-, & j::Send {Blind}{Down}
-, & k::Send {Blind}{Up}
-, & l::Send {Blind}{Right}
+, & h::Send "{Blind}{Left}"
+, & j::Send "{Blind}{Down}"
+, & k::Send "{Blind}{Up}"
+, & l::Send "{Blind}{Right}"
 
-, & b::Send {Enter} 
-, & n::Send {Esc} 
-, & m::Send {Backspace} 
+, & b::Send "{Enter}"
+, & n::Send "{Esc}"
+, & m::Send "{Backspace}"
 
-, & LShift::Send {Blind}{.}
-, & LCtrl::Send {Blind}{=}
+, & LShift::Send "{Blind}{.}"
+, & LCtrl::Send "{Blind}{=}"
 
-$*,::Send {Blind}{,}
+$*,::Send "{Blind}{,}"
