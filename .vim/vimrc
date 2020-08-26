@@ -108,12 +108,16 @@ set nrformats=
 noremap <Space> <Nop>
 sunmap <Space>
 let g:mapleader=" "
+
 "inoremap jk <esc>
 
 " replace selected text with default register without yanking it
 vnoremap <leader>p "_dP
 
 nnoremap U <C-R>
+
+nnoremap j gj
+nnoremap k gk
 
 " " Single-handed HalfPageUp/Down
 map <A-j> <C-d>
