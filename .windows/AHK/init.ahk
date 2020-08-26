@@ -15,7 +15,7 @@
 
 ; #Include LockScreen.ahk
 
-;#Include keyboard\Workarounds.ahk
+#Include keyboard\Workarounds.ahk
 
 
 ;; Training mode

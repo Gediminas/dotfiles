@@ -10,6 +10,9 @@
 ; Tab & LCtrl:: SendInput "#{Tab}"
 ; Tab & F13:: SendInput "{LWin}"
 
+Tab & F3:: SendInput "#{Tab}"
+Tab & F4:: SendInput "{LWin}"
+
 Space & F3:: SendInput "#{Tab}"
 Space & F4:: SendInput "{LWin}"
  
@@ -45,9 +48,9 @@ Space & =::Send "{Blind}{F12}"
 ;;; LEFT
 
 Space & Tab::AltTab
-Space & w::Send "{LCtrl down}{Tab}{LCtrl up}"
+Space & a::Send "{LCtrl down}{Tab}{LCtrl up}"
 
-Space & s::{
+Space & w::{
   If WinActive("ahk_exe emacs.exe") {
     Send "{Esc}:w{Enter}"
   } Else If WinActive("ahk_exe emacsclient.exe") {
@@ -59,19 +62,20 @@ Space & s::{
   }
 }
 
+Space & s::AltTab
+
 Space & d::Send "^#{Left}"
 Space & f::Send "^#{Right}"
 Space & Left:: Send "^#{Left}"
 Space & Right::Send "^#{Right}"
  
-Space & a::^a
 Space & x::^x
 Space & c::^c
 Space & v::^v
 Space & z::^z
  
-Space & t::Send "{Blind}{PgUp}"
-Space & g::Send "{Blind}{PgDn}"
+; Space & t::Send "{Blind}{PgUp}"
+; Space & g::Send "{Blind}{PgDn}"
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
