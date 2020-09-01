@@ -10,6 +10,7 @@ export LC_ALL=en_US.UTF-8
 ##source ~/.oh-my-zsh/templates/zshrc.zsh-template
 
 export PATH=/usr/local/bin:$PATH:~/scripts
+export PATH="/Users/gds/.deno/bin:$PATH"
 
 # Enable Vim mode in ZSH
 bindkey -v
