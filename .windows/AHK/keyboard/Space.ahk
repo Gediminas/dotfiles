@@ -48,7 +48,7 @@ Space & =::Send "{Blind}{F12}"
 ;;; LEFT
 
 Space & Tab::AltTab
-Space & a::Send "{LCtrl down}{Tab}{LCtrl up}"
+Space & e::Send "{LCtrl down}{Tab}{LCtrl up}"
 
 Space & w::{
   If WinActive("ahk_exe emacs.exe") {
@@ -62,7 +62,8 @@ Space & w::{
   }
 }
 
-Space & s::AltTab
+Space & s::Send "{LAlt down}{Tab}{LAlt up}"
+Space & a::AltTab
 
 Space & d::Send "^#{Left}"
 Space & f::Send "^#{Right}"
