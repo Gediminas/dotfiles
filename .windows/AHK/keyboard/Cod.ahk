@@ -1,42 +1,42 @@
 ﻿; cod Layer
 
-. & 1::Send {!}
-. & 2::Send {@}
-. & 3::Send {#}
-. & 4::Send {$}
-. & 5::Send {`%}
-. & 6::Send {^}
+; . & 1::!
+; . & 2::@
+; . & 3::#
+; . & 4::$
+; . & 5::%
+; . & 6::^
 
-. & q::Send {|}
-. & w::Send {&}
-. & e::Send {[}
-. & r::Send {]}
-. & t::Send {;}
-. & y::Send {~}
+; . & q::|
+. & w::`
+. & e::[
+. & r::]
+. & t::;
+; . & y::~
+ 
+. & a::`
+. & s::_
+. & d::(
+. & f::)
+. & g::"
+ 
+. & z::$ 
+. & x::`{
+. & c::}
+. & v::'
 
-. & a::Send {:}
-. & s::Send {_}
-. & d::Send {(}
-. & f::Send {)}
-. & g::Send {`}
+. & h::Send "{Blind}{Left}"
+. & j::Send "{Blind}{Down}"
+. & k::Send "{Blind}{Up}"
+. & l::Send "{Blind}{Right}"
 
-. & z::Send {"}
-. & x::Send {{}
-. & c::Send {}}
-. & v::Send {'}
+. & b::Send "{Enter}"
+. & n::Send "{Esc}"
+. & m::Send "{Backspace}"
+. & ,::Send "{Backspace}"
 
-. & h::Send {Blind}{Left}
-. & j::Send {Blind}{Down}
-. & k::Send {Blind}{Up}
-. & l::Send {Blind}{Right}
-
-. & b::Send {Enter} 
-. & n::Send {Esc} 
-. & m::Send {Backspace} 
-. & ,::Send {Backspace} 
-
-. & LShift::Send {Blind}{.}
-. & LCtrl::Send {Blind}{=}
+. & LShift::Send "{Blind}{.}"
+. & LCtrl::Send "{Blind}{=}"
 
 
-$*.::Send {Blind}{.}
+$*.::Send "{Blind}{.}"

@@ -5,7 +5,7 @@
 ; Alt+Space => Cmd+Alt+F11
 
 ; ResophNotes (~=nvAlt)
-$<^Space::Send #{F11}
+$<^Space::#F11
 
 ; Everything (~=Finder search)
 ;$#!Space::Send #!{F11}
@@ -50,8 +50,9 @@ $<^Space::Send #{F11}
 ~*w::
 ~*x::
 ~*y::
-~*z::
+~*z:: {
    return 
+}
 
 
 
