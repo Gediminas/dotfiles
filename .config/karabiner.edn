@@ -85,6 +85,8 @@
     ;; [:u                     :!Cleft_arrow  [:!appEmacs]]
     ;; [:i                     :!Cright_arrow [:!appEmacs]]
 
+    [:e                     :!T#Stab              [:!appRdc]]
+
     [:w                     :!C#Ss              [:!appRdc :!appEmacs]]
        ;;[:s                     :!Ts                [:appRdc]]
     [:!Rw                   :!T!Ss              [:appRdc]]
@@ -117,7 +119,7 @@
     [:#Ss                 :!C#Stab [:!appRdc]]
        ; [:#Stab                 :!T#Stab [:appRdc]]
 
-    [:#Sw                   :!T#Stab]
+       ;[:#Sw                   :!T#Stab]
     ]}
 
   {:des "num-mode"
