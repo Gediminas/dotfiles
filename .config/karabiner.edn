@@ -10,7 +10,7 @@
                 }
  :layers
  {
-  :spc-mode      {:key :spacebar}
+  :spc-mode      {:key :spacebar  :condi :!appRdc}
   :num-mode      {:key :semicolon  :condi :!appRdc}
   :sym-mode      {:key :comma      :condi [:!appRdcs :!spc-mode]}
   :cod-mode      {:key :period     :condi [:!appRdcs :!spc-mode]}
@@ -85,10 +85,12 @@
     ;; [:u                     :!Cleft_arrow  [:!appEmacs]]
     ;; [:i                     :!Cright_arrow [:!appEmacs]]
 
-    [:s                     :!C#Ss              [:!appRdc :!appEmacs]]
-    [:s                     :!Ts                [:appRdc]]
-    [:!Rs                   :!T!Ss              [:appRdc]]
-    [:s                     [:spacebar :b :!Ss] [:appEmacs]]
+    [:e                     :!T#Stab              [:!appRdc]]
+
+    [:w                     :!C#Ss              [:!appRdc :!appEmacs]]
+       ;;[:s                     :!Ts                [:appRdc]]
+    [:!Rw                   :!T!Ss              [:appRdc]]
+    [:w                     [:spacebar :b :!Ss] [:appEmacs]]
 
     [:#Sz                   :!C#Sz [:!appRdc]]
     [:#Sx                   :!Cx   [:!appRdc]]
@@ -114,10 +116,10 @@
     ;[:period                :!Cperiod]
     ;[:slash                 :!Cslash]
 
-    [:#Stab                 :!C#Stab [:!appRdc]]
-    [:#Stab                 :!T#Stab [:appRdc]]
+    [:#Ss                 :!C#Stab [:!appRdc]]
+       ; [:#Stab                 :!T#Stab [:appRdc]]
 
-    [:#Sw                   :!T#Stab]
+       ;[:#Sw                   :!T#Stab]
     ]}
 
   {:des "num-mode"
