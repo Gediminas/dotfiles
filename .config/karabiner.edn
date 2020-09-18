@@ -104,6 +104,9 @@
     [:a                   :!C#Stab                    [:!appRdc]]
     [:a                   :!O#Stab                    [:appRdc]]
 
+     [:tab                 :!Ctab                    [:!appRdc]]
+     [:tab                 :!Otab                    [:appRdc]]
+
     ]}
 
   {:des "Global" :rules

@@ -2379,6 +2379,40 @@
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "tab"
+          },
+          "to" : [ {
+            "key_code" : "tab",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "tab"
+          },
+          "to" : [ {
+            "key_code" : "tab",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Global",
