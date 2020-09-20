@@ -1307,83 +1307,21 @@
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
-              "name" : "num-mode",
+              "name" : "app-mode",
               "value" : 1
             }
           } ],
           "from" : {
-            "key_code" : "semicolon"
+            "key_code" : "tab"
           },
           "to_after_key_up" : [ {
             "set_variable" : {
-              "name" : "num-mode",
+              "name" : "app-mode",
               "value" : 0
             }
           } ],
           "to_if_alone" : [ {
-            "key_code" : "semicolon"
-          } ],
-          "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
-            "type" : "frontmost_application_unless"
-          } ]
-        }, {
-          "type" : "basic",
-          "to" : [ {
-            "set_variable" : {
-              "name" : "cod-mode",
-              "value" : 1
-            }
-          } ],
-          "from" : {
-            "key_code" : "period"
-          },
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "cod-mode",
-              "value" : 0
-            }
-          } ],
-          "to_if_alone" : [ {
-            "key_code" : "period"
-          } ],
-          "conditions" : [ {
-            "name" : "appRdcs",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "spc-mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          } ]
-        }, {
-          "type" : "basic",
-          "to" : [ {
-            "set_variable" : {
-              "name" : "sym-mode",
-              "value" : 1
-            }
-          } ],
-          "from" : {
-            "key_code" : "comma"
-          },
-          "to_after_key_up" : [ {
-            "set_variable" : {
-              "name" : "sym-mode",
-              "value" : 0
-            }
-          } ],
-          "to_if_alone" : [ {
-            "key_code" : "comma"
-          } ],
-          "conditions" : [ {
-            "name" : "appRdcs",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "spc-mode",
-            "value" : 1,
-            "type" : "variable_unless"
+            "key_code" : "tab"
           } ]
         } ]
       }, {
@@ -2411,6 +2349,26 @@
           }, {
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
             "type" : "frontmost_application_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "app-mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "3"
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "app-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
         } ]

@@ -10,10 +10,11 @@
                 }
  :layers
  {
-  :spc-mode      {:key :spacebar} ;  :condi :!appRdc}
-  :num-mode      {:key :semicolon  :condi :!appRdc}
-  :sym-mode      {:key :comma      :condi [:!appRdcs :!spc-mode]}
-  :cod-mode      {:key :period     :condi [:!appRdcs :!spc-mode]}
+  :spc-mode      {:key :spacebar}
+  :app-mode      {:key :tab}
+  ;:num-mode      {:key :semicolon  :condi :!appRdc}
+  ;:sym-mode      {:key :comma      :condi [:!appRdcs :!spc-mode]}
+  ;:cod-mode      {:key :period     :condi [:!appRdcs :!spc-mode]}
   ; :snp-mode      {:key :slash      :condi :!appRdc}
   ; :num-mode      {:key :non_us_backslash :condi :!appRdc}
   ; :num-mode      {:key :semicolon :condi :!appRdc}
@@ -23,91 +24,101 @@
 
  :main
  [
-  {:des "spc-mode (essential)"
-   :rules
-   [
-    :spc-mode
-    [:##1          :##f1]
-    [:##2          :##f2]
-    [:##3          :##f3]
-    [:##4          :##f4]
-    [:##5          :##f5]
-    [:##6          :##f6]
-    [:##7          :##f7]
-    [:##8          :##f8]
-    [:##9          :##f9]
-    [:##0          :##f10]
-    [:##hyphen     :##f11]
-    [:##equal_sign :##f12]
+   {:des "spc-mode (essential)"
+    :rules
+    [
+      :spc-mode
+      [:##1          :##f1]
+      [:##2          :##f2]
+      [:##3          :##f3]
+      [:##4          :##f4]
+      [:##5          :##f5]
+      [:##6          :##f6]
+      [:##7          :##f7]
+      [:##8          :##f8]
+      [:##9          :##f9]
+      [:##0          :##f10]
+      [:##hyphen     :##f11]
+      [:##equal_sign :##f12]
 
-    [:##h                   :##left_arrow]
-    [:##j                   :##down_arrow]
-    [:##k                   :##up_arrow]
-    [:##l                   :##right_arrow]
+      [:##h                   :##left_arrow]
+      [:##j                   :##down_arrow]
+      [:##k                   :##up_arrow]
+      [:##l                   :##right_arrow]
 
-    [:b                     :return_or_enter]
-    [:n                     :escape]
-    [:##m                   :##delete_or_backspace]
-    [:#Sdelete_or_backspace :delete_forward]
+      [:b                     :return_or_enter]
+      [:n                     :escape]
+      [:##m                   :##delete_or_backspace]
+      [:#Sdelete_or_backspace :delete_forward]
 
-    [:comma                 :!Odelete_or_backspace [:!appRdc]]
-    [:#Sy                   :!C#Sleft_arrow        [:!appRdc]]
-    [:#Su                   :!O#Sleft_arrow        [:!appRdc]]
-    [:#Si                   :!O#Sright_arrow       [:!appRdc]]
-    [:#So                   :!C#Sright_arrow       [:!appRdc]]
+      [:comma                 :!Odelete_or_backspace [:!appRdc]]
+      [:#Sy                   :!C#Sleft_arrow        [:!appRdc]]
+      [:#Su                   :!O#Sleft_arrow        [:!appRdc]]
+      [:#Si                   :!O#Sright_arrow       [:!appRdc]]
+      [:#So                   :!C#Sright_arrow       [:!appRdc]]
 
-    [:comma                 :!Tdelete_or_backspace [:appRdc]]
-    [:#Sy                   :#Shome                [:appRdc]]
-    [:#Su                   :!T#Sleft_arrow        [:appRdc]]
-    [:#Si                   :!T#Sright_arrow       [:appRdc]]
-    [:#So                   :#Send                 [:appRdc]]
+      [:comma                 :!Tdelete_or_backspace [:appRdc]]
+      [:#Sy                   :#Shome                [:appRdc]]
+      [:#Su                   :!T#Sleft_arrow        [:appRdc]]
+      [:#Si                   :!T#Sright_arrow       [:appRdc]]
+      [:#So                   :#Send                 [:appRdc]]
 
-    [:t                     :page_up]
-    [:g                     :page_down]
+      [:t                     :page_up]
+      [:g                     :page_down]
 
-    [:#Se                   :!T#Stab]
+      [:#Se                   :!T#Stab]
 
-    [:w                     :!Cs [:!appRdc :!appEmacs]]
-    [:w                     :!Ts [:appRdc]]
-    [:w                     :!Ts [:appEmacs]]
+      [:w                     :!Cs [:!appRdc :!appEmacs]]
+      [:w                     :!Ts [:appRdc]]
+      [:w                     :!Ts [:appEmacs]]
 
-    [:!Rw                   :!T!Ss [:appRdc]]
+      [:!Rw                   :!T!Ss [:appRdc]]
 
-    [:#Sz                   :!C#Sz [:!appRdc]]
-    [:#Sx                   :!C#Sx [:!appRdc]]
-    [:#Sc                   :!C#Sc [:!appRdc]]
-    [:#Sv                   :!C#Sv [:!appRdc]]
+      [:#Sz                   :!C#Sz [:!appRdc]]
+      [:#Sx                   :!C#Sx [:!appRdc]]
+      [:#Sc                   :!C#Sc [:!appRdc]]
+      [:#Sv                   :!C#Sv [:!appRdc]]
 
-    [:#Sz                   :!T#Sz [:appRdc]]
-    [:#Sx                   :!T#Sx [:appRdc]]
-    [:#Sc                   :!T#Sc [:appRdc]]
-    [:#Sv                   :!T#Sv [:appRdc]]
+      [:#Sz                   :!T#Sz [:appRdc]]
+      [:#Sx                   :!T#Sx [:appRdc]]
+      [:#Sc                   :!T#Sc [:appRdc]]
+      [:#Sv                   :!T#Sv [:appRdc]]
 
-    [:d                     :!CTOleft_arrow  [:!appRdc]]
-    [:f                     :!CTOright_arrow [:!appRdc]]
+      [:d                     :!CTOleft_arrow  [:!appRdc]]
+      [:f                     :!CTOright_arrow [:!appRdc]]
 
-    [:d                     :!CTleft_arrow  [:appRdc]]
-    [:f                     :!CTright_arrow [:appRdc]]
+      [:d                     :!CTleft_arrow  [:appRdc]]
+      [:f                     :!CTright_arrow [:appRdc]]
 
-    [:!Rd                   :!CTOleft_arrow]
-    [:!Rf                   :!CTOright_arrow]
+      [:!Rd                   :!CTOleft_arrow]
+      [:!Rf                   :!CTOright_arrow]
 
-    [:non_us_backslash      :!Cq   [:!appRdc]]
-    [:non_us_backslash      :!OF4  [:appRdc]]
+      [:non_us_backslash      :!Cq   [:!appRdc]]
+      [:non_us_backslash      :!OF4  [:appRdc]]
 
-    ;[:period                :!Cperiod]
-    ;[:slash                 :!Cslash]
+      ;[:period                :!Cperiod]
+      ;[:slash                 :!Cslash]
 
-    [:s                   [:!C#Stab :return_or_enter] [:!appRdc]]
-    [:s                   [:!O#Stab :escape]          [:appRdc]]
+      [:s                   [:!C#Stab :return_or_enter] [:!appRdc]]
+      [:s                   [:!O#Stab :escape]          [:appRdc]]
 
-    [:a                   :!C#Stab                    [:!appRdc]]
-    [:a                   :!O#Stab                    [:appRdc]]
+      [:a                   :!C#Stab                    [:!appRdc]]
+      [:a                   :!O#Stab                    [:appRdc]]
 
-     [:tab                 :!Ctab                    [:!appRdc]]
-     [:tab                 :!Otab                    [:appRdc]]
+      [:tab                 :!Ctab                    [:!appRdc]]
+      [:tab                 :!Otab                    [:appRdc]]
 
-    ]}
+    ]
+   }
+
+   {:des "app-mode"
+    :rules
+    [
+      :app-mode
+      [:3                 :!C!T!Oup_arrow           [:!appRdc]]
+      ;[:3                 :!Otab                    [:appRdc]]
+    ]
+   }
 
   {:des "Global" :rules
    [
