@@ -1323,6 +1323,35 @@
           "to_if_alone" : [ {
             "key_code" : "tab"
           } ]
+        }, {
+          "type" : "basic",
+          "to" : [ {
+            "set_variable" : {
+              "name" : "cod-mode",
+              "value" : 1
+            }
+          } ],
+          "from" : {
+            "key_code" : "period"
+          },
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "cod-mode",
+              "value" : 0
+            }
+          } ],
+          "to_if_alone" : [ {
+            "key_code" : "period"
+          } ],
+          "conditions" : [ {
+            "name" : "appRdcs",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ]
         } ]
       }, {
         "description" : "spc-mode (essential)",
@@ -2392,27 +2421,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "caps_lock"
-          },
-          "to" : [ {
-            "key_code" : "escape"
-          } ],
-          "conditions" : [ {
-            "name" : "num-mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "cod-mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          }, {
-            "name" : "sym-mode",
-            "value" : 1,
-            "type" : "variable_unless"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "left_control"
           },
           "to" : [ {
@@ -3241,40 +3249,6 @@
         "description" : "cod-mode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "q",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "backslash",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "cod-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "w",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "7",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "cod-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "e",
             "modifiers" : {
               "optional" : [ "any" ]
@@ -3298,73 +3272,6 @@
           },
           "to" : [ {
             "key_code" : "close_bracket"
-          } ],
-          "conditions" : [ {
-            "name" : "cod-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "t",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "semicolon"
-          } ],
-          "conditions" : [ {
-            "name" : "cod-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "y",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "grave_accent_and_tilde",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "cod-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "a",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "semicolon",
-            "modifiers" : [ "left_shift" ]
-          } ],
-          "conditions" : [ {
-            "name" : "cod-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "s",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "hyphen",
-            "modifiers" : [ "left_shift" ]
           } ],
           "conditions" : [ {
             "name" : "cod-mode",
@@ -3414,24 +3321,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "grave_accent_and_tilde"
-          } ],
-          "conditions" : [ {
-            "name" : "cod-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "z",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "quote",
-            "modifiers" : [ "left_shift" ]
+            "key_code" : "semicolon"
           } ],
           "conditions" : [ {
             "name" : "cod-mode",

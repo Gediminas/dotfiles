@@ -7,6 +7,7 @@
                 }}
  :applications {:appRdc ["^com.microsoft.rdc.mac"]
                 :appEmacs ["^org.gnu.Emacs"]
+                :appSafari ["com.apple.Safari"]
                 }
  :layers
  {
@@ -14,7 +15,7 @@
   :app-mode      {:key :tab}
   ;:num-mode      {:key :semicolon  :condi :!appRdc}
   ;:sym-mode      {:key :comma      :condi [:!appRdcs :!spc-mode]}
-  ;:cod-mode      {:key :period     :condi [:!appRdcs :!spc-mode]}
+  :cod-mode      {:key :period     :condi [:!appRdcs :!spc-mode]}
   ; :snp-mode      {:key :slash      :condi :!appRdc}
   ; :num-mode      {:key :non_us_backslash :condi :!appRdc}
   ; :num-mode      {:key :semicolon :condi :!appRdc}
@@ -124,7 +125,7 @@
    [
     [:right_command    :right_shift]
     [:non_us_backslash :right_shift]
-    [:caps_lock        :escape [:!num-mode :!cod-mode :!sym-mode]]
+       ;[:caps_lock        :escape [:!num-mode :!cod-mode :!sym-mode]]
     ;[:##grave_accent_and_tilde :##left_shift]
     ;[:non_us_backslash :vk_none]
 
@@ -134,6 +135,9 @@
     :appRdc
     [:left_control  :left_command]
     [:left_command  :left_control]
+
+       ;:appSafari
+       ;[:escape  :Oescape]
    ]}
 
   {:des "num-mode"
@@ -209,20 +213,21 @@
    :rules
    [
     :cod-mode
-    [:##q :!Sbackslash]              ;q |
-    [:##w :!S7]                      ;z &
+    ;[:##q :!Sbackslash]              ;q |
+    ;[:##w :!S7]                      ;z &
     [:##e :##open_bracket]           ;e [
     [:##r :##close_bracket]          ;r ]
-    [:##t :##semicolon]              ;t ;
-    [:##y :!Sgrave_accent_and_tilde] ;y ~
+    ;[:##t :##semicolon]              ;t ;
+    ;[:##y :!Sgrave_accent_and_tilde] ;y ~
 
-    [:##a :!Ssemicolon]              ;a :
-    [:##s :!Shyphen]                 ;s _
+    ;[:##a :!Ssemicolon]              ;a :
+    ;[:##s :!Shyphen]                 ;s _
     [:##d :!S9]                      ;d (
     [:##f :!S0]                      ;f )
-    [:##g :##grave_accent_and_tilde] ;g `
+    [:##g :##semicolon] ;g `
+    ;[:##g :##grave_accent_and_tilde] ;g `
 
-    [:##z :!Squote]                  ;z "
+    ;[:##z :!Squote]                  ;z "
     [:##x :!Sopen_bracket]           ;x {
     [:##c :!Sclose_bracket]          ;c }
     [:##v :##quote]                  ;v '
