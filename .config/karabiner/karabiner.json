@@ -1327,6 +1327,35 @@
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
+              "name" : "sym-mode",
+              "value" : 1
+            }
+          } ],
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "sym-mode",
+              "value" : 0
+            }
+          } ],
+          "to_if_alone" : [ {
+            "key_code" : "comma"
+          } ],
+          "conditions" : [ {
+            "name" : "appRdcs",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ]
+        }, {
+          "type" : "basic",
+          "to" : [ {
+            "set_variable" : {
               "name" : "cod-mode",
               "value" : 1
             }
@@ -1682,7 +1711,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -1702,7 +1731,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -1722,7 +1751,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -1742,7 +1771,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -1762,7 +1791,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -1779,7 +1808,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -1798,7 +1827,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -1818,7 +1847,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -1838,7 +1867,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -1857,7 +1886,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -1917,7 +1946,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           }, {
             "bundle_identifiers" : [ "^org.gnu.Emacs" ],
@@ -1937,7 +1966,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -1974,7 +2003,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -1994,7 +2023,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2014,7 +2043,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2034,7 +2063,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2054,7 +2083,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2074,7 +2103,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2094,7 +2123,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2114,7 +2143,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2134,7 +2163,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2151,7 +2180,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2168,7 +2197,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2185,7 +2214,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2202,7 +2231,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2253,7 +2282,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2270,7 +2299,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2289,7 +2318,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2308,7 +2337,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2325,7 +2354,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2342,7 +2371,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2359,7 +2388,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2376,7 +2405,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2396,7 +2425,7 @@
             "value" : 1,
             "type" : "variable_if"
           }, {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_unless"
           } ],
           "type" : "basic"
@@ -2427,7 +2456,7 @@
             "key_code" : "left_command"
           } ],
           "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -2439,7 +2468,7 @@
             "key_code" : "left_control"
           } ],
           "conditions" : [ {
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac" ],
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ],
             "type" : "frontmost_application_if"
           } ],
           "type" : "basic"
@@ -3042,7 +3071,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "backslash"
+            "key_code" : "equal_sign"
           } ],
           "conditions" : [ {
             "name" : "sym-mode",
@@ -3272,6 +3301,22 @@
           },
           "to" : [ {
             "key_code" : "close_bracket"
+          } ],
+          "conditions" : [ {
+            "name" : "cod-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "semicolon"
           } ],
           "conditions" : [ {
             "name" : "cod-mode",

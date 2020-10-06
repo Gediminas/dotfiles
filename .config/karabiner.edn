@@ -5,7 +5,7 @@
                 :alone   500
                 :held    500
                 }}
- :applications {:appRdc ["^com.microsoft.rdc.mac"]
+ :applications {:appRdc ["^com.microsoft.rdc.mac", "^com.teamviewer"]
                 :appEmacs ["^org.gnu.Emacs"]
                 :appSafari ["com.apple.Safari"]
                 }
@@ -14,7 +14,7 @@
   :spc-mode      {:key :spacebar}
   :app-mode      {:key :tab}
   ;:num-mode      {:key :semicolon  :condi :!appRdc}
-  ;:sym-mode      {:key :comma      :condi [:!appRdcs :!spc-mode]}
+  :sym-mode      {:key :comma      :condi [:!appRdcs :!spc-mode]}
   :cod-mode      {:key :period     :condi [:!appRdcs :!spc-mode]}
   ; :snp-mode      {:key :slash      :condi :!appRdc}
   ; :num-mode      {:key :non_us_backslash :condi :!appRdc}
@@ -192,7 +192,8 @@
     [:##f :!S8]                      ;t *
     [:##g :!S5]                      ;e %
 
-    [:##z :##backslash]              ;z \
+    ;; [:##z :##backslash]              ;z \
+    [:##z :##equal_sign]              ;z \
     [:##x :!Scomma]                  ;x <
     [:##c :!Speriod]                 ;c >
     [:##v :##slash]                  ;g /
@@ -217,7 +218,7 @@
     ;[:##w :!S7]                      ;z &
     [:##e :##open_bracket]           ;e [
     [:##r :##close_bracket]          ;r ]
-    ;[:##t :##semicolon]              ;t ;
+    [:##t :##semicolon]              ;t ;
     ;[:##y :!Sgrave_accent_and_tilde] ;y ~
 
     ;[:##a :!Ssemicolon]              ;a :
