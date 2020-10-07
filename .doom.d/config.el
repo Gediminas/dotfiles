@@ -12,7 +12,6 @@
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
-;; + `doom-font'
 ;; + `doom-variable-pitch-font'
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
@@ -23,7 +22,7 @@
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;gds
-(setq doom-font (font-spec :family "hack" :size 14))
+(setq doom-font (font-spec :family "hack" :size 12))
 
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -61,14 +60,16 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(setq treemacs-position 'right)
+
 (setq mac-command-modifier 'control)
 
-(map! :leader
-      (:when (featurep! :completion ivy)
-        :desc "M-x"                     :n "SPC" #'counsel-M-x))
-(map! :leader
-      (:when (featurep! :completion helm)
-        :desc "M-x"                     :n "SPC" #'helm-M-x))
+;(map! :leader
+;      (:when (featurep! :completion ivy)
+;        :desc "M-x"                     :n "SPC" #'counsel-M-x))
+;(map! :leader
+;      (:when (featurep! :completion helm)
+;        :desc "M-x"                     :n "SPC" #'helm-M-x))
 
 ;(setq irony-additional-clang-options '("-std=c++17"))
 ;
@@ -96,3 +97,39 @@
 ;
 ;;(require 'indium)
 ;;(add-hook 'js-mode-hook #'indium-interaction-mode)
+
+
+;; (defun gds/alternate-buffer (&optional window)
+;;   "Switch back and forth between current and last buffer in the
+;; current window."
+;;   (interactive)
+;;   (cl-destructuring-bind (buf start pos)
+;;     (or (cl-find (window-buffer window) (window-prev-buffers)
+;;                      :key #'car :test-not #'eq)
+;;            (list (other-buffer) nil nil))
+;;     (if (not buf)
+;;         (message "Last buffer not found.")
+;;       (set-window-buffer-start-and-point window buf start pos))))
+
+;(map! "C-<tab>" 'gds/alternate-buffer)
+(global-set-key (kbd "C-e") 'evil-switch-to-windows-last-buffer)
+(global-set-key (kbd "C-<tab>") 'evil-switch-to-windows-last-buffer)
+(global-set-key [f1] 'evil-switch-to-windows-last-buffer)
+
+(setq gds/theme (car custom-enabled-themes))
+
+(when (eq gds/theme 'spacemacs-light)
+  (set-face-attribute 'hl-line nil :background "gray78")
+  (set-face-attribute 'region nil :background "light steel blue")
+  )
+
+(when (eq gds/theme 'zenburn)
+  (set-face-attribute 'hl-line nil :background "gray30")
+  (set-face-attribute 'region nil :background "DeepSkyBlue4")
+  )
+
+  (global-superword-mode t)
+  ;; (global-superword-mode t)
+  ;; (add-hook 'after-change-major-mode-hook
+  ;;           (lambda ()
+  ;;             (modify-syntax-entry ?_ "w")))
