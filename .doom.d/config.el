@@ -115,6 +115,7 @@
 ;;       (set-window-buffer-start-and-point window buf start pos))))
 
 ;(map! "C-<tab>" 'gds/alternate-buffer)
+(global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-e") 'evil-switch-to-windows-last-buffer)
 (global-set-key (kbd "C-<tab>") 'evil-switch-to-windows-last-buffer)
 (global-set-key [f1] 'evil-switch-to-windows-last-buffer)
