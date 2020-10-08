@@ -60,7 +60,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq treemacs-position 'right)
+(setq
+  treemacs-position        'right
+  treemacs-no-png-images   nil
+)
 
 (setq mac-command-modifier 'control)
 
