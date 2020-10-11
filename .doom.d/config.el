@@ -31,7 +31,7 @@
 
 ;gds
 ;(setq doom-theme 'doom-one)
-(setq doom-theme 'zenburn)
+(setq doom-theme 'doom-zenburn)
 
 
 ;; If you use `org' and don't want your org files in the default location below,
@@ -45,7 +45,7 @@
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
-;; - `load!' for loading external *.el files relative to this one
+;; - load! for loading external *.el files relative to this one
 ;; - `use-package!' for configuring packages
 ;; - `after!' for running code after a package has loaded
 ;; - `add-load-path!' for adding directories to the `load-path', relative to
@@ -60,12 +60,122 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq
-  treemacs-position        'right
-  treemacs-no-png-images   nil
-)
 
 (setq mac-command-modifier 'control)
+
+;;(setq irony-additional-clang-options '("-std=c++17"))
+;;(require 'rtags) ;; optional, must have rtags installed
+;;(require 'cmake-ide)
+;;(cmake-ide-setup)
+;;(require 'indium)
+;;(add-hook 'js-mode-hook #'indium-interaction-mode)
+
+;; (setq gds/theme (car custom-enabled-themes))
+
+;; (when (eq gds/theme 'spacemacs-light)
+;;   (set-face-attribute 'hl-line nil :background "gray78")
+;;   (set-face-attribute 'region nil :background "light steel blue")
+;;   )
+
+;; (when (eq gds/theme 'zenburn)
+;;   (set-face-attribute 'hl-line nil :background "gray30")
+;;   (set-face-attribute 'region nil :background "DeepSkyBlue4")
+;;   )
+
+
+;; GUI
+;;
+(global-hl-line-mode 1)
+(set-face-attribute 'region nil :background "#00488B") ;DeepSkyBlue4
+(set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
+
+;(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+(setq frame-title-format '(:eval
+   (let ((project-name (projectile-project-name)))
+   (if (string= "-" project-name)
+       (format "%s" "%b")
+       (format "%s" project-name)))))
+
+;(set-face-attribute 'hl-line nil :background "#888888)
+;(set-face-background 'hl-line-highlight "#3e4446")
+
+
+;; BEHAVIOR
+
+(superword-mode t)
+(add-hook 'after-change-major-mode-hook
+          (lambda ()
+            (modify-syntax-entry ?_ "w")))
+
+  ;; For python
+  ;(add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  ;; For ruby
+  ;(add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+  ;; For Javascript
+  (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
+;; TREEMACS
+
+(after! treemacs
+  (setq
+   treemacs-position               'right
+   ;; treemacs-no-png-images          nil
+   ;; treemacs-is-never-other-window  nil
+   ;; treemacs-file-follow-delay      0.2
+   )
+  (treemacs-follow-mode t)
+  (treemacs-filewatch-mode t)
+  (treemacs-git-mode 'extended)
+  (treemacs-fringe-indicator-mode t)
+  (treemacs-icons-dired-mode t)
+  (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
+
+  )
+
+
+;https://lccambiaghi.github.io/.doom.d/readme.html
+;BEGIN
+
+(after! winum
+  (defun winum-assign-0-to-treemacs ()
+    (when (string-match-p (buffer-name) "*Treemacs*") 10))
+
+  (add-to-list 'winum-assign-functions #'winum-assign-0-to-treemacs)
+  ;(set-face-attribute 'winum-face nil :weight 'bold)
+
+   (setq window-numbering-scope            'local
+;;         winum-reverse-frame-list          nil
+;;         winum-auto-assign-0-to-minibuffer t
+;;         ;winum-assign-func                 'my-winum-assign-func
+         winum-auto-setup-mode-line        t
+;;         ;winum-format                      " %s "
+         winum-mode-line-position          1
+;;         winum-ignored-buffers             '(" *which-key*")
+;;         winum-ignored-buffers-regexp      '(" \\*Treemacs-.*")
+   )
+
+  (winum-mode t)
+)
+
+(setq evil-split-window-below t
+      evil-vsplit-window-right t)
+
+(after! company
+  (add-to-list 'company-backends 'company-tabnine))
+
+(after! which-key
+  ;; Compact which-key
+  (push '(("\\(.*\\) 1" . "winum-select-window-1") . ("\\1 1..9" . "window 1..9"))
+        which-key-replacement-alist)
+  (push '((nil . "winum-select-window-[2-9]") . t) which-key-replacement-alist)
+)
+
+;(ace-window-display-mode t)
+;END
+
+
+;; KEYS
 
 ;(map! :leader
 ;      (:when (featurep! :completion ivy)
@@ -74,66 +184,38 @@
 ;      (:when (featurep! :completion helm)
 ;        :desc "M-x"                     :n "SPC" #'helm-M-x))
 
-;(setq irony-additional-clang-options '("-std=c++17"))
-;
-;;(add-to-list 'custom-theme-load-path "~/.emacs.d/.local/themes/")
-;;(load-theme 'zenburn-care t)
-;;(load-theme 'zenburn t)
-;
-;;(enable-theme 'doom-one)
-;
-;;;(set-face-attribute 'hl-line nil :background "#BBBBBB")
-;
-;;(load-file "~/.doom.d/plugins/devenv-emulation.elc")
-;;
-;
-;
-;;(require 'rtags) ;; optional, must have rtags installed
-;;(require 'cmake-ide)
-;;(cmake-ide-setup)
-;
-;;(require 'realgud-node-inspect)
-;;(global-set-key [f5] 'gud-cont)
-;;(global-set-key [f4] 'gud-next)
-;;(global-set-key [f3] 'gud-step)
-;;(global-set-key [f1] 'gud-break)
-;
-;;(require 'indium)
-;;(add-hook 'js-mode-hook #'indium-interaction-mode)
+(map!
+ :n      "C-<tab>"    #'evil-switch-to-windows-last-buffer
+ :n      "C-s"        #'save-buffer
 
+ :leader      "l"          #'ace-window
 
-;; (defun gds/alternate-buffer (&optional window)
-;;   "Switch back and forth between current and last buffer in the
-;; current window."
-;;   (interactive)
-;;   (cl-destructuring-bind (buf start pos)
-;;     (or (cl-find (window-buffer window) (window-prev-buffers)
-;;                      :key #'car :test-not #'eq)
-;;            (list (other-buffer) nil nil))
-;;     (if (not buf)
-;;         (message "Last buffer not found.")
-;;       (set-window-buffer-start-and-point window buf start pos))))
+ ;; (:when (featurep! :ui window-select)
+ ;;  (:prefix-map ("j" . "Jump")
+ ;;   :desc "ace-window"  "j" #'ace-window
+ ;;   )
+ ;;  )
 
-;(map! "C-<tab>" 'gds/alternate-buffer)
-(global-set-key (kbd "C-s") 'save-buffer)
-(global-set-key (kbd "C-e") 'evil-switch-to-windows-last-buffer)
-(global-set-key (kbd "C-<tab>") 'evil-switch-to-windows-last-buffer)
-(global-set-key [f1] 'evil-switch-to-windows-last-buffer)
+ (:when (featurep! :ui workspaces)
+  :n      "gt"         #'+workspace/other
 
-(setq gds/theme (car custom-enabled-themes))
+ ;;  (:prefix-map ("TAB" . "workspace")
+ ;;  :desc "Switch to last workspace"  "TAB" #'+workspace/other
+ ;;  )
+ )
 
-(when (eq gds/theme 'spacemacs-light)
-  (set-face-attribute 'hl-line nil :background "gray78")
-  (set-face-attribute 'region nil :background "light steel blue")
+ (:when (featurep! :ui window-select)
+  :leader
+  :n "1" #'winum-select-window-1
+  :n "2" #'winum-select-window-2
+  :n "3" #'winum-select-window-3
+  :n "4" #'winum-select-window-4
+  :n "5" #'winum-select-window-5
+  :n "6" #'winum-select-window-6
+  :n "7" #'winum-select-window-7
+  :n "8" #'winum-select-window-8
+  :n "9" #'winum-select-window-9
   )
+)
 
-(when (eq gds/theme 'zenburn)
-  (set-face-attribute 'hl-line nil :background "gray30")
-  (set-face-attribute 'region nil :background "DeepSkyBlue4")
-  )
 
-  (global-superword-mode t)
-  ;; (global-superword-mode t)
-  ;; (add-hook 'after-change-major-mode-hook
-  ;;           (lambda ()
-  ;;             (modify-syntax-entry ?_ "w")))
