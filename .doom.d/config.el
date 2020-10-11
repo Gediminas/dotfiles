@@ -89,16 +89,14 @@
 (set-face-attribute 'region nil :background "#00488B") ;DeepSkyBlue4
 (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
 
-;(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+(setq evil-split-window-below t
+      evil-vsplit-window-right t)
 
 (setq frame-title-format '(:eval
    (let ((project-name (projectile-project-name)))
    (if (string= "-" project-name)
        (format "%s" "%b")
        (format "%s" project-name)))))
-
-;(set-face-attribute 'hl-line nil :background "#888888)
-;(set-face-background 'hl-line-highlight "#3e4446")
 
 
 ;; BEHAVIOR
@@ -135,7 +133,6 @@
 
 
 ;https://lccambiaghi.github.io/.doom.d/readme.html
-;BEGIN
 
 (after! winum
   (defun winum-assign-0-to-treemacs ()
@@ -154,12 +151,8 @@
 ;;         winum-ignored-buffers             '(" *which-key*")
 ;;         winum-ignored-buffers-regexp      '(" \\*Treemacs-.*")
    )
-
   (winum-mode t)
 )
-
-(setq evil-split-window-below t
-      evil-vsplit-window-right t)
 
 (after! company
   (add-to-list 'company-backends 'company-tabnine))
@@ -171,8 +164,11 @@
   (push '((nil . "winum-select-window-[2-9]") . t) which-key-replacement-alist)
 )
 
+(after! evil-magit
+    (setq magit-log-margin    '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+    (setq magit-status-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+)
 ;(ace-window-display-mode t)
-;END
 
 
 ;; KEYS
