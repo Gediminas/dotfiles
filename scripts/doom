@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/local/bin/emacs --with-profile doom
+/usr/local/bin/emacs --with-profile doom --eval "(toggle-frame-fullscreen)" "$@"
