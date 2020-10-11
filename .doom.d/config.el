@@ -89,7 +89,7 @@
 (set-face-attribute 'region nil :background "#00488B") ;DeepSkyBlue4
 (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
 
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+;(add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 (setq frame-title-format '(:eval
    (let ((project-name (projectile-project-name)))
@@ -164,6 +164,13 @@
 (after! company
   (add-to-list 'company-backends 'company-tabnine))
 
+(after! which-key
+  ;; Compact which-key
+  (push '(("\\(.*\\) 1" . "winum-select-window-1") . ("\\1 1..9" . "window 1..9"))
+        which-key-replacement-alist)
+  (push '((nil . "winum-select-window-[2-9]") . t) which-key-replacement-alist)
+)
+
 ;(ace-window-display-mode t)
 ;END
 
@@ -212,8 +219,3 @@
 )
 
 
-;; Compact which-key
-;; (push '(("\\(.*\\) 1" . "winum-select-window-1") . ("\\1 1..9" . "window 1..9"))
-;;       which-key-replacement-alist)
-
-;; (push '((nil . "winum-select-window-[2-9]") . t) which-key-replacement-alist)
