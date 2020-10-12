@@ -1,2 +1,1 @@
-#!/bin/bash
-/usr/local/bin/emacs --with-profile doom --eval "(toggle-frame-fullscreen)" "$@"
+C:\ProgramData\chocolatey\bin\runemacs.exe --with-profile doom --eval "(toggle-frame-maximized)"
