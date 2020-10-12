@@ -86,7 +86,7 @@
 ;; GUI
 ;;
 (global-hl-line-mode 1)
-(set-face-attribute 'region nil :background "#00488B") ;DeepSkyBlue4
+(set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
 (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
 
 (setq evil-split-window-below t
@@ -112,6 +112,8 @@
   ;(add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
   ;; For Javascript
   (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
+  (add-hook 'elisp-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
 ;; TREEMACS
 
