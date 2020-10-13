@@ -180,6 +180,10 @@
  :n      "C-<tab>"    #'evil-switch-to-windows-last-buffer
  :n      "C-s"        #'save-buffer
 
+ (:when (featurep! :ui workspaces)
+  :n "gt"   #'+workspace/other
+ )
+
  :leader      "l"          #'ace-window
 
  ;; (:when (featurep! :ui window-select)
@@ -188,13 +192,10 @@
  ;;   )
  ;;  )
 
- (:when (featurep! :ui workspaces)
-  :n      "gt"         #'+workspace/other
-
  ;;  (:prefix-map ("TAB" . "workspace")
  ;;  :desc "Switch to last workspace"  "TAB" #'+workspace/other
  ;;  )
- )
+ ;)
 
  (:when (featurep! :ui window-select)
   :leader
@@ -211,3 +212,6 @@
 )
 
 
+;; (set-cursor-color "red")
+;; (set-face-attribute 'mode-line nil :background "red")
+;; (set-face-attribute 'mode-line-inactive nil :background "dim gray")
