@@ -1,1 +1,1 @@
-C:/Users/gds/sub/doom-emacs/bin/doom %*
+%HOMEPATH%/sub/doom-emacs/bin/doom %*
