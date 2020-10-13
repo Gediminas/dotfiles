@@ -72,22 +72,11 @@
 
 ;; (setq gds/theme (car custom-enabled-themes))
 
-;; (when (eq gds/theme 'spacemacs-light)
-;;   (set-face-attribute 'hl-line nil :background "gray78")
-;;   (set-face-attribute 'region nil :background "light steel blue")
-;;   )
-
-;; (when (eq gds/theme 'zenburn)
-;;   (set-face-attribute 'hl-line nil :background "gray30")
-;;   (set-face-attribute 'region nil :background "DeepSkyBlue4")
-;;   )
-
-
 ;; GUI
 ;;
 (global-hl-line-mode 1)
-(set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
-(set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
+;; (set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
+;; (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
 
 (setq evil-split-window-below t
       evil-vsplit-window-right t)
@@ -98,6 +87,13 @@
        (format "%s" "%b")
        (format "%s" project-name)))))
 
+(after! solaire-mode
+  ;(set-face-attribute 'solaire-hl-line-face nil :background "#555555") ;active line
+  ;(set-face-attribute 'hl-line nil :background "#000000") ;active line
+  (set-face-attribute 'region nil :background "#0048aa") ; selection
+  (set-face-attribute 'evil-ex-search nil :foreground "black" :background "#ffff00") ;search, when typing
+  (set-face-attribute 'lazy-highlight nil :foreground "black" :background "#aaaa00") ;search, selected
+)
 
 ;; BEHAVIOR
 
@@ -215,8 +211,3 @@
 )
 
 
-
-(set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
-(set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
-
-;(push '("zenburn-bg-1"     . "#2B2BFF") zenburn-override-colors-alist)
