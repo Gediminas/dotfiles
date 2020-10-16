@@ -115,7 +115,7 @@
   (setq
    treemacs-position               'right
    ;; treemacs-no-png-images          nil
-   ;; treemacs-is-never-other-window  nil
+   treemacs-is-never-other-window  t
    ;; treemacs-file-follow-delay      0.2
    )
   (treemacs-follow-mode t)
