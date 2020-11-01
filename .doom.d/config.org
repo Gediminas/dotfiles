@@ -1,3 +1,12 @@
+#+TITLE: My Doom Emacs config
+#+AUTHOR: Gediminas
+#+LANGUAGE: en
+#+PROPERTY: header-args:emacs-lisp :tangle yes :cache yes :results silent :padline no
+#+OPTIONS: toc:nil
+#+EXPORT_FILE_NAME: README.md
+
+* Data
+#+BEGIN_SRC emacs-lisp
 ;;; config.el --- -*- lexical-binding: t -*-
 
 (setq user-full-name "John Doe"
@@ -19,6 +28,10 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+#+END_SRC
+
+* Theme
+#+BEGIN_SRC emacs-lisp
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -42,7 +55,15 @@
 ;;gds
 ;;(setq doom-theme 'doom-one)
 (setq doom-theme 'doom-zenburn)
+#+END_SRC
+
+* MacOS
+#+BEGIN_SRC emacs-lisp
 (setq mac-command-modifier 'control)
+#+END_SRC
+
+* GUI
+#+BEGIN_SRC emacs-lisp
 (global-hl-line-mode 1)
 ;; (set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
 ;; (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
@@ -63,6 +84,10 @@
   (set-face-attribute 'evil-ex-search nil :foreground "black" :background "#ffff00") ;search, when typing
   (set-face-attribute 'lazy-highlight nil :foreground "black" :background "#aaaa00") ;search, selected
   )
+#+END_SRC
+
+* Tree
+#+BEGIN_SRC emacs-lisp
 (after! treemacs
   (setq
    treemacs-position               'right
@@ -77,6 +102,10 @@
   (treemacs-icons-dired-mode t)
   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
   )
+#+END_SRC
+
+* Packages
+#+BEGIN_SRC emacs-lisp
 (after! winum
   (defun winum-assign-0-to-treemacs ()
     (when (string-match-p (buffer-name) "*Treemacs*") 10))
@@ -111,6 +140,11 @@
   (setq magit-log-margin    '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
   (setq magit-status-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
   )
+#+END_SRC
+
+* Misc
+#+BEGIN_SRC emacs-lisp
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
@@ -133,6 +167,10 @@
 (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
                                         ;(add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
                                         ;(add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+#+END_SRC
+
+* Keys
+#+BEGIN_SRC emacs-lisp
 ;(map! :leader
 ;      (:when (featurep! :completion ivy)
 ;        :desc "M-x"                     :n "SPC" #'counsel-M-x))
@@ -174,6 +212,11 @@
   :n "9" #'winum-select-window-9
   )
 )
+#+END_SRC
+
+
+* TEST Disabled
+#+BEGIN_SRC emacs-lisp
 ;;(setq irony-additional-clang-options '("-std=c++17"))
 ;;(require 'rtags) ;; optional, must have rtags installed
 ;;(require 'cmake-ide)
@@ -199,6 +242,18 @@
 ;;   (buffer-face-set 'default))
 
 ;; (add-hook 'buffer-list-update-hook 'highlight-selected-window)
+#+END_SRC
 
+* TEST 3
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+* TEST 2
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+* TEST 1
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
 
 

@@ -13,6 +13,7 @@
 (package! treemacs-icons-dired)
 (package! winum)
 (package! company-tabnine)
+(package! org-ref)
 ;(package! auto-indent-mode)
 
 
