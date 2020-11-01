@@ -50,26 +50,29 @@ Space & =::Send "{Blind}{F12}"
 Space & Tab::AltTab
 Space & e::Send "{LCtrl down}{Tab}{LCtrl up}"
 
-Space & w::{
-  If WinActive("ahk_exe emacs.exe") {
-    Send "{Esc}:w{Enter}"
-  } Else If WinActive("ahk_exe emacsclient.exe") {
-    Send "{Esc}:w{Enter}"
-  } Else If WinActive("ahk_exe putty_tray_64.exe") {
-    Send "{Esc}:w{Enter}"
-  } Else {
-    Send "{Blind}^s"
-  }
-}
 
-Space & s::Send "{LAlt down}{Tab}{LAlt up}"
+;; Space & w::{
+;;   If WinActive("ahk_exe emacs.exe") {
+;;     Send "{Esc}:w{Enter}"
+;;   } Else If WinActive("ahk_exe emacsclient.exe") {
+;;     Send "{Esc}:w{Enter}"
+;;   } Else If WinActive("ahk_exe putty_tray_64.exe") {
+;;     Send "{Esc}:w{Enter}"
+;;   } Else {
+;;     Send "{Blind}^s"
+;;   }
+;; }
+;; Space & s::Send "{LAlt down}{Tab}{LAlt up}"
+Space & s::^s
+Space & w::^s
+
 Space & a::AltTab
 
 Space & d::Send "^#{Left}"
 Space & f::Send "^#{Right}"
 Space & Left:: Send "^#{Left}"
 Space & Right::Send "^#{Right}"
- 
+
 Space & x::^x
 Space & c::^c
 Space & v::^v
