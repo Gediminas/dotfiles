@@ -15,6 +15,9 @@
 (package! company-tabnine)
 (package! org-ref)
 ;(package! auto-indent-mode)
+;
+(if (eq system-type 'windows-nt)
+   (package! ahk-mode))
 
 
 ;; To install a package directly from a remote git repo, you must specify a
