@@ -167,6 +167,10 @@
 (add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
                                         ;(add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
                                         ;(add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
+;; Do not continue comment on new line
+(setq-hook! 'js2-mode-hook comment-line-break-function nil)
+
 #+END_SRC
 
 * Keys
