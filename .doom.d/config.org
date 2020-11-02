@@ -179,8 +179,8 @@
 ;        :desc "M-x"                     :n "SPC" #'helm-M-x))
 
 (map!
- :n      "C-<tab>"    #'evil-switch-to-windows-last-buffer
- :n      "C-s"        #'save-buffer
+ :nvi      "C-<tab>"    #'evil-switch-to-windows-last-buffer
+ :nvi      "C-s"        #'save-buffer
 
  (:when (featurep! :ui workspaces)
   :n "gt"   #'+workspace/other
@@ -246,6 +246,10 @@
 
 * TEST 3
 #+BEGIN_SRC emacs-lisp
+
+;; (c-add-style "doom" ((c-offsets-alist (case-label . 0))))
+;; (c-add-style "doom" (case-label . 0))
+;; (c-set-offset 'case-label '0)
 #+END_SRC
 
 * TEST 2
