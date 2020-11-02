@@ -54,7 +54,15 @@
 
 ;;gds
 ;;(setq doom-theme 'doom-one)
+
+;; (setq doom-zenburn-brighter-modeline t)
+;; (setq doom-zenburn-brighter-comments nil)
+;; (setq doom-zenburn-padded-modeline nil)
+;; (setq doom-zenburn-comment-bg nil)
 (setq doom-theme 'doom-zenburn)
+
+(setq fancy-splash-image "~/.doom.d/doom.png ")
+
 #+END_SRC
 
 * MacOS
@@ -150,6 +158,7 @@
 
 * Lang -> Org
 #+BEGIN_SRC emacs-lisp
+;; (setq org-startup-folded 't)
 (setq org-directory "~/org/") ;; It must be set before org loads!
 
 (map! (:when (featurep! :lang org)    ; local conditional
