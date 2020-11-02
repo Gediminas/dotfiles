@@ -160,15 +160,6 @@
 #+BEGIN_SRC emacs-lisp
 ;; (setq org-startup-folded 't)
 (setq org-directory "~/org/") ;; It must be set before org loads!
-
-(map! (:when (featurep! :lang org)    ; local conditional
-  (:map org-mode-map
-   :localleader
-   (:prefix-map ("e" . "Export/Eval")
-     :desc "org-export-dispatch" "e" #'org-export-dispatch
-     :desc "eval-region"         "r" #'eval-region)
-   )
-))
 #+END_SRC
 
 * Lang -> JavaScript
@@ -185,20 +176,20 @@
 ;; (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 #+END_SRC
 
-* Keys (Global)
+* Keys -> Global
 #+BEGIN_SRC emacs-lisp
-(map! :nvi
-      "C-<tab>"    #'evil-switch-to-windows-last-buffer
-      "C-s"        #'save-buffer
-      )
-
-(map! (:when (featurep! :ui workspaces)
+(map! :map general-override-mode-map
+      :nvi "C-<tab>" #'evil-switch-to-windows-last-buffer
+      :nvi "C-s"     #'save-buffer
+      :nvi "C-j"     #'previous-buffer
+      :nvi "C-k"     #'next-buffer
+      (:when (featurep! :ui workspaces)
        :nv "gt"   #'+workspace/other
        )
       )
 #+END_SRC
 
-* Keys (Leader)
+* Keys -> Leader
 #+BEGIN_SRC emacs-lisp
 (map! :leader
       "l"  #'ace-window
@@ -224,6 +215,22 @@
       )
 #+END_SRC
 
+* Keys -> Org
+#+BEGIN_SRC emacs-lisp
+(map! (:when (featurep! :lang org)    ; local conditional
+       (:map org-mode-map
+        :localleader
+        (:prefix-map ("e" . "Export/Eval")
+         :desc "org-export-dispatch" "e" #'org-export-dispatch
+         :desc "eval-region"         "r" #'eval-region)
+        )
+       ))
+#+END_SRC
+
+
+* TEST 1
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
 
 * TEST Disabled
 #+BEGIN_SRC emacs-lisp
@@ -267,8 +274,4 @@
 ;; (c-add-style "doom" ((c-offsets-alist (case-label . 0))))
 ;; (c-add-style "doom" (case-label . 0))
 ;; (c-set-offset 'case-label '0)
-#+END_SRC
-
-* TEST 2
-#+BEGIN_SRC emacs-lisp
 #+END_SRC
