@@ -142,38 +142,81 @@
   )
 #+END_SRC
 
-* Misc
+* Lang -> General
 #+BEGIN_SRC emacs-lisp
-
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
-
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
-
-
-;; BEHAVIOR
-
-                                        ; Disable smartparents
-(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
-
-(superword-mode t)
-(add-hook 'after-change-major-mode-hook
-          (lambda ()
-            (modify-syntax-entry ?_ "w")))
-
-(add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
-                                        ;(add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
-                                        ;(add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
-
-;; Do not continue comment on new line
-(setq-hook! 'js2-mode-hook comment-line-break-function nil)
-
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode) ;; Disable smartparents
 #+END_SRC
 
-* Keys
+* Lang -> Org
+#+BEGIN_SRC emacs-lisp
+(setq org-directory "~/org/") ;; It must be set before org loads!
+
+(map! (:when (featurep! :lang org)    ; local conditional
+  (:map org-mode-map
+   :localleader
+   (:prefix-map ("e" . "Export/Eval")
+     :desc "org-export-dispatch" "e" #'org-export-dispatch
+     :desc "eval-region"         "r" #'eval-region)
+   )
+))
+#+END_SRC
+
+* Lang -> JavaScript
+#+BEGIN_SRC emacs-lisp
+(setq-hook! 'js2-mode-hook comment-line-break-function nil) ;; Do not continue comment on new line
+#+END_SRC
+
+* Hacks
+#+BEGIN_SRC emacs-lisp
+(superword-mode t)
+(add-hook 'after-change-major-mode-hook (lambda () (modify-syntax-entry ?_ "w")))
+(add-hook 'js2-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+;; (add-hook 'python-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+;; (add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+#+END_SRC
+
+* Keys (Global)
+#+BEGIN_SRC emacs-lisp
+(map! :nvi
+      "C-<tab>"    #'evil-switch-to-windows-last-buffer
+      "C-s"        #'save-buffer
+      )
+
+(map! (:when (featurep! :ui workspaces)
+       :nv "gt"   #'+workspace/other
+       )
+      )
+#+END_SRC
+
+* Keys (Leader)
+#+BEGIN_SRC emacs-lisp
+(map! :leader
+      "l"  #'ace-window
+      "tt" #'toggle-truncate-lines
+
+      (:when (featurep! :ui window-select)
+       (:prefix-map ("j" . "Jump")
+        :desc "ace-window"  "j" #'ace-window
+        )
+       )
+
+      (:when (featurep! :ui window-select)
+       :n "1" #'winum-select-window-1
+       :n "2" #'winum-select-window-2
+       :n "3" #'winum-select-window-3
+       :n "4" #'winum-select-window-4
+       :n "5" #'winum-select-window-5
+       :n "6" #'winum-select-window-6
+       :n "7" #'winum-select-window-7
+       :n "8" #'winum-select-window-8
+       :n "9" #'winum-select-window-9
+       )
+      )
+#+END_SRC
+
+
+* TEST Disabled
 #+BEGIN_SRC emacs-lisp
 ;(map! :leader
 ;      (:when (featurep! :completion ivy)
@@ -182,45 +225,6 @@
 ;      (:when (featurep! :completion helm)
 ;        :desc "M-x"                     :n "SPC" #'helm-M-x))
 
-(map!
- :nvi      "C-<tab>"    #'evil-switch-to-windows-last-buffer
- :nvi      "C-s"        #'save-buffer
-
- (:when (featurep! :ui workspaces)
-  :n "gt"   #'+workspace/other
- )
-
- :leader      "l"          #'ace-window
-
- ;; (:when (featurep! :ui window-select)
- ;;  (:prefix-map ("j" . "Jump")
- ;;   :desc "ace-window"  "j" #'ace-window
- ;;   )
- ;;  )
-
- ;;  (:prefix-map ("TAB" . "workspace")
- ;;  :desc "Switch to last workspace"  "TAB" #'+workspace/other
- ;;  )
- ;)
-
- (:when (featurep! :ui window-select)
-  :leader
-  :n "1" #'winum-select-window-1
-  :n "2" #'winum-select-window-2
-  :n "3" #'winum-select-window-3
-  :n "4" #'winum-select-window-4
-  :n "5" #'winum-select-window-5
-  :n "6" #'winum-select-window-6
-  :n "7" #'winum-select-window-7
-  :n "8" #'winum-select-window-8
-  :n "9" #'winum-select-window-9
-  )
-)
-#+END_SRC
-
-
-* TEST Disabled
-#+BEGIN_SRC emacs-lisp
 ;;(setq irony-additional-clang-options '("-std=c++17"))
 ;;(require 'rtags) ;; optional, must have rtags installed
 ;;(require 'cmake-ide)
@@ -259,9 +263,3 @@
 * TEST 2
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
-
-* TEST 1
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
-
-
