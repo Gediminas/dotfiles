@@ -1,10 +1,3 @@
-#+TITLE: My Doom Emacs config
-#+AUTHOR: Gediminas
-#+LANGUAGE: en
-#+PROPERTY: header-args:emacs-lisp :tangle yes :cache yes :results silent :padline no
-#+OPTIONS: toc:nil
-#+EXPORT_FILE_NAME: README.md
-
 * Data
 #+BEGIN_SRC emacs-lisp
 ;;; config.el --- -*- lexical-binding: t -*-
