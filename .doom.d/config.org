@@ -224,6 +224,7 @@
 * TEST 1
 #+BEGIN_SRC emacs-lisp
 (setq persp-auto-save-fname "_workspaces")
+(setq org-startup-folded t)
 #+END_SRC
 
 * TEST Disabled
