@@ -137,10 +137,6 @@
   (push '((nil . "winum-select-window-[2-9]") . t) which-key-replacement-alist)
   )
 
-(after! evil-magit
-  (setq magit-log-margin    '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
-  (setq magit-status-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
-  )
 #+END_SRC
 
 * Lang -> General
@@ -221,10 +217,36 @@
 #+END_SRC
 
 
-* TEST 1
+* TEST fix
 #+BEGIN_SRC emacs-lisp
 (setq persp-auto-save-fname "_workspaces")
-(setq org-startup-folded t)
+(setq org-startup-folded nil)
+#+END_SRC
+
+* Package -> Magit
+#+BEGIN_SRC emacs-lisp
+(after! evil-magit
+  (setq magit-log-margin    '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+  (setq magit-status-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+  ;; Default commit editor opening in insert mode
+  (add-hook 'with-editor-mode-hook 'evil-insert-state)
+
+  ;; (evil-define-key 'normal with-editor-mode-map
+  ;;   (kbd "RET") 'with-editor-finish
+  ;;   [escape] 'with-editor-cancel
+  ;;   )
+  ;; (evil-define-key 'normal git-rebase-mode-map
+  ;;   "l" 'git-rebase-show-commit
+  ;;   )
+  ;; )
+)
+
+(after! magit
+  (setq magit-diff-options (quote ("--word-diff")))
+  (setq magit-diff-refine-hunk 'all)
+  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+                                        ;(setq projectile-switch-project-action 'magit-status) ;;?
+  )
 #+END_SRC
 
 * TEST Disabled
