@@ -87,7 +87,17 @@
   )
 #+END_SRC
 
-* Tree
+* Settings
+#+BEGIN_SRC emacs-lisp
+(setq display-line-numbers-type 'relative)
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode) ;; Disable smartparents
+#+END_SRC
+* Comments
+#+BEGIN_SRC emacs-lisp
+(setq-hook! 'js2-mode-hook comment-line-break-function nil) ;; Do not continue comment on new line
+#+END_SRC
+
+* -> Tree
 #+BEGIN_SRC emacs-lisp
 (after! treemacs
   (setq
@@ -105,7 +115,47 @@
   )
 #+END_SRC
 
-* Packages
+* -> Org
+#+BEGIN_SRC emacs-lisp
+(after! org
+  (setq org-startup-folded t)
+  (setq org-directory "~/org/") ;; It must be set before org loads!
+  (map!
+   (:map org-mode-map
+    :localleader
+    (:prefix-map ("e" . "Export/Eval")
+     :desc "org-export-dispatch" "e" #'org-export-dispatch
+     :desc "eval-region"         "r" #'eval-region)
+    )))
+#+END_SRC
+
+* -> Git
+#+BEGIN_SRC emacs-lisp
+(after! evil-magit
+  (setq magit-log-margin    '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+  (setq magit-status-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
+  ;; Default commit editor opening in insert mode
+  (add-hook 'with-editor-mode-hook 'evil-insert-state)
+
+  ;; (evil-define-key 'normal with-editor-mode-map
+  ;;   (kbd "RET") 'with-editor-finish
+  ;;   [escape] 'with-editor-cancel
+  ;;   )
+  ;; (evil-define-key 'normal git-rebase-mode-map
+  ;;   "l" 'git-rebase-show-commit
+  ;;   )
+  ;; )
+)
+
+(after! magit
+  (setq magit-diff-options (quote ("--word-diff")))
+  (setq magit-diff-refine-hunk 'all)
+  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+                                        ;(setq projectile-switch-project-action 'magit-status) ;;?
+  )
+#+END_SRC
+
+* -> Windows
 #+BEGIN_SRC emacs-lisp
 (after! winum
   (defun winum-assign-0-to-treemacs ()
@@ -127,36 +177,31 @@
   (winum-mode t)
   )
 
+#+END_SRC
+
+* -> Auto completion
+#+BEGIN_SRC emacs-lisp
 (after! company
   (add-to-list 'company-backends 'company-tabnine))
 
+#+END_SRC
+
+* -> Which-key
+#+BEGIN_SRC emacs-lisp
 (after! which-key
   ;; Compact which-key
   (push '(("\\(.*\\) 1" . "winum-select-window-1") . ("\\1 1..9" . "window 1..9"))
         which-key-replacement-alist)
   (push '((nil . "winum-select-window-[2-9]") . t) which-key-replacement-alist)
   )
-
 #+END_SRC
 
-* Lang -> General
+* FIX -> autoload
 #+BEGIN_SRC emacs-lisp
-(setq display-line-numbers-type 'relative)
-(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode) ;; Disable smartparents
+(setq persp-auto-save-fname "_workspaces")
 #+END_SRC
 
-* Lang -> Org
-#+BEGIN_SRC emacs-lisp
-;; (setq org-startup-folded 't)
-(setq org-directory "~/org/") ;; It must be set before org loads!
-#+END_SRC
-
-* Lang -> JavaScript
-#+BEGIN_SRC emacs-lisp
-(setq-hook! 'js2-mode-hook comment-line-break-function nil) ;; Do not continue comment on new line
-#+END_SRC
-
-* Hacks
+* FIX -> word
 #+BEGIN_SRC emacs-lisp
 (superword-mode t)
 (add-hook 'after-change-major-mode-hook (lambda () (modify-syntax-entry ?_ "w")))
@@ -204,52 +249,7 @@
       )
 #+END_SRC
 
-* Keys -> Org
-#+BEGIN_SRC emacs-lisp
-(map! (:when (featurep! :lang org)    ; local conditional
-       (:map org-mode-map
-        :localleader
-        (:prefix-map ("e" . "Export/Eval")
-         :desc "org-export-dispatch" "e" #'org-export-dispatch
-         :desc "eval-region"         "r" #'eval-region)
-        )
-       ))
-#+END_SRC
-
-
-* TEST fix
-#+BEGIN_SRC emacs-lisp
-(setq persp-auto-save-fname "_workspaces")
-(setq org-startup-folded nil)
-#+END_SRC
-
-* Package -> Magit
-#+BEGIN_SRC emacs-lisp
-(after! evil-magit
-  (setq magit-log-margin    '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
-  (setq magit-status-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
-  ;; Default commit editor opening in insert mode
-  (add-hook 'with-editor-mode-hook 'evil-insert-state)
-
-  ;; (evil-define-key 'normal with-editor-mode-map
-  ;;   (kbd "RET") 'with-editor-finish
-  ;;   [escape] 'with-editor-cancel
-  ;;   )
-  ;; (evil-define-key 'normal git-rebase-mode-map
-  ;;   "l" 'git-rebase-show-commit
-  ;;   )
-  ;; )
-)
-
-(after! magit
-  (setq magit-diff-options (quote ("--word-diff")))
-  (setq magit-diff-refine-hunk 'all)
-  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
-                                        ;(setq projectile-switch-project-action 'magit-status) ;;?
-  )
-#+END_SRC
-
-* TEST Disabled
+* TODO Disabled
 #+BEGIN_SRC emacs-lisp
 ;(map! :leader
 ;      (:when (featurep! :completion ivy)
@@ -283,12 +283,24 @@
 ;;   (buffer-face-set 'default))
 
 ;; (add-hook 'buffer-list-update-hook 'highlight-selected-window)
-#+END_SRC
 
-* TEST 3
-#+BEGIN_SRC emacs-lisp
 
 ;; (c-add-style "doom" ((c-offsets-alist (case-label . 0))))
 ;; (c-add-style "doom" (case-label . 0))
 ;; (c-set-offset 'case-label '0)
+#+END_SRC
+
+* TODO empty
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+* TODO empty
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+* TODO empty
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+* TODO empty
+#+BEGIN_SRC emacs-lisp
 #+END_SRC
