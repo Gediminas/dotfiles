@@ -86,10 +86,22 @@
 (after! solaire-mode
   ;;(set-face-attribute 'solaire-hl-line-face nil :background "#555555") ;active line
   ;;(set-face-attribute 'hl-line nil :background "#000000") ;active line
-  (set-face-attribute 'region nil :background "#0048aa") ; selection
-  (set-face-attribute 'evil-ex-search nil :foreground "black" :background "#ffff00") ;search, when typing
-  (set-face-attribute 'lazy-highlight nil :foreground "black" :background "#aaaa00") ;search, selected
+  ;; (set-face-attribute 'region nil :background "#0048aa") ; selection
+  ;; (set-face-attribute 'evil-ex-search nil :foreground "black" :background "#ffff00") ;search, when typing
+  ;; (set-face-attribute 'lazy-highlight nil :foreground "black" :background "#aaaa00") ;search, selected
+
+  ;; (set-face-attribute 'outline-1 nil :foreground "yellow")
+  (set-face-font 'outline-1 (font-spec :family "Hack" :size 16))
+)
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic)
+  '(region                 :background "#0048aa") ; selection
+  '(evil-ex-search         :foreground "black" :background "#ffff00") ;search, when typing
+  '(lazy-highlight         :foreground "black" :background "#aaaa00") ;search, selected
+  '(outline-1              :foreground "yellow" :family "Hack" :size 16)
   )
+
 #+END_SRC
 
 * Settings
@@ -125,7 +137,6 @@
 (after! org
   (setq org-startup-folded t)
   (setq org-directory "~/org/") ;; It must be set before org loads!
-  (set-face-font 'outline-1 (font-spec :family "Hack" :size 16))
   (map!
    (:map org-mode-map
     :localleader
