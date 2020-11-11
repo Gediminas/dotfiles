@@ -72,6 +72,7 @@
 #+BEGIN_SRC emacs-lisp
 (global-hl-line-mode 1)
 (global-yascroll-bar-mode 1)
+(blink-cursor-mode 1)
 
 ;; (set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
 ;; (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
@@ -105,6 +106,8 @@
   '(outline-1              :foreground "yellow" :family "Hack" :size 16)
   )
 
+;; (add-hook 'doom-switch-buffer-hook '+nav-flash/blink-cursor)
+;; (add-hook 'doom-switch-buffer-hook '+nav-flash/blink-cursor)
 #+END_SRC
 
 * Settings
@@ -128,6 +131,8 @@
    treemacs-is-never-other-window  t
    ;; treemacs-file-follow-delay      0.2
    )
+
+  (treemacs-resize-icons 11)
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
   (treemacs-git-mode 'extended)
