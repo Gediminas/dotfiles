@@ -71,6 +71,8 @@
 * GUI
 #+BEGIN_SRC emacs-lisp
 (global-hl-line-mode 1)
+(global-yascroll-bar-mode 1)
+
 ;; (set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
 ;; (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
 
@@ -93,6 +95,7 @@
   ;; (set-face-attribute 'outline-1 nil :foreground "yellow")
   (set-face-font 'outline-1 (font-spec :family "Hack" :size 16))
 )
+
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic)
@@ -106,9 +109,11 @@
 
 * Settings
 #+BEGIN_SRC emacs-lisp
+(toggle-truncate-lines 1)
 (setq display-line-numbers-type 'relative)
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode) ;; Disable smartparents
 #+END_SRC
+
 * Comments
 #+BEGIN_SRC emacs-lisp
 (setq-hook! 'js2-mode-hook comment-line-break-function nil) ;; Do not continue comment on new line
