@@ -12,6 +12,8 @@ export LC_ALL=en_US.UTF-8
 export PATH=/usr/local/bin:$PATH:~/scripts
 export PATH="/Users/gds/.deno/bin:$PATH"
 
+export RUST_SRC_PATH="~/dev/track/rust"
+
 # Enable Vim mode in ZSH
 bindkey -v
 plugins=(brew git github emacs node npm osx)
@@ -174,5 +176,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-RUST_SRC_PATH = ~/dev/track/rust
