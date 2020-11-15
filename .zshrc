@@ -12,7 +12,7 @@ export LC_ALL=en_US.UTF-8
 export PATH=/usr/local/bin:$PATH:~/scripts
 export PATH="/Users/gds/.deno/bin:$PATH"
 
-export RUST_SRC_PATH="~/dev/track/rust"
+export RUST_SRC_PATH="~/dev/track/rust/src"
 
 # Enable Vim mode in ZSH
 bindkey -v
