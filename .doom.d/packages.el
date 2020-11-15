@@ -13,7 +13,6 @@
 (package! treemacs-icons-dired)
 (package! winum)
 (package! org-ref)
-(package! org-ref)
 (package! yascroll)
 ;(package! auto-indent-mode)
 
