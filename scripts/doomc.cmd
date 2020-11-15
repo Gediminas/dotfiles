@@ -1,1 +1,1 @@
-%HOMEPATH%/sub/doom-emacs/bin/doom %*
+%HOME%\sub\doom-emacs\bin\doom %*
