@@ -62,8 +62,8 @@ Space & e::Send "{LCtrl down}{Tab}{LCtrl up}"
 ;;     Send "{Blind}^s"
 ;;   }
 ;; }
-;; Space & s::Send "{LAlt down}{Tab}{LAlt up}"
-Space & s::^s
+
+Space & s::Send "{LAlt down}{Tab}{LAlt up}"
 Space & w::^s
 
 Space & a::AltTab
