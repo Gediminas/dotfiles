@@ -225,7 +225,7 @@
 
 * FIX -> autoload
 #+BEGIN_SRC emacs-lisp
-(setq persp-auto-save-fname "_workspaces")
+; (setq persp-auto-save-fname "_workspaces")
 #+END_SRC
 
 * FIX -> word
