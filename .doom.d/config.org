@@ -244,6 +244,8 @@
       :nvi "C-s"     #'save-buffer
       :nvi "C-j"     #'previous-buffer
       :nvi "C-k"     #'next-buffer
+       :nv "C-n"     #'flycheck-next-error
+       :nv "C-p"     #'flycheck-previous-error
       (:when (featurep! :ui workspaces)
        :nv "gt"   #'+workspace/other
        )
