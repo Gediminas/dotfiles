@@ -71,8 +71,10 @@
 * GUI
 #+BEGIN_SRC emacs-lisp
 (global-hl-line-mode 1)
-(global-yascroll-bar-mode 1)
-(blink-cursor-mode 1)
+
+(after! yascroll
+  (global-yascroll-bar-mode 1)
+)
 
 ;; (set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
 ;; (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4

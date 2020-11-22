@@ -12,12 +12,12 @@
 (package! spacemacs-theme)
 (package! treemacs-icons-dired)
 (package! winum)
-(package! org-ref)
-(package! yascroll)
+;; (package! org-ref)
+;; (package! yascroll)
 ;(package! auto-indent-mode)
 
-(when (featurep! :completion company)
-  (package! company-tabnine))
+;; (when (featurep! :completion company)
+;;   (package! company-tabnine))
 
 (if (eq system-type 'windows-nt)
    (package! ahk-mode))
