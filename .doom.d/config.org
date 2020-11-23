@@ -324,6 +324,18 @@
 
 * TODO empty
 #+BEGIN_SRC emacs-lisp
+(after! persp-mode
+    (setq +workspaces-name 'Doom) ; name seen in the taskbar when nothing is open
+
+    ;; see documentation for other possible values
+    (setq persp-add-buffer-on-after-change-major-mode t)
+
+    ;; above setting will not discriminate and bring ephemeral buffers e.g.
+    ;; *magit* which you probably don't want. You can filter them out.
+    (add-hook 'persp-common-buffer-filter-functions
+    ;; there is also `persp-add-buffer-on-after-change-major-mode-filter-functions'
+        #'(lambda (b) (string-prefix-p "*" (buffer-name b))))
+    )
 #+END_SRC
 
 * TODO empty
