@@ -50,43 +50,22 @@
 
 * UI -> Theme
 #+BEGIN_SRC emacs-lisp
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
 
-(setq doom-theme 'doom-zenburn)
+(setq doom-theme 'doom-zenburn) ; or manually load with `load-theme'
 
 ;; (setq doom-zenburn-brighter-modeline t)
 ;; (setq doom-zenburn-brighter-comments nil)
 ;; (setq doom-zenburn-padded-modeline nil)
 ;; (setq doom-zenburn-comment-bg nil)
-#+END_SRC
 
-* UI -> Splash
-#+BEGIN_SRC emacs-lisp
-(setq fancy-splash-image "~/.doom.d/doom.png ")
-#+END_SRC
-
-* UI -> Misc
-#+BEGIN_SRC emacs-lisp
-(global-hl-line-mode 1)
-
-(after! yascroll
-  (global-yascroll-bar-mode 1)
-)
-
-;; (set-face-attribute 'region nil :background "#0048CC") ;DeepSkyBlue4
-;; (set-face-attribute 'region nil :foreground nil) ;DeepSkyBlue4
-
-(setq evil-split-window-below t
-      evil-vsplit-window-right t)
-
-;; (setq frame-title-format '(:eval
-;;                            (let ((project-name (projectile-project-name)))
-;;                              (if (string= "-" project-name)
-;;                                  (format "%s" "%b")
-;;                                (format "%s" project-name)))))
-(setq frame-title-format 'persp-last-persp-name)
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic)
+  '(region                 :background "#0048aa") ; selection
+  '(evil-ex-search         :foreground "black" :background "#ffff00") ;search, when typing
+  '(lazy-highlight         :foreground "black" :background "#aaaa00") ;search, selected
+  '(outline-1              :foreground "yellow" :family "Hack" :size 16)
+  )
 
 (after! solaire-mode
   ;;(set-face-attribute 'solaire-hl-line-face nil :background "#555555") ;active line
@@ -99,17 +78,32 @@
   (set-face-font 'outline-1 (font-spec :family "Hack" :size 16))
 )
 
-(custom-set-faces!
-  '(font-lock-comment-face :slant italic)
-  '(font-lock-keyword-face :slant italic)
-  '(region                 :background "#0048aa") ; selection
-  '(evil-ex-search         :foreground "black" :background "#ffff00") ;search, when typing
-  '(lazy-highlight         :foreground "black" :background "#aaaa00") ;search, selected
-  '(outline-1              :foreground "yellow" :family "Hack" :size 16)
-  )
+#+END_SRC
 
-;; (add-hook 'doom-switch-buffer-hook '+nav-flash/blink-cursor)
-;; (add-hook 'doom-switch-buffer-hook '+nav-flash/blink-cursor)
+* UI -> Bells & Whistles
+#+BEGIN_SRC emacs-lisp
+
+(global-hl-line-mode 1)
+
+(after! yascroll
+  (global-yascroll-bar-mode 1)
+)
+
+(setq fancy-splash-image "~/.doom.d/doom.png ")
+
+(setq frame-title-format 'persp-last-persp-name)
+;; (setq frame-title-format '(:eval
+;;                            (let ((project-name (projectile-project-name)))
+;;                              (if (string= "-" project-name)
+;;                                  (format "%s" "%b")
+;;                                (format "%s" project-name)))))
+
+#+END_SRC
+
+* UI -> Behavior
+#+BEGIN_SRC emacs-lisp
+(setq evil-split-window-below t
+      evil-vsplit-window-right t)
 #+END_SRC
 
 * Settings
