@@ -23,7 +23,12 @@
 ;; they are implemented.
 #+END_SRC
 
-* Theme
+* OS -> Mac
+#+BEGIN_SRC emacs-lisp
+(setq mac-command-modifier 'control)
+#+END_SRC
+
+* UI -> Font
 #+BEGIN_SRC emacs-lisp
 
 ;; FONT
@@ -41,10 +46,10 @@
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 (setq doom-font (font-spec :family "hack" :size 12))
+#+END_SRC
 
-
-;; THEME
-
+* UI -> Theme
+#+BEGIN_SRC emacs-lisp
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
@@ -55,20 +60,14 @@
 ;; (setq doom-zenburn-brighter-comments nil)
 ;; (setq doom-zenburn-padded-modeline nil)
 ;; (setq doom-zenburn-comment-bg nil)
-
-
-;; SPLASH
-
-(setq fancy-splash-image "~/.doom.d/doom.png ")
-
 #+END_SRC
 
-* MacOS
+* UI -> Splash
 #+BEGIN_SRC emacs-lisp
-(setq mac-command-modifier 'control)
+(setq fancy-splash-image "~/.doom.d/doom.png ")
 #+END_SRC
 
-* GUI
+* UI -> Misc
 #+BEGIN_SRC emacs-lisp
 (global-hl-line-mode 1)
 

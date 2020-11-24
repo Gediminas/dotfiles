@@ -12,8 +12,8 @@
 (package! spacemacs-theme)
 (package! treemacs-icons-dired)
 (package! winum)
+(package! yascroll)
 ;; (package! org-ref)
-;; (package! yascroll)
 ;(package! auto-indent-mode)
 
 ;; (when (featurep! :completion company)
