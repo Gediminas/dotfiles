@@ -106,7 +106,7 @@
       evil-vsplit-window-right t)
 #+END_SRC
 
-* Settings
+* UI -> Settings
 #+BEGIN_SRC emacs-lisp
 (toggle-truncate-lines 1)
 (setq display-line-numbers-type 'relative)
@@ -118,7 +118,7 @@
 (setq-hook! 'js2-mode-hook comment-line-break-function nil) ;; Do not continue comment on new line
 #+END_SRC
 
-* -> Tree
+* Module -> Tree
 #+BEGIN_SRC emacs-lisp
 (after! treemacs
   (setq
@@ -138,7 +138,7 @@
   )
 #+END_SRC
 
-* -> Org
+* Module -> Org
 #+BEGIN_SRC emacs-lisp
 (after! org
   (setq org-startup-folded t)
@@ -152,7 +152,7 @@
     )))
 #+END_SRC
 
-* -> Git
+* Module -> Git
 #+BEGIN_SRC emacs-lisp
 (after! evil-magit
   (setq magit-log-margin    '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
@@ -178,7 +178,7 @@
   )
 #+END_SRC
 
-* -> Windows
+* Module -> Windows
 #+BEGIN_SRC emacs-lisp
 (after! winum
   (defun winum-assign-0-to-treemacs ()
@@ -202,14 +202,14 @@
 
 #+END_SRC
 
-* -> Auto completion
+* Module -> Auto completion
 #+BEGIN_SRC emacs-lisp
 (after! company
   (add-to-list 'company-backends 'company-tabnine))
 
 #+END_SRC
 
-* -> Which-key
+* Module -> Which-key
 #+BEGIN_SRC emacs-lisp
 (after! which-key
   ;; Compact which-key
@@ -219,7 +219,24 @@
   )
 #+END_SRC
 
-* FIX -> autoload
+* Module -> workspace
+#+BEGIN_SRC emacs-lisp
+(after! persp-mode
+  ;; FIX buffer not added to workspace (?)
+    (setq +workspaces-name 'Doom) ; name seen in the taskbar when nothing is open
+
+    ;; see documentation for other possible values
+    (setq persp-add-buffer-on-after-change-major-mode t)
+
+    ;; above setting will not discriminate and bring ephemeral buffers e.g.
+    ;; *magit* which you probably don't want. You can filter them out.
+    (add-hook 'persp-common-buffer-filter-functions
+    ;; there is also `persp-add-buffer-on-after-change-major-mode-filter-functions'
+        #'(lambda (b) (string-prefix-p "*" (buffer-name b))))
+    )
+#+END_SRC
+
+* //FIX -> autoload
 #+BEGIN_SRC emacs-lisp
 ; (setq persp-auto-save-fname "_workspaces")
 #+END_SRC
@@ -313,22 +330,6 @@
 ;; (c-add-style "doom" ((c-offsets-alist (case-label . 0))))
 ;; (c-add-style "doom" (case-label . 0))
 ;; (c-set-offset 'case-label '0)
-#+END_SRC
-
-* TODO empty
-#+BEGIN_SRC emacs-lisp
-(after! persp-mode
-    (setq +workspaces-name 'Doom) ; name seen in the taskbar when nothing is open
-
-    ;; see documentation for other possible values
-    (setq persp-add-buffer-on-after-change-major-mode t)
-
-    ;; above setting will not discriminate and bring ephemeral buffers e.g.
-    ;; *magit* which you probably don't want. You can filter them out.
-    (add-hook 'persp-common-buffer-filter-functions
-    ;; there is also `persp-add-buffer-on-after-change-major-mode-filter-functions'
-        #'(lambda (b) (string-prefix-p "*" (buffer-name b))))
-    )
 #+END_SRC
 
 * TODO empty
