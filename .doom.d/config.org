@@ -142,6 +142,7 @@
 #+BEGIN_SRC emacs-lisp
 (after! org
   (setq org-startup-folded t)
+  (setq org-startup-with-inline-images t)
   (setq org-directory "~/org/") ;; It must be set before org loads!
   (map!
    (:map org-mode-map
