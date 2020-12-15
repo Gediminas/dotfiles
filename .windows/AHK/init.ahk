@@ -81,7 +81,7 @@ F15::RShift
 ; RButton & WheelDown::Send ^#{Right}
 ; RButton::Send {RButton}
 
-Tab & q::{
+\ & q::{
   If WinActive("ahk_exe emacs.exe") {
     SendInput "{Esc}:w{Enter}"
   } Else If WinActive("ahk_exe emacsclient.exe") {
@@ -94,7 +94,7 @@ Tab & q::{
   Reload
   Return
 }
-$*Tab::Send "{Blind}{Tab}"
+$*\::Send "{Blind}{Tab}"
 
   
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

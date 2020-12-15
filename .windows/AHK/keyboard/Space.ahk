@@ -10,8 +10,8 @@
 ; Tab & LCtrl:: SendInput "#{Tab}"
 ; Tab & F13:: SendInput "{LWin}"
 
-Tab & F3:: SendInput "#{Tab}"
-Tab & F4:: SendInput "{LWin}"
+\ & BS:: SendInput "#{Tab}"
+\ & Enter:: SendInput "{LWin}"
 
 Space & F3:: SendInput "#{Tab}"
 Space & F4:: SendInput "{LWin}"
@@ -85,15 +85,17 @@ Space & z::^z
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; RIGHT
 
+Space & y::Send "{Blind}{Space}"
+
+Space & u::Send "{Blind}^{Left}"
+Space & i::Send "{Blind}^{Right}"
+Space & o::Send "{Blind}{Home}"
+Space & p::Send "{Blind}{End}"
+
 Space & h::Send "{Blind}{Left}"
 Space & j::Send "{Blind}{Down}"
 Space & k::Send "{Blind}{Up}"
 Space & l::Send "{Blind}{Right}"
-
-Space & y::Send "{Blind}{Home}"
-Space & u::Send "{Blind}^{Left}"
-Space & i::Send "{Blind}^{Right}"
-Space & o::Send "{Blind}{End}"
 
 Space & n:: Send "{Blind}{Esc}"
 Space & b:: Send "{Enter}"
