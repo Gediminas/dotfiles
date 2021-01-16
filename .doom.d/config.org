@@ -289,6 +289,11 @@
        :n "8" #'winum-select-window-8
        :n "9" #'winum-select-window-9
        )
+
+      (:when (featurep! :ui treemacs)
+       :n "0" #'treemacs-select-window
+       )
+
       )
 #+END_SRC
 
@@ -335,6 +340,17 @@
 
 * TODO empty
 #+BEGIN_SRC emacs-lisp
+
+  (setq javascript-indent-level 2)
+  (setq js-indent-level 2)
+  (setq js2-basic-offset 2)
+  (setq web-mode-indent-style 2)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+
+; (setq deft-directory "/asset/notes")
+; (setq deft-directory "/files/notes")
 #+END_SRC
 
 * TODO empty
