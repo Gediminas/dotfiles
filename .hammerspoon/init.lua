@@ -9,9 +9,9 @@ caffeine = hs.menubar.new()
 if caffeine then
   function setCaffeineDisplay(state)
     if state then
-      caffeine:setTitle("⚫️")
-    else
       caffeine:setTitle("🟢")
+    else
+      caffeine:setTitle("⚫️")
     end
   end
 
@@ -41,6 +41,7 @@ spoon.HoldToQuit:start()
 -- Test
 
 local hyper = { "cmd", "alt", "ctrl" }
+--local hyper = { "F15" }
 
 local applicationHotkeys = {
   s = 'Safari',
