@@ -38,6 +38,21 @@ wifiWatcher:start()
 hs.loadSpoon("HoldToQuit")
 spoon.HoldToQuit:start()
 
+-- Test
+
+local hyper = { "cmd", "alt", "ctrl" }
+
+local applicationHotkeys = {
+  s = 'Safari',
+  a = 'iTerm',
+}
+
+for key, app in pairs(applicationHotkeys) do
+  hs.hotkey.bind(hyper, key, function()
+    hs.application.launchOrFocus(app)
+  end)
+end
+
 -- END
 
 hs.alert.show("Hammerspoon loaded")

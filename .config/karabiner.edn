@@ -47,22 +47,23 @@
       [:##k                   :##up_arrow]
       [:##l                   :##right_arrow]
 
+      [:y                     :spacebar]
       [:b                     :return_or_enter]
       [:n                     :escape]
       [:##m                   :##delete_or_backspace]
       [:#Sdelete_or_backspace :delete_forward]
 
       [:comma                 :!Odelete_or_backspace [:!appRdc]]
-      [:#Sy                   :!C#Sleft_arrow        [:!appRdc]]
       [:#Su                   :!O#Sleft_arrow        [:!appRdc]]
       [:#Si                   :!O#Sright_arrow       [:!appRdc]]
-      [:#So                   :!C#Sright_arrow       [:!appRdc]]
+      [:#So                   :!C#Sleft_arrow        [:!appRdc]]
+      [:#Sp                   :!C#Sright_arrow       [:!appRdc]]
 
       [:comma                 :!Tdelete_or_backspace [:appRdc]]
-      [:#Sy                   :#Shome                [:appRdc]]
       [:#Su                   :!T#Sleft_arrow        [:appRdc]]
       [:#Si                   :!T#Sright_arrow       [:appRdc]]
-      [:#So                   :#Send                 [:appRdc]]
+      [:#So                   :#Shome                [:appRdc]]
+      [:#Sp                   :#Send                 [:appRdc]]
 
       [:t                     :page_up]
       [:g                     :page_down]
