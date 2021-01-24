@@ -1327,21 +1327,21 @@
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
-              "name" : "sym-mode",
+              "name" : "cod-mode",
               "value" : 1
             }
           } ],
           "from" : {
-            "key_code" : "comma"
+            "key_code" : "period"
           },
           "to_after_key_up" : [ {
             "set_variable" : {
-              "name" : "sym-mode",
+              "name" : "cod-mode",
               "value" : 0
             }
           } ],
           "to_if_alone" : [ {
-            "key_code" : "comma"
+            "key_code" : "period"
           } ],
           "conditions" : [ {
             "name" : "appRdcs",
@@ -1356,21 +1356,21 @@
           "type" : "basic",
           "to" : [ {
             "set_variable" : {
-              "name" : "cod-mode",
+              "name" : "sym-mode",
               "value" : 1
             }
           } ],
           "from" : {
-            "key_code" : "period"
+            "key_code" : "comma"
           },
           "to_after_key_up" : [ {
             "set_variable" : {
-              "name" : "cod-mode",
+              "name" : "sym-mode",
               "value" : 0
             }
           } ],
           "to_if_alone" : [ {
-            "key_code" : "period"
+            "key_code" : "comma"
           } ],
           "conditions" : [ {
             "name" : "appRdcs",
@@ -2459,6 +2459,62 @@
           },
           "to" : [ {
             "key_code" : "right_shift"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "escape"
+          } ],
+          "from" : {
+            "key_code" : "caps_lock"
+          },
+          "to" : [ {
+            "key_code" : "left_option",
+            "modifiers" : [ "left_control", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          }, {
+            "name" : "num-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "cod-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "sym-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          } ],
+          "type" : "basic"
+        }, {
+          "to_if_alone" : [ {
+            "key_code" : "semicolon"
+          } ],
+          "from" : {
+            "key_code" : "semicolon"
+          },
+          "to" : [ {
+            "key_code" : "left_option",
+            "modifiers" : [ "left_control", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          }, {
+            "name" : "num-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "cod-mode",
+            "value" : 1,
+            "type" : "variable_unless"
+          }, {
+            "name" : "sym-mode",
+            "value" : 1,
+            "type" : "variable_unless"
           } ],
           "type" : "basic"
         }, {

@@ -1,3 +1,18 @@
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; P  | caps_lock
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
+
 {
  :profiles {:G {:default true
                 :sim     300
@@ -131,7 +146,11 @@
     ;[:non_us_backslash :vk_none]
 
     :!appRdc
-    ;[:caps_lock [:!CTOleft_shift] [:!num-mode :!cod-mode :!sym-mode] {:alone :escape}]
+    [:caps_lock   [:!STleft_option]  [:!num-mode :!cod-mode :!sym-mode] {:alone :escape}]
+
+    ;Hyper
+    :!appRdc
+    [:semicolon [:!STleft_option] [:!num-mode :!cod-mode :!sym-mode] {:alone :semicolon}]
 
     :appRdc
     [:left_control  :left_command]
