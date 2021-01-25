@@ -51,20 +51,25 @@ Activate(exe, clss, path:=False) {
 
     ;for this_id in ids {
         ;this_id := ids[1]
+
+    Last_id := ''
     Loop ids.Length {
         i := ids.Length + 1 - A_Index
         this_id := ids[i]
         this_title := WinGetTitle(this_id)
-        this_class := WinGetClass(this_id)
-        this_ExStyle := WinGetExStyle(this_id)
+        ; this_class := WinGetClass(this_id)
+        ; this_ExStyle := WinGetExStyle(this_id)
         if (this_title) {
             WinActivate this_id
+            Last_id := this_id
             ;Tooltip "i: " . i . "`nTITLE: " . this_title . "`nCLASS: " . this_class, 0, 0
             ;Sleep 5000
             ;break
         }
     }
-
+    ; if (Last_id) {
+    ;     WinActivate Last_id
+    ; }
 }
 
 ActivateBottom(exe, path:=False) {
