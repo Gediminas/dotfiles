@@ -29,55 +29,41 @@ $*`;::Send("{Blind}`;")
 
 Activate(exe, clss, path:=False) {
 
-    if WinExist("ahk_exe" . exe) {
-        try {
-            ; count := WinGetCount("ahk_exe " . exe . " ahk_class " . clss)
-            ; ToolTip "count: " . count, 0, 0
+    ; if WinExist("ahk_exe" . exe) {
+    ;     try {
+    ;         ; count := WinGetCount("ahk_exe " . exe . " ahk_class " . clss)
+    ;         ; ToolTip "count: " . count, 0, 0
 
-            ; WinActivate("ahk_exe " . exe . " ahk_class " . clss)
+    ;         ; WinActivate("ahk_exe " . exe . " ahk_class " . clss)
 
-            IDLast := WinGetIDLast("ahk_exe " . exe . " ahk_class " . clss)
-            WinActivate("ahk_id" . IDLast)
-        } catch e {
-            ToolTip "Error ", 0, 0
-        }
-    } else {
-        ToolTip exe . " not lauched", 0, 0
-    }
-
-    ; ; ids := WinGetList("ahk_exe" . exe,, "Program Manager")
-    ; ids := WinGetList("ahk_exe " . exe . " ahk_class " . clss,, "Program Manager")
-    ; Tooltip "count: " . ids.Length
-    ; for this_id in ids {
-    ;     this_title := WinGetTitle(this_id)
-    ;     this_class := WinGetClass(this_id)
-    ;     this_ExStyle := WinGetExStyle(this_id)
-    ;     if (this_title) {
-    ;         WinActivateBottom this_id
-    ;         Tooltip "TITLE: " . this_title . "`nCLASS: " . this_class, 0, 0
-    ;         Sleep 5000
-    ;         ; break
+    ;         IDLast := WinGetIDLast("ahk_exe " . exe . " ahk_class " . clss)
+    ;         WinActivate("ahk_id" . IDLast)
+    ;     } catch e {
+    ;         ToolTip "Error ", 0, 0
     ;     }
-    ;     ; this_class := WinGetClass(this_id)
-    ;     ; this_title := WinGetTitle(this_id)
-    ;     ; this_Style := WinGetStyle(this_id)
-    ;     ; this_ExStyle := WinGetExStyle(this_id)
-    ;     ; Result := MsgBox(
-    ;     ;     (
-    ;     ;         "Visiting All Windows
-    ;     ;         " A_Index " of " ids.Length "
-    ;     ;         ahk_id " this_id "
-    ;     ;         ahk_class " this_class "
-    ;     ;         style " this_Style "
-    ;     ;         ExStyle " this_ExStyle "
-    ;     ;         " this_title "
-
-    ;     ;     Continue?"
-    ;     ; ),, 4)
-    ;     ; if (Result = "No")
-    ;     ;     break
+    ; } else {
+    ;     ToolTip exe . " not lauched", 0, 0
     ; }
-    ; Tooltip
+
+    ; ids := WinGetList("ahk_exe" . exe,, "Program Manager")
+    ids := WinGetList("ahk_exe " . exe . " ahk_class " . clss,, "Program Manager")
+    ;Tooltip "count: " . ids.Length
+
+    ;for this_id in ids {
+        ;this_id := ids[1]
+    Loop ids.Length {
+        i := ids.Length + 1 - A_Index
+        this_id := ids[i]
+        this_title := WinGetTitle(this_id)
+        this_class := WinGetClass(this_id)
+        this_ExStyle := WinGetExStyle(this_id)
+        if (this_title) {
+            WinActivate this_id
+            ;Tooltip "i: " . i . "`nTITLE: " . this_title . "`nCLASS: " . this_class, 0, 0
+            ;Sleep 5000
+            ;break
+        }
+    }
 
 }
 

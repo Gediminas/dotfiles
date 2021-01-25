@@ -6,6 +6,9 @@
 ; SendMode Input ; superior speed and reliability.
 ; SetKeyDelay, -1, -1, -1
 
+#WinActivateForce
+DetectHiddenWindows 1
+
 
 ;; ; https://github.com/ahkscript/awesome-AutoHotkey
 ;; ; https://autohotkey.com/docs/KeyList.htm
@@ -62,6 +65,7 @@ SC056::LShift ;\ nm apple magic
 ; #Include keyboard\Num.ahk
 #Include keyboard\Sym.ahk
 #Include keyboard\Cod.ahk
+#Include keyboard\Hyper.ahk
 
 ;#Include keyboard\RAlt.ahk
 ;#Include keyboard\Snp.ahk
