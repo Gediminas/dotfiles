@@ -50,20 +50,21 @@ local windows = {
 	Q = "Anki",                     -- Questionaire
 	W = "Messenger",                -- Write BS
 	E = "Emacs",                    -- Editor
-	R = "R not assigned",           -- R
+	R = "Double Commander",
 	T = "Microsoft Remote Desktop", -- Teleport
 	Y = "Y not assigned",           -- Y
 
 	A = "A not assigned",           -- A
   --S                             -- Switch app window
-	D = "XCode",                    -- Dev Environment
+	D = "Emacs",                    -- Editor
 	F = "Safari",                   -- First Browser
 	G = "Google Chrome",            -- Google Browser
 
 	Z = "Mail",
-	X = "Double Commander",
+	X = "XCode",                    -- Dev Environment
 	C = "iTerm2",
-	V = "Code",                     -- V = "Visual Studio Code",
+	V = "Google Chrome",            -- View Result
+	-- V = "Code",                     -- V = "Visual Studio Code",
 	B = "B not assigned",           -- B
 
 	M = "Messenger",
@@ -76,7 +77,7 @@ local windows = {
 -- will take precedence when opening the app.
 local windowLaunchNames = {
 	-- currently just VS Code
-	V = "Visual Studio Code",
+	-- V = "Visual Studio Code",
 }
 
 local prevApp = nil
