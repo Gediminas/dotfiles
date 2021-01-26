@@ -52,10 +52,10 @@ local windows = {
 	Q = "Messenger",
 	W = "Double Commander",
 	E = "Emacs",
-	R = "Safari",
+	R = "Google Chrome",
 	T = "iTerm2",
-	Y = "Microsoft Remote Desktop",
-	G = "Google Chrome",
+	Y = "soft Remote Desktop",
+	G = "Safari",
 
 	-- Y = "Y not assigned",           -- Y
 
