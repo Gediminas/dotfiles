@@ -62,7 +62,7 @@
       [:##k                   :##up_arrow]
       [:##l                   :##right_arrow]
 
-      [:y                     :spacebar]
+      ;; [:y                     :spacebar]
       [:b                     :return_or_enter]
       [:n                     :escape]
       [:##m                   :##delete_or_backspace]
@@ -80,10 +80,8 @@
       [:#So                   :#Shome                [:appRdc]]
       [:#Sp                   :#Send                 [:appRdc]]
 
-      [:t                     :page_up]
-      [:g                     :page_down]
-
-      [:#Se                   :!T#Stab]
+      ;; [:#Se                   :!T#Stab]
+      [:#Sa                   :!T#Stab]
 
       [:w                     :!Cs [:!appRdc :!appEmacs]]
       [:w                     :!Ts [:appRdc]]
@@ -91,12 +89,12 @@
 
       [:!Rw                   :!T!Ss [:appRdc]]
 
-      [:#Sz                   :!C#Sz [:!appRdc]]
+      ;; [:#Sz                   :!C#Sz [:!appRdc]]
       [:#Sx                   :!C#Sx [:!appRdc]]
       [:#Sc                   :!C#Sc [:!appRdc]]
       [:#Sv                   :!C#Sv [:!appRdc]]
 
-      [:#Sz                   :!T#Sz [:appRdc]]
+      ;; [:#Sz                   :!T#Sz [:appRdc]]
       [:#Sx                   :!T#Sx [:appRdc]]
       [:#Sc                   :!T#Sc [:appRdc]]
       [:#Sv                   :!T#Sv [:appRdc]]
@@ -116,15 +114,23 @@
       ;[:period                :!Cperiod]
       ;[:slash                 :!Cslash]
 
-      [:s                   [:!C#Stab :return_or_enter] [:!appRdc]]
-      [:s                   [:!O#Stab :escape]          [:appRdc]]
-
-      [:a                   :!C#Stab                    [:!appRdc]]
-      [:a                   :!O#Stab                    [:appRdc]]
+      [:s                   [:!Ctab :return_or_enter] [:!appRdc]]
+      [:s                   [:!Otab :escape]          [:appRdc]]
+      [:!Rs                   :!Ctab                    [:!appRdc]]
+      [:!Rs                   :!Otab                    [:appRdc]]
 
       [:tab                 :!Ctab                    [:!appRdc]]
       [:tab                 :!Otab                    [:appRdc]]
 
+      [:#Cz :!STO#Cz [:!appRdc]]
+      ;; [:#Ca :!STO#Ca [:!appRdc]]
+      [:#Cq :!STO#Cq [:!appRdc]]
+      ;; [:#Cw :!STO#Cw [:!appRdc]]
+      [:#Ce :!STO#Ce [:!appRdc]]
+      [:#Cr :!STO#Cr [:!appRdc]]
+      [:#Ct :!STO#Ct [:!appRdc]]
+      [:#Cg :!STO#Cg [:!appRdc]]
+      [:#Cy :!STO#Cy [:!appRdc]]
     ]
    }
 
