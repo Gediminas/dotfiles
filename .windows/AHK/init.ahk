@@ -6,7 +6,8 @@
 ; SendMode Input ; superior speed and reliability.
 ; SetKeyDelay, -1, -1, -1
 
-#WinActivateForce
+; #WinActivateForce
+SetTitleMatchMode "Fast"
 DetectHiddenWindows 1
 
 
@@ -85,6 +86,7 @@ F15::RShift
 ; RButton & WheelDown::Send ^#{Right}
 ; RButton::Send {RButton}
 
+Space & q::
 \ & q::{
   If WinActive("ahk_exe emacs.exe") {
     SendInput "{Esc}:w{Enter}"

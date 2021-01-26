@@ -48,7 +48,7 @@ Space & =::Send "{Blind}{F12}"
 ;;; LEFT
 
 Space & Tab::AltTab
-Space & e::Send "{LCtrl down}{Tab}{LCtrl up}"
+; Space & e::Send "{LCtrl down}{Tab}{LCtrl up}"
 
 
 ;; Space & w::{
@@ -63,10 +63,10 @@ Space & e::Send "{LCtrl down}{Tab}{LCtrl up}"
 ;;   }
 ;; }
 
-Space & s::Send "{LAlt down}{Tab}{LAlt up}"
 Space & w::^s
 
-Space & a::AltTab
+;Space & a::AltTab
+Space & s::Send "{LAlt down}{Tab}{LAlt up}"
 
 Space & d::Send "^#{Left}"
 Space & f::Send "^#{Right}"
@@ -76,7 +76,7 @@ Space & Right::Send "^#{Right}"
 Space & x::^x
 Space & c::^c
 Space & v::^v
-Space & z::^z
+;Space & z::^z
  
 ; Space & t::Send "{Blind}{PgUp}"
 ; Space & g::Send "{Blind}{PgDn}"
