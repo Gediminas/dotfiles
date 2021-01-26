@@ -54,7 +54,7 @@ local windows = {
 	E = "Emacs",
 	R = "Google Chrome",
 	T = "iTerm2",
-	Y = "soft Remote Desktop",
+	Y = "Microsoft Remote Desktop",
 	G = "Safari",
 
 	-- Y = "Y not assigned",           -- Y
