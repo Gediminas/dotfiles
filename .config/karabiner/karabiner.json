@@ -1642,19 +1642,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "y"
-          },
-          "to" : [ {
-            "key_code" : "spacebar"
-          } ],
-          "conditions" : [ {
-            "name" : "spc-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "b"
           },
           "to" : [ {
@@ -1905,33 +1892,7 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "t"
-          },
-          "to" : [ {
-            "key_code" : "page_up"
-          } ],
-          "conditions" : [ {
-            "name" : "spc-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "g"
-          },
-          "to" : [ {
-            "key_code" : "page_down"
-          } ],
-          "conditions" : [ {
-            "name" : "spc-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "e",
+            "key_code" : "a",
             "modifiers" : {
               "optional" : [ "left_shift" ]
             }
@@ -2022,26 +1983,6 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "z",
-            "modifiers" : {
-              "optional" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "z",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "name" : "spc-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "type" : "frontmost_application_unless",
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
             "key_code" : "x",
             "modifiers" : {
               "optional" : [ "left_shift" ]
@@ -2097,26 +2038,6 @@
             "type" : "variable_if"
           }, {
             "type" : "frontmost_application_unless",
-            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
-          } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "z",
-            "modifiers" : {
-              "optional" : [ "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "z",
-            "modifiers" : [ "left_control" ]
-          } ],
-          "conditions" : [ {
-            "name" : "spc-mode",
-            "value" : 1,
-            "type" : "variable_if"
-          }, {
-            "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
           } ],
           "type" : "basic"
@@ -2356,7 +2277,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "a"
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
           },
           "to" : [ {
             "key_code" : "tab",
@@ -2373,7 +2297,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "a"
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "right_shift" ]
+            }
           },
           "to" : [ {
             "key_code" : "tab",
@@ -2419,6 +2346,146 @@
             "type" : "variable_if"
           }, {
             "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "optional" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "z",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q",
+            "modifiers" : {
+              "optional" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "q",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e",
+            "modifiers" : {
+              "optional" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "e",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "optional" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "r",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "optional" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "optional" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "g",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "type" : "frontmost_application_unless",
+            "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "optional" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "y",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "spc-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          }, {
+            "type" : "frontmost_application_unless",
             "bundle_identifiers" : [ "^com.microsoft.rdc.mac", "^com.teamviewer" ]
           } ],
           "type" : "basic"

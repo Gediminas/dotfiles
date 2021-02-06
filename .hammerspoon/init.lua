@@ -47,28 +47,30 @@ local hyper_shift = {"shift", "ctrl", "alt", "cmd"}
 
 -- define your own shortcut list here
 local windows = {
-	Q = "Anki",                     -- Questionaire
-	W = "Messenger",                -- Write BS
-	E = "Emacs",                    -- Editor
-	R = "Double Commander",
-	T = "Microsoft Remote Desktop", -- Teleport
-	Y = "Y not assigned",           -- Y
+	-- Z = "Mail",
+	Z = "nvALT",
+	Q = "Messenger",
+	W = "Double Commander",
+	E = "Emacs",
+	R = "Google Chrome",
+	T = "iTerm2",
+	Y = "Microsoft Remote Desktop",
+	G = "Safari",
 
-	A = "A not assigned",           -- A
-  --S                             -- Switch app window
-	D = "Emacs",                    -- Editor
-	F = "Safari",                   -- First Browser
-	G = "Google Chrome",            -- Google Browser
+	-- Y = "Y not assigned",           -- Y
 
-	Z = "Mail",
-	X = "XCode",                    -- Dev Environment
-	C = "iTerm2",
-	V = "Google Chrome",            -- View Result
-	-- V = "Code",                     -- V = "Visual Studio Code",
-	B = "B not assigned",           -- B
+  -- --S                             -- Switch app window
+	-- D = "Emacs",                    -- Editor
+	-- F = "Safari",                   -- First Browser
 
-	M = "Messenger",
-	N = "nvALT",
+	-- X = "XCode",                    -- Dev Environment
+	-- C = "iTerm2",
+	-- V = "Google Chrome",            -- View Result
+	-- -- V = "Code",                     -- V = "Visual Studio Code",
+	-- B = "B not assigned",           -- B
+
+	-- M = "Messenger",
+	-- N = "nvALT",
 	['\\'] = "Hammerspoon", -- opens the Hammerspoon console. useful
 }
 
