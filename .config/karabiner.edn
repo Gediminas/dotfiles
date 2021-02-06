@@ -44,6 +44,7 @@
     :rules
     [
       :spc-mode
+      ;; F1 - F12
       [:##1          :##f1]
       [:##2          :##f2]
       [:##3          :##f3]
@@ -57,6 +58,7 @@
       [:##hyphen     :##f11]
       [:##equal_sign :##f12]
 
+      ;; Navigation
       [:##h                   :##left_arrow]
       [:##j                   :##down_arrow]
       [:##k                   :##up_arrow]
