@@ -86,7 +86,7 @@ F15::RShift
 ; RButton & WheelDown::Send ^#{Right}
 ; RButton::Send {RButton}
 
-Space & q::
+Space & Enter::
 \ & q::{
   If WinActive("ahk_exe emacs.exe") {
     SendInput "{Esc}:w{Enter}"
