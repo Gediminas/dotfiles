@@ -3,20 +3,26 @@
 ; Space & r::Activate("Reader",   "^\[ ahk_exe firefox.exe ahk_class MozillaWindowClass", "RegEx")
 
 
+`; & e::Send "{LCtrl down}{Tab}{LCtrl up}"
+
+; Space & a::
 `; & a::Activate("A planner", "^\[MX\] ahk_exe firefox.exe ahk_class MozillaWindowClass", "RegEx")
+
+; Space & z::
 `; & z::Activate("MAIL",      "Thunderbird ahk_exe thunderbird.exe ahk_class MozillaWindowClass", "RegEx")
 
-`; & e::Activate("Emacs",    "ahk_exe emacs.exe ahk_class Emacs", 3)
-`; & d::Activate("Emacs",    "ahk_exe emacs.exe ahk_class Emacs", 3)
-`; & x::Activate("DevEnv",   "ahk_exe devenv.exe ahk_class ^HwndWrapper", "RegEx")
+; Space & q::Activate("Messenger", "^Messenger", "RegEx")
+; Space & w::Activate("DlbCmd",    "^Double Commander", "RegEx")
+; Space & e::Activate("Emacs",     "ahk_exe emacs.exe ahk_class Emacs", 3)
+; Space & r::Activate("ChromeDev", "^[^Y] ahk_exe chrome.exe ahk_class Chrome_WidgetWin_1", "RegEx")
+; Space & t::Activate("Cmd",       "ahk_exe cmd.exe ahk_class ConsoleWindowClass", 3)
+; Space & g::Activate("Browser",   "^\[DEV\] ahk_exe firefox.exe ahk_class MozillaWindowClass", "RegEx")
 
-`; & v::Activate("ViewRes",  "^\[DEV\] ahk_exe firefox.exe ahk_class MozillaWindowClass", "RegEx")
 
-`; & c::Activate("Cmd",      "ahk_exe cmd.exe ahk_class ConsoleWindowClass", 3)
+; `; & x::Activate("DevEnv",   "ahk_exe devenv.exe ahk_class ^HwndWrapper", "RegEx")
+; `; & m::Activate("Youtube",   "YouTube - Google Chrome$ ahk_exe chrome.exe ahk_class Chrome_WidgetWin_1", "RegEx")
+; `; & n::Activate("Notes",     "ahk_exe ResophNotes.exe", 3)
 
-`; & f::Activate("Dev",     "^!Y ahk_exe chrome.exe ahk_class Chrome_WidgetWin_1", "RegEx")
-`; & m::Activate("Youtube", "^YouTube ahk_exe chrome.exe ahk_class Chrome_WidgetWin_1", "RegEx")
-`; & n::Activate("Notes",   "ahk_exe ResophNotes.exe", 3)
 
 ; `; & a::Activate("resophnotes.exe", "")
 ; `; & z::Activate("thunderbird.exe", "MozillaWindowClass")
