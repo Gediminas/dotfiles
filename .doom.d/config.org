@@ -89,7 +89,7 @@
   (global-yascroll-bar-mode 1)
 )
 
-(setq fancy-splash-image "~/.doom.d/media/splash.png ")
+(setq fancy-splash-image "~/.doom.d/media/splash.png")
 
 (setq frame-title-format 'persp-last-persp-name)
 ;; (setq frame-title-format '(:eval
