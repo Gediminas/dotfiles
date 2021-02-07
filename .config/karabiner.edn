@@ -82,7 +82,7 @@
       [:#So                   :#Shome                [:appRdc]]
       [:#Sp                   :#Send                 [:appRdc]]
 
-      ;; [:#Se                   :!T#Stab]
+      [:#Se                   :!T#Stab]
       [:#Sa                   :!T#Stab]
 
       [:w                     :!Cs [:!appRdc :!appEmacs]]
@@ -128,7 +128,7 @@
       ;; [:#Ca :!STO#Ca [:!appRdc]]
       [:#Cq :!STO#Cq [:!appRdc]]
       ;; [:#Cw :!STO#Cw [:!appRdc]]
-      [:#Ce :!STO#Ce [:!appRdc]]
+      ;; [:#Ce :!STO#Ce [:!appRdc]]
       [:#Cr :!STO#Cr [:!appRdc]]
       [:#Ct :!STO#Ct [:!appRdc]]
       [:#Cg :!STO#Cg [:!appRdc]]
