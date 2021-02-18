@@ -205,8 +205,8 @@
 
 * Module -> Auto completion
 #+BEGIN_SRC emacs-lisp
-(after! company
-  (add-to-list 'company-backends 'company-tabnine))
+;; (after! company
+;;   (add-to-list 'company-backends 'company-tabnine))
 
 #+END_SRC
 
